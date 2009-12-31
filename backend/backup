@@ -1,0 +1,74 @@
+#!/usr/local/bin/guile -s
+!#
+;;;; This file is part of Cheetah News Aggregator
+;;;; Copyright (C) 2006 The Cheetah News Team
+;;;;
+;;;; This program is free software; you can redistribute it and/or modify it
+;;;; under the terms of the GNU General Public License as published by the
+;;;; Free Software Foundation; either version 3 of the License, or (at your
+;;;; option) any later version.
+;;;;
+;;;; This program is distributed in the hope that it will be useful,
+;;;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;;; GNU General Public License for more details.
+;;;;
+;;;; You should have received a copy of the GNU General Public License along
+;;;; with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;; Update load path.
+;; FIXME: This should be done by configure.
+(set! %load-path (append
+		  (list "/etc"
+			"/websites/cheetah"
+			"/websites/cheetah/backend")
+		  %load-path))
+(setenv "PATH" (string-append "/usr/sbin:/usr/local/bin/:" (getenv "PATH")))
+ 
+(use-modules (gamma sql)
+	     (ice-9 getopt-long)
+	     (backend config)
+	     (backend i18n))
+
+(define (usage)
+  (display "usage: backup OPTIONS\n")
+  (display "OPTIONS are:\n")
+  (display " -h, --help         Display this help list\n")
+  (display " -n, --dry-run      Do nothing, print everything\n")
+  (display " -d, --debug        Increase debugging level\n")
+  0)
+
+(define (run cmd)
+  (debug 1 "Running " cmd)
+  (dry-run (system cmd)))
+
+(let ((grammar `((help (single-char #\h))
+		 (debug (single-char #\d))
+		 (dry-run (single-char #\n)))))
+  (for-each
+   (lambda (x)
+     (cond
+      ((and (pair? x) (not (list? x)))
+       (case (car x)
+	 ((help)
+	  (exit (usage)))
+	 ((debug)
+	  (set! debug-level (1+ debug-level)))
+	 ((dry-run)
+	  (set! dry-run-mode #t)
+	  (set! debug-level 100))))
+      ((not (null? (cdr x)))
+       (diag "Too many arguments"))))
+   (getopt-long (command-line) grammar))
+
+  (chdir cheetah-misc-dir)
+
+  (run "logrotate --state logrotate.status logrotate.conf")
+
+  (run (string-append
+	"mysqldump -u\"" cheetah-user
+	"\" -p\"" cheetah-password "\" --ignore-table=" cheetah-database ".cache "
+	"--ignore-table=" cheetah-database ".weathercache "
+	cheetah-database "> dumps/cheetah.dump")))
+
+;;;; End of backup.scm

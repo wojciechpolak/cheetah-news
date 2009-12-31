@@ -1,0 +1,103 @@
+<h2>Cheetah News Terms of Service</h2>
+
+<p>These Terms of Service govern your access to and use of the Cheetah
+News web site, and any services provided therewith (hereinafter the
+<dfn>Service</dfn>).  They do not, however, cover use of any information
+provided by third-parties and displayed using the Service.</p>
+
+<p>Your access to and use of the Service are expressly conditioned on
+your compliance with these Terms of Service.  By accessing or using
+the Service you agree to be bound by these Terms.  Your registration
+as a Cheetah News user indicates acceptances of these Terms of
+Service.</p>
+
+<ol>
+
+<li>MODIFICATIONS OF TERMS OF SERVICE
+  <p>Cheetah News Team reserves the right to periodically revise and
+    update these Terms of Service.  Any new features that augment or
+    enhance the current Service, including, but not limited to the
+    release of new tools and resources, shall be subject to the Terms
+    of Service.  Your continued access or use of the Service after the
+    Team makes any such changes, indicates your agreement to be bound
+    by the revised Terms of Service.</p>
+</li>
+
+<li>PRIVACY
+  <p>See <a href="privacy">Privacy Policy</a>, for information and
+    notices concerning collection and use of your private information
+    by Cheetah News Service.</p>
+</li>
+
+<li>ACCOUNT TERMS
+  <ol style="list-style-type:lower-latin; margin-top:1.2em; margin-bottom:1em;">
+    <li>You must be a human.  Creation of accounts by robots or
+      other automated software is not permitted.</li>
+      
+    <li>You are responsible for maintaining the security of your
+      account by protecting your account password from disclosure.  Cheetah
+      News Team shall not be hold liable for any loss or damage
+      arising from your failure to comply with this security
+      obligation.</li>
+      
+    <li>You may not use the Service to promote non-free
+      software.</li>
+      
+    <li>You may not use the Service for any illegal or unauthorized
+      purpose.  You must not, in the use of the Service, violate any
+      laws in your jurisdiction (including, but not limited to,
+      copyright laws).</li>
+
+    <li id="expiration">Your account will remain active for as long as you are using it at least
+      once a month.  It will expire if you never access it within a term of
+      60 days.  Approximately two weeks before your account is due to expire,
+      you will receive an expiration notice via e-mail.</li>
+   
+    <li>Special <i>guest</i> account is provided for evaluation purposes.
+      The account gives access to a limited subset of the Service
+      functionality.  The terms set forth in this document apply without
+      limitation to this account.  Your using of this account indicates 
+      acceptances of these Terms of Service.</li>
+  </ol>
+</li>
+
+<li>GENERAL CONDITIONS
+  <ol style="list-style-type:lower-latin; margin-top:1.2em; margin-bottom:1em;">
+    <li>The Service is provided on an `<samp><span class="samp">as
+	  is</span></samp>' basis.  Your use of the Service is at
+      your sole risk.</li>
+
+    <li>Except when expressly permitted by the Cheetah News Team,
+      you must not modify another website so as to imply it is
+      associated with the Service.  This limitation does not cover
+      placing links to the Service on the third-party websites.</li>
+    
+    <li>The Cheetah News Team may, but has no obligation to, remove
+      any Content, or Accounts containing or promoting any such
+      Content, that the Team in its discretion determines as
+      unlawful, offensive, threatening, libelous, defamatory,
+      pornographic, obscene or otherwise objectionable or violating
+      these Terms of Service.</li>
+      
+    <li>The Cheetah News Service is not warranted to meet any
+      specific requirements, including, but not limited to,
+      requirements that the service be uninterrupted, timely, secure
+      or error-free, and that the results obtained from the use of
+      the Service be accurate and/or reliable.</li>
+    
+    <li>Failure of the Cheetah News Team to exercise or enforce any
+      right or provision of the Terms of Service shall not
+      constitute a waiver of such right or provision.  These Terms
+      of Service constitute the entire agreement between you and the
+      Cheetah News Team, superseding any prior agreements,
+      including, but not limited to, any prior versions of the Terms
+      of Service.</li>
+  </ol>
+</li>
+
+<li>QUESTIONS
+  <p>All questions regarding this Terms of Service should be directed
+  to <a href="mailto:cheetah-admins@gnu.org.ua">cheetah-admins@gnu.org.ua</a>.</p>
+</li>
+
+</ol>

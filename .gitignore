@@ -1,0 +1,12 @@
+*~
+*.o
+*.mo
+*.so
+.htaccess
+errorlog
+frontend/lib/config.php
+frontend/trs/*
+gen/popular.xml
+po/*-js.po
+po/*-php.po
+src/mod_jspp.c

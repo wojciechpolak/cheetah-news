@@ -1,0 +1,116 @@
+#!/usr/local/bin/guile -s
+!#
+;;;; This file is part of Cheetah News Aggregator
+;;;; Copyright (C) 2006 The Cheetah News Team
+;;;;
+;;;; This program is free software; you can redistribute it and/or modify it
+;;;; under the terms of the GNU General Public License as published by the
+;;;; Free Software Foundation; either version 3 of the License, or (at your
+;;;; option) any later version.
+;;;;
+;;;; This program is distributed in the hope that it will be useful,
+;;;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;;; GNU General Public License for more details.
+;;;;
+;;;; You should have received a copy of the GNU General Public License along
+;;;; with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;; Update load path.
+;; FIXME: This should be done by configure.
+(set! %load-path (append
+		  (list "/etc"
+			"/websites/cheetah"
+			"/websites/cheetah/backend")
+		  %load-path))
+
+(use-modules (gamma sql)
+             (ice-9 getopt-long)
+	     (backend config)
+	     (backend i18n))
+
+(define cleanup-targets #f)
+
+
+(define (usage code)
+  (display "usage: cleanup [OPTIONS] [WHAT]\n")
+  (newline)
+  (display "WHAT is one or more occurrences of: db, files\n")
+  (newline)
+  (display "OPTIONS are:\n")
+  (display " -h, --help         Display this help list\n")
+  (display " -n, --dry-run      Do nothing, print everything\n")
+  (display " -d, --debug        Increase debugging level\n")
+  code)
+
+(define (parse-command-line arglist)
+  (let ((grammar `((help (single-char #\h))
+		   (debug (single-char #\d))
+		   (dry-run (single-char #\n)))))
+    (for-each
+     (lambda (x)
+       (cond
+        ((and (pair? x) (not (list? x)))
+	 (case (car x)
+	   ((help)
+	    (exit (usage 0)))
+	   ((count)
+	    (set! outline-count (string->number (cdr x))))
+	   ((dry-run)
+	    (set! dry-run-mode #t)
+	    (set! debug-level 100))
+	   ((debug)
+	    (set! debug-level (1+ debug-level)))))
+	((not (null? (cdr x)))
+	 (set! cleanup-targets (cdr x)))))
+     (getopt-long arglist grammar))))
+
+
+(define (cleanup-db)
+  (catch-sql-failure
+   (let ((conn (sql-connect
+		cheetah-iface cheetah-host cheetah-port cheetah-database
+		cheetah-user cheetah-password)))
+     (sql-query conn "SET NAMES utf8")
+     (for-each
+      (lambda (query)
+	(run-sql-query conn query))
+      (list
+       "DELETE LOW_PRIORITY FROM cache WHERE lastAccessed < DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 MONTH)"
+       "DELETE LOW_PRIORITY FROM weathercache WHERE lastAccessed < DATE_SUB(UTC_TIMESTAMP(), INTERVAL 7 DAY)"
+       "DELETE LOW_PRIORITY FROM marker WHERE mstamp < DATE_SUB(NOW(), INTERVAL 1 MONTH)"
+       "DELETE LOW_PRIORITY ntag.* FROM ntag LEFT JOIN jntag ON ntag.id=jntag.tagid WHERE tagid IS NULL")))))
+
+(define (cleanup-files)
+  (dry-run
+   (run-prog
+    (string-append
+     "find " cheetah-base-dir "/frontend/trs -maxdepth 1 -type f -daystart -atime "
+     (number->string cheetah-trs-expire-days) " | xargs -r rm"))
+   (run-prog
+    (string-append
+     "find " cheetah-tmp-dir " -maxdepth 1 -name ',ex*.orig' -daystart -atime 2 | xargs -r rm"))))
+
+;; Main
+(parse-command-line (command-line))
+
+(cond
+ ((not cleanup-targets)
+  (usage 1))
+ ((member "all" cleanup-targets)
+  (cleanup-db)
+  (cleanup-files))
+ (else
+  (for-each
+   (lambda (what)
+     (cond
+      ((string=? what "db")
+       (cleanup-db))
+      ((string=? what "files")
+       (cleanup-files))
+      (else
+       (diag "Unknown target " what))))
+   cleanup-targets)))
+
+;;;; End of cleanup.scm
+

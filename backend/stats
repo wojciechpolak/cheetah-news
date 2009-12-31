@@ -1,0 +1,179 @@
+#!/usr/local/bin/guile -s
+!#
+;;;; This file is part of Cheetah News Aggregator
+;;;; Copyright (C) 2006 The Cheetah News Team
+;;;;
+;;;; This program is free software; you can redistribute it and/or modify it
+;;;; under the terms of the GNU General Public License as published by the
+;;;; Free Software Foundation; either version 3 of the License, or (at your
+;;;; option) any later version.
+;;;;
+;;;; This program is distributed in the hope that it will be useful,
+;;;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;;; GNU General Public License for more details.
+;;;;
+;;;; You should have received a copy of the GNU General Public License along
+;;;; with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;; Update load path.
+;; FIXME: This should be done by configure.
+(set! %load-path (append
+                 (list "/etc"
+                       "/websites/cheetah"
+                       "/websites/cheetah/backend")
+		  %load-path))
+
+(use-modules (gamma sql)
+             (ice-9 getopt-long)
+	     (backend config))
+
+
+
+(define output-file #f)
+
+(define (usage)
+  (display "usage: stats [OPTIONS] [FILE]\n")
+  (display "OPTIONS are:\n")
+  (display " -h, --help         Display this help list\n")
+  (display " -d, --debug        Increase debugging level\n")
+  0)
+
+(define (parse-command-line arglist)
+  (let ((grammar `((help (single-char #\h))
+		   (debug (single-char #\d))
+		   (dry-run (single-char #\n)))))
+    (for-each
+     (lambda (x)
+       (cond
+        ((and (pair? x) (not (list? x)))
+	 (case (car x)
+	   ((help)
+	    (exit (usage)))
+	   ((count)
+	    (set! outline-count (string->number (cdr x))))
+	   ((debug)
+	    (set! debug-level (1+ debug-level)))))
+	((not (null? (cdr x)))
+	 (if (null? (cddr x))
+	     (set! output-file (car (cdr x)))
+	     (diag "Too many arguments")))))
+     (getopt-long arglist grammar))))
+
+
+(define (display-header)
+  (display "\
+Cheetah News Statistics
+=======================
+
+")
+  (display (strftime "%a, %d %b %Y %H:%M:%S %Z" (gmtime (current-time))))
+  (newline)
+  (newline))
+
+(define (display-footer)
+  (newline))
+
+(define (display-stats)
+  (catch-sql-failure
+   (let ((conn (sql-connect
+		cheetah-iface cheetah-host cheetah-port cheetah-database
+		cheetah-user cheetah-password)))
+     (sql-query conn "SET NAMES utf8")
+     
+     (let ((nusers (run-num-query conn "SELECT COUNT(*) FROM user"))
+	   (guest-logins
+	    (run-num-query
+	     conn
+	     (string-append
+	      "SELECT logCount FROM user WHERE email='"
+	      cheetah-guest-account
+	      "'")))
+	   (total-logins
+	    (run-num-query
+	     conn
+	     "SELECT SUM(logCount) FROM user")))
+       
+       (display-header)
+       (format #t "Number of users: ~A~%" (format-number #f (- nusers 1)))
+
+       (format #t "Max. users:      ~A~%"
+	       (format-number #f (cheetah-max-user-count)))
+
+       (format #t "User  logcount:  ~A~%" (format-number #f 
+                                           (- total-logins guest-logins)))
+       (format #t "Guest logcount:  ~A~%" (format-number #f guest-logins))
+       (format #t "Total logcount:  ~A~%" (format-number #f total-logins))
+       (format #t "Total feeds:     ~A~%"
+	       (format-number #f 
+                 (run-num-query conn "SELECT COUNT(*) FROM feed")))
+       (format #t "Feeds read:      ~A~%"
+	       (format-number #f 
+                (run-num-query
+		 conn
+		 "SELECT COUNT(DISTINCT(feedid)) FROM subscription")))
+       (format #t "Subscriptions:   ~A~%"
+	       (format-number #f 
+                (run-num-query
+		 conn
+		 "SELECT COUNT(*) FROM subscription")))
+       (format #t "Notes:           ~A~%"
+               (format-number #f 
+	        (run-num-query
+	 	 conn
+		 "SELECT COUNT(*) FROM note")))
+       (format #t "Cache size:      ~A~%"
+	       (format-number #f (run-num-query
+			          conn
+			          "SELECT SUM(LENGTH(xml)) FROM cache")))
+       (format #t "Markers size:    ~A~%"
+	       (format-number #f (run-num-query
+			          conn
+			          "SELECT SUM(LENGTH(markers)) size FROM marker")))
+       (display-footer)))))
+
+
+(define (format-number port num . rest)
+  (let ((separator (if (null? rest) #\space (car rest))))
+    (letrec ((output (lambda (stack)
+		       (cond
+			((null? stack)
+			 (display "0"))
+			(else
+			 (display (car stack))
+			 (for-each
+			  (lambda (n)
+			    (display separator)
+			    (if (< n 100)
+				(display "0"))
+			    (if (< n 10)
+				(display "0"))
+			    (display n))
+			  (cdr stack)))))))
+      (let loop ((num num)
+		 (stack '()))
+	(if (= num 0)
+	    (cond
+	     ((eq? port #f)
+	      (with-output-to-string (lambda () (output stack))))
+	     ((eq? port #t)
+	      (with-output-to-port (current-output-port) (lambda () (output stack))))
+	     (else
+	      (with-output-to-port port (lambda () (output stack)))))
+	    (loop (quotient num 1000) (cons (remainder num 1000) stack)))))))
+
+
+;; Main
+(parse-command-line (command-line))
+
+(cond
+ (output-file
+  (if (access? output-file F_OK)
+      (delete-file output-file))
+  (with-output-to-file
+      output-file
+    display-stats))
+ (else
+  (display-stats)))
+
+;;;; End of stats.scm

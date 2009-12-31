@@ -1,0 +1,136 @@
+#!/usr/local/bin/guile -s
+!#
+;;;; This file is part of Cheetah News Aggregator
+;;;; Copyright (C) 2006 The Cheetah News Team
+;;;;
+;;;; This program is free software; you can redistribute it and/or modify it
+;;;; under the terms of the GNU General Public License as published by the
+;;;; Free Software Foundation; either version 3 of the License, or (at your
+;;;; option) any later version.
+;;;;
+;;;; This program is distributed in the hope that it will be useful,
+;;;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;;; GNU General Public License for more details.
+;;;;
+;;;; You should have received a copy of the GNU General Public License along
+;;;; with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;; Update load path.
+;; FIXME: This should be done by configure.
+(set! %load-path (append
+		  (list "/etc"
+			"/websites/cheetah"
+			"/websites/cheetah/backend")
+		  %load-path))
+
+(use-modules (gamma sql)
+             (ice-9 getopt-long)
+	     (backend config))
+
+(define (create-header count)
+  (format #t "\
+<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<opml version=\"1.0\">
+  <head>
+    <title>Cheetah News Top ~A Feeds</title>
+    <ownerName>Cheetah News</ownerName>
+    <dateCreated>~A</dateCreated>
+  </head>
+  <body>
+"
+	  count
+	  (strftime "%a, %d %b %Y %H:%M:%S %Z" (gmtime (current-time)))))
+
+(define (create-footer)
+  (display "\
+  </body>
+</opml>")
+  (newline))
+
+(define (create-popular-feeds conn)
+  (let ((res (run-sql-query
+	      conn
+	      (format #f
+    "SELECT f.description, f.url, COUNT(f.id) \
+     FROM feed f, subscription s \
+     WHERE f.id=s.feedid \
+     GROUP BY f.id ORDER BY 3 DESC, f.description DESC LIMIT 0,~A"
+    outline-count))))
+    (create-header (length res))
+    (for-each
+     (lambda (tuple)
+       (let ((txt (list-ref tuple 0))
+	     (url (list-ref tuple 1))
+	     (count (list-ref tuple 2)))
+	 (format #t
+	"    <outline text=\"~A\" type=\"link\" url=\"~A\" count=\"~A\" icon=\"~A\" />~%"
+		 (html-escape-string (if (string-null? txt) url txt))
+		 (html-escape-string url)
+		 (html-escape-string count)
+		 (html-escape-string (string-append
+				      (if (> (string-count url #\/) 2)
+					  (substring url
+						     0
+						     (string-index url #\/ 8))
+					  url)
+				      "/favicon.ico")))))
+     res)
+    (create-footer)))
+
+
+(define (usage)
+  (display "usage: popular [OPTIONS] [FILE]\n")
+  (display "OPTIONS are:\n")
+  (display " -h, --help         Display this help list\n")
+  (display " -c, --count=NUMBER Set number of outlines to create. Default is 15\n")
+  (display " -d, --debug        Increase debugging level\n")
+  0)
+
+(define output-file #f)
+(define outline-count 15)
+  
+(define (parse-command-line arglist)
+  (let ((grammar `((help (single-char #\h))
+		   (debug (single-char #\d))
+		   (count (single-char #\c) (value #t)))))
+    (for-each
+     (lambda (x)
+       (cond
+        ((and (pair? x) (not (list? x)))
+	 (case (car x)
+	   ((help)
+	    (exit (usage)))
+	   ((count)
+	    (set! outline-count (string->number (cdr x))))
+	   ((debug)
+	    (set! debug-level (1+ debug-level)))))
+	((not (null? (cdr x)))
+	 (if (null? (cddr x))
+	     (set! output-file (car (cdr x)))
+	     (diag "Too many arguments")))))
+     (getopt-long arglist grammar))))
+
+
+;; Main
+(parse-command-line (command-line))
+
+(catch-sql-failure
+ (let ((conn (sql-connect
+	      cheetah-iface cheetah-host cheetah-port cheetah-database
+	      cheetah-user cheetah-password)))
+   (sql-query conn "SET NAMES utf8")
+   (cond
+    (output-file
+     (if (access? output-file F_OK)
+	 (delete-file output-file))
+     (with-output-to-file
+	 output-file
+       (lambda ()
+	 (create-popular-feeds conn))))
+    (else
+     (create-popular-feeds conn)))))
+	    
+;;;; End of popular.scm
+
+       

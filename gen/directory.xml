@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opml version="1.0">
+  <head>
+    <title>Popular Feeds</title>
+    <ownerName>Cheetah News</ownerName>
+  </head>
+  <body>
+    <outline text="Česki">
+     <outline text="Lidovky.cz RSS" type="link" icon="http://g.zpravy.cz/o/lidovky/favicon.ico"
+              url="http://lidovky.zpravy.cz/export/rss.asp?c=ln_lidovky"/>
+     <outline text="Actuálnì" icon="http://img.centrum.cz/3/favicon.ico">
+        <outline text="Actuálně RSS" type="link" icon="http://img.centrum.cz/3/favicon.ico"
+                 url="http://aktualne.centrum.cz/export/rss-hp.phtml"/>
+        <outline text="právě se děje" type="link" icon="http://img.centrum.cz/3/favicon.ico"
+                 url="http://aktualne.centrum.cz/export/rss-prave-se-deje.phtml"/>
+        <outline text="domácí" type="link" icon="http://img.centrum.cz/3/favicon.ico"
+                 url="http://aktualne.centrum.cz/export/rss-domaci.phtml"/>
+        <outline text="zahraničí" type="link" icon="http://img.centrum.cz/3/favicon.ico"
+                 url="http://aktualne.centrum.cz/export/rss-zahranici.phtml"/>
+        <outline text="ekonomika" type="link" icon="http://img.centrum.cz/3/favicon.ico"
+                 url="http://aktualne.centrum.cz/export/rss-ekonomika.phtml"/>
+        <outline text="kultura" type="link" icon="http://img.centrum.cz/3/favicon.ico"
+                 url="http://aktualne.centrum.cz/export/rss-kultura.phtml"/>
+        <outline text="názory" type="link" icon="http://img.centrum.cz/3/favicon.ico"
+                 url="http://aktualne.centrum.cz/export/rss-nazory.phtml"/>
+     </outline>
+    </outline>
+
+    <outline text="English">
+      <outline text="Business">
+	<outline text="Forbes" type="link" icon="http://www.forbesimg.com/icon/favicon.ico"
+		 url="http://www.forbes.com/feeds/popstories.xml"/>
+	<outline text="Google News: Business" type="link" icon="http://news.google.com/favicon.ico"
+		 url="http://news.google.com/?ned=us&amp;topic=b&amp;output=rss"/>
+	<outline text="Motley Fool" type="link" icon="http://fool.com/favicon.ico"
+		 url="http://feeds.fool.com/usmf/foolwatch"/>
+	<outline text="Newsweek" type="link" icon="http://www.msnbc.msn.com/favicon.ico"
+		 url="http://rss.msnbc.msn.com/id/3032071/device/rss/rss.xml"/>
+      </outline>
+      <outline text="Entertainment">
+	<outline text="Google News: Entertainment" type="link" icon="http://news.google.com/favicon.ico"
+		 url="http://news.google.com/?ned=us&amp;topic=e&amp;output=rss"/>
+	<outline text="IMDb.com News" type="link" icon="http://us.imdb.com/favicon.ico"
+		 url="http://rss.imdb.com/news/"/>
+	<outline text="RollingStone.com" icon="http://i.rollingstone.com/rs/favicon.ico">
+	  <outline text="Music News" type="link" icon="http://i.rollingstone.com/rs/favicon.ico"
+		   url="http://www.rollingstone.com/rssxml/music_news.xml"/>
+	  <outline text="CD Reviews" type="link" icon="http://i.rollingstone.com/rs/favicon.ico"
+		   url="http://www.rollingstone.com/rssxml/album_reviews.xml"/>
+	  <outline text="Photos" type="link" icon="http://i.rollingstone.com/rs/favicon.ico"
+		   url="http://www.rollingstone.com/rssxml/photos.xml"/>
+	  <outline text="Videos" type="link" icon="http://i.rollingstone.com/rs/favicon.ico"
+		   url="http://www.rollingstone.com/rssxml/videos.xml"/>
+	</outline>
+      </outline>
+      <outline text="FS/OS">
+	<outline text="What's New at GNU" type="link" icon="http://www.gnu.org/graphics/gnu-head-icon.png"
+		 url="http://www.gnu.org/rss/whatsnew.rss"/>
+	<outline text="OSNews" type="link" icon="http://www.osnews.com/favicon.ico"
+		 url="http://www.osnews.com/files/recent.rdf"/>
+	<outline text="freshmeat.net" type="link" icon="http://freshmeat.net/favicon.ico"
+		 url="http://rss.freshmeat.net/freshmeat/feeds/fm-releases-global"/>
+	<outline text="LWN.net" type="link" icon="http://lwn.net/favicon.ico"
+		 url="http://lwn.net/headlines/newrss"/>
+      </outline>
+      <outline text="Health">
+	<outline text="Google News: Health" type="link" icon="http://news.google.com/favicon.ico"
+		 url="http://news.google.com/?ned=us&amp;topic=m&amp;output=rss"/>
+	<outline text="MedicineNet Daily Term" type="link" icon="http://www.medterms.com/favicon.ico"
+		 url="http://www.medicinenet.com/rss/dailyword.xml"/>
+	<outline text="MedicineNet Health" type="link" icon="http://www.medterms.com/favicon.ico"
+		 url="http://www.medicinenet.com/rss/dailyhealth.xml"/>
+	<outline text="Medscape" type="link"
+		 url="http://www.medscape.com/cx/rssfeeds/2700.xml"/>
+      </outline>
+      <outline text="News">
+	<outline text="Google News" icon="http://news.google.com/favicon.ico">
+	  <outline text="Top Stories" type="link" icon="http://news.google.com/favicon.ico"
+		   url="http://news.google.com/?output=rss"/>
+	  <outline text="World" type="link" icon="http://news.google.com/favicon.ico"
+		   url="http://news.google.com/?ned=us&amp;topic=w&amp;output=rss"/>
+	  <outline text="U.S." type="link" icon="http://news.google.com/favicon.ico"
+		   url="http://news.google.com/?ned=us&amp;topic=n&amp;output=rss"/>
+	</outline>
+	<outline text="BBC News" type="link" icon="http://news.bbc.co.uk/favicon.ico"
+		 url="http://newsrss.bbc.co.uk/rss/newsonline_world_edition/front_page/rss.xml"/>
+	<outline text="CNN" type="link" icon="http://www.cnn.com/favicon.ico"
+		 url="http://rss.cnn.com/rss/cnn_topstories.rss"/>
+	<outline text="New York Times" type="link" icon="http://www.nytimes.com/favicon.ico"
+		 url="http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"/>
+	<outline text="Newsvine World News" type="link" icon="http://www.newsvine.com/favicon.ico"
+		 url="http://www.newsvine.com/_feeds/rss2/tag?id=world-news"/>
+	<outline text="Reuters" type="link" icon="http://today.reuters.com/favicon.ico"
+		 url="http://today.reuters.com/rss/topNews/"/>
+	<outline text="USA Today" type="link" icon="http://www.usatoday.com/_common/_images/usat16x16.png"
+		 url="http://rssfeeds.usatoday.com/usatoday-NewsTopStories"/>
+	<outline text="Washington Post" type="link" icon="http://www.washingtonpost.com/favicon.ico"
+		 url="http://www.washingtonpost.com/wp-dyn/rss/linkset/2005/03/24/LI2005032400102.xml"/>
+	<outline text="Yahoo! News" type="link" icon="http://news.yahoo.com/favicon.ico"
+		 url="http://rss.news.yahoo.com/rss/topstories"/>
+      </outline>
+      <outline text="Planets">
+	<outline text="Planet GNOME" type="link" icon="http://planet.gnome.org/favicon.ico"
+		 url="http://planet.gnome.org/rss20.xml"/>
+	<outline text="Planet Debian" type="link" icon="http://planet.debian.org/favicon.ico"
+		 url="http://planet.debian.org/rss20.xml"/>
+	<outline text="Planet Java" type="link" icon="http://java.org/favicon.ico"
+		 url="http://planetjava.org/rss20.xml"/>
+	<outline text="Planet Perl" type="link" icon="http://www.perl.org/favicon.ico"
+		 url="http://planet.perl.org/rss20.xml"/>
+	<outline text="Planet Python" type="link" icon="http://www.python.org/favicon.ico"
+		 url="http://www.planetpython.org/rss20.xml"/>
+	<outline text="Planet BSD" type="link" icon="http://www.bsd.org/favicon.ico"
+		 url="http://people.bsdplanet.net/rss20.xml"/>
+	<outline text="mozillaZine feedHouse" type="link" icon="http://mozillazine.org/favicon.ico"
+		 url="http://feedhouse.mozillazine.org/rss20.xml"/>
+      </outline>
+      <outline text="Podcasts">
+	<outline text="Audio">
+	  <outline text="Chinese Podcasts" type="link" icon="http://www.chinesepod.com/favicon.ico"
+		   url="http://chinesepod.com/feed"/>
+	  <outline text="Engadget Podcasts" type="link" icon="http://www.engadget.com/media/favicon.ico"
+		   url="http://podcasts.engadget.com/rss.xml"/>
+	  <outline text="IT Conversations" type="link" icon="http://www.itconversations.com/favicon.ico"
+		   url="http://feeds.feedburner.com/ITConversations-EverythingMP3"/>
+	  <outline text="Science @ NASA" type="link" icon="http://science.nasa.gov/favicon.ico"
+		   url="http://science.nasa.gov/podcast.xml"/>
+	  <outline text="Talkcrunch" type="link" icon="http://www.techcrunch.com/favicon.ico"
+		   url="http://feeds.feedburner.com/Talkcrunch"/>
+	</outline>
+      </outline>
+      <outline text="Science &amp; Tech">
+	<outline text="Astronomy Picture of the Day" type="link" icon="http://antwrp.gsfc.nasa.gov/apod/favicon.ico"
+		 url="http://www.jwz.org/cheesegrater/RSS/apod.rss"/>
+	<outline text="ComputerWorld" type="link" icon="http://www.computerworld.com/favicon.ico"
+		 url="http://feeds.computerworld.com/Computerworld/News"/>
+	<outline text="CNET News.com" type="link" icon="http://news.com.com/favicon.ico"
+		 url="http://news.com.com/2547-1_3-0-5.xml"/>
+	<outline text="Digital Photography Review" type="link" icon="http://www.dpreview.com/favicon.ico"
+		 url="http://www.dpreview.com/news/dpr.rdf"/>
+	<outline text="Engadget" type="link" icon="http://www.engadget.com/media/favicon.ico"
+		 url="http://www.engadget.com/rss.xml"/>
+	<outline text="Google News: Sci/Tech" type="link" icon="http://news.google.com/favicon.ico"
+		 url="http://news.google.com/?ned=us&amp;topic=t&amp;output=rss"/>
+	<outline text="NASA" type="link" icon="http://www.nasa.gov/favicon.ico"
+		 url="http://www.nasa.gov/rss/breaking_news.rss"/>
+	<outline text="National Geographic" type="link" icon="http://news.nationalgeographic.com/favicon.ico"
+		 url="http://news.nationalgeographic.com/index.rss"/>
+	<outline text="Newsvine Technology" type="link" icon="http://www.newsvine.com/favicon.ico"
+		 url="http://www.newsvine.com/_feeds/rss2/tag?id=technology"/>
+	<outline text="Slashdot" type="link" icon="http://slashdot.org/favicon.ico"
+		 url="http://rss.slashdot.org/Slashdot/slashdot"/>
+	<outline text="The Register" type="link" icon="http://www.theregister.co.uk/favicon.ico"
+		 url="http://www.theregister.co.uk/headlines.rss"/>
+	<outline text="Wikipedia Featured Articles" type="link" icon="http://www.wikipedia.org/favicon.ico"
+		 url="http://jeays.net/wikipedia/featured.xml"/>
+      </outline>
+      <outline text="Web Technology">
+	<outline text="Ajaxian" type="link" icon="http://ajaxian.com/wp-content/themes/ajaxian/images/favicon.ico"
+		 url="http://feeds.feedburner.com/ajaxian"/>
+	<outline text="Ajax Blog" type="link" icon="http://ajaxblog.com/wp-content/themes/k2_ajaxblog/styles/ninerniner/favicon.ico"
+		 url="http://feeds.feedburner.com/AjaxBlog"/>
+	<outline text="Techcrunch" type="link" icon="http://techcrunch.com/favicon.ico"
+		 url="http://feeds.feedburner.com/Techcrunch"/>
+	<outline text="World Wide Web Consortium" type="link"
+		 url="http://www.w3.org/2000/08/w3c-synd/home.rss"/>
+      </outline>
+      <outline text="Sports">
+	<outline text="ESPN" type="link" icon="http://espn.go.com/favicon.ico"
+		 url="http://sports.espn.go.com/espn/rss/news"/>
+	<outline text="Fox Sports" type="link" icon="http://msn.foxsports.com/favicon.ico"
+		 url="http://feeds.feedburner.com/foxsports/rss/headlines"/>
+	<outline text="Google News: Sports" type="link" icon="http://news.google.com/favicon.ico"
+		 url="http://news.google.com/?ned=us&amp;topic=s&amp;output=rss"/>
+	<outline text="Sports Illustrated" type="link" icon="http://sportsillustrated.cnn.com/favicon.ico"
+		 url="http://rss.cnn.com/rss/si_topstories.rss"/>
+      </outline>
+      <outline text="Lifestyle">
+	<outline text="About Fashion" type="link" icon="http://fashion.about.com/favicon.ico"
+		 url="http://fashion.about.com/b/index.xml"/>
+	<outline text="Simply Recipes" type="link" icon="http://www.elise.com/recipes/simply-recipes.ico"
+		 url="http://feeds.feedburner.com/elise/simplyrecipes"/>
+      </outline>
+      <outline text="Fun">
+	<outline text="Ask Yahoo!" type="link" icon="http://www.yahoo.com/favicon.ico"
+		 url="http://ask.yahoo.com/index.xml"/>
+	<outline text="Dilbert" type="link" icon="http://www.dilbert.com/favicon.ico"
+		 url="http://feedproxy.google.com/DilbertDailyStrip"/>
+	<outline text="&quot;How To&quot; of the Day" type="link" icon="http://www.wikihow.com/favicon.ico"
+		 url="http://www.wikihow.com/feed.rss"/>
+	<outline text="FAIL Blog" type="link" icon="http://s.wordpress.com/wp-content/themes/vip/failblog/images/favicon.ico"
+		 url="http://feedproxy.google.com/failblog"/>
+	<outline text="Mighty Optical Illusions" type="link" icon="http://www.moillusions.com/favicon.ico"
+		 url="http://feeds.feedburner.com/OpticalIllusions"/>
+	<outline text="New Urban Legends" type="link" icon="http://snopes.com/favicon.ico"
+		 url="http://snopes.com/info/whatsnew.xml"/>
+      </outline>
+    </outline>
+
+    <outline text="Polski">
+      <outline text="Wiadomości">
+	<outline text="Gazeta Wyborcza" icon="http://serwisy.gazeta.pl/img/gazeta.ico">
+	  <outline text="Kraj" type="link" icon="http://serwisy.gazeta.pl/img/gazeta.ico"
+		   url="http://rss.gazeta.pl/pub/rss/gazetawyborcza_kraj.xml"/>
+	  <outline text="Świat" type="link" icon="http://serwisy.gazeta.pl/img/gazeta.ico"
+		   url="http://rss.gazeta.pl/pub/rss/gazetawyborcza_swiat.xml"/>
+	  <outline text="Kultura" type="link" icon="http://serwisy.gazeta.pl/img/gazeta.ico"
+		   url="http://rss.gazeta.pl/pub/rss/gazetawyborcza_kultura.xml"/>
+	  <outline text="Nauka" type="link" icon="http://serwisy.gazeta.pl/img/gazeta.ico"
+		   url="http://rss.gazeta.pl/pub/rss/gazetawyborcza_nauka.xml"/>
+	  <outline text="Duży Format" type="link" icon="http://serwisy.gazeta.pl/img/gazeta.ico"
+		   url="http://rss.gazeta.pl/pub/rss/gazetawyborcza_duzyformat.xml"/>
+	</outline>
+	<outline text="Gazeta.pl" icon="http://serwisy.gazeta.pl/img/gazeta.ico">
+	  <outline text="Wiadomości" type="link" icon="http://serwisy.gazeta.pl/img/gazeta.ico"
+		   url="http://rss.gazeta.pl/pub/rss/wiadomosci.xml"/>
+	  <outline text="Kraj" type="link" icon="http://serwisy.gazeta.pl/img/gazeta.ico"
+		   url="http://rss.gazeta.pl/pub/rss/kraj.xml"/>
+	  <outline text="Świat" type="link" icon="http://serwisy.gazeta.pl/img/gazeta.ico"
+		   url="http://rss.gazeta.pl/pub/rss/swiat.xml"/>
+	  <outline text="Sport" type="link" icon="http://serwisy.gazeta.pl/img/gazeta.ico"
+		   url="http://rss.gazeta.pl/pub/rss/sport.xml"/>
+	  <outline text="Gospodarka" type="link" icon="http://serwisy.gazeta.pl/img/gazeta.ico"
+		   url="http://rss.gazeta.pl/pub/rss/gospodarka.xml"/>
+	  <outline text="Internet" type="link" icon="http://serwisy.gazeta.pl/img/gazeta.ico"
+		   url="http://rss.gazeta.pl/pub/rss/internettechnologie.xml"/>
+	  <outline text="Praca" type="link" icon="http://serwisy.gazeta.pl/img/gazeta.ico"
+		   url="http://rss.gazeta.pl/pub/rss/praca.xml"/>
+	  <outline text="Auto" type="link" icon="http://serwisy.gazeta.pl/img/gazeta.ico"
+		   url="http://rss.gazeta.pl/pub/rss/auto.xml"/>
+	  <outline text="Kuchnia" type="link" icon="http://serwisy.gazeta.pl/img/gazeta.ico"
+		   url="http://rss.gazeta.pl/pub/rss/kuchnia.xml"/>
+	</outline>
+	<outline text="Onet" icon="http://wiadomosci.onet.pl/favicon.ico">
+	  <outline text="Wiadomości" type="link" icon="http://wiadomosci.onet.pl/favicon.ico"
+		   url="http://wiadomosci.onet.pl/2,kategoria.rss"/>
+	  <outline text="Gospodarka" type="link" icon="http://wiadomosci.onet.pl/favicon.ico"
+		   url="http://wiadomosci.onet.pl/10,kategoria.rss"/>
+	  <outline text="Sport" type="link" icon="http://wiadomosci.onet.pl/favicon.ico"
+		   url="http://wiadomosci.onet.pl/14,kategoria.rss"/>
+	  <outline text="Nauka" type="link" icon="http://wiadomosci.onet.pl/favicon.ico"
+		   url="http://wiadomosci.onet.pl/16,kategoria.rss"/>
+	  <outline text="Internet i komputery" type="link" icon="http://wiadomosci.onet.pl/favicon.ico"
+		   url="http://wiadomosci.onet.pl/18,kategoria.rss"/>
+	</outline>
+	<outline text="Money.pl" icon="http://www.money.pl/d/favicon.ico">
+	  <outline text="Informacje ze strony głównej" type="link" icon="http://www.money.pl/d/favicon.ico"
+		   url="http://www.money.pl/rss/main.xml"/>
+	  <outline text="Giełda" type="link" icon="http://www.money.pl/d/favicon.ico"
+		   url="http://www.money.pl/rss/gielda.xml"/>
+	  <outline text="Pieniądze" type="link" icon="http://www.money.pl/d/favicon.ico"
+		   url="http://www.money.pl/rss/pieniadze.xml"/>
+	  <outline text="Banki" type="link" icon="http://www.money.pl/d/favicon.ico"
+		   url="http://www.money.pl/rss/banki.xml"/>
+	  <outline text="Fundusze" type="link" icon="http://www.money.pl/d/favicon.ico"
+		   url="http://www.money.pl/rss/fundusze.xml"/>
+	  <outline text="Emerytury" type="link" icon="http://www.money.pl/d/favicon.ico"
+		   url="http://www.money.pl/rss/emerytury.xml"/>
+	  <outline text="Podatki" type="link" icon="http://www.money.pl/d/favicon.ico"
+		   url="http://www.money.pl/rss/podatki.xml"/>
+	  <outline text="Ubezpieczenia" type="link" icon="http://www.money.pl/d/favicon.ico"
+		   url="http://www.money.pl/rss/ubezpieczenia.xml"/>
+	  <outline text="Poradniki Money.pl" type="link" icon="http://www.money.pl/d/favicon.ico"
+		   url="http://www.money.pl/rss/poradniki.xml"/>
+	  <outline text="Raporty Money.pl" type="link" icon="http://www.money.pl/d/favicon.ico"
+		   url="http://www.money.pl/rss/raporty.xml"/>
+	  <outline text="Komunikaty ze spółek" type="link" icon="http://www.money.pl/d/favicon.ico"
+		   url="http://www.money.pl/d/rss/komunikaty.xml"/>
+	  <outline text="Motoryzacja" type="link" icon="http://www.money.pl/d/favicon.ico"
+		   url="http://www.money.pl/d/rss/moto_rss.xml"/>
+	  <outline text="Manager" type="link" icon="http://www.money.pl/d/favicon.ico"
+		   url="http://www.money.pl/rss/manager.xml"/>
+	</outline>
+	<outline text="Wiadomosci.wp.pl - Wiadomości Dnia" type="link" icon="http://i.wp.pl/a/i/sg/favicon.ico"
+		 url="http://wiadomosci.wp.pl/ver,rss,rss.xml"/>
+      </outline>
+      <outline text="Internet i Technologie">
+	<outline text="Gazeta.pl - Internet" type="link" icon="http://serwisy.gazeta.pl/img/gazeta.ico"
+		 url="http://rss.gazeta.pl/pub/rss/internettechnologie.xml"/>
+	<outline text="7thGuard.net" type="link" icon="http://7thguard.net/favicon.ico"
+		 url="http://rss.7thguard.net/7thguard.xml"/>
+	<outline text="CERT Polska" type="link" icon="http://www.cert.pl/favicon.ico"
+		 url="http://feeds.feedburner.com/CertPolska"/>
+	<outline text="Hacking.pl" type="link" icon="http://hacking.pl/favicon.ico"
+		 url="http://hacking.pl/rss.xml"/>
+      </outline>
+      <outline text="Film">
+	<outline text="Filmweb News" type="link" icon="http://gfx.filmweb.pl/gf/favicon.ico"
+		 url="http://www.filmweb.pl/rss/news"/>
+	<outline text="Interia.pl - Film" type="link" icon="http://www.interia.pl/favicon.ico"
+		 url="http://kanaly.rss.interia.pl/film.xml"/>
+      </outline>
+      <outline text="Blogi">
+	<outline text="Endgame: Blog Bartka Węglarczyka (GW)" type="link"
+		 url="http://bartoszweglarczyk.blox.pl/rss2"/>
+	<outline text="Nadużycie semantyczne: Blog Pawła Wrońskiego (GW)" type="link"
+		 url="http://pawelwronski.blox.pl/rss2"/>
+	<outline text="Blog Ewy Milewicz (GW)" type="link"
+		 url="http://ewamilewicz.blox.pl/rss2"/>
+	<outline text="Gra w klasy: Blog Adama Szostkiewicza (Polityka)" type="link"
+		 url="http://szostkiewicz.blog.polityka.pl/?feed=atom"/>
+	<outline text="Skrót myślowy: Blog Janiny Paradowskiej (Polityka)" type="link"
+		 url="http://paradowska.blog.polityka.pl/?feed=atom"/>
+	<outline text="Blog Bartka Pogody: Podróże, zdjęcia, reportaże" type="link"
+		 url="http://bartpogoda.net/rss.php"/>
+      </outline>
+    </outline>
+
+    <outline text="Українська">
+      <outline text="Українська правда" type="link" icon="http://www.pravda.com.ua/favicon.ico"
+	       url="http://www.pravda.com.ua/ru/export.xml"/>
+    </outline>    
+
+    <outline text="中文（简体）">
+      <outline text="新华网-全球新闻网 (Xinhua)" icon="http://www.xinhuanet.com/favicon.ico">
+	<outline text="国内新闻" type="link" icon="http://www.xinhuanet.com/favicon.ico"
+		 url="http://rss.xinhuanet.com/rss/native.xml"/>
+	<outline text="国际新闻" type="link" icon="http://www.xinhuanet.com/favicon.ico"
+		 url="http://rss.xinhuanet.com/rss/world.xml"/>
+        <outline text="财经新闻" type="link" icon="http://www.xinhuanet.com/favicon.ico"
+		 url="http://rss.xinhuanet.com/rss/fortune.xml"/>
+	<outline text="图片新闻" type="link" icon="http://www.xinhuanet.com/favicon.ico"
+		 url="http://rss.xinhuanet.com/rss/photos.xml"/>
+	<outline text="文娱新闻" type="link" icon="http://www.xinhuanet.com/favicon.ico"
+		 url="http://rss.xinhuanet.com/rss/ent.xml"/>
+	<outline text="教育新闻" type="link" icon="http://www.xinhuanet.com/favicon.ico"
+		 url="http://rss.xinhuanet.com/rss/edu.xml"/>
+	<outline text="体育新闻" type="link" icon="http://www.xinhuanet.com/favicon.ico"
+		 url="http://rss.xinhuanet.com/rss/sports.xml"/>
+	<outline text="科技新闻" type="link" icon="http://www.xinhuanet.com/favicon.ico"
+		 url="http://rss.xinhuanet.com/rss/science.xml"/>
+	<outline text="IT新闻" type="link" icon="http://www.xinhuanet.com/favicon.ico"
+		url="http://rss.xinhuanet.com/rss/it.xml"/>
+      </outline>
+      <outline text="上海合作组织成员国元首会议在沪举行 - 新华网" type="link"
+	       icon="http://news.google.com/favicon.ico"
+	       url="http://news.google.com/news?ned=cn&amp;output=rss"/>
+    </outline>
+
+    <outline text="日本語">
+      <outline text="TokyoToday - 今日のトーキョー" type="link"
+	       url="http://tokyotoday.net/atom.xml"/>
+      <outline text="TechCrunch Japanese" type="link" icon="http://www.techcrunch.com/favicon.ico"
+	       url="http://www.pheedo.jp/f/JapaneseTechCrunch"/>
+    </outline>
+
+    <outline text="한국어">
+      <outline text="Google 뉴스 한국" type="link" icon="http://news.google.com/favicon.ico"
+	       url="http://news.google.com/news?ned=kr&amp;output=rss"/>
+    </outline>
+
+    <outline text="العربية">
+      <outline text="BBC Arabic News | الصفحة الرئيسية" type="link"
+	       icon="http://news.bbc.co.uk/favicon.ico"
+	       url="http://news.bbc.co.uk/rss/arabic/news/rss.xml"/>
+    </outline>
+
+  </body>
+</opml>

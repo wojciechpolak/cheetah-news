@@ -1,0 +1,319 @@
+#!/usr/local/bin/guile -s
+!#
+;;;; This file is part of Cheetah News Aggregator
+;;;; Copyright (C) 2006 The Cheetah News Team
+;;;;
+;;;; This program is free software; you can redistribute it and/or modify it
+;;;; under the terms of the GNU General Public License as published by the
+;;;; Free Software Foundation; either version 3 of the License, or (at your
+;;;; option) any later version.
+;;;;
+;;;; This program is distributed in the hope that it will be useful,
+;;;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;;; GNU General Public License for more details.
+;;;;
+;;;; You should have received a copy of the GNU General Public License along
+;;;; with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;; Update load path.
+;; FIXME: This should be done by configure.
+(set! %load-path (append
+		  (list "/etc"
+			"/websites/cheetah"
+			"/websites/cheetah/backend")
+		  %load-path))
+
+(use-modules (gamma sql)
+	     (ice-9 getopt-long)
+	     (ice-9 regex)
+	     (ice-9 format)
+	     (ice-9 popen)
+	     (ice-9 rdelim)
+	     (backend config)
+	     (backend i18n))
+
+(define mhn-prog "/usr/local/bin/mu-mh/mhn")
+(define send-prog "/usr/local/bin/mu-mh/send")
+(define formatter-prog "/websites/cheetah/backend/fmt.utf-8")
+(define formatter-args '())
+;(define mhn-prog "cat")
+;(define send-prog ":")
+;(define formatter-prog "awk")
+;(define formatter-args '("{print \"FRM: \" $0}"))
+
+(define (usage)
+  (display "usage: expire OPTIONS\n")
+  (display "OPTIONS are:\n")
+  (display " -h, --help         Display this help list\n")
+  (display " -n, --dry-run      Do nothing, print everything\n")
+  (display " -d, --debug        Increase debugging level\n")
+  0)
+
+(define mail-to #f)
+
+(define (parse-command-line arglist)
+  (let ((grammar `((help (single-char #\h))
+		   (debug (single-char #\d))
+		   (dry-run (single-char #\n))
+                   (mail-to (value #t)))))
+    (for-each
+     (lambda (x)
+       (cond
+        ((and (pair? x) (not (list? x)))
+	 (case (car x)
+	   ((help)
+	    (exit (usage)))
+	   ((debug)
+	    (set! debug-level (1+ debug-level)))
+	   ((dry-run)
+	    (set! dry-run-mode #t)
+	    (set! debug-level 100))
+           ((mail-to)
+            (set! mail-to (cdr x)))))
+	((not (null? (cdr x)))
+	 (diag "Too many arguments"))))
+     (getopt-long arglist grammar))))
+
+(define (print-body port email last-access days)
+  (with-output-to-port
+      port
+    (lambda ()
+      (format #t
+	      (ngettext
+	       "This is to notify you that your account on ~A is due to expire in ~A day."
+	       "This is to notify you that your account on ~A is due to expire in ~A days."
+	       cheetah-notify-days)
+	      cheetah-sys-name
+	      cheetah-notify-days)
+      (display " ")
+      (format #t
+	      (_ "To renew your account, please visit http://~A and log in. \
+For more information regarding Terms of use of ~A, \
+please see http://~A/terms_of_service.")
+	      cheetah-site cheetah-sys-name cheetah-site)
+      (newline)
+      (newline)
+      (format #t (_ "If you have any questions, please write to <~A>.")
+	      cheetah-admin-email))))
+
+(define (sigchld-handler sig)
+  (catch 'system-error
+	 (lambda ()
+	   (do ((pid (waitpid WAIT_ANY WNOHANG) (waitpid WAIT_ANY WNOHANG)))
+	       ((= (car pid) 0) #f)
+	     (debug 1 "Child " (car pid) " terminated with code " (cdr pid))))
+	 (lambda args #f)))
+
+(define (format-body email last-access days)
+  (sigaction SIGCHLD sigchld-handler SA_RESTART)
+  (let ((lp (pipe))
+	(rp (pipe))
+	(pid (primitive-fork)))
+    (setvbuf (cdr lp) _IONBF)
+    (setvbuf (cdr rp) _IONBF)
+    (cond
+     ((= pid 0)
+      ;; select the three file descriptors to be used as
+      ;; standard descriptors 0, 1, 2 for the new process.  one
+      ;; is the pipe to the parent, the other two are taken
+      ;; from the current Scheme input/output/error ports if
+      ;; possible.
+
+      (let ((input-fdes (fileno (car lp)))
+	    (output-fdes (fileno (cdr rp)))
+	    (error-fdes (fileno (current-error-port))))
+
+	;; close all file descriptors in ports inherited from
+	;; the parent except for the three selected above.
+	;; this is to avoid causing problems for other pipes in
+	;; the parent.
+
+	;; use low-level system calls, not close-port or the
+	;; scsh routines, to avoid side-effects such as
+	;; flushing port buffers or evicting ports.
+
+	(port-for-each (lambda (pt-entry)
+			 (false-if-exception
+			  (let ((pt-fileno (fileno pt-entry)))
+			    (if (not (or (= pt-fileno input-fdes)
+					 (= pt-fileno output-fdes)
+					 (= pt-fileno error-fdes)))
+				(close-fdes pt-fileno))))))
+
+	;; copy the three selected descriptors to the standard
+	;; descriptors 0, 1, 2.  note that it's possible that
+	;; output-fdes or input-fdes is equal to error-fdes.
+
+	(cond ((not (= input-fdes 0))
+	       (if (= output-fdes 0)
+		   (set! output-fdes (dup->fdes 0)))
+	       (if (= error-fdes 0)
+		   (set! error-fdes (dup->fdes 0)))
+	       (dup2 input-fdes 0)))
+	
+	(cond ((not (= output-fdes 1))
+	       (if (= error-fdes 1)
+		   (set! error-fdes (dup->fdes 1)))
+	       (dup2 output-fdes 1)))
+	
+	(dup2 error-fdes 2)
+
+	(apply execlp formatter-prog formatter-prog formatter-args)
+	(exit 1)))
+     
+     (else
+      (close-input-port (car lp))
+      (close-output-port (cdr rp))
+      (let ((cpid (primitive-fork)))
+	(cond
+	 ((= cpid 0)
+	  (port-for-each (lambda (pt-entry)
+			   (false-if-exception
+			    (let ((pt-fileno (fileno pt-entry)))
+			      (if (not (= pt-fileno (fileno (cdr lp))))
+				  (close-fdes pt-fileno))))))
+	  (print-body (cdr lp) email last-access days)
+	  (close-output-port (cdr lp))
+	  (exit 0))
+	 (else
+	  (close-output-port (cdr lp))
+	  (car rp))))))))
+
+(define (send-mail email last-access lang days)
+  (let ((umask-value (umask #o077))
+	(draft-name (string-append
+		     cheetah-tmp-dir "/exXXXXXX" )))
+
+    (let ((port (mkstemp! draft-name)))
+      (with-output-to-port
+	  port
+	(lambda ()
+	  (let ((charset (locale-setup lang)))
+	    (format #t "From: ~A~%" cheetah-mail-from)
+	    (cond (mail-to
+		   (format #t "To: <~A>~%" mail-to)
+		   (format #t "X-To: <~A>~%" email))
+		  (else
+		   (format #t "To: <~A>~%" email)))
+	    (format #t "X-Cheetah-Server: ~A~%" cheetah-site)
+	    (format #t "Subject: ~A~A~%"
+		    (if charset
+			(string-append
+			 "#<charset=" charset
+			 "; encoding=B>")
+			"")
+		    (_ "Your Cheetah account is due to expire"))
+	    (display "---------\n")
+	    (if charset
+		(display (string-append
+			  "#<text/plain; charset=" charset "\n")))
+	    (let ((pipe (format-body email last-access days)))
+	      (do ((line (read-line pipe) (read-line pipe)))
+		  ((eof-object? line) #f)
+		(display line)
+		(newline))
+	      (close-input-port pipe)))))
+      (close-output-port port))
+    
+    (debug 2 "Preparing mail to " email)
+    (run-prog (string-append mhn-prog " " draft-name)
+	      (lambda ()
+		(debug 2 "Sending mail to " email)
+		(run-prog (string-append send-prog " " draft-name))))
+			  
+    (umask umask-value)
+    (locale-setup "C")))
+
+
+(define (quote-arg arg)
+  (regexp-substitute/global #f "\"" arg 'pre "\\\"" 'post ))
+
+(define (notify conn days)
+  (debug 3 "Begin notification")
+  (for-each
+   (lambda (elt)
+     (let ((email (list-ref elt 0))
+	   (last-access (list-ref elt 1))
+	   (lang (list-ref elt 2)))
+       (debug 1
+	      "account " email
+	      " (last access on " last-access ") "
+	      "is due to expire in " cheetah-notify-days " days");
+       (dry-run
+	(send-mail email last-access lang days) 
+	(sql-query conn
+		   (string-append
+		    "UPDATE user "
+		    "SET lastAccess=now(), active='suspended' "
+		    "WHERE email=\"" (quote-arg email) "\"")))))
+   (run-sql-query
+    conn
+    (string-append
+     "SELECT email,date(lastAccess),lang "
+     "FROM user "
+     "WHERE email != '" cheetah-guest-account "' "
+     "AND active='yes' "
+     "AND datediff(curdate(),lastAccess) > " (number->string days))))
+  (debug 3 "End notification"))
+
+(define (remove-account conn email)
+  (let* ((qemail (quote-arg email))
+	 (id (let ((res (sql-query
+			 conn
+			 (string-append "SELECT id FROM user WHERE email=\""
+					qemail "\""))))
+	       (cond
+		((= (length res) 1)
+		 (caar res))
+		(else
+		 (throw 'expire-error
+			"Cannot get user ID for ~A; Select returned ~A"
+			(list qemail res)))))))
+
+    (for-each
+     (lambda (x)
+       (run-sql-query conn (format #f x id)))
+     (list
+      "DELETE FROM weather WHERE userid=~A"
+      "DELETE FROM jntag WHERE userid=~A"
+      "DELETE FROM note WHERE userid=~A"
+      "DELETE FROM folder WHERE userid=~A"
+      "DELETE FROM subscription WHERE userid=~A"
+      "DELETE FROM marker WHERE userid=~A"
+      "DELETE FROM openid WHERE userid=~A"
+      "DELETE FROM user WHERE id=~A"))))
+
+(define (expire conn days)
+  (debug 3 "Begin expiration")
+  (for-each
+   (lambda (elt)
+     (let ((email (list-ref elt 0))
+	   (last-access (list-ref elt 1)))
+       (debug 1 "account " email
+	      " (notified on " last-access ") expired")
+       (dry-run
+	(remove-account conn email))))
+   (run-sql-query
+    conn
+    (string-append
+     "SELECT email,date(lastAccess) "
+     "FROM user "
+     "WHERE active='suspended' "
+     "AND datediff(curdate(),lastAccess) > "
+     (number->string days))))
+  (debug 3 "End expiration"))
+
+(parse-command-line (command-line))
+
+(catch-sql-failure
+ (let ((conn (sql-connect
+	      cheetah-iface cheetah-host cheetah-port cheetah-database
+	      cheetah-user cheetah-password)))
+   (sql-query conn "SET NAMES utf8")
+
+   (notify conn (- cheetah-expire-days cheetah-notify-days))
+
+   (expire conn cheetah-notify-days)))
+
+(exit 0)

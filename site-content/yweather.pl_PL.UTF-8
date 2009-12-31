@@ -1,0 +1,9 @@
+<!-- Opis yweather, wersja polska -->
+W celu ustalenia poprawnego <i>ID lokacji</i>, należy wyszukać
+swoją lokację na stronie
+<a href="http://weather.yahoo.com/" target="weather.yahoo.com">
+Yahoo! Weather</a>.  <i>ID lokacji</i> zawarty jest w adresie URL
+prognozy pogody dla wybranej lokacji.  Na przykład, jeśli szukasz
+Warszawy na stronie Yahoo! Weather to właściwy adres dla jej
+prognozy pogody to http://weather.yahoo.com/forecast/PLXX0028.html.
+Prawidłowym identyfikatorem lokacji jest wtedy PLXX0028.

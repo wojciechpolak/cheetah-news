@@ -1,0 +1,28 @@
+<IfDefine !APACHE2>
+ <IfModule mod_headers.c>
+   ErrorHeader unset Content-Location
+   ErrorHeader unset Vary
+   ErrorHeader unset TCN
+ </IfModule>
+</IfDefine>
+<IfDefine APACHE2>
+ <IfModule mod_headers.c>
+   Header always unset Content-Location
+   Header always unset Vary
+   Header always unset TCN
+ </IfModule>
+ <IfModule mod_deflate.c>
+   AddOutputFilterByType DEFLATE application/x-javascript application/xml text/xml text/css
+ </IfModule>
+</IfDefine>
+
+Options +MultiViews
+RewriteEngine on
+RewriteRule ^v1/$ /v1 [R,L]
+RewriteRule ^v2/$ /v2 [R,L]
+RewriteRule ^v1$ /index.php?v=1 [L]
+RewriteRule ^v2$ /index.php?v=2 [L]
+RewriteRule ^xrds\.xml$ /xrds.php [L]
+RewriteRule notes.php/(.+)/(.+) notes.php?u=$1&t=$2 [L]
+RewriteRule notes.php/(.+)/ notes.php?u=$1 [L]
+RewriteRule notes.php/(.+) notes.php?u=$1 [L]

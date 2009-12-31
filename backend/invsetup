@@ -1,0 +1,113 @@
+#!/usr/local/bin/guile -s
+!#
+;;;; This file is part of Cheetah News Aggregator
+;;;; Copyright (C) 2006 The Cheetah News Team
+;;;;
+;;;; This program is free software; you can redistribute it and/or modify it
+;;;; under the terms of the GNU General Public License as published by the
+;;;; Free Software Foundation; either version 3 of the License, or (at your
+;;;; option) any later version.
+;;;;
+;;;; This program is distributed in the hope that it will be useful,
+;;;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;;; GNU General Public License for more details.
+;;;;
+;;;; You should have received a copy of the GNU General Public License along
+;;;; with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;; Update load path.
+;; FIXME: This should be done by configure.
+(set! %load-path (append
+                  (list "/etc"
+                        "/websites/cheetah"
+                        "/websites/cheetah/backend")
+		  %load-path))
+
+(use-modules (gamma sql)
+	     (gamma gettext)
+	     (ice-9 getopt-long)
+	     (backend config))
+
+(define (usage)
+  (display "usage: invsetup OPTIONS\n")
+  (display "OPTIONS are:\n")
+  (display " -h, --help         Display this help list\n")
+  (display " -n, --dry-run      Do nothing, print everything\n")
+  (display " -d, --debug        Increase debugging level\n")
+  0)
+
+(define (parse-command-line arglist)
+  (let ((grammar `((help (single-char #\h))
+		   (debug (single-char #\d))
+		   (dry-run (single-char #\n)))))
+    (for-each
+     (lambda (x)
+       (cond
+        ((and (pair? x) (not (list? x)))
+	 (case (car x)
+	   ((help)
+	    (exit (usage)))
+	   ((debug)
+	    (set! debug-level (1+ debug-level)))
+	   ((dry-run)
+	    (set! dry-run-mode #t)
+	    (set! debug-level 100))))
+	((not (null? (cdr x)))
+	 (diag "Too many arguments"))))
+     (getopt-long arglist grammar))))
+
+
+(parse-command-line (command-line))
+
+(catch-sql-failure
+ (let ((conn (sql-connect
+	      cheetah-iface cheetah-host cheetah-port cheetah-database
+	      cheetah-user cheetah-password)))
+   (sql-query conn "SET NAMES utf8")
+   
+   (let ((num-reg (run-num-query
+		   conn
+		   "SELECT count(*) FROM user WHERE regtype='R'"))
+	 (num-inv (run-num-query
+		   conn
+		   "SELECT count(*) FROM user WHERE regtype='I'")))
+     
+     (for-each
+      (lambda (tuple)
+	(let ((id (string->number (car tuple)))
+	      (regtype (cadr tuple)))
+	  (let ((inv-count (cond
+			    ((and (string=? regtype "R")
+				  (< num-reg cheetah-init-inv-users))
+			     (set! num-reg (1+ num-reg))
+			     cheetah-inv-base)
+			    (else
+			     (set! num-inv (1+ num-inv))
+			     (- cheetah-inv-base
+				(quotient (+ num-reg num-inv)
+					  cheetah-inv-mod))))))
+	    (debug 1 "ID " id " (" regtype "): " inv-count)
+	    (dry-run
+	     (run-sql-query
+	      conn
+	      (string-append
+	       "UPDATE user SET invitation="
+	       (number->string inv-count)
+	       " WHERE id="
+	       (number->string id)))))))
+      (run-sql-query
+       conn
+       (string-append
+	"SELECT id,regtype "
+	"FROM user "
+	"WHERE invitation=0 AND invited=0 "
+	"AND email != '" cheetah-guest-account "' "
+	"AND logCount > " (number->string cheetah-inv-log-count) " "
+	"AND active='yes' "
+	"AND datediff(curdate(),lastAccess) < "
+	  (number->string cheetah-inv-last-access-days) " "
+	"ORDER BY regtype,id"))))))
+		 
+	
+

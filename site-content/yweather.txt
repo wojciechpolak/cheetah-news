@@ -1,0 +1,7 @@
+To find your <i>Location ID</i>, browse or search for your city from
+the <a href="http://weather.yahoo.com/" target="weather.yahoo.com">
+Yahoo! Weather</a> home page.  The <i>Location ID</i> is in the URL
+for the forecast page for that city.  For instance, if you search for
+New York City on the Yahoo! Weather home page, the forecast page for
+that city is http://weather.yahoo.com/forecast/USNY0996.html.  The
+<i>Location ID</i> is USNY0996.

@@ -1,0 +1,2163 @@
+# Polish messages for Cheetah News Aggregator.
+# Copyright (C) 2005, 2006, 2008, 2009 Wojciech Polak.
+# This file is distributed under the same license as the Cheetah package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cheetah News 2.0\n"
+"Report-Msgid-Bugs-To: cheetah-admins@gnu.org.ua\n"
+"POT-Creation-Date: 2009-12-16 18:36+0200\n"
+"PO-Revision-Date: 2009-12-16 17:35+0100\n"
+"Last-Translator: Wojciech Polak <polak@gnu.org>\n"
+"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+
+#: backend/expire.scm:84
+#, scheme-format
+msgid ""
+"This is to notify you that your account on ~A is due to expire in ~A day."
+msgid_plural ""
+"This is to notify you that your account on ~A is due to expire in ~A days."
+msgstr[0] "Twoje konto w ~A wygaśnie za ~A dzień."
+msgstr[1] "Twoje konto w ~A wygaśnie za ~A dni."
+msgstr[2] "Twoje konto w ~A wygaśnie za ~A dni."
+
+#: backend/expire.scm:91
+#, scheme-format
+msgid ""
+"To renew your account, please visit http://~A and log in. For more "
+"information regarding Terms of use of ~A, please see http://~A/"
+"terms_of_service."
+msgstr ""
+"Aby odnowić swoje konto, odwiedź http://~A i zaloguj się. Informacje "
+"odnośnie Warunków korzystania z usług ~A, znajdziesz na stronie http://~A/"
+"terms_of_service."
+
+#: backend/expire.scm:97
+#, scheme-format
+msgid "If you have any questions, please write to <~A>."
+msgstr "Jeśli masz jakiekolwiek pytania, napisz na adres <~A>."
+
+#: backend/expire.scm:206
+msgid "Your Cheetah account is due to expire"
+msgstr "Twoje konto w serwisie Cheetah News wkrótce wygaśnie"
+
+#: frontend/changepassword.php:54 frontend/import.php:30 frontend/mdb.php:35
+#: frontend/openid_manage.php:40 frontend/xnotes.php:34
+msgid "You are using a guest account. You must register in order to do this."
+msgstr ""
+"Używasz gościnnego konta. Aby wykonać tę operację musisz się zarejestrować."
+
+#: frontend/changepassword.php:71 frontend/changepassword.php:110
+msgid "Your password has been successfully changed."
+msgstr "Twoje hasło zostało zmienione pomyślnie."
+
+#: frontend/changepassword.php:97 frontend/changepassword.php:118
+msgid "Your password recovery session has expired."
+msgstr "Twoja sesja odzyskiwania hasła wygasła."
+
+#: frontend/changepassword.php:115
+#, php-format
+msgid "Account %s doesn't exist."
+msgstr "Konto %s nie istnieje."
+
+#: frontend/changepassword.php:126 frontend/changepassword.php:168
+#: frontend/login.php:208 frontend/login.php:283 frontend/login.php:327
+#: frontend/signup.php:223
+msgid "Sign in"
+msgstr "Zaloguj"
+
+#: frontend/changepassword.php:130
+msgid "Set New Password"
+msgstr "Edycja nowego hasła"
+
+#: frontend/changepassword.php:130 frontend/signup.php:152
+msgid "account"
+msgstr "konto"
+
+#: frontend/changepassword.php:135
+msgid "Old password: "
+msgstr "Stare hasło: "
+
+#: frontend/changepassword.php:142
+msgid "New password: "
+msgstr "Nowe hasło: "
+
+#: frontend/changepassword.php:149 frontend/login.php:304
+#: frontend/signup.php:192
+msgid "Re-type password: "
+msgstr "Powtórzone hasło: "
+
+#: frontend/changepassword.php:154 frontend/login.php:120
+#: frontend/signup.php:199
+msgid "Password cannot be an empty string."
+msgstr "Hasło nie może być puste"
+
+#: frontend/changepassword.php:156 frontend/login.php:124
+#: frontend/signup.php:201
+msgid "Passwords do not match."
+msgstr "Hasło i powtórzone hasło różnią się."
+
+#: frontend/changepassword.php:158
+msgid "Invalid old password."
+msgstr "Nieprawidłowe stare hasło."
+
+#: frontend/changepassword.php:162 js/v1/gui.js:1090 js/v2/gui.js:956
+msgid "Change Password"
+msgstr "Zmień hasło"
+
+#: frontend/reader.php:46 frontend/reader1.php:42
+msgid "JavaScript is required"
+msgstr "Wymagana jest obsługa JavaScriptu"
+
+#: frontend/reader.php:55
+msgid "What's New"
+msgstr "Nowości"
+
+#: frontend/reader.php:102 frontend/login.php:227
+msgid "or"
+msgstr "lub"
+
+#: frontend/reader.php:159 frontend/reader1.php:182
+msgid "Browser preferred language"
+msgstr "Preferowany język w przeglądarce"
+
+#: frontend/reader.php:261
+#, php-format
+msgid "Personal News Aggregator %s"
+msgstr "Osobisty Agregator Wiadomości, wersja %s"
+
+#: frontend/reader.php:263 frontend/reader1.php:72 frontend/login.php:237
+#: frontend/signup.php:167 frontend/signup.php:211
+msgid "Privacy Policy"
+msgstr "Ochrona prywatności"
+
+#: frontend/reader.php:264 frontend/reader1.php:73 frontend/login.php:238
+#: frontend/signup.php:168 frontend/signup.php:212
+msgid "Terms of Service"
+msgstr "Warunki korzystania z usług"
+
+#: frontend/reader.php:266 frontend/reader1.php:75
+msgid "Credits:"
+msgstr "Autorzy:"
+
+#: frontend/reader.php:268 frontend/reader1.php:77
+msgid "main programming and lead developer"
+msgstr "programowanie i główny deweloper"
+
+#: frontend/reader.php:269 frontend/reader.php:270 frontend/reader1.php:78
+#: frontend/reader1.php:79
+msgid "additional programming"
+msgstr "dodatkowe programowanie"
+
+#: frontend/reader.php:271 frontend/reader1.php:80
+msgid "graphics (icons)"
+msgstr "grafika (ikony)"
+
+#: frontend/reader.php:275 frontend/reader1.php:84
+msgid "Feedback:"
+msgstr "Opinie:"
+
+#: frontend/reader.php:279 frontend/reader1.php:88
+msgid "-- send us your bug reports and suggestions (public list)."
+msgstr "-- wyślij nam swoje opinie i propozycje (lista publiczna)."
+
+#: frontend/reader.php:281 frontend/reader1.php:90
+msgid "-- private list."
+msgstr "-- lista niepubliczna."
+
+#: frontend/reader1.php:70 frontend/login.php:322
+#, php-format
+msgid "Bleeding-Edge Personal News Aggregator %s"
+msgstr "Osobisty Agregator Wiadomości, wersja %s"
+
+#: frontend/reader1.php:256
+msgid "Currently used language"
+msgstr "Obecnie używany język"
+
+#: frontend/reader1.php:367
+msgid "Bookmark to del.icio.us"
+msgstr "Zapamiętaj adres w del.icio.us"
+
+#: frontend/reader1.php:367
+msgid "Digg it"
+msgstr "Zapamiętaj adres w digg.com"
+
+#: frontend/fetch.php:244
+msgid "Broken XML feed. Verify "
+msgstr "Niepoprawny kanał XML. Sprawdź "
+
+#: frontend/fetch.php:267
+msgid "The requested URL was not found on this server"
+msgstr "Nie odnaleziono żądanego URL na tym serwerze"
+
+#: frontend/fetch.php:273 frontend/lib/feed.class.php:202
+msgid "Request timed out"
+msgstr "Przekroczono czas oczekiwania na połączenie"
+
+#: frontend/fetch.php:276
+msgid "Connection timed out"
+msgstr "Przekroczono czas oczekiwania na połączenie"
+
+#: frontend/fetch.php:279
+msgid "Connection refused"
+msgstr "Połączenie odrzucone"
+
+#: frontend/fetch.php:282
+msgid "Host is down"
+msgstr "Host nie odpowiada"
+
+#: frontend/fetch.php:285
+msgid "No route to host"
+msgstr "Brak drogi do hosta"
+
+#: frontend/fetch.php:288
+msgid "Internal server error on remote host"
+msgstr "Wewnętrzny błąd serwera na zdalnej maszynie"
+
+#: frontend/fetch.php:291 frontend/lib/feed.class.php:205
+msgid "Network is unreachable"
+msgstr "Połączenie sieciowe jest niedostępne"
+
+#: frontend/fetch.php:294 js/v1/core.js:980 js/v2/core.js:1165
+msgid "Unknown error"
+msgstr "Nieznany błąd"
+
+#: frontend/fetch.php:299
+msgid "Bad feedId"
+msgstr "Niepoprawny feedId"
+
+#: frontend/fetch.php:304 frontend/import.php:68 frontend/invite.php:50
+#: frontend/mdb.php:84 frontend/xnotes.php:53
+msgid "Operation not permitted. Access denied"
+msgstr "Operacja niedozwolona. Odmowa dostępu"
+
+#: frontend/import.php:34 frontend/import.php:63
+msgid "There was a problem with your upload"
+msgstr "Wystąpił problem podczas przegrywania pliku"
+
+#: frontend/import.php:44
+msgid "The uploaded file is not an OPML."
+msgstr "Załadowany plik nie jest zgodny z formatem OPML."
+
+#: frontend/import.php:47
+msgid "XML Syntax Error"
+msgstr "Błąd składni XML"
+
+#: frontend/import.php:54
+msgid "The file you are trying to upload is too big"
+msgstr "Plik który próbujesz przesłać jest zbyt duży"
+
+#: frontend/import.php:57
+msgid "The file was only partially uploaded"
+msgstr "Załadowany plik został tylko częściowo przegrany"
+
+#: frontend/import.php:60
+msgid "No file was uploaded"
+msgstr "Nie załadowano żadnego pliku"
+
+#: frontend/invite.php:33
+msgid "You have been invited to open Cheetah News Aggregator account"
+msgstr "Zaproszenie do systemu agregacji wiadomości Cheetah"
+
+#: frontend/invite.php:34
+#, php-format
+msgid "%s has invited you to open a free Cheetah News Aggregator account."
+msgstr ""
+"%s zaprasza Cię do utworzenia konta w wolnym systemie agregacji wiadomości "
+"Cheetah News."
+
+#: frontend/invite.php:35
+#, php-format
+msgid "Learn more about Cheetah News Aggregator at %s."
+msgstr "Dowiedz się więcej o Cheetah News ze strony %s."
+
+#: frontend/invite.php:36
+#, php-format
+msgid "To accept this invitation and register for your account, visit: %s"
+msgstr "Aby przyjąć zaproszenie i utworzyć konto, odwiedź %s"
+
+#: frontend/invite.php:37
+#, php-format
+msgid ""
+"Please do not reply to this email. If you need further assistance,\n"
+"please mail to %s."
+msgstr ""
+"Prosimy nie odpowiadać na niniejszą wiadomość. Jeśli potrzebujesz\n"
+"dalszej pomocy, napisz do %s."
+
+#: frontend/invite.php:126
+msgid "No invitations left"
+msgstr "Nie masz już zaproszeń"
+
+#: frontend/invite.php:132 frontend/login.php:101 frontend/login.php:116
+#: frontend/login.php:134 frontend/signup.php:55
+msgid "Please specify a valid e-mail address."
+msgstr "Proszę podać prawidłowy adres e-mail."
+
+#: frontend/invite.php:139
+msgid "This user is already subscribed."
+msgstr "Ten użytkownik jest już subskrybentem."
+
+#: frontend/invite.php:189 frontend/login.php:105 frontend/login.php:138
+#: frontend/signup.php:59
+msgid "Service temporarily unavailable. Please try again later."
+msgstr "Usługa chwilowo niedostępna. Proszę spróbować później."
+
+#: frontend/login.php:67 frontend/openid_manage.php:53
+msgid "Verification cancelled."
+msgstr "Weryfikacja zaniechana."
+
+#: frontend/login.php:70 frontend/openid_manage.php:56
+#, php-format
+msgid "OpenID authentication failed: %s"
+msgstr "Autentykacja OpenID nie powiodła się: %s"
+
+#: frontend/login.php:90
+msgid "E-mail and password do not match."
+msgstr "E-mail i hasło nie pasują do siebie."
+
+#: frontend/login.php:98
+msgid "E-mail has been sent to you."
+msgstr "E-mail został wysłany na wskazany adres."
+
+#: frontend/login.php:109
+msgid "Account doesn't exist."
+msgstr "Konto nie istnieje."
+
+#: frontend/login.php:131 frontend/signup.php:51
+msgid "A registration confirmation e-mail has been sent to you."
+msgstr "E-mail potwierdzający rejestrację został wysłany na wskazany adres."
+
+#: frontend/login.php:142 frontend/signup.php:63 frontend/signup.php:92
+msgid "Account already exists."
+msgstr "To konto już istnieje."
+
+#: frontend/login.php:161
+msgid "Welcome to Cheetah News"
+msgstr "Witaj na Cheetah News"
+
+#: frontend/login.php:178 frontend/login.php:269 frontend/login.php:294
+#: frontend/signup.php:183
+msgid "E-mail: "
+msgstr "E-mail: "
+
+#: frontend/login.php:184 frontend/login.php:300 frontend/signup.php:188
+msgid "Password: "
+msgstr "Hasło: "
+
+#: frontend/login.php:188
+msgid "OpenID: "
+msgstr "OpenID: "
+
+#: frontend/login.php:197
+msgid "Use OpenID"
+msgstr "Użyj OpenID"
+
+#: frontend/login.php:198
+msgid "Use username / password"
+msgstr "użytkownik / hasło"
+
+#: frontend/login.php:203
+msgid "Remember me on this computer."
+msgstr "Zapamiętaj mnie na tym komputerze."
+
+#: frontend/login.php:209
+msgid "About SSL"
+msgstr "O SSL"
+
+#: frontend/login.php:215
+msgid "Forgot your password?"
+msgstr "Nie pamiętasz hasła?"
+
+#: frontend/login.php:220
+msgid "What is OpenID?"
+msgstr "Co to jest OpenID?"
+
+#: frontend/login.php:225
+msgid "Don't have an account?"
+msgstr "Nie masz konta?"
+
+#: frontend/login.php:226 frontend/login.php:309 frontend/signup.php:179
+#: frontend/signup.php:205
+msgid "Sign Up"
+msgstr "Rejestracja"
+
+#: frontend/login.php:228
+msgid "Guest login"
+msgstr "Gościnne konto"
+
+#: frontend/login.php:233
+msgid "Learn more"
+msgstr "Więcej informacji"
+
+#: frontend/login.php:267
+msgid "Password Recovery"
+msgstr "Odzyskiwanie hasła"
+
+#: frontend/login.php:277
+msgid "Submit"
+msgstr "Wyślij"
+
+#: frontend/login.php:292
+msgid "Registration Process"
+msgstr "Proces rejestracji"
+
+#: frontend/login.php:314 frontend/signup.php:210
+msgid "I already have an account"
+msgstr "Mam już konto"
+
+#: frontend/login.php:332
+msgid "[External link] Help Save the Wild Cheetah"
+msgstr "[Odsyłacz zewnętrzny] Uratujmy dzikiego geparda"
+
+#: frontend/login.php:333
+msgid "Help Save the Wild Cheetah"
+msgstr "Uratujmy dzikiego geparda"
+
+#: frontend/mdb.php:65
+msgid ""
+"Concurrent session in another window/browser has changed the settings. "
+"Saving terminated. Please reload."
+msgstr ""
+"Ustawienia zostały zmienione przez konkurencyjną sesję w innym oknie/"
+"przeglądarce. Przerwano zapisywanie. Proszę odświeżyć stronę."
+
+#: frontend/mdb.php:173
+msgid "This folder already exists."
+msgstr "Ten folder już istnieje."
+
+#: frontend/mdb.php:189 frontend/lib/feed.class.php:294
+msgid "Unknown error."
+msgstr "Nieznany błąd."
+
+#: frontend/mdb.php:216
+msgid "Nameless"
+msgstr "Bez nazwy"
+
+#: frontend/openid_manage.php:69 frontend/openid_manage.php:108
+msgid "This OpenID is already attached."
+msgstr "Ten OpenID jest już dołączony."
+
+#: frontend/openid_manage.php:74
+msgid "Your OpenID has been successfully attached."
+msgstr "Twój OpenID został pomyślnie dołączony."
+
+#: frontend/openid_manage.php:88
+msgid "OpenID authentication failed."
+msgstr "Autentykacja OpenID nie powiodła się"
+
+#: frontend/openid_manage.php:150 js/v2/gui.js:954
+msgid "Manage your OpenIDs"
+msgstr "Zarządzanie loginami OpenID"
+
+#: frontend/openid_manage.php:160
+msgid "Are you sure you want to detach this OpenID?"
+msgstr "Czy na pewno chcesz usunąć wskazany OpenID?"
+
+#: frontend/openid_manage.php:162 js/v1/gui.js:1540 js/v1/gui.js:1573
+#: js/v1/notes.js:271 js/v2/gui.js:1324 js/v2/gui.js:1357 js/v2/notes.js:292
+msgid "Remove"
+msgstr "Usunięcie"
+
+#: frontend/openid_manage.php:173
+msgid "Attach new OpenID"
+msgstr "Dołącz nowy OpenID"
+
+#: frontend/signup.php:67 frontend/signup.php:134
+msgid "Your confirmation period or invitation has expired."
+msgstr "Twoje zaproszenie wygasło."
+
+#: frontend/signup.php:124
+msgid "Done, rejected."
+msgstr "Wykonano."
+
+#: frontend/signup.php:152
+msgid "Do you confirm signing up?"
+msgstr "Czy potwierdzasz rejestrację?"
+
+#: frontend/signup.php:158
+msgid "Yes, I confirm"
+msgstr "Tak, potwierdzam"
+
+#: frontend/signup.php:161
+msgid "No, I decline"
+msgstr "Nie, odrzucam"
+
+#: frontend/lib/forgotpassword.php:22
+msgid "Password Change Request"
+msgstr "Żądanie zmiany hasła"
+
+#: frontend/lib/forgotpassword.php:23
+#, php-format
+msgid ""
+"Greetings,\n"
+"\n"
+"Someone (IP: %s), possible you, has requested to recover\n"
+"the password for your Cheetah News Aggregator account."
+msgstr ""
+"Cześć,\n"
+"\n"
+"Ktoś o adresie IP %s, prawdopodobnie Ty, zażądał odtworzenia\n"
+"hasła do Twojego konta w agregatorze wiadomości Cheetah News."
+
+#: frontend/lib/forgotpassword.php:25
+msgid "To set your new password, click the following link:"
+msgstr "Aby ustalić nowe hasło, odwiedź następującą stronę:"
+
+#: frontend/lib/forgotpassword.php:26 frontend/lib/register.php:24
+#, php-format
+msgid ""
+"Please do not reply to this email. If you need further assistance,\n"
+"please mail %s."
+msgstr ""
+"Prosimy nie odpowiadać na niniejszą wiadomość. Jeśli potrzebujesz dalszej\n"
+"pomocy, napisz do %s."
+
+#: frontend/lib/feed.class.php:72 frontend/lib/feed.class.php:88
+#: frontend/lib/feed.class.php:149
+msgid "XML Syntax Error. Verify the given URL"
+msgstr "Błąd składni XML. Sprawdz podany URL"
+
+#: frontend/lib/feed.class.php:152
+msgid "This is not a valid XML resource"
+msgstr "To nie jest poprawny zasób XML"
+
+#: frontend/lib/feed.class.php:164 frontend/lib/feed.class.php:169
+msgid "This is not a valid feed"
+msgstr "To nie jest prawidłowy kanał"
+
+#: frontend/lib/feed.class.php:187
+msgid "Unauthorized"
+msgstr "Brak uwierzytelnienia"
+
+#: frontend/lib/feed.class.php:190
+msgid "Forbidden"
+msgstr "Zabroniono"
+
+#: frontend/lib/feed.class.php:193
+msgid "Resource Not Found"
+msgstr "Zasobu nie odnaleziono"
+
+#: frontend/lib/feed.class.php:196
+msgid "Internal Server Error"
+msgstr "Wewnętrzny błąd serwera"
+
+#: frontend/lib/feed.class.php:199
+msgid "Service Unavailable"
+msgstr "Usługa niedostępna"
+
+#: frontend/lib/feed.class.php:231
+msgid "You are already subscribed to this feed"
+msgstr "Jesteś już subskrybentem tego kanału"
+
+#: frontend/lib/http.class.php:245
+msgid "Connection failed"
+msgstr "Połączenie nie powiodło się"
+
+#: frontend/lib/register.php:22
+msgid "Confirm Registration"
+msgstr "Potwierdzenie rejestracji"
+
+#: frontend/lib/register.php:23
+msgid ""
+"Greetings,\n"
+"\n"
+"To confirm or decline signing up for the Cheetah News Aggregator account,\n"
+"please click the following link:"
+msgstr ""
+"Cześć,\n"
+"\n"
+"Aby potwierdzić lub skasować rejestrację w agregatorze wiadomości Cheetah "
+"News,\n"
+"odwiedź następującą stronę:"
+
+#: frontend/html/error.php:39
+#, php-format
+msgid "Error %s: %s"
+msgstr "Błąd %s: %s"
+
+#: frontend/html/loading.php:50 js/v1/gui.js:91 js/v1/gui.js:700
+#: js/v1/gui.js:855 js/v1/gui.js:902 js/v1/media.js:79 js/v1/notes.js:300
+#: js/v1/opml.js:45 js/v1/weather.js:183 js/v2/core.js:2408 js/v2/gui.js:60
+#: js/v2/gui.js:571 js/v2/gui.js:725 js/v2/gui.js:775 js/v2/notes.js:317
+#: js/v2/opml.js:33 js/v2/opml.js:130 js/v2/weather.js:236
+msgid "Loading..."
+msgstr "Wczytywanie danych..."
+
+#: frontend/html/noactivex.php:36
+msgid "Cheetah News Aggregator requires ActiveX controls to be enabled."
+msgstr "Agregator wiadomości Cheetah wymaga włączonej kontrolki ActiveX."
+
+#: frontend/html/noactivex.php:37
+msgid ""
+"Your browser seems to be Internet Explorer, and ActiveX seems to be disabled."
+msgstr ""
+"Zdaje się że Twoją przeglądarką jest Internet Explorer, i funkcje ActiveX "
+"zdają się być wyłączone."
+
+#: frontend/html/noactivex.php:38
+msgid ""
+"Please enable ActiveX controls in Internet Explorer. You can do this by "
+"going to the Tools menu,<br />selecting Internet Options, Security tab, "
+"Internet zone, and either select the Default Level,<br />or selecting Custom "
+"Level and scrolling down to \"Run ActiveX controls and plug-ins\" and "
+"selecting Enable."
+msgstr ""
+
+#: frontend/html/noactivex.php:39
+#, php-format
+msgid "After enabling ActiveX controls, %stry again%s."
+msgstr "Po włączeniu ActiveX, %sspróbuj jeszcze raz%s."
+
+#: frontend/html/nodatabase.php:36
+msgid "Temporary database problem"
+msgstr "Tymczasowy błąd bazy danych"
+
+#: frontend/html/unsupported.php:36
+msgid ""
+"Sorry, but your browser is currently not supported by the Cheetah News "
+"Aggregator."
+msgstr ""
+"Niestety Twoja przeglądarka na razie nie jest obsługiwana przez agregator "
+"wiadomości Cheetah News."
+
+#: frontend/help/kshortcuts.php:57 js/v1/gui.js:1910 js/v2/gui.js:1524
+msgid "Keyboard shortcuts"
+msgstr "Skróty klawiszowe"
+
+#: frontend/help/kshortcuts.php:61
+msgid "Keystroke"
+msgstr "Kombinacja klawiszy"
+
+#: frontend/help/kshortcuts.php:61
+msgid "Action"
+msgstr "Akcja"
+
+#: frontend/help/kshortcuts.php:65 js/v1/gui.js:1911 js/v2/gui.js:1525
+msgid "next item"
+msgstr "następny element"
+
+#: frontend/help/kshortcuts.php:66 js/v1/gui.js:1912 js/v2/gui.js:1526
+msgid "previous item"
+msgstr "poprzedni element"
+
+#: frontend/help/kshortcuts.php:67 js/v1/gui.js:1913 js/v2/gui.js:1527
+msgid "next feed"
+msgstr "następny kanał"
+
+#: frontend/help/kshortcuts.php:68 js/v1/gui.js:1914 js/v2/gui.js:1528
+msgid "previous feed"
+msgstr "poprzedni kanał"
+
+#: frontend/help/kshortcuts.php:69 js/v1/gui.js:1915 js/v2/gui.js:1529
+msgid "open selected feed/entry"
+msgstr "otwórz wskazany kanał/wpis"
+
+#: frontend/help/kshortcuts.php:70
+msgid "append selected feed"
+msgstr "dodaj wskazany kanał"
+
+#: frontend/help/kshortcuts.php:71 js/v1/gui.js:1916 js/v2/gui.js:1530
+msgid "open feeds from folder/more"
+msgstr "otwórz kanały z folderu/więcej"
+
+#: frontend/help/kshortcuts.php:72
+msgid "append feeds from folder"
+msgstr "dodaj kanały z folderu"
+
+#: frontend/help/kshortcuts.php:73
+msgid "close selected feed"
+msgstr "zamknij wskazany kanał"
+
+#: frontend/help/kshortcuts.php:74
+msgid "move left to My Stuff window"
+msgstr "przejście w lewo do okna Moje kanały"
+
+#: frontend/help/kshortcuts.php:75
+msgid "move right to a feed window"
+msgstr "przejście w prawo do okna kanału"
+
+#: frontend/help/kshortcuts.php:76
+msgid "hide/show all active feeds"
+msgstr "ukryj/pokaż wszystkie aktywne kanały"
+
+#: frontend/help/kshortcuts.php:77
+msgid "show all loaded feeds"
+msgstr "pokaż wszystkie wczytane kanały"
+
+#: frontend/help/kshortcuts.php:78
+msgid "open/close My Stuff window"
+msgstr "otwórz/zamknij Moje kanały"
+
+#: frontend/help/kshortcuts.php:79 js/v1/gui.js:1925 js/v2/gui.js:1539
+msgid "collapse"
+msgstr "zwiń"
+
+#: frontend/help/kshortcuts.php:80 js/v1/gui.js:124 js/v1/gui.js:1926
+#: js/v2/gui.js:94 js/v2/gui.js:1540
+msgid "refresh visible"
+msgstr "odśwież widoczne"
+
+#: frontend/help/kshortcuts.php:81 js/v1/gui.js:1928 js/v2/gui.js:1542
+msgid "mark entry as read"
+msgstr "oznacz wpis jako przeczytany"
+
+#: frontend/help/kshortcuts.php:82 js/v1/gui.js:1929 js/v2/gui.js:1543
+msgid "mark entry as unread"
+msgstr "oznacz wpis jako nieprzeczytany"
+
+#: frontend/help/kshortcuts.php:83 js/v1/gui.js:126 js/v1/gui.js:1931
+#: js/v2/gui.js:96 js/v2/gui.js:1545
+msgid "filter visible"
+msgstr "filtruj widoczne"
+
+#: frontend/help/kshortcuts.php:84 js/v1/gui.js:1923 js/v1/notes.js:71
+#: js/v2/gui.js:1537 js/v2/notes.js:69
+msgid "save link"
+msgstr "zapisz odsyłacz"
+
+#: frontend/help/kshortcuts.php:85
+msgid "open/close Weather Report"
+msgstr "otwórz/zamknij Raport pogodowy"
+
+#: frontend/help/kshortcuts.php:86
+msgid "open/close Notes and Bookmarks"
+msgstr "otwórz/zamknij Notatki i Zakładki"
+
+#: js/v1/boot.js:31 js/v2/boot.js:41
+msgid "initializing..."
+msgstr "inicjalizacja..."
+
+#: js/v1/core.js:285 js/v2/core.js:287
+msgid "Your browser is working offline!"
+msgstr "Twoja przeglądarka jest obecnie odłączona od sieci!"
+
+#: js/v1/core.js:303 js/v2/core.js:305
+msgid "You need to enable active scripting and ActiveX controls."
+msgstr "Musisz włączyć \"active scripting\" oraz \"ActiveX controls\"."
+
+#: js/v1/core.js:312 js/v1/gui.js:529 js/v1/gui.js:624 js/v1/gui.js:837
+#: js/v1/gui.js:889 js/v1/gui.js:942 js/v1/invite.js:77 js/v2/core.js:314
+#: js/v2/gui.js:482 js/v2/gui.js:707 js/v2/gui.js:762 js/v2/gui.js:794
+msgid "Timeout Error!"
+msgstr "Przekroczono czas!"
+
+#: js/v1/core.js:349 js/v1/core.js:509 js/v1/core.js:519 js/v1/media.js:74
+#: js/v1/notes.js:569 js/v2/core.js:335 js/v2/core.js:347 js/v2/core.js:390
+#: js/v2/core.js:554 js/v2/core.js:590 js/v2/notes.js:485
+msgid "error"
+msgstr "błąd"
+
+#: js/v1/core.js:446
+msgid "Your browser can't handle this script."
+msgstr "Twoja przeglądarka nie obsługuje tego skryptu."
+
+#: js/v1/core.js:613 js/v1/gui.js:252 js/v2/core.js:771 js/v2/gui.js:195
+msgid "fetching data..."
+msgstr "pobieranie danych..."
+
+#: js/v1/core.js:655 js/v2/core.js:813
+msgid "Open feeds from this folder"
+msgstr "Otwórz wszystkie kanały z tego folderu"
+
+#: js/v1/core.js:875 js/v2/core.js:1051
+msgid "loading..."
+msgstr "ładowanie..."
+
+#: js/v1/core.js:1073 js/v1/gui.js:1093 js/v2/core.js:1268 js/v2/gui.js:959
+msgid "stories"
+msgstr "ilość wpisów"
+
+#: js/v1/core.js:1077 js/v1/gui.js:140 js/v2/core.js:1272 js/v2/gui.js:109
+msgid "Expand"
+msgstr "Rozwiń"
+
+#: js/v1/core.js:1079 js/v2/core.js:1274
+msgid "Expand entries"
+msgstr "Rozwiń wpisy"
+
+#: js/v1/core.js:1085 js/v1/gui.js:145 js/v2/core.js:1280 js/v2/gui.js:115
+msgid "Collapse"
+msgstr "Zwiń"
+
+#: js/v1/core.js:1086 js/v2/core.js:1281
+msgid "Collapse entries"
+msgstr "Zwiń wpisy"
+
+#: js/v1/core.js:1098 js/v2/core.js:1293
+msgid "Mark as read"
+msgstr "Oznacz jako przeczytane"
+
+#: js/v1/core.js:1099 js/v2/core.js:1294
+msgid "Mark all entries as read"
+msgstr "Oznacz wszystkie wpisy jako przeczytane"
+
+#: js/v1/core.js:1106 js/v2/core.js:1301
+msgid "Mark as unread"
+msgstr "Oznacz jako nieprzeczytane"
+
+#: js/v1/core.js:1107 js/v2/core.js:1302
+msgid "Mark all entries as unread"
+msgstr "Oznacz wszystkie wpisy jako nieprzeczytane"
+
+#: js/v1/core.js:1125 js/v2/core.js:1399
+msgid "See enclosed multimedia"
+msgstr "Zobacz załączone dane multimedialne"
+
+#: js/v1/core.js:1132 js/v2/core.js:1410 js/v2/core.js:1576
+msgid "See enclosed image"
+msgstr "Zobacz załączony obrazek"
+
+#: js/v1/core.js:1195 js/v1/core.js:1208 js/v1/weather.js:225
+#: js/v2/core.js:1370 js/v2/core.js:1383 js/v2/core.js:1392
+#: js/v2/weather.js:306
+msgid "External link"
+msgstr "Zewnętrzny odsyłacz"
+
+#: js/v1/core.js:1207 js/v1/weather.js:224 js/v2/core.js:1382
+#: js/v2/core.js:1391 js/v2/gui.js:1551 js/v2/weather.js:305
+msgid "more"
+msgstr "więcej"
+
+#: js/v1/core.js:1217
+msgid "email this"
+msgstr "wyślij znajomym"
+
+#: js/v1/core.js:1218
+msgid "Email this to a friend"
+msgstr "Wyślij ten adres znajomym"
+
+#: js/v1/core.js:1510 js/v2/core.js:1744
+msgid "progress"
+msgstr "postęp"
+
+#: js/v1/core.js:1578
+msgid "You don't have any active feeds."
+msgstr "Nie masz żadnych aktywnych kanałów."
+
+#: js/v1/core.js:2008 js/v2/core.js:2210
+msgid "A popup blocker may be preventing Cheetah News from opening the page."
+msgstr ""
+"Włączona blokada wyskakujących okienek może uniemożliwić otwarcie nowej "
+"strony."
+
+#: js/v1/core.js:2009 js/v2/core.js:2211
+msgid "If you have a popup blocker, try disabling it to open the window."
+msgstr ""
+"Jeśli blokada jest włączona, proszę ją wyłączyć dla strony serwisu Cheetah "
+"News."
+
+#: js/v1/filter.js:30 js/v2/filter.js:30
+msgid "Filter"
+msgstr "Filtr"
+
+#: js/v1/filter.js:32 js/v2/filter.js:32
+msgid "filtering..."
+msgstr "filtrowanie..."
+
+#: js/v1/filter.js:40 js/v2/filter.js:40
+msgid "%d entry"
+msgid_plural "%d entries"
+msgstr[0] "%d wpis"
+msgstr[1] "%d wpisy"
+msgstr[2] "%d wpisów"
+
+#: js/v1/filter.js:98 js/v2/filter.js:99
+msgid "filtered"
+msgstr "filtr"
+
+#: js/v1/filter.js:99 js/v1/filter.js:183 js/v2/filter.js:100
+#: js/v2/filter.js:184
+msgid "Remove filtering"
+msgstr "Usuń filtrowanie"
+
+#: js/v1/filter.js:184 js/v2/filter.js:185
+msgid "Remove filtering from all feeds"
+msgstr "Usuń filtrowanie ze wszystkich kanałów"
+
+#: js/v1/gui.js:43
+msgid "Error Information"
+msgstr "Informacje o błędach"
+
+#: js/v1/gui.js:47
+msgid "clear"
+msgstr "wyczyść"
+
+#: js/v1/gui.js:84 js/v2/gui.js:54
+msgid "My Stuff"
+msgstr "Moje kanały"
+
+#: js/v1/gui.js:116 js/v2/gui.js:86
+msgid "Welcome"
+msgstr "Witaj"
+
+#: js/v1/gui.js:117 js/v1/gui.js:998 js/v2/gui.js:87 js/v2/gui.js:860
+msgid "About Cheetah News"
+msgstr "Informacje o Cheetah News"
+
+#: js/v1/gui.js:118 js/v2/gui.js:88
+msgid "show active"
+msgstr "pokaż aktywne"
+
+#: js/v1/gui.js:118 js/v2/gui.js:88
+msgid "Show all active feeds"
+msgstr "Pokaż wszystkie aktywne kanały"
+
+#: js/v1/gui.js:119 js/v2/gui.js:89
+msgid "show loaded"
+msgstr "pokaż wczytane"
+
+#: js/v1/gui.js:119 js/v2/gui.js:89
+msgid "Show all loaded feeds"
+msgstr "Pokaż wszystkie wczytane kanały"
+
+#: js/v1/gui.js:120 js/v2/gui.js:90
+msgid "hide all"
+msgstr "ukryj wszystkie"
+
+#: js/v1/gui.js:120 js/v2/gui.js:90
+msgid "Hide all feeds"
+msgstr "Ukryj wszystkie kanały"
+
+#: js/v1/gui.js:124 js/v2/gui.js:94
+msgid "Refresh all visible feeds"
+msgstr "Odśwież wszystkie widoczne kanały"
+
+#: js/v1/gui.js:126 js/v2/gui.js:96
+msgid "Filter visible feeds"
+msgstr "Filtruj widoczne kanały"
+
+#: js/v1/gui.js:141 js/v2/gui.js:110
+msgid "Expand folders"
+msgstr "Rozwiń foldery"
+
+#: js/v1/gui.js:146 js/v2/gui.js:116
+msgid "Collapse folders"
+msgstr "Zwiń foldery"
+
+#: js/v1/gui.js:151 js/v2/gui.js:121
+msgid "Show My Stuff"
+msgstr "Pokaż moje kanały"
+
+#: js/v1/gui.js:152 js/v1/gui.js:1085 js/v2/gui.js:122 js/v2/gui.js:947
+msgid "Add New Feed"
+msgstr "Dodaj nowy kanał"
+
+#: js/v1/gui.js:153 js/v1/gui.js:1086 js/v2/gui.js:123 js/v2/gui.js:948
+msgid "Manage Subscriptions"
+msgstr "Zarządzanie kanałami"
+
+#: js/v1/gui.js:154 js/v1/gui.js:1087 js/v2/gui.js:124 js/v2/gui.js:949
+msgid "Manage Folders"
+msgstr "Zarządzanie folderami"
+
+#: js/v1/gui.js:155 js/v1/gui.js:1088 js/v2/gui.js:125 js/v2/gui.js:950
+msgid "User Settings"
+msgstr "Ustawienia użytkownika"
+
+#: js/v1/gui.js:156 js/v2/gui.js:127
+msgid "Logout"
+msgstr "Wylogowanie"
+
+#: js/v1/gui.js:186 js/v1/gui.js:242 js/v2/gui.js:165 js/v2/gui.js:185
+msgid "Close Window"
+msgstr "Zamknij okno"
+
+#: js/v1/gui.js:239 js/v2/gui.js:182
+msgid "Reload this feed"
+msgstr "Odśwież bieżący kanał"
+
+#: js/v1/gui.js:337 js/v1/gui.js:1210 js/v2/gui.js:289 js/v2/gui.js:1073
+msgid "Root folder"
+msgstr "Katalog główny"
+
+#: js/v1/gui.js:403 js/v2/gui.js:353
+msgid "Menu"
+msgstr "Menu"
+
+#: js/v1/gui.js:404 js/v2/gui.js:354
+msgid "menu"
+msgstr "menu"
+
+#: js/v1/gui.js:518 js/v1/gui.js:609 js/v2/gui.js:463 js/v2/gui.js:520
+msgid "Invalid URL"
+msgstr "Nieprawidłowy adres"
+
+#: js/v1/gui.js:524 js/v1/gui.js:619 js/v2/gui.js:478
+msgid "Validating URL..."
+msgstr "Sprawdzanie adresu..."
+
+#: js/v1/gui.js:543 js/v1/gui.js:574 js/v1/gui.js:699 js/v1/gui.js:741
+#: js/v1/weather.js:330 js/v2/gui.js:496 js/v2/gui.js:569 js/v2/gui.js:605
+#: js/v2/gui.js:727 js/v2/gui.js:777 js/v2/weather.js:389
+msgid "OK"
+msgstr "OK"
+
+#: js/v1/gui.js:614
+msgid "Subscribing to %s..."
+msgstr "Zapisywanie na %s..."
+
+#: js/v1/gui.js:633
+msgid "Info Window"
+msgstr "Okno informacyjne"
+
+#: js/v1/gui.js:655
+msgid "Or add feed by URL"
+msgstr "Lub dodaj nowy kanał wpisując jego adres URL"
+
+#: js/v1/gui.js:661 js/v1/gui.js:1089
+msgid "Or import an OPML file"
+msgstr "Lub dokonaj importu pliku OPML"
+
+#: js/v1/gui.js:675 js/v2/gui.js:545
+msgid "Importing file..."
+msgstr "Importowanie pliku..."
+
+#: js/v1/gui.js:722 js/v2/gui.js:586
+msgid "Invalid folder name"
+msgstr "Nieprawidłowa nazwa folderu"
+
+#: js/v1/gui.js:728 js/v2/gui.js:592
+msgid "Adding folder..."
+msgstr "Dodawanie folderu..."
+
+#: js/v1/gui.js:822
+msgid ""
+"You have checked more than 10 active feeds.\n"
+"This might slow down the startup process.\n"
+"Would you like to proceed?"
+msgstr ""
+"Zostało wybranych więcej niż 10 aktywnych kanałów.\n"
+"To może spowolnić proces uruchamiania.\n"
+"Czy mimo wszystko chcesz zachować te ustawienia?"
+
+#: js/v1/gui.js:1030 js/v2/gui.js:903
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: js/v1/gui.js:1041 js/v2/gui.js:913
+msgid "Save changes"
+msgstr "Zapisz zmiany"
+
+#: js/v1/gui.js:1043 js/v1/weather.js:82 js/v2/gui.js:915 js/v2/notes.js:55
+#: js/v2/weather.js:117
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: js/v1/gui.js:1051
+msgid ""
+"Add a specific RSS, RDF, or ATOM feed by entering the URL below "
+"(Autodiscovery supported)."
+msgstr ""
+"Wpisz adres URL wybranego kanału RSS, RDF, lub ATOM (Autoodkrywanie "
+"wspierane)."
+
+#: js/v1/gui.js:1052 js/v2/gui.js:923
+msgid "Import your subscriptions from an OPML file."
+msgstr "Import kanałów i folderów z pliku OPML."
+
+#: js/v1/gui.js:1053 js/v2/gui.js:924
+msgid "Refresh rate (active feeds)"
+msgstr "Częstotliwość odświeżania (kanały aktywne)"
+
+#: js/v1/gui.js:1054 js/v2/gui.js:925
+msgid "Show active feeds on startup"
+msgstr "Pokaż aktywne kanały na starcie"
+
+#: js/v1/gui.js:1055 js/v2/gui.js:926
+msgid "Oldest entries first"
+msgstr "Najstarsze wpisy na górze"
+
+#: js/v1/gui.js:1056 js/v2/gui.js:927
+msgid "Add new folder."
+msgstr "Nowy folder."
+
+#: js/v1/gui.js:1057 js/v2/gui.js:928
+msgid "Display language:"
+msgstr "Język interfejsu:"
+
+#: js/v1/gui.js:1058
+msgid "Interface (cookie-based):"
+msgstr "Interfejs (ustawienie przechowywane w ciastku):"
+
+#: js/v1/gui.js:1059 js/v2/gui.js:929
+msgid "System:"
+msgstr "System:"
+
+#: js/v1/gui.js:1066 js/v2/gui.js:971
+msgid "Close without saving?"
+msgstr "Zamknąć bez zapisania zmian?"
+
+#: js/v1/gui.js:1077 js/v1/gui.js:1082 js/v2/gui.js:944
+msgid "add"
+msgstr "dodaj"
+
+#: js/v1/gui.js:1080 js/v2/gui.js:942
+msgid "Import"
+msgstr "Importuj"
+
+#: js/v1/gui.js:1094 js/v2/gui.js:960
+msgid "expand"
+msgstr "rozwiń"
+
+#: js/v1/gui.js:1095 js/v2/gui.js:961
+msgid "active"
+msgstr "aktywny"
+
+#: js/v1/gui.js:1096 js/v2/gui.js:962
+msgid "minutes"
+msgstr "minut"
+
+#: js/v1/gui.js:1159 js/v2/gui.js:1024
+msgid "Switch without saving?"
+msgstr "Przełączyć bez zapisania zmian?"
+
+#: js/v1/gui.js:1214 js/v2/gui.js:1077
+msgid "Select folder"
+msgstr "Wybierz folder"
+
+#: js/v1/gui.js:1221 js/v2/gui.js:1084
+msgid "Export selected folder"
+msgstr "Eksport wybranego folderu"
+
+#: js/v1/gui.js:1222 js/v2/gui.js:1085
+msgid "Export feeds from selected folder to OPML"
+msgstr "Eksport kanałów z wybranego folderu do OPML"
+
+#: js/v1/gui.js:1229 js/v2/gui.js:1092
+msgid "Export all feeds"
+msgstr "Eksport wszystkich kanałów"
+
+#: js/v1/gui.js:1230 js/v2/gui.js:1093
+msgid "Export all feeds to OPML"
+msgstr "Eksport wszystkich kanałów i folderów do OPML"
+
+#: js/v1/gui.js:1528 js/v1/gui.js:1565 js/v2/gui.js:1312 js/v2/gui.js:1349
+msgid "Move up"
+msgstr "Przesunięcie w górę"
+
+#: js/v1/gui.js:1532 js/v1/gui.js:1569 js/v2/gui.js:1316 js/v2/gui.js:1353
+msgid "Move down"
+msgstr "Przesunięcie w dół"
+
+#: js/v1/gui.js:1536 js/v2/gui.js:1320
+msgid "Move to other folder"
+msgstr "Przeniesienie do innego folderu"
+
+#: js/v1/gui.js:1917 js/v2/gui.js:1531
+msgid "close feed"
+msgstr "zamknij kanał"
+
+#: js/v1/gui.js:1918 js/v2/gui.js:1532
+msgid "left"
+msgstr "w lewo"
+
+#: js/v1/gui.js:1919 js/v2/gui.js:1533
+msgid "right"
+msgstr "w prawo"
+
+#: js/v1/gui.js:1920 js/v2/gui.js:1534
+msgid "hide/show all active"
+msgstr "ukryj/pokaż wszystkie aktywne"
+
+#: js/v1/gui.js:1921 js/v2/gui.js:1535
+msgid "show all loaded"
+msgstr "pokaż wszystkie wczytane"
+
+#: js/v1/gui.js:1924 js/v2/gui.js:1538
+msgid "my stuff"
+msgstr "moje kanały"
+
+#: js/v1/invite.js:35 js/v1/invite.js:47
+msgid "Invite a friend"
+msgstr "Zaproś przyjaciela"
+
+#: js/v1/invite.js:38
+msgid "First Name:"
+msgstr "Imię:"
+
+#: js/v1/invite.js:39
+msgid "Last Name:"
+msgstr "Nazwisko:"
+
+#: js/v1/invite.js:40
+msgid "E-mail:"
+msgstr "E-mail:"
+
+#: js/v1/invite.js:41
+msgid "Optional note:"
+msgstr "Opcjonalna notatka:"
+
+#: js/v1/invite.js:42
+msgid "Invitation language:"
+msgstr "Język zaproszenia:"
+
+#: js/v1/invite.js:44
+msgid "Send invitation"
+msgstr "Wyślij zaproszenie"
+
+#: js/v1/invite.js:59
+msgid "You have %d invitation left, send invitation to:"
+msgid_plural "You have %d invitations left, send invitation to:"
+msgstr[0] "Posiadasz %d zaproszenie, wyślij je do:"
+msgstr[1] "Posiadasz %d zaproszenia, wyślij zaproszenie do:"
+msgstr[2] "Posiadasz %d zaproszeń, wyślij zaproszenie do:"
+
+#: js/v1/media.js:33
+msgid "Thumbnail"
+msgstr "Miniaturka"
+
+#: js/v1/media.js:77
+msgid "aborted"
+msgstr "przerwano"
+
+#: js/v1/media.js:85
+msgid "Multimedia"
+msgstr "Multimedia"
+
+#: js/v1/notes.js:37 js/v1/notes.js:43
+msgid "My Notes and Bookmarks"
+msgstr "Moje Notatki i Zakładki"
+
+#: js/v1/notes.js:49 js/v2/notes.js:48
+msgid "Your publicly visible notes and links (Atom feed)"
+msgstr "Twoje publicznie widoczne notatki i zakładki (Atom)"
+
+#: js/v1/notes.js:51 js/v2/notes.js:50
+msgid "Title:"
+msgstr "Tytuł:"
+
+#: js/v1/notes.js:52 js/v2/notes.js:51
+msgid "Tags:"
+msgstr "Etykiety:"
+
+#: js/v1/notes.js:53
+msgid "Color:"
+msgstr "Kolor:"
+
+#: js/v1/notes.js:54 js/v2/notes.js:52
+msgid "Publicly visible:"
+msgstr "Widoczna publicznie:"
+
+#: js/v1/notes.js:55 js/v2/notes.js:53
+msgid "Note (double-click or tab to edit):"
+msgstr "Notatka (podwójne kliknięcie lub tab aby edytować):"
+
+#: js/v1/notes.js:56 js/v1/notes.js:515 js/v2/notes.js:54 js/v2/notes.js:447
+msgid "Save Note"
+msgstr "Zapisz notatkę"
+
+#: js/v1/notes.js:72 js/v2/notes.js:70
+msgid "Save link to this entry"
+msgstr "Zapisz odsyłacz do tego wpisu"
+
+#: js/v1/notes.js:120 js/v2/notes.js:134
+msgid "Create Note"
+msgstr "Stwórz nową"
+
+#: js/v1/notes.js:132 js/v2/notes.js:138
+msgid "Tag:"
+msgstr "Etykieta:"
+
+#: js/v1/notes.js:137 js/v1/websearch.js:116 js/v2/notes.js:141
+msgid "Search"
+msgstr "Szukaj"
+
+#: js/v1/notes.js:143 js/v1/notes.js:166 js/v2/notes.js:147 js/v2/notes.js:191
+msgid "Searching..."
+msgstr "Szukanie..."
+
+#: js/v1/notes.js:157
+msgid "Title"
+msgstr "Tytuł"
+
+#: js/v1/notes.js:158
+msgid "Date"
+msgstr "Data"
+
+#: js/v1/notes.js:159
+msgid "Public"
+msgstr "Publiczna"
+
+#: js/v1/notes.js:200 js/v2/notes.js:217
+msgid "Found %d note tagged with \"%s\"."
+msgid_plural "Found %d notes tagged with \"%s\"."
+msgstr[0] "Znaleziono %d notatkę oznaczoną \"%s\"."
+msgstr[1] "Znaleziono %d notatki oznaczone \"%s\"."
+msgstr[2] "Znaleziono %d notatek oznaczonych \"%s\"."
+
+#: js/v1/notes.js:205 js/v2/notes.js:222
+msgid "Found %d latest note."
+msgid_plural "Found %d latest notes."
+msgstr[0] "Znaleziono %d ostatnią notatkę."
+msgstr[1] "Znaleziono %d ostatnie notatki."
+msgstr[2] "Znaleziono %d ostatnich notatek."
+
+#: js/v1/notes.js:260 js/v2/notes.js:263
+msgid "rem"
+msgstr "usuń"
+
+#: js/v1/notes.js:312 js/v2/notes.js:328
+msgid "Are you sure you want to delete this note?"
+msgstr "Czy na pewno usunąć wskazaną notatkę?"
+
+#: js/v1/notes.js:367
+msgid "Edit Window"
+msgstr "Okno edycji"
+
+#: js/v1/notes.js:445 js/v2/notes.js:177
+msgid "Comma-separated list of tags"
+msgstr "Lista etykiet rozdzielonych przecinkiem"
+
+#: js/v1/notes.js:483 js/v2/notes.js:416
+msgid "Finish editing"
+msgstr "Zakończ edycję"
+
+#: js/v1/notes.js:588 js/v2/notes.js:508
+msgid "At least one tag is required."
+msgstr "Wymagana jest co najmniej jedna etykieta."
+
+#: js/v1/notes.js:593 js/v2/notes.js:513
+msgid "Empty note title and body."
+msgstr "Nie podano tytułu ani treści notatki."
+
+#: js/v1/notes.js:603 js/v2/notes.js:523
+msgid "No title"
+msgstr "Brak tytułu"
+
+#: js/v1/opml.js:24
+msgid "Feed Directory"
+msgstr "Katalog kanałów"
+
+#: js/v1/opml.js:25
+msgid "Popular Feeds (Cheetah)"
+msgstr "Popularne kanały (Cheetah)"
+
+#: js/v1/opml.js:123
+msgid "Subscribe to %s"
+msgstr "Subskrypcja kanału %s"
+
+#: js/v1/translate.js:35 js/v2/translate.js:35
+msgid "translate"
+msgstr "tłumaczenie"
+
+#: js/v1/translate.js:36 js/v2/translate.js:36
+msgid "Translate this entry"
+msgstr "Automatyczne tłumaczenie danego wpisu"
+
+#: js/v1/translate.js:93 js/v2/translate.js:88
+msgid "to English"
+msgstr "na angielski"
+
+#: js/v1/translate.js:96 js/v2/translate.js:91
+msgid "to Polish"
+msgstr "na polski"
+
+#: js/v1/translate.js:99 js/v2/translate.js:94
+msgid "to Ukrainian"
+msgstr "na ukraiński"
+
+#: js/v1/translate.js:102 js/v2/translate.js:97
+msgid "to German"
+msgstr "na niemiecki"
+
+#: js/v1/translate.js:105 js/v2/translate.js:100
+msgid "to Spanish"
+msgstr "na hiszpański"
+
+#: js/v1/translate.js:108 js/v2/translate.js:103
+msgid "to French"
+msgstr "na francuski"
+
+#: js/v1/translate.js:111 js/v2/translate.js:106
+msgid "to Italian"
+msgstr "na włoski"
+
+#: js/v1/translate.js:114 js/v2/translate.js:109
+msgid "to Portuguese"
+msgstr "na portugalski"
+
+#: js/v1/translate.js:117 js/v2/translate.js:112
+msgid "to Arabic"
+msgstr "na arabski"
+
+#: js/v1/translate.js:120 js/v2/translate.js:115
+msgid "to Japanese"
+msgstr "na japoński"
+
+#: js/v1/translate.js:123 js/v2/translate.js:118
+msgid "to Korean"
+msgstr "na koreański"
+
+#: js/v1/translate.js:126 js/v2/translate.js:121
+msgid "to Chinese"
+msgstr "na chiński"
+
+#: js/v1/translate.js:131 js/v2/translate.js:126
+msgid "Not available"
+msgstr "Niedostępne"
+
+#: js/v1/weather.js:33 js/v1/weather.js:34 js/v2/weather.js:33
+#: js/v2/weather.js:185
+msgid "Weather Report"
+msgstr "Raport pogodowy"
+
+#: js/v1/weather.js:53 js/v2/weather.js:92
+msgid "Add"
+msgstr "Dodaj"
+
+#: js/v1/weather.js:54 js/v2/weather.js:93
+msgid "Add location"
+msgstr "Nowa lokacja"
+
+#: js/v1/weather.js:65 js/v2/weather.js:102
+msgid "Refresh"
+msgstr "Odśwież"
+
+#: js/v1/weather.js:66 js/v2/weather.js:103
+msgid "Refresh Weather News"
+msgstr "Odśwież informacje pogodowe"
+
+#: js/v1/weather.js:71 js/v2/weather.js:106
+msgid "Location ID:"
+msgstr "ID lokacji:"
+
+#: js/v1/weather.js:72 js/v2/weather.js:107
+msgid "Description:"
+msgstr "Opis:"
+
+#: js/v1/weather.js:73 js/v2/weather.js:108
+msgid "Unit:"
+msgstr "Jednostka:"
+
+#: js/v1/weather.js:75 js/v2/weather.js:110
+msgid "Save"
+msgstr "Zapisz"
+
+#: js/v1/weather.js:78 js/v2/weather.js:113
+msgid "Delete"
+msgstr "Skasuj"
+
+#: js/v1/weather.js:228 js/v2/weather.js:280
+msgid "Wrong location or data temporarily unavailable."
+msgstr "Nieprawidłowa lokacja lub dane tymczasowo niedostępne."
+
+#: js/v1/weather.js:231 js/v2/weather.js:283
+msgid "Edit this location"
+msgstr "Edycja tej lokacji"
+
+#: js/v1/weather.js:245 js/v2/weather.js:297
+msgid "Tomorrow's weather forecast"
+msgstr "Jutrzejsza prognoza pogody"
+
+#: js/v1/weather.js:267 js/v2/weather.js:324
+msgid "Editing location"
+msgstr "Edycja lokacji"
+
+#: js/v1/weather.js:275 js/v2/weather.js:332
+msgid "Add new location."
+msgstr "Dodanie nowej lokacji."
+
+#: js/v1/weather.js:300 js/v2/weather.js:359
+msgid "Invalid location ID"
+msgstr "Nieprawidłowy identyfikator lokacji"
+
+#: js/v1/weather.js:312 js/v2/weather.js:371
+msgid "Saving location..."
+msgstr "Zapisywanie lokacji..."
+
+#: js/v1/weather.js:351 js/v2/weather.js:410
+msgid "Are you sure you want to delete this location?"
+msgstr "Czy na pewno usunąć wskazaną lokację?"
+
+#: js/v1/weather.js:355 js/v2/weather.js:414
+msgid "Deleting..."
+msgstr "Kasowanie..."
+
+#. TRANSLATORS: BEGIN JS 
+#: js/v1/weather.js:362 js/v2/weather.js:421
+msgid "Location"
+msgstr "Lokacja"
+
+#: js/v1/weather.js:362 js/v2/weather.js:421
+msgid "Forecast"
+msgstr "Prognoza pogody"
+
+#: js/v1/weather.js:362 js/v2/weather.js:421
+msgid "Now"
+msgstr "Teraz"
+
+#: js/v1/weather.js:362 js/v2/weather.js:421
+msgid "Today"
+msgstr "Dzisiaj"
+
+#: js/v1/weather.js:362 js/v2/weather.js:421
+msgid "Tomorrow"
+msgstr "Jutro"
+
+#: js/v1/weather.js:362 js/v2/weather.js:421
+msgid "Feels like"
+msgstr "T. odczuwana"
+
+#: js/v1/weather.js:363 js/v2/weather.js:422
+msgid "Wind"
+msgstr "Wiatr"
+
+#: js/v1/weather.js:363 js/v2/weather.js:422
+msgid "Humidity"
+msgstr "Wilgotność"
+
+#: js/v1/weather.js:363 js/v2/weather.js:422
+msgid "Pressure"
+msgstr "Ciśnienie"
+
+#: js/v1/weather.js:363 js/v2/weather.js:422
+msgid "Sunrise"
+msgstr "Wschód słońca"
+
+#: js/v1/weather.js:363 js/v2/weather.js:422
+msgid "Sunset"
+msgstr "Zachód słońca"
+
+#: js/v1/weather.js:364 js/v2/weather.js:423
+msgid "Temp"
+msgstr "Temp"
+
+#: js/v1/weather.js:364 js/v2/weather.js:423
+msgid "High"
+msgstr "Max"
+
+#: js/v1/weather.js:364 js/v2/weather.js:423
+msgid "Low"
+msgstr "Min"
+
+#: js/v1/weather.js:364 js/v2/weather.js:423
+msgid "Sun"
+msgstr "Niedziela"
+
+#: js/v1/weather.js:364 js/v2/weather.js:423
+msgid "Mon"
+msgstr "Poniedziałek"
+
+#: js/v1/weather.js:364 js/v2/weather.js:423
+msgid "Tue"
+msgstr "Wtorek"
+
+#: js/v1/weather.js:364 js/v2/weather.js:423
+msgid "Wed"
+msgstr "Środa"
+
+#: js/v1/weather.js:365 js/v2/weather.js:424
+msgid "Thu"
+msgstr "Czwartek"
+
+#: js/v1/weather.js:365 js/v2/weather.js:424
+msgid "Fri"
+msgstr "Piątek"
+
+#: js/v1/weather.js:365 js/v2/weather.js:424
+msgid "Sat"
+msgstr "Sobota"
+
+#: js/v1/weather.js:365 js/v2/weather.js:424
+msgid "kph"
+msgstr "km/h"
+
+#: js/v1/weather.js:365 js/v2/weather.js:424
+msgid "mb"
+msgstr "hPa"
+
+#: js/v1/weather.js:365 js/v2/weather.js:424
+msgid "Windy"
+msgstr "Wiatr"
+
+#: js/v1/weather.js:366 js/v2/weather.js:425
+msgid "Mist"
+msgstr "Mgła"
+
+#: js/v1/weather.js:366 js/v2/weather.js:425
+msgid "Fair"
+msgstr "Niewielkie zachmurzenie"
+
+#: js/v1/weather.js:366 js/v2/weather.js:425
+msgid "Clear"
+msgstr "Przejrzyste niebo"
+
+#: js/v1/weather.js:366 js/v2/weather.js:425
+msgid "Mostly Clear"
+msgstr "Przeważnie przejrzyście"
+
+#: js/v1/weather.js:366 js/v2/weather.js:425
+msgid "Mostly Cloudy"
+msgstr "Przeważnie pochmurno"
+
+#: js/v1/weather.js:367 js/v2/weather.js:426
+msgid "Partly Cloudy"
+msgstr "Częściowo pochmurno"
+
+#: js/v1/weather.js:367 js/v2/weather.js:426
+msgid "Cloudy"
+msgstr "Pochmurno"
+
+#: js/v1/weather.js:367 js/v2/weather.js:426
+msgid "Mostly Sunny"
+msgstr "Przeważnie słonecznie"
+
+#: js/v1/weather.js:367 js/v2/weather.js:426
+msgid "Sunny"
+msgstr "Słonecznie"
+
+#: js/v1/weather.js:368 js/v2/weather.js:427
+msgid "Rain"
+msgstr "Deszcz"
+
+#: js/v1/weather.js:368 js/v2/weather.js:427
+msgid "Light Rain"
+msgstr "Lekki deszcz"
+
+#: js/v1/weather.js:368 js/v2/weather.js:427
+msgid "Freezing Rain"
+msgstr "Marznący deszcz"
+
+#: js/v1/weather.js:368 js/v2/weather.js:427
+msgid "Heavy Rain"
+msgstr "Obfity deszcz"
+
+#: js/v1/weather.js:368 js/v2/weather.js:427
+msgid "Snow"
+msgstr "Śnieg"
+
+#: js/v1/weather.js:369 js/v2/weather.js:428
+msgid "Light Snow"
+msgstr "Małe opady śniegu"
+
+#: js/v1/weather.js:369 js/v2/weather.js:428
+msgid "AM Light Snow"
+msgstr "Rano małe opady śniegu"
+
+#: js/v1/weather.js:369 js/v2/weather.js:428
+msgid "PM Light Snow"
+msgstr "Po południu lekki śnieg"
+
+#: js/v1/weather.js:369 js/v2/weather.js:428
+msgid "Snow Showers"
+msgstr "Opady śniegu"
+
+#: js/v1/weather.js:370 js/v2/weather.js:429
+msgid "AM Snow"
+msgstr "Rano śnieg"
+
+#: js/v1/weather.js:370 js/v2/weather.js:429
+msgid "PM Snow"
+msgstr "Po południu śnieg"
+
+#: js/v1/weather.js:370 js/v2/weather.js:429
+msgid "AM Snow Showers"
+msgstr "Poranne opady śniegu"
+
+#: js/v1/weather.js:370 js/v2/weather.js:429
+msgid "PM Snow Showers"
+msgstr "Po południu opady śniegu"
+
+#: js/v1/weather.js:371 js/v2/weather.js:430
+msgid "Scattered Snow Showers"
+msgstr "Duże opady śniegu"
+
+#: js/v1/weather.js:371 js/v2/weather.js:430
+msgid "Flurries"
+msgstr "Śnieżny szkwał"
+
+#: js/v1/weather.js:371 js/v2/weather.js:430
+msgid "Drizzle"
+msgstr "Mżawka"
+
+#: js/v1/weather.js:371 js/v2/weather.js:430
+msgid "Freezing Drizzle"
+msgstr "Marznąca mżawka"
+
+#: js/v1/weather.js:372 js/v2/weather.js:431
+msgid "Haze"
+msgstr "Zamglone niebo"
+
+#: js/v1/weather.js:372 js/v2/weather.js:431
+msgid "Showers"
+msgstr "Przelotne opady"
+
+#: js/v1/weather.js:372 js/v2/weather.js:431
+msgid "AM Showers"
+msgstr "Poranne opady"
+
+#: js/v1/weather.js:372 js/v2/weather.js:431
+msgid "PM Showers"
+msgstr "Popołudniowe opady"
+
+#: js/v1/weather.js:373 js/v2/weather.js:432
+msgid "Showers Early"
+msgstr "Poranne opady"
+
+#: js/v1/weather.js:373 js/v2/weather.js:432
+msgid "Showers Late"
+msgstr "Wieczorne opady"
+
+#: js/v1/weather.js:373 js/v2/weather.js:432
+msgid "Few Showers"
+msgstr "Nieliczne opady"
+
+#: js/v1/weather.js:373 js/v2/weather.js:432
+msgid "Heavy Snow"
+msgstr "Obfity śnieg"
+
+#: js/v1/weather.js:374 js/v2/weather.js:433
+msgid "Fog"
+msgstr "Mgła"
+
+#: js/v1/weather.js:374 js/v2/weather.js:433
+msgid "Fog Early"
+msgstr "Poranna mgła"
+
+#: js/v1/weather.js:374 js/v2/weather.js:433
+msgid "Fog Late"
+msgstr "Wieczorem mgła"
+
+#: js/v1/weather.js:374 js/v2/weather.js:433
+msgid "Foggy"
+msgstr "Mglisto"
+
+#: js/v1/weather.js:374 js/v2/weather.js:433
+msgid "AM Clouds"
+msgstr "Rano pochmurno"
+
+#: js/v1/weather.js:374 js/v2/weather.js:433
+msgid "PM Sun"
+msgstr "Po południu słońce"
+
+#: js/v1/weather.js:375 js/v2/weather.js:434
+msgid "Thunder"
+msgstr "Burza"
+
+#: js/v1/weather.js:375 js/v2/weather.js:434
+msgid "Thunderstorms"
+msgstr "Burze"
+
+#: js/v1/weather.js:375 js/v2/weather.js:434
+msgid "Isolated Thunderstorms"
+msgstr "Burze z piorunami"
+
+#: js/v1/weather.js:375 js/v2/weather.js:434
+msgid "AM Fog"
+msgstr "Rano mglisto"
+
+#: js/v1/weather.js:376 js/v2/weather.js:435
+msgid "AM Drizzle"
+msgstr "Rano mżawka"
+
+#: js/v1/weather.js:376 js/v2/weather.js:435
+msgid "AM Light Rain"
+msgstr "Rano lekki deszcz"
+
+#: js/v1/weather.js:376 js/v2/weather.js:435
+msgid "PM Light Rain"
+msgstr "Po południu lekki deszcz"
+
+#: js/v1/weather.js:376 js/v2/weather.js:435
+msgid "PM Clouds"
+msgstr "Po południu pochmurno"
+
+#: js/v1/weather.js:377 js/v2/weather.js:436
+msgid "Light Rain Early"
+msgstr "Poranny lekki deszcz"
+
+#: js/v1/weather.js:377 js/v2/weather.js:436
+msgid "Snow Showers Late"
+msgstr "Wieczorne opady śniegu"
+
+#: js/v1/weather.js:377 js/v2/weather.js:436
+msgid "Few Snow Showers"
+msgstr "Nieliczne opady śniegu"
+
+#: js/v1/weather.js:378 js/v2/weather.js:437
+msgid "Snow to Wintry Mix"
+msgstr "Śnieg lub deszcz ze śniegiem"
+
+#: js/v1/weather.js:378 js/v2/weather.js:437
+msgid "Wintry Mix"
+msgstr "Deszcz ze śniegiem"
+
+#: js/v1/weather.js:378 js/v2/weather.js:437
+msgid "Thundershowers"
+msgstr "Burze z opadami"
+
+#: js/v1/weather.js:378 js/v2/weather.js:437
+msgid "Rain to Snow"
+msgstr "Deszcz i możliwy śnieg"
+
+#: js/v1/weather.js:379 js/v2/weather.js:438
+msgid "Clouds Early"
+msgstr "Rano pochmurno"
+
+#: js/v1/weather.js:379 js/v2/weather.js:438
+msgid "Clouds Late"
+msgstr "Wieczorem pochmurno"
+
+#: js/v1/weather.js:379 js/v2/weather.js:438
+msgid "Clearing Late"
+msgstr "Później przejaśnienia"
+
+#: js/v1/weather.js:379 js/v2/weather.js:438
+msgid "AM Ice"
+msgstr "Rano lód"
+
+#: js/v1/weather.js:380 js/v2/weather.js:439
+msgid "Sleet"
+msgstr "Deszcz ze śniegiem"
+
+#: js/v1/weather.js:380 js/v2/weather.js:439
+msgid "Scattered Flurries"
+msgstr "Rozrzucony śnieżny szkwał"
+
+#: js/v1/weather.js:380 js/v2/weather.js:439
+msgid "Snow Showers Early"
+msgstr "Poranne opady śniegu"
+
+#: js/v1/weather.js:380 js/v2/weather.js:439
+msgid "Light Snow Late"
+msgstr "Wieczorem małe opady śniegu"
+
+#: js/v1/weather.js:381 js/v2/weather.js:440
+msgid "Snow Early"
+msgstr "Poranne opady śniegu"
+
+#: js/v1/weather.js:381 js/v2/weather.js:440
+msgid "Snow Late"
+msgstr "Wieczorne opady śniegu"
+
+#: js/v1/weather.js:381 js/v2/weather.js:440
+msgid "Wind Early"
+msgstr "Rano wiatr"
+
+#: js/v1/weather.js:381 js/v2/weather.js:440
+msgid "AM Rain"
+msgstr "Rano deszcz"
+
+#: js/v1/weather.js:381 js/v2/weather.js:440
+msgid "PM Rain"
+msgstr "Po południu deszcz"
+
+#: js/v1/weather.js:382 js/v2/weather.js:441
+msgid "PM Fog"
+msgstr "Po południu mglisto"
+
+#: js/v1/weather.js:382 js/v2/weather.js:441
+msgid "Drizzle Early"
+msgstr "Poranna mżawka"
+
+#: js/v1/weather.js:382 js/v2/weather.js:441
+msgid "Drizzle Late"
+msgstr "Wieczorna mżawka"
+
+#: js/v1/weather.js:382 js/v2/weather.js:441
+msgid "PM Drizzle"
+msgstr "Po południu mżawka"
+
+#: js/v1/weather.js:383 js/v2/weather.js:442
+msgid "Light Rain Late"
+msgstr "Wieczorem lekki deszcz"
+
+#: js/v1/weather.js:383 js/v2/weather.js:442
+msgid "Wind Late"
+msgstr "Wieczorem wiatr"
+
+#: js/v1/weather.js:383 js/v2/weather.js:442
+msgid "Scattered Strong Storms"
+msgstr "Rozrzucone silne sztormy"
+
+#: js/v1/weather.js:383 js/v2/weather.js:442
+msgid "Strong Storms"
+msgstr "Silne sztormy"
+
+#: js/v1/weather.js:384 js/v2/weather.js:443
+msgid "AM Light Wintry Mix"
+msgstr "Rano lekki deszcz ze śniegiem"
+
+#: js/v1/weather.js:384 js/v2/weather.js:443
+msgid "PM Light Wintry Mix"
+msgstr "Po południu lekki deszcz ze śniegiem"
+
+#: js/v1/weather.js:384 js/v2/weather.js:443
+msgid "Light Wintry Mix"
+msgstr "Lekki deszcz ze śniegiem"
+
+#: js/v1/weather.js:385 js/v2/weather.js:444
+msgid "AM Thunderstorms"
+msgstr "Rano burze"
+
+#: js/v1/weather.js:385 js/v2/weather.js:444
+msgid "PM Thunderstorms"
+msgstr "Po południu burze"
+
+#: js/v1/weather.js:385 js/v2/weather.js:444
+msgid "Thunderstorms Late"
+msgstr "Wieczorem burze"
+
+#: js/v1/weather.js:385 js/v2/weather.js:444
+msgid "Rain Early"
+msgstr "Poranny deszcz"
+
+#: js/v1/weather.js:386 js/v2/weather.js:445
+msgid "Thunderstorms Early"
+msgstr "Poranne burze"
+
+#: js/v1/weather.js:386 js/v2/weather.js:445
+msgid "AM Thundershowers"
+msgstr "Rano burze z opadami"
+
+#: js/v1/weather.js:386 js/v2/weather.js:445
+msgid "PM Thundershowers"
+msgstr "Po południu burze z opadami"
+
+#: js/v1/weather.js:387 js/v2/weather.js:446
+msgid "Thundershowers Early"
+msgstr "Poranne burze z opadami"
+
+#: js/v1/weather.js:387 js/v2/weather.js:446
+msgid "Thundershowers Late"
+msgstr "Wieczorem burze z opadami"
+
+#: js/v1/weather.js:387 js/v2/weather.js:446
+msgid "Rain Late"
+msgstr "Wieczorem deszcz"
+
+#: js/v1/weather.js:387 js/v2/weather.js:446
+msgid "Ice to Rain"
+msgstr "Lód z deszczem"
+
+#. TRANSLATORS: END JS 
+#: js/v1/weather.js:389 js/v2/weather.js:448
+msgid "Scattered Thunderstorms"
+msgstr "Rozrzucone burze z piorunami"
+
+#: js/v1/websearch.js:44 js/v1/websearch.js:46
+msgid "Web Search"
+msgstr "Szukaj w Internecie"
+
+#: js/v1/websearch.js:118
+msgid "Native language search"
+msgstr "Szukanie z uwzględnieniem preferowanego języka."
+
+#: js/v1/websearch.js:119
+msgid "Search in all simultaneously"
+msgstr "Szukanie we wszystkich jednocześnie"
+
+#: js/v2/core.js:571 js/v2/core.js:665
+msgid "Subscribe"
+msgstr "Subskrybuj"
+
+#: js/v2/core.js:576 js/v2/core.js:670
+msgid "You are not subscribed to this feed."
+msgstr "Nie jesteś subskrybentem tego kanału"
+
+#: js/v2/core.js:992
+msgid ""
+"No subscriptions yet?! Add new subscriptions or import them by visiting Menu/"
+"Add New Feed."
+msgstr ""
+"Nic nie subskrybujesz?! Dodaj lub importuj nowe subskrypcje odwiedzając Menu/"
+"Dodaj nowy kanał."
+
+#: js/v2/core.js:1000
+msgid "Feed Preview"
+msgstr "Podgląd kanału"
+
+#: js/v2/core.js:1021
+msgid "weather"
+msgstr "pogoda"
+
+#: js/v2/core.js:1023
+msgid "notes"
+msgstr "notatki"
+
+#: js/v2/core.js:1669
+msgid "Feed Preview: %s"
+msgstr "Podgląd kanału: %s"
+
+#: js/v2/core.js:1795
+msgid ""
+"You don't have any active feeds. Active feeds are automatically loaded at "
+"startup. You can set them in Menu/Manage Subscriptions."
+msgstr ""
+"Nie masz żadnych aktywnych kanałów. Aktywne kanały są automatycznie ładowane "
+"na starcie. Możesz je ustawić w Menu/Zarządzanie kanałami."
+
+#: js/v2/core.js:2502
+msgid "Sorry, but this operation is not supported by your browser."
+msgstr ""
+"Niestety, ale ta operacja nie jest obsługiwana przez twoją przeglądarkę."
+
+#: js/v2/gui.js:79
+msgid "About"
+msgstr "O nas"
+
+#: js/v2/gui.js:532
+msgid "Add feed by URL"
+msgstr "Dodaj nowy kanał wpisując jego adres URL"
+
+#: js/v2/gui.js:538 js/v2/gui.js:951
+msgid "Import an OPML file"
+msgstr "Dokonaj importu pliku OPML"
+
+#: js/v2/gui.js:688
+msgid ""
+"You have checked more than %d active feed.\n"
+"This might slow down the startup process.\n"
+"Would you like to proceed?"
+msgid_plural ""
+"You have checked more than %d active feeds.\n"
+"This might slow down the startup process.\n"
+"Would you like to proceed?"
+msgstr[0] ""
+"Zostało wybranych więcej niż %d aktywnych kanałów.\n"
+"To może spowolnić proces uruchamiania.\n"
+"Czy mimo wszystko chcesz zachować te ustawienia?"
+msgstr[1] ""
+"Został wybrany więcej niż %d aktywny kanał.\n"
+"To może spowolnić proces uruchamiania.\n"
+"Czy mimo wszystko chcesz zachować te ustawienia?"
+msgstr[2] ""
+"Zostało wybranych więcej niż %d aktywnych kanałów.\n"
+"To może spowolnić proces uruchamiania.\n"
+"Czy mimo wszystko chcesz zachować te ustawienia?"
+
+#: js/v2/gui.js:906 js/v2/notes.js:41 js/v2/weather.js:87
+msgid "&laquo; return to reader"
+msgstr "&laquo; powrót do czytnika"
+
+#: js/v2/gui.js:909 js/v2/notes.js:44 js/v2/weather.js:82
+msgid "Close"
+msgstr "Zamknij"
+
+#: js/v2/gui.js:922
+msgid ""
+"Open a specific feed by entering the URL below (Autodiscovery supported) or "
+"enter a search term."
+msgstr ""
+"Otwórz wybrany kanał RSS wpisując jego adres (Autoodkrywanie wspierane) lub "
+"wpisz szukaną frazę."
+
+#: js/v2/gui.js:930
+msgid "Goodies:"
+msgstr "Dodatki:"
+
+#: js/v2/gui.js:939 js/v2/opml.js:108
+msgid "open"
+msgstr "otwórz"
+
+#: js/v2/gui.js:952
+msgid "Register Cheetah News as feed handler in your browser"
+msgstr "Zarejestruj obsługę kanałów przez Cheetah News w swojej przeglądarce"
+
+#. TRANSLATORS: The second %d is fixed, see the source for its value 
+#: js/v2/marker.js:189
+msgid "You read %d feed entry over the last %d active days."
+msgid_plural "You read %d feed entries over the last %d active days."
+msgstr[0] "Przeczytałeś %d wpis przez ostatnie %d aktywnych dni."
+msgstr[1] "Przeczytałeś %d wpisy przez ostatnie %d aktywnych dni."
+msgstr[2] "Przeczytałeś %d wpisów przez ostatnie %d aktywnych dni."
+
+#. TRANSLATORS: The third %d is fixed, see the source for its value 
+#: js/v2/marker.js:195
+msgid "You read %d feed entry (%s) over the last %d active days."
+msgid_plural "You read %d feed entries (%s) over the last %d active days."
+msgstr[0] "Przeczytałeś %d wpis (%s) przez ostatnie %d aktywnych dni."
+msgstr[1] "Przeczytałeś %d wpisy (%s) przez ostatnie %d aktywnych dni."
+msgstr[2] "Przeczytałeś %d wpisów (%s) przez ostatnie %d aktywnych dni."
+
+#. TRANSLATORS: 'unique' refers to entries in the prior message 
+#: js/v2/marker.js:198
+msgid "%d unique"
+msgid_plural "%d uniques"
+msgstr[0] "%d unikalny"
+msgstr[1] "%d unikalne"
+msgstr[2] "%d unikalnych"
+
+#: js/v2/marker.js:204 js/v2/marker.js:217
+msgid "Show stats"
+msgstr "Pokaż statystyki"
+
+#: js/v2/marker.js:212
+msgid "Hide stats"
+msgstr "Ukryj statystyki"
+
+#: js/v2/notes.js:35
+msgid "Notes and Bookmarks"
+msgstr "Notatki i Zakładki"
+
+#: js/v2/notes.js:270
+msgid "Publicly visible"
+msgstr "Widoczna publicznie"
+
+#: js/v2/notes.js:272
+msgid "Not publicly visible"
+msgstr "Niewidoczna publicznie"
+
+#: js/v2/opml.js:24
+msgid "Browse feed directory"
+msgstr "Przejrzyj katalog kanałów"
+
+#: js/v2/opml.js:25
+msgid "Browse popular feeds (Cheetah)"
+msgstr "Przejrzyj popularne kanały (Cheetah)"
+
+#: js/v2/opml.js:26
+msgid "Follow friends & family"
+msgstr "Aktualności od rodziny i znajomych"
+
+#: js/v2/opml.js:44
+msgid "Open \"%s\", %s"
+msgstr "Otwórz \"%s\", %s"
+
+#: js/v2/opml.js:59
+msgid "No results found"
+msgstr "Nie znaleziono wyników"
+
+#: js/v2/opml.js:63
+msgid "An error occurred, please try again"
+msgstr "Wystąpił błąd, proszę spróbować ponownie"
+
+#: js/v2/opml.js:101
+msgid "username"
+msgstr "użytkownik"
+
+#: js/v2/opml.js:122
+msgid ""
+"Follow news and updates from your friends & family. Enter their username and "
+"choose a popular service:"
+msgstr ""
+"Bądź na bieżąco z aktualnościami od rodziny i znajomych. Wprowadź ich nazwę "
+"użytkownika i wybierz popularny serwis z listy:"
+
+#: js/v2/opml.js:207
+msgid "Open \"%s\""
+msgstr "Otwórz \"%s\""
+
+#: js/v2/share.js:32
+msgid "share this"
+msgstr "podziel się ze znajomymi"
+
+#: js/v2/share.js:33
+msgid "Share this entry"
+msgstr "Podziel się wpisem ze znajomymi"
+
+#: js/v2/weather.js:282
+msgid "edit"
+msgstr "edycja"
+
+#~ msgid "%d subscriber"
+#~ msgid_plural "%d subscribers"
+#~ msgstr[0] "%d subskrybent"
+#~ msgstr[1] "%d subskrybentów"
+#~ msgstr[2] "%d subskrybentów"

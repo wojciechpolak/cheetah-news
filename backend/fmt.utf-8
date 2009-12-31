@@ -1,0 +1,38 @@
+#! /bin/sh
+(cat - <<\EOF
+<?
+function encode_body ($text)
+{
+  $out = '';
+  if (function_exists ('mb_strlen')) {
+    while ($text != '') {
+      $length = 79;
+      $inlen = mb_strlen ($text, 'UTF-8');
+      if ($length > $inlen) {
+        $out .= $text;
+	break;
+      }
+      $s = mb_substr ($text, 0, $length, 'UTF-8');
+      mb_ereg_search_init ($s, "\n");
+      $rc = mb_ereg_search_pos ();
+      if ($rc)
+	$pos = $rc[0];
+      else {
+	mb_ereg_search_init ($s, "[ \t]");
+	for ($pos = false; $rc = mb_ereg_search_pos ();) 
+	  $pos = $rc[0];
+      }
+      if (!is_numeric ($pos))
+	break;
+      $out .= mb_substr ($s, 0, $pos) . "\n";
+      $text = mb_substr ($text, $pos + 1);
+    }
+  }
+  return $out;
+}
+$text='
+EOF
+sed "s,',\\\\',g"
+echo "';";
+echo 'echo encode_body($text);';
+echo '?>')|php  -q

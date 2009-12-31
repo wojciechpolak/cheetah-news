@@ -1,0 +1,18 @@
+body {
+  background-color: white;
+}
+
+div.notice {
+  text-align: center;
+  font-weight: bold;
+  font-size: 120%;
+  margin-top: 2em;
+}
+
+div.error {
+  text-align: center;
+  font-weight: bold;
+  font-size: 120%;
+  color: red;	
+  margin-top: 2em;
+}
