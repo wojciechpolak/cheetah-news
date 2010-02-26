@@ -2,7 +2,7 @@
 
 <!--
     Cheetah News XSLT v2/feed.xsl
-    Copyright (C) 2005, 2006, 2007, 2008, 2009 Wojciech Polak.
+    Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010 Wojciech Polak.
 
     This program is free software; you can redistribute it and/or modify it
     under the terms of the GNU General Public License as published by the
@@ -330,7 +330,7 @@
 	  </xsl:call-template>
 	</xsl:when>
       </xsl:choose>
-      <xsl:apply-templates select="enclosure|media:thumbnail"/>
+      <xsl:apply-templates select="enclosure|media:thumbnail|media:content"/>
       <div class="entryMeta">
 	<xsl:if test="link">
 	  <span class="entryMore">
@@ -723,7 +723,8 @@
 	</xsl:when>
       </xsl:choose>
       <xsl:apply-templates select="atom:link[@rel = 'enclosure']|
-				   atomW3:link[@rel = 'enclosure']"/>
+				   atomW3:link[@rel = 'enclosure']|
+				   media:thumbnail|media:content"/>
       <div class="entryMeta">
 	<xsl:if test="atom:link|atomW3:link">
 	  <span class="entryMore">
@@ -944,7 +945,7 @@
 
 <xsl:template match="enclosure|atom:link[@rel = 'enclosure']|
 		     atomW3:link[@rel = 'enclosure']|
-		     media:thumbnail">
+		     media:thumbnail|media:content">
   <div style="margin-top:5px; margin-bottom:5px">
     <xsl:choose>
       <xsl:when test="@type = 'image/jpeg' or @type = 'jpg' or
@@ -961,7 +962,7 @@
 	  <xsl:attribute name="href">
 	    <xsl:value-of select="@url|@href"/>
 	  </xsl:attribute>
-	  <img src="images/video.png" width="18" height="10" alt="media" />
+	  <img src="images/video.png" width="18" height="12" alt="media" />
 	</a>
       </xsl:when>
       <xsl:when test="@type = 'audio/mpeg'">

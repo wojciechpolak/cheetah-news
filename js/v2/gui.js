@@ -1,6 +1,6 @@
 /*
    Cheetah News JS/v2 GUI
-   Copyright (C) 2005, 2006, 2007, 2008, 2009 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -79,7 +79,7 @@ function initGui () {
   var aboutLink = DCE ('span', {className: 'link'}, [_('About')]);
   aboutLink.onmousedown = openAWindow;
   main.appendChild (DCE ('div', {id: 'copyright'},
-			 [DCE ('span', {}, ['&copy; 2005-2009 The Cheetah News Team - ']),
+			 [DCE ('span', {}, ['&copy; 2005-2010 The Cheetah News Team - ']),
 			  aboutLink]));
   reader.appendChild (main);
 

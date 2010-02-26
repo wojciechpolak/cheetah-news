@@ -1,6 +1,6 @@
 /*
    Cheetah News JS/v2 Core
-   Copyright (C) 2005, 2006, 2007, 2008, 2009 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -1398,7 +1398,7 @@ function prepareEntry (n, feedid) {
       if (flash) {
 	n.title = _('See enclosed multimedia');
 	n.onclick = function () {
-	  Greybox.open ({src: n.href, width:425, height:344});
+	  Greybox.open ({src: n.href, width:480, height:295, type:'swf'});
 	  this.blur ();
 	  return false;
 	};

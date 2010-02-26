@@ -2,7 +2,7 @@
 
 /*
    Cheetah News reader1.php
-   Copyright (C) 2005, 2006, 2007, 2008 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -76,7 +76,7 @@ if ($session->status['afterlogged'] == 'yes')
   <ul>
     <li><a href="http://wojciechpolak.org/" target="Wojciech Polak">Wojciech Polak</a> -- <?php echo _('main programming and lead developer'); ?></li>
     <li><a href="http://gray.gnu.org.ua/" target="Sergey Poznyakoff">Sergey Poznyakoff</a> -- <?php echo _('additional programming'); ?></li>
-    <li><a href="http://www.ranisz.9x.pl/" target="Marcin Raniszewski">Marcin Raniszewski</a> -- <?php echo _('additional programming'); ?></li>
+    <li><a href="http://www.ranisz.o12.pl/" target="Marcin Raniszewski">Marcin Raniszewski</a> -- <?php echo _('additional programming'); ?></li>
     <li>Paweł Piekarski -- <?php echo _('graphics (icons)'); ?></li>
     <li><a href="http://www.famfamfam.com/" target="Mark James">Mark James</a> -- &quot;Silk&quot; icons</li>
     <li><a href="thanks" target="Thanks">Thanks</a></li>
