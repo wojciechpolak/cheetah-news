@@ -325,9 +325,10 @@ if ((!hasXSLT || fbe == 'google') && typeof google != 'undefined')  {
       feed.setResultFormat (google.feeds.Feed.XML_FORMAT);
       feed.load (function (result) {
 	  if (!result.error) {
-	    $(result.xmlDocument).find ('content, encoded').each (function () {
-		$(this).text ($(this).text().replace (/src=\"/g, 'osrc="'));
-	      });
+	    $(result.xmlDocument).find ('content, encoded, content\\:encoded').
+	      each (function () {
+		  $(this).text ($(this).text().replace (/src=\"/g, 'osrc="'));
+		});
 	    transformFeed (result.xmlDocument, feedid, latest, expand);
 	  }
 	  else {
@@ -1048,7 +1049,7 @@ function refresh () {
   if (!isOnline ()) return;
   var rc = 0;
   feedCnt = 0;
-  top.document.title = _('loading...');
+  try { top.document.title = _('loading...'); } catch (e) {}
   resetBCursor ();
   for (var foi = 0; foi < cheetahData.feedOrder.length; foi++) {
     var feedid = cheetahData.feedOrder[foi];
@@ -1378,6 +1379,7 @@ function prepareEntry (n, feedid) {
     }
     else if (n.className == 'linkMore') {
       if (n.href) {
+	n.href = n.href.replace (/[&\?]from=rss/, '');
 	n.style.color = 'gray'; /* Gecko bug workaround */
 	n.innerHTML = _('more');
 	n.title = '[' + _('External link') + ']';
@@ -1741,7 +1743,7 @@ function updateProgressBar (s) {
   }
   if (s < 0) s = 0;
   else if (s > 100) s = 100;
-  progressBar.innerHTML = top.document.title = _('progress') +' '+ s + '%';
+  try { progressBar.innerHTML = top.document.title = _('progress') +' '+ s + '%'; } catch (e) {}
   if (feedCnt >= totalFeeds) resetTitle ();
 }
 
@@ -1752,7 +1754,7 @@ function hideProgressBar () {
 }
 
 function resetTitle () {
-  top.document.title = 'Cheetah News';
+  try { top.document.title = 'Cheetah News'; } catch (e) {}
 }
 
 var lastScrollTop = 0;
@@ -2291,8 +2293,8 @@ var MDOM = {
     var innerHeight = 0;
     if (!objWidth && !objHeight) {
       if (opera || safari) obj.style.display = 'block';
-      objWidth  = this.getStyle (obj, 'width');
-      objHeight = this.getStyle (obj, 'height');
+      objWidth  = $(obj).width ();
+      objHeight = $(obj).height ();
       if (objWidth == '0px' || objWidth == 'auto') {
 	objWidth = obj.offsetWidth + 'px';
 	objHeight = obj.offsetHeight + 'px';
@@ -2306,15 +2308,16 @@ var MDOM = {
     }
     if (window.innerWidth) {
       innerWidth  = window.innerWidth / 2;
-      innerHeight = window.innerHeight / 2 - 20;
-    } else if (document.body.clientWidth) {
-      innerWidth  = document.body.clientWidth / 2;
-      innerHeight = this.getWindowHeight () / 2 - 20;
+      innerHeight = window.innerHeight / 2;
+    }
+    else if (document.body.clientWidth) {
+      innerWidth  = $(window).width () / 2;
+      innerHeight = $(window).height () / 2;
     }
     var wleft = innerWidth - (objWidth / 2);
     if (wleft < 0) wleft = 0;
     obj.style.left = wleft + 'px';
-    obj.style.top  = this.getScrollY () + innerHeight - (objHeight/2) + 'px';
+    obj.style.top  = $(document).scrollTop () + innerHeight - (objHeight/2) + 'px';
     if (parseInt (obj.style.top) < 1)
       obj.style.top = '1px';
   },
@@ -2478,11 +2481,17 @@ var Greybox = new function () {
     if (gb.style.display != 'block')
       return;
     var img = this;
-    var maxWidth = 640;
+    var maxWidth = $(window).width () - 50;
     if (img.width > maxWidth) {
       var nscale = maxWidth / img.width;
-      img.width = maxWidth;
+      img.width  = maxWidth;
       img.height = img.height * nscale;
+    }
+    var maxHeight = $(window).height () - 50;
+    if (img.height > maxHeight) {
+      var nscale = maxHeight / img.height;
+      img.height = maxHeight;
+      img.width  = img.width * nscale;
     }
     MDOM.center (gb, img.width, img.height);
     $(gb).animate ({width: img.width + 'px', height: img.height + 'px'}, 500, function () {

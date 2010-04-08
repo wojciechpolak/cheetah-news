@@ -18,6 +18,7 @@ ul, p {
 }
 input, select {
   font-size: 100%;
+  outline: none;
 }
 img {
   border-style: none;
@@ -196,9 +197,8 @@ a.linkMore {
 
 #controls {
   font-size: 90%;
-  padding-top: 4px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 4px 0 0 70px;
+  margin: 0 auto 0 auto;
   text-align: center;
 }
 
@@ -231,12 +231,12 @@ a.linkMore {
 #weClose2 img:hover { border: 1px solid black; }
 
 #weLocationsBox {
-  margin-left: 190px;
+  margin-left: 15%;
 }
 #weLocationsNames {
   float: left;
   padding-top: 5px;
-  width: 190px;
+  width: 15%;
 }
 #weLocationsNames h2 {
   font-size: 130%;
@@ -261,18 +261,28 @@ td.weatherData {
   background: transparent url(images/yweather/b_day.gif) repeat-x 0 0;
   padding-bottom: 5px;
 }
+td.weatherData:first-child {
+  border-radius: 4px 0 0 0;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-top-left-radius: 4px;
+}
+td.weatherData:last-child {
+  border-radius: 0 4px 0 0;
+  -moz-border-radius: 0 4px 0 0;
+  -webkit-border-top-right-radius: 4px;
+}
 td.weatherData h3 {
   font-size: 100%;
   padding: 3px;
   text-decoration: underline;
 }
 .weatherImage {
-  width: 320px;
+  width: 310px;
   height: 130px;
 }
 .weather-current {
   float: right;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .weather-current h4 {
   font-size: 100%;
@@ -396,9 +406,9 @@ h4.weatherTemp {
   padding: 5px;
   padding-top: 10px;
 }
-
 .cWindowLabel p {
-  line-height: 8px;
+  line-height: normal;
+  margin: 6px 0 6px 0;
 }
 
 .dLink {
@@ -540,7 +550,6 @@ h4.weatherTemp {
 #sWindow {
   float:left;
   margin: 10px;
-  margin-right: 0;
   width: 180px;
   min-height: 150px;
   border: 1px solid black;
@@ -592,6 +601,7 @@ h4.weatherTemp {
   display: none;
   font-size: 95%;
   position: absolute;
+  background-color: #fcfbfa;
   background-color: Menu;
   border: 1px solid black;
   border-top-color: white;
@@ -610,6 +620,7 @@ h4.weatherTemp {
   font-size: 95%;
   display: none;
   position: absolute;
+  background-color: #fcfbfa;
   background-color: Menu;
   border: 1px solid #8d7a68;
   padding: 2px;
@@ -894,7 +905,7 @@ span.outlink:hover {
   padding: 0.5em;
 }
 #neWindowContent textarea {
-  font-size: 100%;
+  font-size: 120%;
   padding: 0.5em;
   background-color: #ffffff;
   border: 1px solid darkred;

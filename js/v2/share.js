@@ -1,6 +1,6 @@
 /*
    Cheetah News JS/v2 Share
-   Copyright (C) 2008, 2009 Wojciech Polak.
+   Copyright (C) 2008, 2009, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -69,7 +69,7 @@ Modules.Share = new function () {
   function initMenu (n) {
     menu.innerHTML = '';
     var href = n.getAttribute ('href');
-    href = encodeURIComponent (href.replace (/&from=rss/, ''));
+    href = encodeURIComponent (href.replace (/[&\?]from=rss/, ''));
     var desc = encodeURIComponent (n.getAttribute ('desc'));
     var mail = DCE ('a',
       {className:'linkCM',
@@ -94,7 +94,7 @@ Modules.Share = new function () {
       ['&nbsp;<img src="images/share/reddit.png" width="16" height="16" alt="" />&nbsp;Reddit&nbsp;</span>']);
     var fac = DCE ('a',
       {className:'linkCM', target:'facebook',
-       href:'http://www.facebook.com/share.php?u=' + href + '&t=' + desc},
+       href:'http://www.facebook.com/sharer.php?u=' + href + '&t=' + desc},
       ['&nbsp;<img src="images/share/facebook.png" width="16" height="16" alt="" />&nbsp;Facebook&nbsp;</span>']);
     var stu = DCE ('a',
       {className:'linkCM', target:'stumbleupon',
@@ -115,11 +115,11 @@ Modules.Share = new function () {
     setCmhLink (goo, null);
 
     menu.appendChild (mail);
+    menu.appendChild (fac);
     menu.appendChild (ff);
     menu.appendChild (dlc);
     menu.appendChild (dig);
     menu.appendChild (red);
-    menu.appendChild (fac);
     menu.appendChild (stu);
     menu.appendChild (goo);
 

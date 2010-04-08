@@ -1,6 +1,6 @@
 /*
    Cheetah News JS/v2 Bootstrapping
-   Copyright (C) 2005, 2006, 2007, 2008 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -17,7 +17,6 @@
 */
 
 var nua = navigator.userAgent.toLowerCase ();
-var ff3 = nua.indexOf ('firefox/3') != -1;
 var linux = nua.indexOf ('linux') != -1;
 var opera = nua.indexOf ('opera') != -1;
 var msie = nua.indexOf ('msie') != -1 && (document.all && !opera);

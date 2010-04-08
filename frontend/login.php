@@ -200,7 +200,7 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="'.$CHEETAH_LANG.'" la
     </tr>
     <tr>
       <td align="right"><input type="checkbox" id="PersistentCookie" name="PersistentCookie" value="yes" /></td>
-      <td align="left"><?php echo _('Remember me on this computer.'); ?></td>
+      <td align="left"><label for="PersistentCookie"><?php echo _('Remember me on this computer.'); ?></label></td>
     </tr>
     <tr>
       <td><?php if (!empty ($feedurl)) echo '<input type="hidden" name="feedurl" value="'.htmlspecialchars ($feedurl).'" />'; ?></td>

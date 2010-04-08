@@ -52,7 +52,7 @@ function initGui () {
   }
 
   sWindow = createEmptyWindow ('s', null, _('My Stuff'));
-  if (ff3 || safari || msie) sWindow.style.marginRight = '10px';
+  if (opera) sWindow.style.marginRight = 0;
   var sWindowOptions = GID ('sWindowOptions');
   sWindowOptions.style.marginTop = '3px';
   sWindowFeeds = document.createElement ('DIV');
