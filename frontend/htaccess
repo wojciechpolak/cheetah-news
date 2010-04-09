@@ -1,10 +1,3 @@
-<IfDefine !APACHE2>
- <IfModule mod_headers.c>
-   ErrorHeader unset Content-Location
-   ErrorHeader unset Vary
-   ErrorHeader unset TCN
- </IfModule>
-</IfDefine>
 <IfDefine APACHE2>
  <IfModule mod_headers.c>
    Header always unset Content-Location

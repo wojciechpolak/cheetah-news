@@ -18,7 +18,6 @@
    with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-include 'lib/gz.php';
 require 'lib/include.php';
 
 start_session (null);
