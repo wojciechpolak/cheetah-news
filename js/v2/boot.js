@@ -51,8 +51,7 @@ function reader () {
     window.location = 'html/noactivex';
   if (!xh) return;
   try {
-    xh.open ('GET', 'd?q=js/2', true);
-    xh.setRequestHeader ('X-Referer', 'CNA');
+    xh.open ('GET', dsp ('js', '&lang=' + LANG), true);
     xh.onreadystatechange = function () {
       if (xh.readyState == 4) {
 	if (xh.status == 200) {
@@ -71,6 +70,14 @@ function reader () {
   } catch (e) {
     window.location = 'html/error?st=' + e.message;
   }
+}
+
+function dsp (res, p) {
+  var d = 'd?q=' + res;
+  if (res in SIGS)
+    d += '&v=' + SIGS[res];
+  if (p) d += p;
+  return d;
 }
 
 window.onload = reader;

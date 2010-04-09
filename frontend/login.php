@@ -2,7 +2,7 @@
 
 /*
    Cheetah News login.php
-   Copyright (C) 2005, 2006, 2007, 2008, 2009 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -19,6 +19,7 @@
 */
 
 require_once 'lib/include.php';
+require_once 'lib/d-sigs.php';
 require_once 'lib/register.php';
 require_once 'Auth/OpenID/Consumer.php';
 require_once 'Auth/OpenID/FileStore.php';
@@ -164,9 +165,9 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="'.$CHEETAH_LANG.'" la
 <meta name="description" content="Web-based Personal News Aggregator. The Google Reader Alternative." />
 <meta name="keywords" content="cheetah news, web-based personal news aggregator, feedreader, feeds, rss, atom, rdf, web 2.0" />
 <meta name="robots" content="index,nofollow" />
-<link rel="stylesheet" href="d?q=css.login" type="text/css" />
+<link rel="stylesheet" href="<?=dsp('css.login')?>" type="text/css" />
 <link rel="icon" href="images/favicon.png" type="image/png" />
-<script type="text/javascript" src="d?q=login"></script>
+<script type="text/javascript" src="<?=dsp('login')?>"></script>
 </head>
 <body>
 

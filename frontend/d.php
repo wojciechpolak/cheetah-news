@@ -2,7 +2,7 @@
 
 /*
    Cheetah News d.php
-   Copyright (C) 2005, 2006, 2007, 2008, 2009 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010 Wojciech Polak.
    Copyright (C) 2006 The Cheetah News Team.
 
    This program is free software; you can redistribute it and/or modify it
@@ -20,6 +20,7 @@
 */
 
 require 'lib/include.php';
+require 'lib/d-files.php';
 
 $copyright = "/*
    Cheetah News Aggregator.
@@ -40,42 +41,14 @@ $copyright = "/*
    with this program.  If not, see <http://www.gnu.org/licenses/>.
 */\n\n";
 
-$files = array ('bt/2'       => array ('js',  array ('js/v2/i18n.js',
-						     'js/v2/boot.js',
-						     'js/v2/jquery.js',
-						     'js/v2/jquery-ui.js',
-						     'js/v2/jquery-extra.js')),
-		'js/2'       => array ('js',  array ('js/v2/core.js',
-						     'js/v2/gui.js',
-						     'js/v2/opml.js',
-						     'js/v2/filter.js',
-						     'js/v2/marker.js',
-						     'js/v2/share.js',
-						     'js/v2/translate.js',
-						     'js/v2/notes.js',
-						     'js/v2/weather.js',
-						     'js/v2/niftycube.js')),
-		'login'      => array ('js',  array ('js/v2/login.js')),
-		'tr/2'       => array ('xml', array ('xslt/v2/feed.xsl')),
-		'op/2'       => array ('xml', array ('xslt/v2/opml.xsl')),
-		'wt/2'       => array ('xml', array ('xslt/v2/weather.xsl')),
-		'css/2'      => array ('css', array ('css/v2/style1.css',
-						     'css/v2/niftyCorners.css')),
-		'css.login'  => array ('css', array ('css/v2/login.css')),
-		'css.notice' => array ('css', array ('css/v2/notice.css')),
-		'css.signup' => array ('css', array ('css/v2/signup.css')),
-		'css.changepassword' => array ('css', array ('css/v2/changepassword.css')),
-		'dir'        => array ('xml', array ('gen/directory.xml')),
-		'popular'    => array ('xml', array ('gen/popular.xml'))
-		);
-
 getvars ('q');
 
-if (isset ($files[$q]) && $files[$q][0] == 'js')
-  start_session (null, false, 0);
+if ($q == 'popular')
+  $days = 1;
 else
-  start_session (null, false, 900);
+  $days = 30;
 
+start_session (null, false, 86400 * $days);
 $session->auth ('iflogged');
 
 $headers = getallheaders ();
@@ -86,14 +59,12 @@ if (isset ($files[$q])) {
   if ($d[0] == 'js') {
     if (!$logged && $q != 'login')
       return;
-    if ($q == 'js/1' || $q == 'js/2')
-      checkReferer ();
     $m = $d[1];
     array_push ($m, $mofile);
     checkModification ($m, true);
     header ('Content-Type: application/x-javascript; charset=UTF-8');
     echo $copyright;
-    if ($q == 'bt/1' || $q == 'bt/2')
+    if ($q == 'bt')
       convert_mo ();
     printJsCode ($d[1]);
   }
@@ -103,23 +74,10 @@ if (isset ($files[$q])) {
     printCode ($d[1]);
   }
   else if ($d[0] == 'xml') {
-    checkReferer ();
     checkModification ($d[1], false);
     header ('Content-Type: application/xml; charset=UTF-8');
     printCode ($d[1]);
   }
-}
-
-function checkReferer ()
-{
-  global $headers;
-  foreach ($headers as $k => $v)
-  {
-    if (strtolower ($k) == 'x-referer' && $v == 'CNA')
-      return;
-  }
-  header ('HTTP/1.1 401 Unauthorized');
-  exit ();
 }
 
 function checkModification ($files, $checkLang)

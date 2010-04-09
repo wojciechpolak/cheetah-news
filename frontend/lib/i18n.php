@@ -397,7 +397,7 @@ function convert_mo()
   echo "var gettext_locale = \"$locale\";\n";
   echo "gettext_msg = {\n";
   for ($q = 1; $q < $str_count; $q++) {
-    printf("  '%s' : '%s'", my_addslashes ($msgid[$q]), my_addslashes ($msgstr[$q]));
+    printf("  '%s': '%s'", my_addslashes ($msgid[$q]), my_addslashes ($msgstr[$q]));
     if ($q < $str_count-1)
       printf(",");
     echo "\n";

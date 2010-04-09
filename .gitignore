@@ -5,6 +5,7 @@
 .htaccess
 errorlog
 frontend/lib/config.php
+frontend/lib/d-sigs.php
 frontend/trs/*
 gen/popular.xml
 po/*-js.po

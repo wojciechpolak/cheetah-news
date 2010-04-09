@@ -2,7 +2,7 @@
 
 /*
    Cheetah News lib/functions.php
-   Copyright (C) 2005, 2006 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -146,6 +146,19 @@ function checkCSRF ($csid) {
     printXmlError (null, 'CSRF');
     exit ();
   }
+}
+
+function dsp ($res, $params=array()) {
+  global $SIGS;
+
+  if (isset ($SIGS[$res]))
+    $params['v'] = $SIGS[$res];
+
+  $p = '';
+  foreach ($params as $k => $v) {
+    $p .= '&amp;'.$k.'='.$v;
+  }
+  return 'd?q='.$res.$p;
 }
 
 ?>

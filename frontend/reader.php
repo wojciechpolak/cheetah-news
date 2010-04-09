@@ -19,6 +19,7 @@
 */
 
 require 'lib/include.php';
+require 'lib/d-sigs.php';
 
 start_session (null);
 $session->auth ('afterlogged');
@@ -33,11 +34,15 @@ if ($session->status['afterlogged'] == 'yes')
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link id="style" rel="stylesheet" type="text/css" href="d?q=css/2" />
+<link id="style" rel="stylesheet" type="text/css" href="<?=dsp('css')?>" />
 <?php if ($CONF['feedEngine'] != 'cthonly') { ?><script type="text/javascript" src="http://www.google.com/jsapi?key=<?=$CONF['google.key']?>"></script>
 <? } ?>
-<script type="text/javascript">var fbe='<?=$CONF['feedEngine']?>';</script>
-<script type="text/javascript" src="d?q=bt/2<?php if (!empty ($session->lang)) echo '&amp;'.$session->lang; ?>"></script>
+<script type="text/javascript">
+var fbe = '<?=$CONF['feedEngine']?>';
+var LANG = '<?=$session->lang?>';
+var SIGS = {'js':'<?=$SIGS["js"]?>', 'tr':'<?=$SIGS["tr"]?>', 'wt':'<?=$SIGS["wt"]?>', 'op':'<?=$SIGS["op"]?>', 'dir':'<?=$SIGS["dir"]?>'};
+</script>
+<script type="text/javascript" src="<?=dsp('bt')?><?php if (!empty ($session->lang)) echo '&amp;lang='.$session->lang; ?>"></script>
 
 <title>Cheetah News</title>
 </head>

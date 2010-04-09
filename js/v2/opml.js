@@ -1,6 +1,6 @@
 /*
    Cheetah News JS/v2 OPML
-   Copyright (C) 2005, 2006, 2008, 2009 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2008, 2009, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -138,8 +138,7 @@ Modules.OPML = new function () {
     var xh = initHouseholdCleanser ();
     if (!xh) return;
     try {
-      xh.open ('GET', 'd?q=op/2', true);
-      xh.setRequestHeader ('X-Referer', 'CNA');
+      xh.open ('GET', dsp ('op'), true);
       xh.onreadystatechange = function () {
 	if (xh.readyState == 4) {
 	  if (xh.status == 200) {
@@ -163,7 +162,6 @@ Modules.OPML = new function () {
     if (!xh) return;
     try {
       xh.open ('GET', file, true);
-      xh.setRequestHeader ('X-Referer', 'CNA');
       xh.onreadystatechange = function() {
 	if (xh.readyState == 4) {
 	  if (xh.status == 200) {
@@ -182,7 +180,7 @@ Modules.OPML = new function () {
   }
 
   function getFeedDirectory () {
-    getOPML ('d?q=dir');
+    getOPML (dsp ('dir'));
   }
 
   function getPopularFeeds () {

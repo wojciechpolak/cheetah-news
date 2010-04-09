@@ -1,6 +1,6 @@
 /*
    Cheetah News JS/v2 Weather
-   Copyright (C) 2005, 2006, 2008 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2008, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -149,8 +149,7 @@ Modules.Weather = new function () {
     var xh = initHouseholdCleanser ();
     if (!xh) return;
     try {
-      xh.open ('GET', 'd?q=wt/2', true);
-      xh.setRequestHeader ('X-Referer', 'CNA');
+      xh.open ('GET', dsp ('wt'), true);
       xh.onreadystatechange = function () {
 	if (xh.readyState == 4) {
 	  if (xh.status == 200) {

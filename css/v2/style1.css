@@ -218,8 +218,8 @@ a.linkMore {
   margin: 10px;
 }
 #weForecast {
+  top: 0;
   margin-left: -70px;
-  margin-top: -12px;
   vertical-align: middle;
   z-index: 10;
 }

@@ -2,7 +2,7 @@
 
 /*
    Cheetah News fetch.php
-   Copyright (C) 2005, 2006, 2008 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2008, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -47,15 +47,13 @@ if ($session->status['afterlogged'] == 'yes')
     $safs = 0;
     $oldestFirst = 0;
     $refresh = 0;
-    $invitation = 0;
     $lucid = '';
-    $db->query ("SELECT showActive,oldestFirst,refresh,invitation,lastUC ".
+    $db->query ("SELECT showActive,oldestFirst,refresh,lastUC ".
 		"FROM user WHERE id='".$session->id."'");
     if ($db->next_record ()) {
       $safs = $db->f ('showActive');
       $oldestFirst = $db->f ('oldestFirst');
       $refresh = $db->f ('refresh');
-      $invitation = $db->f ('invitation');
       $lucid = $db->f ('lastUC');
       if (!empty ($lucid)) $lucid = md5 ($lucid);
     }
@@ -85,8 +83,7 @@ if ($session->status['afterlogged'] == 'yes')
   this.lang = '".$session->lang."';
   this.safs = $safs;
   this.oldf = $oldestFirst;
-  this.frequency = $refresh;
-  this.invitation = $invitation;\n";
+  this.frequency = $refresh;\n";
     if ($feedAddSid)
       echo "  this.feedAddSid = '".encodeJsEntities ($feedAddSid)."';\n";
     else if ($feedAddUrl)
@@ -105,7 +102,7 @@ if ($session->status['afterlogged'] == 'yes')
     echo "  this.folders = {\n";
     $i = 1;
     foreach ($folders as $k => $v) {
-      echo "   '".$k."' : '".encodeJsEntities ($v)."'";
+      echo "   '".$k."': '".encodeJsEntities ($v)."'";
       if ($i++ < $end)
 	echo ",\n";
     }
@@ -126,7 +123,7 @@ if ($session->status['afterlogged'] == 'yes')
     $i = 1;
     while ($db->next_record ())
     {
-      echo "   '".$db->f ('feedid')."' : ['".
+      echo "   '".$db->f ('feedid')."': ['".
 	encodeJsEntities ($db->f ('description'))
 	."','".$db->f ('folder')."',".$db->f ('latest')
 	.",".$db->f ('expand').",".$db->f ('active').",'".$db->f ('url')."']";

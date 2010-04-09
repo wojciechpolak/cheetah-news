@@ -496,8 +496,7 @@ function initXSLT (cb) {
   var xh = initHouseholdCleanser ();
   if (!xh) return;
   try {
-    xh.open ('GET', 'd?q=tr/2', true);
-    xh.setRequestHeader ('X-Referer', 'CNA');
+    xh.open ('GET', dsp ('tr'), true);
     xh.onreadystatechange = function () {
       if (xh.readyState == 4) {
 	if (xh.status == 200) {
