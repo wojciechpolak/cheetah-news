@@ -268,7 +268,6 @@ if ($session->status['afterlogged'] == 'yes')
     <li><a href="http://wojciechpolak.org/" target="Wojciech_Polak">Wojciech Polak</a> -- <?php echo _('main programming and lead developer'); ?></li>
     <li><a href="http://gray.gnu.org.ua/" target="Sergey_Poznyakoff">Sergey Poznyakoff</a> -- <?php echo _('additional programming'); ?></li>
     <li><a href="http://www.ranisz.o12.pl/" target="Marcin_Raniszewski">Marcin Raniszewski</a> -- <?php echo _('additional programming'); ?></li>
-    <li>Paweł Piekarski -- <?php echo _('graphics (icons)'); ?></li>
     <li><a href="http://www.famfamfam.com/" target="Mark_James">Mark James</a> -- &quot;Silk&quot; icons</li>
     <li><a href="thanks" target="Thanks">Thanks</a></li>
   </ul>

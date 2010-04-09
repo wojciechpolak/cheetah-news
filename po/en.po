@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cheetah 2.0\n"
 "Report-Msgid-Bugs-To: cheetah-admins@gnu.org.ua\n"
-"POT-Creation-Date: 2009-12-16 18:36+0200\n"
+"POT-Creation-Date: 2010-04-09 18:15+0300\n"
 "PO-Revision-Date: 2006-06-16 11:56+0200\n"
 "Last-Translator: Wojciech Polak <wojciechpolak@gmail.com>\n"
 "Language-Team: English <en@li.org>\n"
@@ -103,11 +103,11 @@ msgstr ""
 msgid "Invalid old password."
 msgstr ""
 
-#: frontend/changepassword.php:162 js/v1/gui.js:1090 js/v2/gui.js:956
+#: frontend/changepassword.php:162 js/v2/gui.js:956
 msgid "Change Password"
 msgstr ""
 
-#: frontend/reader.php:46 frontend/reader1.php:42
+#: frontend/reader.php:46
 msgid "JavaScript is required"
 msgstr ""
 
@@ -119,7 +119,7 @@ msgstr ""
 msgid "or"
 msgstr ""
 
-#: frontend/reader.php:159 frontend/reader1.php:182
+#: frontend/reader.php:159
 msgid "Browser preferred language"
 msgstr ""
 
@@ -128,60 +128,42 @@ msgstr ""
 msgid "Personal News Aggregator %s"
 msgstr ""
 
-#: frontend/reader.php:263 frontend/reader1.php:72 frontend/login.php:237
-#: frontend/signup.php:167 frontend/signup.php:211
+#: frontend/reader.php:263 frontend/login.php:237 frontend/signup.php:167
+#: frontend/signup.php:211
 msgid "Privacy Policy"
 msgstr ""
 
-#: frontend/reader.php:264 frontend/reader1.php:73 frontend/login.php:238
-#: frontend/signup.php:168 frontend/signup.php:212
+#: frontend/reader.php:264 frontend/login.php:238 frontend/signup.php:168
+#: frontend/signup.php:212
 msgid "Terms of Service"
 msgstr ""
 
-#: frontend/reader.php:266 frontend/reader1.php:75
+#: frontend/reader.php:266
 msgid "Credits:"
 msgstr ""
 
-#: frontend/reader.php:268 frontend/reader1.php:77
+#: frontend/reader.php:268
 msgid "main programming and lead developer"
 msgstr ""
 
-#: frontend/reader.php:269 frontend/reader.php:270 frontend/reader1.php:78
-#: frontend/reader1.php:79
+#: frontend/reader.php:269 frontend/reader.php:270
 msgid "additional programming"
 msgstr ""
 
-#: frontend/reader.php:271 frontend/reader1.php:80
+#: frontend/reader.php:271
 msgid "graphics (icons)"
 msgstr ""
 
-#: frontend/reader.php:275 frontend/reader1.php:84
+#: frontend/reader.php:275
 msgid "Feedback:"
 msgstr ""
 
-#: frontend/reader.php:279 frontend/reader1.php:88
+#: frontend/reader.php:279
 msgid "-- send us your bug reports and suggestions (public list)."
 msgstr ""
 
-#: frontend/reader.php:281 frontend/reader1.php:90
+#: frontend/reader.php:281
 msgid "-- private list."
-msgstr ""
-
-#: frontend/reader1.php:70 frontend/login.php:322
-#, php-format
-msgid "Bleeding-Edge Personal News Aggregator %s"
-msgstr ""
-
-#: frontend/reader1.php:256
-msgid "Currently used language"
-msgstr ""
-
-#: frontend/reader1.php:367
-msgid "Bookmark to del.icio.us"
-msgstr ""
-
-#: frontend/reader1.php:367
-msgid "Digg it"
 msgstr ""
 
 #: frontend/fetch.php:244
@@ -220,7 +202,7 @@ msgstr ""
 msgid "Network is unreachable"
 msgstr ""
 
-#: frontend/fetch.php:294 js/v1/core.js:980 js/v2/core.js:1165
+#: frontend/fetch.php:294 js/v2/core.js:1166
 msgid "Unknown error"
 msgstr ""
 
@@ -228,8 +210,8 @@ msgstr ""
 msgid "Bad feedId"
 msgstr ""
 
-#: frontend/fetch.php:304 frontend/import.php:68 frontend/invite.php:50
-#: frontend/mdb.php:84 frontend/xnotes.php:53
+#: frontend/fetch.php:304 frontend/import.php:68 frontend/mdb.php:84
+#: frontend/xnotes.php:53
 msgid "Operation not permitted. Access denied"
 msgstr ""
 
@@ -257,50 +239,6 @@ msgstr ""
 msgid "No file was uploaded"
 msgstr ""
 
-#: frontend/invite.php:33
-msgid "You have been invited to open Cheetah News Aggregator account"
-msgstr ""
-
-#: frontend/invite.php:34
-#, php-format
-msgid "%s has invited you to open a free Cheetah News Aggregator account."
-msgstr ""
-
-#: frontend/invite.php:35
-#, php-format
-msgid "Learn more about Cheetah News Aggregator at %s."
-msgstr ""
-
-#: frontend/invite.php:36
-#, php-format
-msgid "To accept this invitation and register for your account, visit: %s"
-msgstr ""
-
-#: frontend/invite.php:37
-#, php-format
-msgid ""
-"Please do not reply to this email. If you need further assistance,\n"
-"please mail to %s."
-msgstr ""
-
-#: frontend/invite.php:126
-msgid "No invitations left"
-msgstr ""
-
-#: frontend/invite.php:132 frontend/login.php:101 frontend/login.php:116
-#: frontend/login.php:134 frontend/signup.php:55
-msgid "Please specify a valid e-mail address."
-msgstr ""
-
-#: frontend/invite.php:139
-msgid "This user is already subscribed."
-msgstr ""
-
-#: frontend/invite.php:189 frontend/login.php:105 frontend/login.php:138
-#: frontend/signup.php:59
-msgid "Service temporarily unavailable. Please try again later."
-msgstr ""
-
 #: frontend/login.php:67 frontend/openid_manage.php:53
 msgid "Verification cancelled."
 msgstr ""
@@ -316,6 +254,15 @@ msgstr ""
 
 #: frontend/login.php:98
 msgid "E-mail has been sent to you."
+msgstr ""
+
+#: frontend/login.php:101 frontend/login.php:116 frontend/login.php:134
+#: frontend/signup.php:55
+msgid "Please specify a valid e-mail address."
+msgstr ""
+
+#: frontend/login.php:105 frontend/login.php:138 frontend/signup.php:59
+msgid "Service temporarily unavailable. Please try again later."
 msgstr ""
 
 #: frontend/login.php:109
@@ -404,6 +351,11 @@ msgstr ""
 msgid "I already have an account"
 msgstr ""
 
+#: frontend/login.php:322
+#, php-format
+msgid "Bleeding-Edge Personal News Aggregator %s"
+msgstr ""
+
 #: frontend/login.php:332
 msgid "[External link] Help Save the Wild Cheetah"
 msgstr ""
@@ -450,8 +402,8 @@ msgstr ""
 msgid "Are you sure you want to detach this OpenID?"
 msgstr ""
 
-#: frontend/openid_manage.php:162 js/v1/gui.js:1540 js/v1/gui.js:1573
-#: js/v1/notes.js:271 js/v2/gui.js:1324 js/v2/gui.js:1357 js/v2/notes.js:292
+#: frontend/openid_manage.php:162 js/v2/gui.js:1324 js/v2/gui.js:1357
+#: js/v2/notes.js:292
 msgid "Remove"
 msgstr ""
 
@@ -561,9 +513,7 @@ msgstr ""
 msgid "Error %s: %s"
 msgstr ""
 
-#: frontend/html/loading.php:50 js/v1/gui.js:91 js/v1/gui.js:700
-#: js/v1/gui.js:855 js/v1/gui.js:902 js/v1/media.js:79 js/v1/notes.js:300
-#: js/v1/opml.js:45 js/v1/weather.js:183 js/v2/core.js:2408 js/v2/gui.js:60
+#: frontend/html/loading.php:50 js/v2/core.js:2411 js/v2/gui.js:60
 #: js/v2/gui.js:571 js/v2/gui.js:725 js/v2/gui.js:775 js/v2/notes.js:317
 #: js/v2/opml.js:33 js/v2/opml.js:130 js/v2/weather.js:236
 msgid "Loading..."
@@ -602,7 +552,7 @@ msgid ""
 "Aggregator."
 msgstr ""
 
-#: frontend/help/kshortcuts.php:57 js/v1/gui.js:1910 js/v2/gui.js:1524
+#: frontend/help/kshortcuts.php:57 js/v2/gui.js:1524
 msgid "Keyboard shortcuts"
 msgstr ""
 
@@ -614,23 +564,23 @@ msgstr ""
 msgid "Action"
 msgstr ""
 
-#: frontend/help/kshortcuts.php:65 js/v1/gui.js:1911 js/v2/gui.js:1525
+#: frontend/help/kshortcuts.php:65 js/v2/gui.js:1525
 msgid "next item"
 msgstr ""
 
-#: frontend/help/kshortcuts.php:66 js/v1/gui.js:1912 js/v2/gui.js:1526
+#: frontend/help/kshortcuts.php:66 js/v2/gui.js:1526
 msgid "previous item"
 msgstr ""
 
-#: frontend/help/kshortcuts.php:67 js/v1/gui.js:1913 js/v2/gui.js:1527
+#: frontend/help/kshortcuts.php:67 js/v2/gui.js:1527
 msgid "next feed"
 msgstr ""
 
-#: frontend/help/kshortcuts.php:68 js/v1/gui.js:1914 js/v2/gui.js:1528
+#: frontend/help/kshortcuts.php:68 js/v2/gui.js:1528
 msgid "previous feed"
 msgstr ""
 
-#: frontend/help/kshortcuts.php:69 js/v1/gui.js:1915 js/v2/gui.js:1529
+#: frontend/help/kshortcuts.php:69 js/v2/gui.js:1529
 msgid "open selected feed/entry"
 msgstr ""
 
@@ -638,7 +588,7 @@ msgstr ""
 msgid "append selected feed"
 msgstr ""
 
-#: frontend/help/kshortcuts.php:71 js/v1/gui.js:1916 js/v2/gui.js:1530
+#: frontend/help/kshortcuts.php:71 js/v2/gui.js:1530
 msgid "open feeds from folder/more"
 msgstr ""
 
@@ -670,30 +620,27 @@ msgstr ""
 msgid "open/close My Stuff window"
 msgstr ""
 
-#: frontend/help/kshortcuts.php:79 js/v1/gui.js:1925 js/v2/gui.js:1539
+#: frontend/help/kshortcuts.php:79 js/v2/gui.js:1539
 msgid "collapse"
 msgstr ""
 
-#: frontend/help/kshortcuts.php:80 js/v1/gui.js:124 js/v1/gui.js:1926
-#: js/v2/gui.js:94 js/v2/gui.js:1540
+#: frontend/help/kshortcuts.php:80 js/v2/gui.js:94 js/v2/gui.js:1540
 msgid "refresh visible"
 msgstr ""
 
-#: frontend/help/kshortcuts.php:81 js/v1/gui.js:1928 js/v2/gui.js:1542
+#: frontend/help/kshortcuts.php:81 js/v2/gui.js:1542
 msgid "mark entry as read"
 msgstr ""
 
-#: frontend/help/kshortcuts.php:82 js/v1/gui.js:1929 js/v2/gui.js:1543
+#: frontend/help/kshortcuts.php:82 js/v2/gui.js:1543
 msgid "mark entry as unread"
 msgstr ""
 
-#: frontend/help/kshortcuts.php:83 js/v1/gui.js:126 js/v1/gui.js:1931
-#: js/v2/gui.js:96 js/v2/gui.js:1545
+#: frontend/help/kshortcuts.php:83 js/v2/gui.js:96 js/v2/gui.js:1545
 msgid "filter visible"
 msgstr ""
 
-#: frontend/help/kshortcuts.php:84 js/v1/gui.js:1923 js/v1/notes.js:71
-#: js/v2/gui.js:1537 js/v2/notes.js:69
+#: frontend/help/kshortcuts.php:84 js/v2/gui.js:1537 js/v2/notes.js:69
 msgid "save link"
 msgstr ""
 
@@ -705,1259 +652,283 @@ msgstr ""
 msgid "open/close Notes and Bookmarks"
 msgstr ""
 
-#: js/v1/boot.js:31 js/v2/boot.js:41
+#: js/v2/boot.js:40
 msgid "initializing..."
 msgstr ""
 
-#: js/v1/core.js:285 js/v2/core.js:287
+#: js/v2/core.js:287
 msgid "Your browser is working offline!"
 msgstr ""
 
-#: js/v1/core.js:303 js/v2/core.js:305
+#: js/v2/core.js:305
 msgid "You need to enable active scripting and ActiveX controls."
 msgstr ""
 
-#: js/v1/core.js:312 js/v1/gui.js:529 js/v1/gui.js:624 js/v1/gui.js:837
-#: js/v1/gui.js:889 js/v1/gui.js:942 js/v1/invite.js:77 js/v2/core.js:314
-#: js/v2/gui.js:482 js/v2/gui.js:707 js/v2/gui.js:762 js/v2/gui.js:794
+#: js/v2/core.js:314 js/v2/gui.js:482 js/v2/gui.js:707 js/v2/gui.js:762
+#: js/v2/gui.js:794
 msgid "Timeout Error!"
 msgstr ""
 
-#: js/v1/core.js:349 js/v1/core.js:509 js/v1/core.js:519 js/v1/media.js:74
-#: js/v1/notes.js:569 js/v2/core.js:335 js/v2/core.js:347 js/v2/core.js:390
-#: js/v2/core.js:554 js/v2/core.js:590 js/v2/notes.js:485
+#: js/v2/core.js:336 js/v2/core.js:348 js/v2/core.js:391 js/v2/core.js:555
+#: js/v2/core.js:591 js/v2/notes.js:485
 msgid "error"
 msgstr ""
 
-#: js/v1/core.js:446
-msgid "Your browser can't handle this script."
-msgstr ""
-
-#: js/v1/core.js:613 js/v1/gui.js:252 js/v2/core.js:771 js/v2/gui.js:195
-msgid "fetching data..."
-msgstr ""
-
-#: js/v1/core.js:655 js/v2/core.js:813
-msgid "Open feeds from this folder"
-msgstr ""
-
-#: js/v1/core.js:875 js/v2/core.js:1051
-msgid "loading..."
-msgstr ""
-
-#: js/v1/core.js:1073 js/v1/gui.js:1093 js/v2/core.js:1268 js/v2/gui.js:959
-msgid "stories"
-msgstr ""
-
-#: js/v1/core.js:1077 js/v1/gui.js:140 js/v2/core.js:1272 js/v2/gui.js:109
-msgid "Expand"
-msgstr ""
-
-#: js/v1/core.js:1079 js/v2/core.js:1274
-msgid "Expand entries"
-msgstr ""
-
-#: js/v1/core.js:1085 js/v1/gui.js:145 js/v2/core.js:1280 js/v2/gui.js:115
-msgid "Collapse"
-msgstr ""
-
-#: js/v1/core.js:1086 js/v2/core.js:1281
-msgid "Collapse entries"
-msgstr ""
-
-#: js/v1/core.js:1098 js/v2/core.js:1293
-msgid "Mark as read"
-msgstr ""
-
-#: js/v1/core.js:1099 js/v2/core.js:1294
-msgid "Mark all entries as read"
-msgstr ""
-
-#: js/v1/core.js:1106 js/v2/core.js:1301
-msgid "Mark as unread"
-msgstr ""
-
-#: js/v1/core.js:1107 js/v2/core.js:1302
-msgid "Mark all entries as unread"
-msgstr ""
-
-#: js/v1/core.js:1125 js/v2/core.js:1399
-msgid "See enclosed multimedia"
-msgstr ""
-
-#: js/v1/core.js:1132 js/v2/core.js:1410 js/v2/core.js:1576
-msgid "See enclosed image"
-msgstr ""
-
-#: js/v1/core.js:1195 js/v1/core.js:1208 js/v1/weather.js:225
-#: js/v2/core.js:1370 js/v2/core.js:1383 js/v2/core.js:1392
-#: js/v2/weather.js:306
-msgid "External link"
-msgstr ""
-
-#: js/v1/core.js:1207 js/v1/weather.js:224 js/v2/core.js:1382
-#: js/v2/core.js:1391 js/v2/gui.js:1551 js/v2/weather.js:305
-msgid "more"
-msgstr ""
-
-#: js/v1/core.js:1217
-msgid "email this"
-msgstr ""
-
-#: js/v1/core.js:1218
-msgid "Email this to a friend"
-msgstr ""
-
-#: js/v1/core.js:1510 js/v2/core.js:1744
-msgid "progress"
-msgstr ""
-
-#: js/v1/core.js:1578
-msgid "You don't have any active feeds."
-msgstr ""
-
-#: js/v1/core.js:2008 js/v2/core.js:2210
-msgid "A popup blocker may be preventing Cheetah News from opening the page."
-msgstr ""
-
-#: js/v1/core.js:2009 js/v2/core.js:2211
-msgid "If you have a popup blocker, try disabling it to open the window."
-msgstr ""
-
-#: js/v1/filter.js:30 js/v2/filter.js:30
-msgid "Filter"
-msgstr ""
-
-#: js/v1/filter.js:32 js/v2/filter.js:32
-msgid "filtering..."
-msgstr ""
-
-#: js/v1/filter.js:40 js/v2/filter.js:40
-msgid "%d entry"
-msgid_plural "%d entries"
-msgstr[0] ""
-msgstr[1] ""
-
-#: js/v1/filter.js:98 js/v2/filter.js:99
-msgid "filtered"
-msgstr ""
-
-#: js/v1/filter.js:99 js/v1/filter.js:183 js/v2/filter.js:100
-#: js/v2/filter.js:184
-msgid "Remove filtering"
-msgstr ""
-
-#: js/v1/filter.js:184 js/v2/filter.js:185
-msgid "Remove filtering from all feeds"
-msgstr ""
-
-#: js/v1/gui.js:43
-msgid "Error Information"
-msgstr ""
-
-#: js/v1/gui.js:47
-msgid "clear"
-msgstr ""
-
-#: js/v1/gui.js:84 js/v2/gui.js:54
-msgid "My Stuff"
-msgstr ""
-
-#: js/v1/gui.js:116 js/v2/gui.js:86
-msgid "Welcome"
-msgstr ""
-
-#: js/v1/gui.js:117 js/v1/gui.js:998 js/v2/gui.js:87 js/v2/gui.js:860
-msgid "About Cheetah News"
-msgstr ""
-
-#: js/v1/gui.js:118 js/v2/gui.js:88
-msgid "show active"
-msgstr ""
-
-#: js/v1/gui.js:118 js/v2/gui.js:88
-msgid "Show all active feeds"
-msgstr ""
-
-#: js/v1/gui.js:119 js/v2/gui.js:89
-msgid "show loaded"
-msgstr ""
-
-#: js/v1/gui.js:119 js/v2/gui.js:89
-msgid "Show all loaded feeds"
-msgstr ""
-
-#: js/v1/gui.js:120 js/v2/gui.js:90
-msgid "hide all"
-msgstr ""
-
-#: js/v1/gui.js:120 js/v2/gui.js:90
-msgid "Hide all feeds"
-msgstr ""
-
-#: js/v1/gui.js:124 js/v2/gui.js:94
-msgid "Refresh all visible feeds"
-msgstr ""
-
-#: js/v1/gui.js:126 js/v2/gui.js:96
-msgid "Filter visible feeds"
-msgstr ""
-
-#: js/v1/gui.js:141 js/v2/gui.js:110
-msgid "Expand folders"
-msgstr ""
-
-#: js/v1/gui.js:146 js/v2/gui.js:116
-msgid "Collapse folders"
-msgstr ""
-
-#: js/v1/gui.js:151 js/v2/gui.js:121
-msgid "Show My Stuff"
-msgstr ""
-
-#: js/v1/gui.js:152 js/v1/gui.js:1085 js/v2/gui.js:122 js/v2/gui.js:947
-msgid "Add New Feed"
-msgstr ""
-
-#: js/v1/gui.js:153 js/v1/gui.js:1086 js/v2/gui.js:123 js/v2/gui.js:948
-msgid "Manage Subscriptions"
-msgstr ""
-
-#: js/v1/gui.js:154 js/v1/gui.js:1087 js/v2/gui.js:124 js/v2/gui.js:949
-msgid "Manage Folders"
-msgstr ""
-
-#: js/v1/gui.js:155 js/v1/gui.js:1088 js/v2/gui.js:125 js/v2/gui.js:950
-msgid "User Settings"
-msgstr ""
-
-#: js/v1/gui.js:156 js/v2/gui.js:127
-msgid "Logout"
-msgstr ""
-
-#: js/v1/gui.js:186 js/v1/gui.js:242 js/v2/gui.js:165 js/v2/gui.js:185
-msgid "Close Window"
-msgstr ""
-
-#: js/v1/gui.js:239 js/v2/gui.js:182
-msgid "Reload this feed"
-msgstr ""
-
-#: js/v1/gui.js:337 js/v1/gui.js:1210 js/v2/gui.js:289 js/v2/gui.js:1073
-msgid "Root folder"
-msgstr ""
-
-#: js/v1/gui.js:403 js/v2/gui.js:353
-msgid "Menu"
-msgstr ""
-
-#: js/v1/gui.js:404 js/v2/gui.js:354
-msgid "menu"
-msgstr ""
-
-#: js/v1/gui.js:518 js/v1/gui.js:609 js/v2/gui.js:463 js/v2/gui.js:520
-msgid "Invalid URL"
-msgstr ""
-
-#: js/v1/gui.js:524 js/v1/gui.js:619 js/v2/gui.js:478
-msgid "Validating URL..."
-msgstr ""
-
-#: js/v1/gui.js:543 js/v1/gui.js:574 js/v1/gui.js:699 js/v1/gui.js:741
-#: js/v1/weather.js:330 js/v2/gui.js:496 js/v2/gui.js:569 js/v2/gui.js:605
-#: js/v2/gui.js:727 js/v2/gui.js:777 js/v2/weather.js:389
-msgid "OK"
-msgstr ""
-
-#: js/v1/gui.js:614
-msgid "Subscribing to %s..."
-msgstr ""
-
-#: js/v1/gui.js:633
-msgid "Info Window"
-msgstr ""
-
-#: js/v1/gui.js:655
-msgid "Or add feed by URL"
-msgstr ""
-
-#: js/v1/gui.js:661 js/v1/gui.js:1089
-msgid "Or import an OPML file"
-msgstr ""
-
-#: js/v1/gui.js:675 js/v2/gui.js:545
-msgid "Importing file..."
-msgstr ""
-
-#: js/v1/gui.js:722 js/v2/gui.js:586
-msgid "Invalid folder name"
-msgstr ""
-
-#: js/v1/gui.js:728 js/v2/gui.js:592
-msgid "Adding folder..."
-msgstr ""
-
-#: js/v1/gui.js:822
-msgid ""
-"You have checked more than 10 active feeds.\n"
-"This might slow down the startup process.\n"
-"Would you like to proceed?"
-msgstr ""
-
-#: js/v1/gui.js:1030 js/v2/gui.js:903
-msgid "Settings"
-msgstr ""
-
-#: js/v1/gui.js:1041 js/v2/gui.js:913
-msgid "Save changes"
-msgstr ""
-
-#: js/v1/gui.js:1043 js/v1/weather.js:82 js/v2/gui.js:915 js/v2/notes.js:55
-#: js/v2/weather.js:117
-msgid "Cancel"
-msgstr ""
-
-#: js/v1/gui.js:1051
-msgid ""
-"Add a specific RSS, RDF, or ATOM feed by entering the URL below "
-"(Autodiscovery supported)."
-msgstr ""
-
-#: js/v1/gui.js:1052 js/v2/gui.js:923
-msgid "Import your subscriptions from an OPML file."
-msgstr ""
-
-#: js/v1/gui.js:1053 js/v2/gui.js:924
-msgid "Refresh rate (active feeds)"
-msgstr ""
-
-#: js/v1/gui.js:1054 js/v2/gui.js:925
-msgid "Show active feeds on startup"
-msgstr ""
-
-#: js/v1/gui.js:1055 js/v2/gui.js:926
-msgid "Oldest entries first"
-msgstr ""
-
-#: js/v1/gui.js:1056 js/v2/gui.js:927
-msgid "Add new folder."
-msgstr ""
-
-#: js/v1/gui.js:1057 js/v2/gui.js:928
-msgid "Display language:"
-msgstr ""
-
-#: js/v1/gui.js:1058
-msgid "Interface (cookie-based):"
-msgstr ""
-
-#: js/v1/gui.js:1059 js/v2/gui.js:929
-msgid "System:"
-msgstr ""
-
-#: js/v1/gui.js:1066 js/v2/gui.js:971
-msgid "Close without saving?"
-msgstr ""
-
-#: js/v1/gui.js:1077 js/v1/gui.js:1082 js/v2/gui.js:944
-msgid "add"
-msgstr ""
-
-#: js/v1/gui.js:1080 js/v2/gui.js:942
-msgid "Import"
-msgstr ""
-
-#: js/v1/gui.js:1094 js/v2/gui.js:960
-msgid "expand"
-msgstr ""
-
-#: js/v1/gui.js:1095 js/v2/gui.js:961
-msgid "active"
-msgstr ""
-
-#: js/v1/gui.js:1096 js/v2/gui.js:962
-msgid "minutes"
-msgstr ""
-
-#: js/v1/gui.js:1159 js/v2/gui.js:1024
-msgid "Switch without saving?"
-msgstr ""
-
-#: js/v1/gui.js:1214 js/v2/gui.js:1077
-msgid "Select folder"
-msgstr ""
-
-#: js/v1/gui.js:1221 js/v2/gui.js:1084
-msgid "Export selected folder"
-msgstr ""
-
-#: js/v1/gui.js:1222 js/v2/gui.js:1085
-msgid "Export feeds from selected folder to OPML"
-msgstr ""
-
-#: js/v1/gui.js:1229 js/v2/gui.js:1092
-msgid "Export all feeds"
-msgstr ""
-
-#: js/v1/gui.js:1230 js/v2/gui.js:1093
-msgid "Export all feeds to OPML"
-msgstr ""
-
-#: js/v1/gui.js:1528 js/v1/gui.js:1565 js/v2/gui.js:1312 js/v2/gui.js:1349
-msgid "Move up"
-msgstr ""
-
-#: js/v1/gui.js:1532 js/v1/gui.js:1569 js/v2/gui.js:1316 js/v2/gui.js:1353
-msgid "Move down"
-msgstr ""
-
-#: js/v1/gui.js:1536 js/v2/gui.js:1320
-msgid "Move to other folder"
-msgstr ""
-
-#: js/v1/gui.js:1917 js/v2/gui.js:1531
-msgid "close feed"
-msgstr ""
-
-#: js/v1/gui.js:1918 js/v2/gui.js:1532
-msgid "left"
-msgstr ""
-
-#: js/v1/gui.js:1919 js/v2/gui.js:1533
-msgid "right"
-msgstr ""
-
-#: js/v1/gui.js:1920 js/v2/gui.js:1534
-msgid "hide/show all active"
-msgstr ""
-
-#: js/v1/gui.js:1921 js/v2/gui.js:1535
-msgid "show all loaded"
-msgstr ""
-
-#: js/v1/gui.js:1924 js/v2/gui.js:1538
-msgid "my stuff"
-msgstr ""
-
-#: js/v1/invite.js:35 js/v1/invite.js:47
-msgid "Invite a friend"
-msgstr ""
-
-#: js/v1/invite.js:38
-msgid "First Name:"
-msgstr ""
-
-#: js/v1/invite.js:39
-msgid "Last Name:"
-msgstr ""
-
-#: js/v1/invite.js:40
-msgid "E-mail:"
-msgstr ""
-
-#: js/v1/invite.js:41
-msgid "Optional note:"
-msgstr ""
-
-#: js/v1/invite.js:42
-msgid "Invitation language:"
-msgstr ""
-
-#: js/v1/invite.js:44
-msgid "Send invitation"
-msgstr ""
-
-#: js/v1/invite.js:59
-msgid "You have %d invitation left, send invitation to:"
-msgid_plural "You have %d invitations left, send invitation to:"
-msgstr[0] ""
-msgstr[1] ""
-
-#: js/v1/media.js:33
-msgid "Thumbnail"
-msgstr ""
-
-#: js/v1/media.js:77
-msgid "aborted"
-msgstr ""
-
-#: js/v1/media.js:85
-msgid "Multimedia"
-msgstr ""
-
-#: js/v1/notes.js:37 js/v1/notes.js:43
-msgid "My Notes and Bookmarks"
-msgstr ""
-
-#: js/v1/notes.js:49 js/v2/notes.js:48
-msgid "Your publicly visible notes and links (Atom feed)"
-msgstr ""
-
-#: js/v1/notes.js:51 js/v2/notes.js:50
-msgid "Title:"
-msgstr ""
-
-#: js/v1/notes.js:52 js/v2/notes.js:51
-msgid "Tags:"
-msgstr ""
-
-#: js/v1/notes.js:53
-msgid "Color:"
-msgstr ""
-
-#: js/v1/notes.js:54 js/v2/notes.js:52
-msgid "Publicly visible:"
-msgstr ""
-
-#: js/v1/notes.js:55 js/v2/notes.js:53
-msgid "Note (double-click or tab to edit):"
-msgstr ""
-
-#: js/v1/notes.js:56 js/v1/notes.js:515 js/v2/notes.js:54 js/v2/notes.js:447
-msgid "Save Note"
-msgstr ""
-
-#: js/v1/notes.js:72 js/v2/notes.js:70
-msgid "Save link to this entry"
-msgstr ""
-
-#: js/v1/notes.js:120 js/v2/notes.js:134
-msgid "Create Note"
-msgstr ""
-
-#: js/v1/notes.js:132 js/v2/notes.js:138
-msgid "Tag:"
-msgstr ""
-
-#: js/v1/notes.js:137 js/v1/websearch.js:116 js/v2/notes.js:141
-msgid "Search"
-msgstr ""
-
-#: js/v1/notes.js:143 js/v1/notes.js:166 js/v2/notes.js:147 js/v2/notes.js:191
-msgid "Searching..."
-msgstr ""
-
-#: js/v1/notes.js:157
-msgid "Title"
-msgstr ""
-
-#: js/v1/notes.js:158
-msgid "Date"
-msgstr ""
-
-#: js/v1/notes.js:159
-msgid "Public"
-msgstr ""
-
-#: js/v1/notes.js:200 js/v2/notes.js:217
-msgid "Found %d note tagged with \"%s\"."
-msgid_plural "Found %d notes tagged with \"%s\"."
-msgstr[0] ""
-msgstr[1] ""
-
-#: js/v1/notes.js:205 js/v2/notes.js:222
-msgid "Found %d latest note."
-msgid_plural "Found %d latest notes."
-msgstr[0] ""
-msgstr[1] ""
-
-#: js/v1/notes.js:260 js/v2/notes.js:263
-msgid "rem"
-msgstr ""
-
-#: js/v1/notes.js:312 js/v2/notes.js:328
-msgid "Are you sure you want to delete this note?"
-msgstr ""
-
-#: js/v1/notes.js:367
-msgid "Edit Window"
-msgstr ""
-
-#: js/v1/notes.js:445 js/v2/notes.js:177
-msgid "Comma-separated list of tags"
-msgstr ""
-
-#: js/v1/notes.js:483 js/v2/notes.js:416
-msgid "Finish editing"
-msgstr ""
-
-#: js/v1/notes.js:588 js/v2/notes.js:508
-msgid "At least one tag is required."
-msgstr ""
-
-#: js/v1/notes.js:593 js/v2/notes.js:513
-msgid "Empty note title and body."
-msgstr ""
-
-#: js/v1/notes.js:603 js/v2/notes.js:523
-msgid "No title"
-msgstr ""
-
-#: js/v1/opml.js:24
-msgid "Feed Directory"
-msgstr ""
-
-#: js/v1/opml.js:25
-msgid "Popular Feeds (Cheetah)"
-msgstr ""
-
-#: js/v1/opml.js:123
-msgid "Subscribe to %s"
-msgstr ""
-
-#: js/v1/translate.js:35 js/v2/translate.js:35
-msgid "translate"
-msgstr ""
-
-#: js/v1/translate.js:36 js/v2/translate.js:36
-msgid "Translate this entry"
-msgstr ""
-
-#: js/v1/translate.js:93 js/v2/translate.js:88
-msgid "to English"
-msgstr ""
-
-#: js/v1/translate.js:96 js/v2/translate.js:91
-msgid "to Polish"
-msgstr ""
-
-#: js/v1/translate.js:99 js/v2/translate.js:94
-msgid "to Ukrainian"
-msgstr ""
-
-#: js/v1/translate.js:102 js/v2/translate.js:97
-msgid "to German"
-msgstr ""
-
-#: js/v1/translate.js:105 js/v2/translate.js:100
-msgid "to Spanish"
-msgstr ""
-
-#: js/v1/translate.js:108 js/v2/translate.js:103
-msgid "to French"
-msgstr ""
-
-#: js/v1/translate.js:111 js/v2/translate.js:106
-msgid "to Italian"
-msgstr ""
-
-#: js/v1/translate.js:114 js/v2/translate.js:109
-msgid "to Portuguese"
-msgstr ""
-
-#: js/v1/translate.js:117 js/v2/translate.js:112
-msgid "to Arabic"
-msgstr ""
-
-#: js/v1/translate.js:120 js/v2/translate.js:115
-msgid "to Japanese"
-msgstr ""
-
-#: js/v1/translate.js:123 js/v2/translate.js:118
-msgid "to Korean"
-msgstr ""
-
-#: js/v1/translate.js:126 js/v2/translate.js:121
-msgid "to Chinese"
-msgstr ""
-
-#: js/v1/translate.js:131 js/v2/translate.js:126
-msgid "Not available"
-msgstr ""
-
-#: js/v1/weather.js:33 js/v1/weather.js:34 js/v2/weather.js:33
-#: js/v2/weather.js:185
-msgid "Weather Report"
-msgstr ""
-
-#: js/v1/weather.js:53 js/v2/weather.js:92
-msgid "Add"
-msgstr ""
-
-#: js/v1/weather.js:54 js/v2/weather.js:93
-msgid "Add location"
-msgstr ""
-
-#: js/v1/weather.js:65 js/v2/weather.js:102
-msgid "Refresh"
-msgstr ""
-
-#: js/v1/weather.js:66 js/v2/weather.js:103
-msgid "Refresh Weather News"
-msgstr ""
-
-#: js/v1/weather.js:71 js/v2/weather.js:106
-msgid "Location ID:"
-msgstr ""
-
-#: js/v1/weather.js:72 js/v2/weather.js:107
-msgid "Description:"
-msgstr ""
-
-#: js/v1/weather.js:73 js/v2/weather.js:108
-msgid "Unit:"
-msgstr ""
-
-#: js/v1/weather.js:75 js/v2/weather.js:110
-msgid "Save"
-msgstr ""
-
-#: js/v1/weather.js:78 js/v2/weather.js:113
-msgid "Delete"
-msgstr ""
-
-#: js/v1/weather.js:228 js/v2/weather.js:280
-msgid "Wrong location or data temporarily unavailable."
-msgstr ""
-
-#: js/v1/weather.js:231 js/v2/weather.js:283
-msgid "Edit this location"
-msgstr ""
-
-#: js/v1/weather.js:245 js/v2/weather.js:297
-msgid "Tomorrow's weather forecast"
-msgstr ""
-
-#: js/v1/weather.js:267 js/v2/weather.js:324
-msgid "Editing location"
-msgstr ""
-
-#: js/v1/weather.js:275 js/v2/weather.js:332
-msgid "Add new location."
-msgstr ""
-
-#: js/v1/weather.js:300 js/v2/weather.js:359
-msgid "Invalid location ID"
-msgstr ""
-
-#: js/v1/weather.js:312 js/v2/weather.js:371
-msgid "Saving location..."
-msgstr ""
-
-#: js/v1/weather.js:351 js/v2/weather.js:410
-msgid "Are you sure you want to delete this location?"
-msgstr ""
-
-#: js/v1/weather.js:355 js/v2/weather.js:414
-msgid "Deleting..."
-msgstr ""
-
-#. TRANSLATORS: BEGIN JS 
-#: js/v1/weather.js:362 js/v2/weather.js:421
-msgid "Location"
-msgstr ""
-
-#: js/v1/weather.js:362 js/v2/weather.js:421
-msgid "Forecast"
-msgstr ""
-
-#: js/v1/weather.js:362 js/v2/weather.js:421
-msgid "Now"
-msgstr ""
-
-#: js/v1/weather.js:362 js/v2/weather.js:421
-msgid "Today"
-msgstr ""
-
-#: js/v1/weather.js:362 js/v2/weather.js:421
-msgid "Tomorrow"
-msgstr ""
-
-#: js/v1/weather.js:362 js/v2/weather.js:421
-msgid "Feels like"
-msgstr ""
-
-#: js/v1/weather.js:363 js/v2/weather.js:422
-msgid "Wind"
-msgstr ""
-
-#: js/v1/weather.js:363 js/v2/weather.js:422
-msgid "Humidity"
-msgstr ""
-
-#: js/v1/weather.js:363 js/v2/weather.js:422
-msgid "Pressure"
-msgstr ""
-
-#: js/v1/weather.js:363 js/v2/weather.js:422
-msgid "Sunrise"
-msgstr ""
-
-#: js/v1/weather.js:363 js/v2/weather.js:422
-msgid "Sunset"
-msgstr ""
-
-#: js/v1/weather.js:364 js/v2/weather.js:423
-msgid "Temp"
-msgstr ""
-
-#: js/v1/weather.js:364 js/v2/weather.js:423
-msgid "High"
-msgstr ""
-
-#: js/v1/weather.js:364 js/v2/weather.js:423
-msgid "Low"
-msgstr ""
-
-#: js/v1/weather.js:364 js/v2/weather.js:423
-msgid "Sun"
-msgstr ""
-
-#: js/v1/weather.js:364 js/v2/weather.js:423
-msgid "Mon"
-msgstr ""
-
-#: js/v1/weather.js:364 js/v2/weather.js:423
-msgid "Tue"
-msgstr ""
-
-#: js/v1/weather.js:364 js/v2/weather.js:423
-msgid "Wed"
-msgstr ""
-
-#: js/v1/weather.js:365 js/v2/weather.js:424
-msgid "Thu"
-msgstr ""
-
-#: js/v1/weather.js:365 js/v2/weather.js:424
-msgid "Fri"
-msgstr ""
-
-#: js/v1/weather.js:365 js/v2/weather.js:424
-msgid "Sat"
-msgstr ""
-
-#: js/v1/weather.js:365 js/v2/weather.js:424
-msgid "kph"
-msgstr ""
-
-#: js/v1/weather.js:365 js/v2/weather.js:424
-msgid "mb"
-msgstr ""
-
-#: js/v1/weather.js:365 js/v2/weather.js:424
-msgid "Windy"
-msgstr ""
-
-#: js/v1/weather.js:366 js/v2/weather.js:425
-msgid "Mist"
-msgstr ""
-
-#: js/v1/weather.js:366 js/v2/weather.js:425
-msgid "Fair"
-msgstr ""
-
-#: js/v1/weather.js:366 js/v2/weather.js:425
-msgid "Clear"
-msgstr ""
-
-#: js/v1/weather.js:366 js/v2/weather.js:425
-msgid "Mostly Clear"
-msgstr ""
-
-#: js/v1/weather.js:366 js/v2/weather.js:425
-msgid "Mostly Cloudy"
-msgstr ""
-
-#: js/v1/weather.js:367 js/v2/weather.js:426
-msgid "Partly Cloudy"
-msgstr ""
-
-#: js/v1/weather.js:367 js/v2/weather.js:426
-msgid "Cloudy"
-msgstr ""
-
-#: js/v1/weather.js:367 js/v2/weather.js:426
-msgid "Mostly Sunny"
-msgstr ""
-
-#: js/v1/weather.js:367 js/v2/weather.js:426
-msgid "Sunny"
-msgstr ""
-
-#: js/v1/weather.js:368 js/v2/weather.js:427
-msgid "Rain"
-msgstr ""
-
-#: js/v1/weather.js:368 js/v2/weather.js:427
-msgid "Light Rain"
-msgstr ""
-
-#: js/v1/weather.js:368 js/v2/weather.js:427
-msgid "Freezing Rain"
-msgstr ""
-
-#: js/v1/weather.js:368 js/v2/weather.js:427
-msgid "Heavy Rain"
-msgstr ""
-
-#: js/v1/weather.js:368 js/v2/weather.js:427
-msgid "Snow"
-msgstr ""
-
-#: js/v1/weather.js:369 js/v2/weather.js:428
-msgid "Light Snow"
-msgstr ""
-
-#: js/v1/weather.js:369 js/v2/weather.js:428
-msgid "AM Light Snow"
-msgstr ""
-
-#: js/v1/weather.js:369 js/v2/weather.js:428
-msgid "PM Light Snow"
-msgstr ""
-
-#: js/v1/weather.js:369 js/v2/weather.js:428
-msgid "Snow Showers"
-msgstr ""
-
-#: js/v1/weather.js:370 js/v2/weather.js:429
-msgid "AM Snow"
-msgstr ""
-
-#: js/v1/weather.js:370 js/v2/weather.js:429
-msgid "PM Snow"
-msgstr ""
-
-#: js/v1/weather.js:370 js/v2/weather.js:429
-msgid "AM Snow Showers"
-msgstr ""
-
-#: js/v1/weather.js:370 js/v2/weather.js:429
-msgid "PM Snow Showers"
-msgstr ""
-
-#: js/v1/weather.js:371 js/v2/weather.js:430
-msgid "Scattered Snow Showers"
-msgstr ""
-
-#: js/v1/weather.js:371 js/v2/weather.js:430
-msgid "Flurries"
-msgstr ""
-
-#: js/v1/weather.js:371 js/v2/weather.js:430
-msgid "Drizzle"
-msgstr ""
-
-#: js/v1/weather.js:371 js/v2/weather.js:430
-msgid "Freezing Drizzle"
-msgstr ""
-
-#: js/v1/weather.js:372 js/v2/weather.js:431
-msgid "Haze"
-msgstr ""
-
-#: js/v1/weather.js:372 js/v2/weather.js:431
-msgid "Showers"
-msgstr ""
-
-#: js/v1/weather.js:372 js/v2/weather.js:431
-msgid "AM Showers"
-msgstr ""
-
-#: js/v1/weather.js:372 js/v2/weather.js:431
-msgid "PM Showers"
-msgstr ""
-
-#: js/v1/weather.js:373 js/v2/weather.js:432
-msgid "Showers Early"
-msgstr ""
-
-#: js/v1/weather.js:373 js/v2/weather.js:432
-msgid "Showers Late"
-msgstr ""
-
-#: js/v1/weather.js:373 js/v2/weather.js:432
-msgid "Few Showers"
-msgstr ""
-
-#: js/v1/weather.js:373 js/v2/weather.js:432
-msgid "Heavy Snow"
-msgstr ""
-
-#: js/v1/weather.js:374 js/v2/weather.js:433
-msgid "Fog"
-msgstr ""
-
-#: js/v1/weather.js:374 js/v2/weather.js:433
-msgid "Fog Early"
-msgstr ""
-
-#: js/v1/weather.js:374 js/v2/weather.js:433
-msgid "Fog Late"
-msgstr ""
-
-#: js/v1/weather.js:374 js/v2/weather.js:433
-msgid "Foggy"
-msgstr ""
-
-#: js/v1/weather.js:374 js/v2/weather.js:433
-msgid "AM Clouds"
-msgstr ""
-
-#: js/v1/weather.js:374 js/v2/weather.js:433
-msgid "PM Sun"
-msgstr ""
-
-#: js/v1/weather.js:375 js/v2/weather.js:434
-msgid "Thunder"
-msgstr ""
-
-#: js/v1/weather.js:375 js/v2/weather.js:434
-msgid "Thunderstorms"
-msgstr ""
-
-#: js/v1/weather.js:375 js/v2/weather.js:434
-msgid "Isolated Thunderstorms"
-msgstr ""
-
-#: js/v1/weather.js:375 js/v2/weather.js:434
-msgid "AM Fog"
-msgstr ""
-
-#: js/v1/weather.js:376 js/v2/weather.js:435
-msgid "AM Drizzle"
-msgstr ""
-
-#: js/v1/weather.js:376 js/v2/weather.js:435
-msgid "AM Light Rain"
-msgstr ""
-
-#: js/v1/weather.js:376 js/v2/weather.js:435
-msgid "PM Light Rain"
-msgstr ""
-
-#: js/v1/weather.js:376 js/v2/weather.js:435
-msgid "PM Clouds"
-msgstr ""
-
-#: js/v1/weather.js:377 js/v2/weather.js:436
-msgid "Light Rain Early"
-msgstr ""
-
-#: js/v1/weather.js:377 js/v2/weather.js:436
-msgid "Snow Showers Late"
-msgstr ""
-
-#: js/v1/weather.js:377 js/v2/weather.js:436
-msgid "Few Snow Showers"
-msgstr ""
-
-#: js/v1/weather.js:378 js/v2/weather.js:437
-msgid "Snow to Wintry Mix"
-msgstr ""
-
-#: js/v1/weather.js:378 js/v2/weather.js:437
-msgid "Wintry Mix"
-msgstr ""
-
-#: js/v1/weather.js:378 js/v2/weather.js:437
-msgid "Thundershowers"
-msgstr ""
-
-#: js/v1/weather.js:378 js/v2/weather.js:437
-msgid "Rain to Snow"
-msgstr ""
-
-#: js/v1/weather.js:379 js/v2/weather.js:438
-msgid "Clouds Early"
-msgstr ""
-
-#: js/v1/weather.js:379 js/v2/weather.js:438
-msgid "Clouds Late"
-msgstr ""
-
-#: js/v1/weather.js:379 js/v2/weather.js:438
-msgid "Clearing Late"
-msgstr ""
-
-#: js/v1/weather.js:379 js/v2/weather.js:438
-msgid "AM Ice"
-msgstr ""
-
-#: js/v1/weather.js:380 js/v2/weather.js:439
-msgid "Sleet"
-msgstr ""
-
-#: js/v1/weather.js:380 js/v2/weather.js:439
-msgid "Scattered Flurries"
-msgstr ""
-
-#: js/v1/weather.js:380 js/v2/weather.js:439
-msgid "Snow Showers Early"
-msgstr ""
-
-#: js/v1/weather.js:380 js/v2/weather.js:439
-msgid "Light Snow Late"
-msgstr ""
-
-#: js/v1/weather.js:381 js/v2/weather.js:440
-msgid "Snow Early"
-msgstr ""
-
-#: js/v1/weather.js:381 js/v2/weather.js:440
-msgid "Snow Late"
-msgstr ""
-
-#: js/v1/weather.js:381 js/v2/weather.js:440
-msgid "Wind Early"
-msgstr ""
-
-#: js/v1/weather.js:381 js/v2/weather.js:440
-msgid "AM Rain"
-msgstr ""
-
-#: js/v1/weather.js:381 js/v2/weather.js:440
-msgid "PM Rain"
-msgstr ""
-
-#: js/v1/weather.js:382 js/v2/weather.js:441
-msgid "PM Fog"
-msgstr ""
-
-#: js/v1/weather.js:382 js/v2/weather.js:441
-msgid "Drizzle Early"
-msgstr ""
-
-#: js/v1/weather.js:382 js/v2/weather.js:441
-msgid "Drizzle Late"
-msgstr ""
-
-#: js/v1/weather.js:382 js/v2/weather.js:441
-msgid "PM Drizzle"
-msgstr ""
-
-#: js/v1/weather.js:383 js/v2/weather.js:442
-msgid "Light Rain Late"
-msgstr ""
-
-#: js/v1/weather.js:383 js/v2/weather.js:442
-msgid "Wind Late"
-msgstr ""
-
-#: js/v1/weather.js:383 js/v2/weather.js:442
-msgid "Scattered Strong Storms"
-msgstr ""
-
-#: js/v1/weather.js:383 js/v2/weather.js:442
-msgid "Strong Storms"
-msgstr ""
-
-#: js/v1/weather.js:384 js/v2/weather.js:443
-msgid "AM Light Wintry Mix"
-msgstr ""
-
-#: js/v1/weather.js:384 js/v2/weather.js:443
-msgid "PM Light Wintry Mix"
-msgstr ""
-
-#: js/v1/weather.js:384 js/v2/weather.js:443
-msgid "Light Wintry Mix"
-msgstr ""
-
-#: js/v1/weather.js:385 js/v2/weather.js:444
-msgid "AM Thunderstorms"
-msgstr ""
-
-#: js/v1/weather.js:385 js/v2/weather.js:444
-msgid "PM Thunderstorms"
-msgstr ""
-
-#: js/v1/weather.js:385 js/v2/weather.js:444
-msgid "Thunderstorms Late"
-msgstr ""
-
-#: js/v1/weather.js:385 js/v2/weather.js:444
-msgid "Rain Early"
-msgstr ""
-
-#: js/v1/weather.js:386 js/v2/weather.js:445
-msgid "Thunderstorms Early"
-msgstr ""
-
-#: js/v1/weather.js:386 js/v2/weather.js:445
-msgid "AM Thundershowers"
-msgstr ""
-
-#: js/v1/weather.js:386 js/v2/weather.js:445
-msgid "PM Thundershowers"
-msgstr ""
-
-#: js/v1/weather.js:387 js/v2/weather.js:446
-msgid "Thundershowers Early"
-msgstr ""
-
-#: js/v1/weather.js:387 js/v2/weather.js:446
-msgid "Thundershowers Late"
-msgstr ""
-
-#: js/v1/weather.js:387 js/v2/weather.js:446
-msgid "Rain Late"
-msgstr ""
-
-#: js/v1/weather.js:387 js/v2/weather.js:446
-msgid "Ice to Rain"
-msgstr ""
-
-#. TRANSLATORS: END JS 
-#: js/v1/weather.js:389 js/v2/weather.js:448
-msgid "Scattered Thunderstorms"
-msgstr ""
-
-#: js/v1/websearch.js:44 js/v1/websearch.js:46
-msgid "Web Search"
-msgstr ""
-
-#: js/v1/websearch.js:118
-msgid "Native language search"
-msgstr ""
-
-#: js/v1/websearch.js:119
-msgid "Search in all simultaneously"
-msgstr ""
-
-#: js/v2/core.js:571 js/v2/core.js:665
+#: js/v2/core.js:572 js/v2/core.js:666
 msgid "Subscribe"
 msgstr ""
 
-#: js/v2/core.js:576 js/v2/core.js:670
+#: js/v2/core.js:577 js/v2/core.js:671
 msgid "You are not subscribed to this feed."
 msgstr ""
 
-#: js/v2/core.js:992
+#: js/v2/core.js:772 js/v2/gui.js:195
+msgid "fetching data..."
+msgstr ""
+
+#: js/v2/core.js:814
+msgid "Open feeds from this folder"
+msgstr ""
+
+#: js/v2/core.js:993
 msgid ""
 "No subscriptions yet?! Add new subscriptions or import them by visiting Menu/"
 "Add New Feed."
 msgstr ""
 
-#: js/v2/core.js:1000
+#: js/v2/core.js:1001
 msgid "Feed Preview"
 msgstr ""
 
-#: js/v2/core.js:1021
+#: js/v2/core.js:1022
 msgid "weather"
 msgstr ""
 
-#: js/v2/core.js:1023
+#: js/v2/core.js:1024
 msgid "notes"
 msgstr ""
 
-#: js/v2/core.js:1669
+#: js/v2/core.js:1052
+msgid "loading..."
+msgstr ""
+
+#: js/v2/core.js:1269 js/v2/gui.js:959
+msgid "stories"
+msgstr ""
+
+#: js/v2/core.js:1273 js/v2/gui.js:109
+msgid "Expand"
+msgstr ""
+
+#: js/v2/core.js:1275
+msgid "Expand entries"
+msgstr ""
+
+#: js/v2/core.js:1281 js/v2/gui.js:115
+msgid "Collapse"
+msgstr ""
+
+#: js/v2/core.js:1282
+msgid "Collapse entries"
+msgstr ""
+
+#: js/v2/core.js:1294
+msgid "Mark as read"
+msgstr ""
+
+#: js/v2/core.js:1295
+msgid "Mark all entries as read"
+msgstr ""
+
+#: js/v2/core.js:1302
+msgid "Mark as unread"
+msgstr ""
+
+#: js/v2/core.js:1303
+msgid "Mark all entries as unread"
+msgstr ""
+
+#: js/v2/core.js:1371 js/v2/core.js:1385 js/v2/core.js:1394
+#: js/v2/weather.js:306
+msgid "External link"
+msgstr ""
+
+#: js/v2/core.js:1384 js/v2/core.js:1393 js/v2/gui.js:1551
+#: js/v2/weather.js:305
+msgid "more"
+msgstr ""
+
+#: js/v2/core.js:1401
+msgid "See enclosed multimedia"
+msgstr ""
+
+#: js/v2/core.js:1412 js/v2/core.js:1578
+msgid "See enclosed image"
+msgstr ""
+
+#: js/v2/core.js:1671
 msgid "Feed Preview: %s"
 msgstr ""
 
-#: js/v2/core.js:1795
+#: js/v2/core.js:1746
+msgid "progress"
+msgstr ""
+
+#: js/v2/core.js:1797
 msgid ""
 "You don't have any active feeds. Active feeds are automatically loaded at "
 "startup. You can set them in Menu/Manage Subscriptions."
 msgstr ""
 
-#: js/v2/core.js:2502
+#: js/v2/core.js:2212
+msgid "A popup blocker may be preventing Cheetah News from opening the page."
+msgstr ""
+
+#: js/v2/core.js:2213
+msgid "If you have a popup blocker, try disabling it to open the window."
+msgstr ""
+
+#: js/v2/core.js:2511
 msgid "Sorry, but this operation is not supported by your browser."
+msgstr ""
+
+#: js/v2/filter.js:30
+msgid "Filter"
+msgstr ""
+
+#: js/v2/filter.js:32
+msgid "filtering..."
+msgstr ""
+
+#: js/v2/filter.js:40
+msgid "%d entry"
+msgid_plural "%d entries"
+msgstr[0] ""
+msgstr[1] ""
+
+#: js/v2/filter.js:99
+msgid "filtered"
+msgstr ""
+
+#: js/v2/filter.js:100 js/v2/filter.js:184
+msgid "Remove filtering"
+msgstr ""
+
+#: js/v2/filter.js:185
+msgid "Remove filtering from all feeds"
+msgstr ""
+
+#: js/v2/gui.js:54
+msgid "My Stuff"
 msgstr ""
 
 #: js/v2/gui.js:79
 msgid "About"
+msgstr ""
+
+#: js/v2/gui.js:86
+msgid "Welcome"
+msgstr ""
+
+#: js/v2/gui.js:87 js/v2/gui.js:860
+msgid "About Cheetah News"
+msgstr ""
+
+#: js/v2/gui.js:88
+msgid "show active"
+msgstr ""
+
+#: js/v2/gui.js:88
+msgid "Show all active feeds"
+msgstr ""
+
+#: js/v2/gui.js:89
+msgid "show loaded"
+msgstr ""
+
+#: js/v2/gui.js:89
+msgid "Show all loaded feeds"
+msgstr ""
+
+#: js/v2/gui.js:90
+msgid "hide all"
+msgstr ""
+
+#: js/v2/gui.js:90
+msgid "Hide all feeds"
+msgstr ""
+
+#: js/v2/gui.js:94
+msgid "Refresh all visible feeds"
+msgstr ""
+
+#: js/v2/gui.js:96
+msgid "Filter visible feeds"
+msgstr ""
+
+#: js/v2/gui.js:110
+msgid "Expand folders"
+msgstr ""
+
+#: js/v2/gui.js:116
+msgid "Collapse folders"
+msgstr ""
+
+#: js/v2/gui.js:121
+msgid "Show My Stuff"
+msgstr ""
+
+#: js/v2/gui.js:122 js/v2/gui.js:947
+msgid "Add New Feed"
+msgstr ""
+
+#: js/v2/gui.js:123 js/v2/gui.js:948
+msgid "Manage Subscriptions"
+msgstr ""
+
+#: js/v2/gui.js:124 js/v2/gui.js:949
+msgid "Manage Folders"
+msgstr ""
+
+#: js/v2/gui.js:125 js/v2/gui.js:950
+msgid "User Settings"
+msgstr ""
+
+#: js/v2/gui.js:127
+msgid "Logout"
+msgstr ""
+
+#: js/v2/gui.js:165 js/v2/gui.js:185
+msgid "Close Window"
+msgstr ""
+
+#: js/v2/gui.js:182
+msgid "Reload this feed"
+msgstr ""
+
+#: js/v2/gui.js:289 js/v2/gui.js:1073
+msgid "Root folder"
+msgstr ""
+
+#: js/v2/gui.js:353
+msgid "Menu"
+msgstr ""
+
+#: js/v2/gui.js:354
+msgid "menu"
+msgstr ""
+
+#: js/v2/gui.js:463 js/v2/gui.js:520
+msgid "Invalid URL"
+msgstr ""
+
+#: js/v2/gui.js:478
+msgid "Validating URL..."
+msgstr ""
+
+#: js/v2/gui.js:496 js/v2/gui.js:569 js/v2/gui.js:605 js/v2/gui.js:727
+#: js/v2/gui.js:777 js/v2/weather.js:389
+msgid "OK"
 msgstr ""
 
 #: js/v2/gui.js:532
@@ -1966,6 +937,18 @@ msgstr ""
 
 #: js/v2/gui.js:538 js/v2/gui.js:951
 msgid "Import an OPML file"
+msgstr ""
+
+#: js/v2/gui.js:545
+msgid "Importing file..."
+msgstr ""
+
+#: js/v2/gui.js:586
+msgid "Invalid folder name"
+msgstr ""
+
+#: js/v2/gui.js:592
+msgid "Adding folder..."
 msgstr ""
 
 #: js/v2/gui.js:688
@@ -1980,6 +963,10 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
+#: js/v2/gui.js:903
+msgid "Settings"
+msgstr ""
+
 #: js/v2/gui.js:906 js/v2/notes.js:41 js/v2/weather.js:87
 msgid "&laquo; return to reader"
 msgstr ""
@@ -1988,10 +975,46 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
+#: js/v2/gui.js:913
+msgid "Save changes"
+msgstr ""
+
+#: js/v2/gui.js:915 js/v2/notes.js:55 js/v2/weather.js:117
+msgid "Cancel"
+msgstr ""
+
 #: js/v2/gui.js:922
 msgid ""
 "Open a specific feed by entering the URL below (Autodiscovery supported) or "
 "enter a search term."
+msgstr ""
+
+#: js/v2/gui.js:923
+msgid "Import your subscriptions from an OPML file."
+msgstr ""
+
+#: js/v2/gui.js:924
+msgid "Refresh rate (active feeds)"
+msgstr ""
+
+#: js/v2/gui.js:925
+msgid "Show active feeds on startup"
+msgstr ""
+
+#: js/v2/gui.js:926
+msgid "Oldest entries first"
+msgstr ""
+
+#: js/v2/gui.js:927
+msgid "Add new folder."
+msgstr ""
+
+#: js/v2/gui.js:928
+msgid "Display language:"
+msgstr ""
+
+#: js/v2/gui.js:929
+msgid "System:"
 msgstr ""
 
 #: js/v2/gui.js:930
@@ -2002,8 +1025,92 @@ msgstr ""
 msgid "open"
 msgstr ""
 
+#: js/v2/gui.js:942
+msgid "Import"
+msgstr ""
+
+#: js/v2/gui.js:944
+msgid "add"
+msgstr ""
+
 #: js/v2/gui.js:952
 msgid "Register Cheetah News as feed handler in your browser"
+msgstr ""
+
+#: js/v2/gui.js:960
+msgid "expand"
+msgstr ""
+
+#: js/v2/gui.js:961
+msgid "active"
+msgstr ""
+
+#: js/v2/gui.js:962
+msgid "minutes"
+msgstr ""
+
+#: js/v2/gui.js:971
+msgid "Close without saving?"
+msgstr ""
+
+#: js/v2/gui.js:1024
+msgid "Switch without saving?"
+msgstr ""
+
+#: js/v2/gui.js:1077
+msgid "Select folder"
+msgstr ""
+
+#: js/v2/gui.js:1084
+msgid "Export selected folder"
+msgstr ""
+
+#: js/v2/gui.js:1085
+msgid "Export feeds from selected folder to OPML"
+msgstr ""
+
+#: js/v2/gui.js:1092
+msgid "Export all feeds"
+msgstr ""
+
+#: js/v2/gui.js:1093
+msgid "Export all feeds to OPML"
+msgstr ""
+
+#: js/v2/gui.js:1312 js/v2/gui.js:1349
+msgid "Move up"
+msgstr ""
+
+#: js/v2/gui.js:1316 js/v2/gui.js:1353
+msgid "Move down"
+msgstr ""
+
+#: js/v2/gui.js:1320
+msgid "Move to other folder"
+msgstr ""
+
+#: js/v2/gui.js:1531
+msgid "close feed"
+msgstr ""
+
+#: js/v2/gui.js:1532
+msgid "left"
+msgstr ""
+
+#: js/v2/gui.js:1533
+msgid "right"
+msgstr ""
+
+#: js/v2/gui.js:1534
+msgid "hide/show all active"
+msgstr ""
+
+#: js/v2/gui.js:1535
+msgid "show all loaded"
+msgstr ""
+
+#: js/v2/gui.js:1538
+msgid "my stuff"
 msgstr ""
 
 #. TRANSLATORS: The second %d is fixed, see the source for its value 
@@ -2039,12 +1146,96 @@ msgstr ""
 msgid "Notes and Bookmarks"
 msgstr ""
 
+#: js/v2/notes.js:48
+msgid "Your publicly visible notes and links (Atom feed)"
+msgstr ""
+
+#: js/v2/notes.js:50
+msgid "Title:"
+msgstr ""
+
+#: js/v2/notes.js:51
+msgid "Tags:"
+msgstr ""
+
+#: js/v2/notes.js:52
+msgid "Publicly visible:"
+msgstr ""
+
+#: js/v2/notes.js:53
+msgid "Note (double-click or tab to edit):"
+msgstr ""
+
+#: js/v2/notes.js:54 js/v2/notes.js:447
+msgid "Save Note"
+msgstr ""
+
+#: js/v2/notes.js:70
+msgid "Save link to this entry"
+msgstr ""
+
+#: js/v2/notes.js:134
+msgid "Create Note"
+msgstr ""
+
+#: js/v2/notes.js:138
+msgid "Tag:"
+msgstr ""
+
+#: js/v2/notes.js:141
+msgid "Search"
+msgstr ""
+
+#: js/v2/notes.js:147 js/v2/notes.js:191
+msgid "Searching..."
+msgstr ""
+
+#: js/v2/notes.js:177
+msgid "Comma-separated list of tags"
+msgstr ""
+
+#: js/v2/notes.js:217
+msgid "Found %d note tagged with \"%s\"."
+msgid_plural "Found %d notes tagged with \"%s\"."
+msgstr[0] ""
+msgstr[1] ""
+
+#: js/v2/notes.js:222
+msgid "Found %d latest note."
+msgid_plural "Found %d latest notes."
+msgstr[0] ""
+msgstr[1] ""
+
+#: js/v2/notes.js:263
+msgid "rem"
+msgstr ""
+
 #: js/v2/notes.js:270
 msgid "Publicly visible"
 msgstr ""
 
 #: js/v2/notes.js:272
 msgid "Not publicly visible"
+msgstr ""
+
+#: js/v2/notes.js:328
+msgid "Are you sure you want to delete this note?"
+msgstr ""
+
+#: js/v2/notes.js:416
+msgid "Finish editing"
+msgstr ""
+
+#: js/v2/notes.js:508
+msgid "At least one tag is required."
+msgstr ""
+
+#: js/v2/notes.js:513
+msgid "Empty note title and body."
+msgstr ""
+
+#: js/v2/notes.js:523
+msgid "No title"
 msgstr ""
 
 #: js/v2/opml.js:24
@@ -2093,6 +1284,604 @@ msgstr ""
 msgid "Share this entry"
 msgstr ""
 
+#: js/v2/translate.js:35
+msgid "translate"
+msgstr ""
+
+#: js/v2/translate.js:36
+msgid "Translate this entry"
+msgstr ""
+
+#: js/v2/translate.js:88
+msgid "to English"
+msgstr ""
+
+#: js/v2/translate.js:91
+msgid "to Polish"
+msgstr ""
+
+#: js/v2/translate.js:94
+msgid "to Ukrainian"
+msgstr ""
+
+#: js/v2/translate.js:97
+msgid "to German"
+msgstr ""
+
+#: js/v2/translate.js:100
+msgid "to Spanish"
+msgstr ""
+
+#: js/v2/translate.js:103
+msgid "to French"
+msgstr ""
+
+#: js/v2/translate.js:106
+msgid "to Italian"
+msgstr ""
+
+#: js/v2/translate.js:109
+msgid "to Portuguese"
+msgstr ""
+
+#: js/v2/translate.js:112
+msgid "to Arabic"
+msgstr ""
+
+#: js/v2/translate.js:115
+msgid "to Japanese"
+msgstr ""
+
+#: js/v2/translate.js:118
+msgid "to Korean"
+msgstr ""
+
+#: js/v2/translate.js:121
+msgid "to Chinese"
+msgstr ""
+
+#: js/v2/translate.js:126
+msgid "Not available"
+msgstr ""
+
+#: js/v2/weather.js:33 js/v2/weather.js:185
+msgid "Weather Report"
+msgstr ""
+
+#: js/v2/weather.js:92
+msgid "Add"
+msgstr ""
+
+#: js/v2/weather.js:93
+msgid "Add location"
+msgstr ""
+
+#: js/v2/weather.js:102
+msgid "Refresh"
+msgstr ""
+
+#: js/v2/weather.js:103
+msgid "Refresh Weather News"
+msgstr ""
+
+#: js/v2/weather.js:106
+msgid "Location ID:"
+msgstr ""
+
+#: js/v2/weather.js:107
+msgid "Description:"
+msgstr ""
+
+#: js/v2/weather.js:108
+msgid "Unit:"
+msgstr ""
+
+#: js/v2/weather.js:110
+msgid "Save"
+msgstr ""
+
+#: js/v2/weather.js:113
+msgid "Delete"
+msgstr ""
+
+#: js/v2/weather.js:280
+msgid "Wrong location or data temporarily unavailable."
+msgstr ""
+
 #: js/v2/weather.js:282
 msgid "edit"
+msgstr ""
+
+#: js/v2/weather.js:283
+msgid "Edit this location"
+msgstr ""
+
+#: js/v2/weather.js:297
+msgid "Tomorrow's weather forecast"
+msgstr ""
+
+#: js/v2/weather.js:324
+msgid "Editing location"
+msgstr ""
+
+#: js/v2/weather.js:332
+msgid "Add new location."
+msgstr ""
+
+#: js/v2/weather.js:359
+msgid "Invalid location ID"
+msgstr ""
+
+#: js/v2/weather.js:371
+msgid "Saving location..."
+msgstr ""
+
+#: js/v2/weather.js:410
+msgid "Are you sure you want to delete this location?"
+msgstr ""
+
+#: js/v2/weather.js:414
+msgid "Deleting..."
+msgstr ""
+
+#. TRANSLATORS: BEGIN JS 
+#: js/v2/weather.js:421
+msgid "Location"
+msgstr ""
+
+#: js/v2/weather.js:421
+msgid "Forecast"
+msgstr ""
+
+#: js/v2/weather.js:421
+msgid "Now"
+msgstr ""
+
+#: js/v2/weather.js:421
+msgid "Today"
+msgstr ""
+
+#: js/v2/weather.js:421
+msgid "Tomorrow"
+msgstr ""
+
+#: js/v2/weather.js:421
+msgid "Feels like"
+msgstr ""
+
+#: js/v2/weather.js:422
+msgid "Wind"
+msgstr ""
+
+#: js/v2/weather.js:422
+msgid "Humidity"
+msgstr ""
+
+#: js/v2/weather.js:422
+msgid "Pressure"
+msgstr ""
+
+#: js/v2/weather.js:422
+msgid "Sunrise"
+msgstr ""
+
+#: js/v2/weather.js:422
+msgid "Sunset"
+msgstr ""
+
+#: js/v2/weather.js:423
+msgid "Temp"
+msgstr ""
+
+#: js/v2/weather.js:423
+msgid "High"
+msgstr ""
+
+#: js/v2/weather.js:423
+msgid "Low"
+msgstr ""
+
+#: js/v2/weather.js:423
+msgid "Sun"
+msgstr ""
+
+#: js/v2/weather.js:423
+msgid "Mon"
+msgstr ""
+
+#: js/v2/weather.js:423
+msgid "Tue"
+msgstr ""
+
+#: js/v2/weather.js:423
+msgid "Wed"
+msgstr ""
+
+#: js/v2/weather.js:424
+msgid "Thu"
+msgstr ""
+
+#: js/v2/weather.js:424
+msgid "Fri"
+msgstr ""
+
+#: js/v2/weather.js:424
+msgid "Sat"
+msgstr ""
+
+#: js/v2/weather.js:424
+msgid "kph"
+msgstr ""
+
+#: js/v2/weather.js:424
+msgid "mb"
+msgstr ""
+
+#: js/v2/weather.js:424
+msgid "Windy"
+msgstr ""
+
+#: js/v2/weather.js:425
+msgid "Mist"
+msgstr ""
+
+#: js/v2/weather.js:425
+msgid "Fair"
+msgstr ""
+
+#: js/v2/weather.js:425
+msgid "Clear"
+msgstr ""
+
+#: js/v2/weather.js:425
+msgid "Mostly Clear"
+msgstr ""
+
+#: js/v2/weather.js:425
+msgid "Mostly Cloudy"
+msgstr ""
+
+#: js/v2/weather.js:426
+msgid "Partly Cloudy"
+msgstr ""
+
+#: js/v2/weather.js:426
+msgid "Cloudy"
+msgstr ""
+
+#: js/v2/weather.js:426
+msgid "Mostly Sunny"
+msgstr ""
+
+#: js/v2/weather.js:426
+msgid "Sunny"
+msgstr ""
+
+#: js/v2/weather.js:427
+msgid "Rain"
+msgstr ""
+
+#: js/v2/weather.js:427
+msgid "Light Rain"
+msgstr ""
+
+#: js/v2/weather.js:427
+msgid "Freezing Rain"
+msgstr ""
+
+#: js/v2/weather.js:427
+msgid "Heavy Rain"
+msgstr ""
+
+#: js/v2/weather.js:427
+msgid "Snow"
+msgstr ""
+
+#: js/v2/weather.js:428
+msgid "Light Snow"
+msgstr ""
+
+#: js/v2/weather.js:428
+msgid "AM Light Snow"
+msgstr ""
+
+#: js/v2/weather.js:428
+msgid "PM Light Snow"
+msgstr ""
+
+#: js/v2/weather.js:428
+msgid "Snow Showers"
+msgstr ""
+
+#: js/v2/weather.js:429
+msgid "AM Snow"
+msgstr ""
+
+#: js/v2/weather.js:429
+msgid "PM Snow"
+msgstr ""
+
+#: js/v2/weather.js:429
+msgid "AM Snow Showers"
+msgstr ""
+
+#: js/v2/weather.js:429
+msgid "PM Snow Showers"
+msgstr ""
+
+#: js/v2/weather.js:430
+msgid "Scattered Snow Showers"
+msgstr ""
+
+#: js/v2/weather.js:430
+msgid "Flurries"
+msgstr ""
+
+#: js/v2/weather.js:430
+msgid "Drizzle"
+msgstr ""
+
+#: js/v2/weather.js:430
+msgid "Freezing Drizzle"
+msgstr ""
+
+#: js/v2/weather.js:431
+msgid "Haze"
+msgstr ""
+
+#: js/v2/weather.js:431
+msgid "Showers"
+msgstr ""
+
+#: js/v2/weather.js:431
+msgid "AM Showers"
+msgstr ""
+
+#: js/v2/weather.js:431
+msgid "PM Showers"
+msgstr ""
+
+#: js/v2/weather.js:432
+msgid "Showers Early"
+msgstr ""
+
+#: js/v2/weather.js:432
+msgid "Showers Late"
+msgstr ""
+
+#: js/v2/weather.js:432
+msgid "Few Showers"
+msgstr ""
+
+#: js/v2/weather.js:432
+msgid "Heavy Snow"
+msgstr ""
+
+#: js/v2/weather.js:433
+msgid "Fog"
+msgstr ""
+
+#: js/v2/weather.js:433
+msgid "Fog Early"
+msgstr ""
+
+#: js/v2/weather.js:433
+msgid "Fog Late"
+msgstr ""
+
+#: js/v2/weather.js:433
+msgid "Foggy"
+msgstr ""
+
+#: js/v2/weather.js:433
+msgid "AM Clouds"
+msgstr ""
+
+#: js/v2/weather.js:433
+msgid "PM Sun"
+msgstr ""
+
+#: js/v2/weather.js:434
+msgid "Thunder"
+msgstr ""
+
+#: js/v2/weather.js:434
+msgid "Thunderstorms"
+msgstr ""
+
+#: js/v2/weather.js:434
+msgid "Isolated Thunderstorms"
+msgstr ""
+
+#: js/v2/weather.js:434
+msgid "AM Fog"
+msgstr ""
+
+#: js/v2/weather.js:435
+msgid "AM Drizzle"
+msgstr ""
+
+#: js/v2/weather.js:435
+msgid "AM Light Rain"
+msgstr ""
+
+#: js/v2/weather.js:435
+msgid "PM Light Rain"
+msgstr ""
+
+#: js/v2/weather.js:435
+msgid "PM Clouds"
+msgstr ""
+
+#: js/v2/weather.js:436
+msgid "Light Rain Early"
+msgstr ""
+
+#: js/v2/weather.js:436
+msgid "Snow Showers Late"
+msgstr ""
+
+#: js/v2/weather.js:436
+msgid "Few Snow Showers"
+msgstr ""
+
+#: js/v2/weather.js:437
+msgid "Snow to Wintry Mix"
+msgstr ""
+
+#: js/v2/weather.js:437
+msgid "Wintry Mix"
+msgstr ""
+
+#: js/v2/weather.js:437
+msgid "Thundershowers"
+msgstr ""
+
+#: js/v2/weather.js:437
+msgid "Rain to Snow"
+msgstr ""
+
+#: js/v2/weather.js:438
+msgid "Clouds Early"
+msgstr ""
+
+#: js/v2/weather.js:438
+msgid "Clouds Late"
+msgstr ""
+
+#: js/v2/weather.js:438
+msgid "Clearing Late"
+msgstr ""
+
+#: js/v2/weather.js:438
+msgid "AM Ice"
+msgstr ""
+
+#: js/v2/weather.js:439
+msgid "Sleet"
+msgstr ""
+
+#: js/v2/weather.js:439
+msgid "Scattered Flurries"
+msgstr ""
+
+#: js/v2/weather.js:439
+msgid "Snow Showers Early"
+msgstr ""
+
+#: js/v2/weather.js:439
+msgid "Light Snow Late"
+msgstr ""
+
+#: js/v2/weather.js:440
+msgid "Snow Early"
+msgstr ""
+
+#: js/v2/weather.js:440
+msgid "Snow Late"
+msgstr ""
+
+#: js/v2/weather.js:440
+msgid "Wind Early"
+msgstr ""
+
+#: js/v2/weather.js:440
+msgid "AM Rain"
+msgstr ""
+
+#: js/v2/weather.js:440
+msgid "PM Rain"
+msgstr ""
+
+#: js/v2/weather.js:441
+msgid "PM Fog"
+msgstr ""
+
+#: js/v2/weather.js:441
+msgid "Drizzle Early"
+msgstr ""
+
+#: js/v2/weather.js:441
+msgid "Drizzle Late"
+msgstr ""
+
+#: js/v2/weather.js:441
+msgid "PM Drizzle"
+msgstr ""
+
+#: js/v2/weather.js:442
+msgid "Light Rain Late"
+msgstr ""
+
+#: js/v2/weather.js:442
+msgid "Wind Late"
+msgstr ""
+
+#: js/v2/weather.js:442
+msgid "Scattered Strong Storms"
+msgstr ""
+
+#: js/v2/weather.js:442
+msgid "Strong Storms"
+msgstr ""
+
+#: js/v2/weather.js:443
+msgid "AM Light Wintry Mix"
+msgstr ""
+
+#: js/v2/weather.js:443
+msgid "PM Light Wintry Mix"
+msgstr ""
+
+#: js/v2/weather.js:443
+msgid "Light Wintry Mix"
+msgstr ""
+
+#: js/v2/weather.js:444
+msgid "AM Thunderstorms"
+msgstr ""
+
+#: js/v2/weather.js:444
+msgid "PM Thunderstorms"
+msgstr ""
+
+#: js/v2/weather.js:444
+msgid "Thunderstorms Late"
+msgstr ""
+
+#: js/v2/weather.js:444
+msgid "Rain Early"
+msgstr ""
+
+#: js/v2/weather.js:445
+msgid "Thunderstorms Early"
+msgstr ""
+
+#: js/v2/weather.js:445
+msgid "AM Thundershowers"
+msgstr ""
+
+#: js/v2/weather.js:445
+msgid "PM Thundershowers"
+msgstr ""
+
+#: js/v2/weather.js:446
+msgid "Thundershowers Early"
+msgstr ""
+
+#: js/v2/weather.js:446
+msgid "Thundershowers Late"
+msgstr ""
+
+#: js/v2/weather.js:446
+msgid "Rain Late"
+msgstr ""
+
+#: js/v2/weather.js:446
+msgid "Ice to Rain"
+msgstr ""
+
+#. TRANSLATORS: END JS 
+#: js/v2/weather.js:448
+msgid "Scattered Thunderstorms"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cheetah 2.0\n"
 "Report-Msgid-Bugs-To: cheetah-admins@gnu.org.ua\n"
-"POT-Creation-Date: 2009-12-16 18:36+0200\n"
+"POT-Creation-Date: 2010-04-09 18:15+0300\n"
 "PO-Revision-Date: 2009-12-29 23:09+0200\n"
 "Last-Translator: Sergey Poznyakoff <gray@gnu.org>\n"
 "Language-Team: Catalan <ca@dodds.net>\n"
@@ -109,11 +109,11 @@ msgstr "Les contrasenyes no concorden."
 msgid "Invalid old password."
 msgstr "Contrasenya antiga no vàlida"
 
-#: frontend/changepassword.php:162 js/v1/gui.js:1090 js/v2/gui.js:956
+#: frontend/changepassword.php:162 js/v2/gui.js:956
 msgid "Change Password"
 msgstr "Canviar contrasenya"
 
-#: frontend/reader.php:46 frontend/reader1.php:42
+#: frontend/reader.php:46
 msgid "JavaScript is required"
 msgstr "Es requereix JavaScript"
 
@@ -125,7 +125,7 @@ msgstr "Què novetats"
 msgid "or"
 msgstr "o"
 
-#: frontend/reader.php:159 frontend/reader1.php:182
+#: frontend/reader.php:159
 msgid "Browser preferred language"
 msgstr "Idioma preferit del navegador"
 
@@ -134,61 +134,43 @@ msgstr "Idioma preferit del navegador"
 msgid "Personal News Aggregator %s"
 msgstr "Agregador de notícies personal %s"
 
-#: frontend/reader.php:263 frontend/reader1.php:72 frontend/login.php:237
-#: frontend/signup.php:167 frontend/signup.php:211
+#: frontend/reader.php:263 frontend/login.php:237 frontend/signup.php:167
+#: frontend/signup.php:211
 msgid "Privacy Policy"
 msgstr "Política de privadesa"
 
-#: frontend/reader.php:264 frontend/reader1.php:73 frontend/login.php:238
-#: frontend/signup.php:168 frontend/signup.php:212
+#: frontend/reader.php:264 frontend/login.php:238 frontend/signup.php:168
+#: frontend/signup.php:212
 msgid "Terms of Service"
 msgstr "Condiciones de servicio"
 
-#: frontend/reader.php:266 frontend/reader1.php:75
+#: frontend/reader.php:266
 msgid "Credits:"
 msgstr "Crèdits:"
 
-#: frontend/reader.php:268 frontend/reader1.php:77
+#: frontend/reader.php:268
 msgid "main programming and lead developer"
 msgstr "programació principal i coordinació del projecto"
 
-#: frontend/reader.php:269 frontend/reader.php:270 frontend/reader1.php:78
-#: frontend/reader1.php:79
+#: frontend/reader.php:269 frontend/reader.php:270
 msgid "additional programming"
 msgstr "programació addicional"
 
-#: frontend/reader.php:271 frontend/reader1.php:80
+#: frontend/reader.php:271
 msgid "graphics (icons)"
 msgstr "gràfica (icones)"
 
-#: frontend/reader.php:275 frontend/reader1.php:84
+#: frontend/reader.php:275
 msgid "Feedback:"
 msgstr "Re-alimentació:"
 
-#: frontend/reader.php:279 frontend/reader1.php:88
+#: frontend/reader.php:279
 msgid "-- send us your bug reports and suggestions (public list)."
 msgstr "-- envieu-nos informes d'error i suggeriments (llista pública)."
 
-#: frontend/reader.php:281 frontend/reader1.php:90
+#: frontend/reader.php:281
 msgid "-- private list."
 msgstr "-- llista privada."
-
-#: frontend/reader1.php:70 frontend/login.php:322
-#, php-format
-msgid "Bleeding-Edge Personal News Aggregator %s"
-msgstr "Avançat agregador de notícies personal %s"
-
-#: frontend/reader1.php:256
-msgid "Currently used language"
-msgstr "Idioma actualment usada"
-
-#: frontend/reader1.php:367
-msgid "Bookmark to del.icio.us"
-msgstr "Guardar enllaç en del.icio.us"
-
-#: frontend/reader1.php:367
-msgid "Digg it"
-msgstr "Guardar enllaç en digg.com"
 
 #: frontend/fetch.php:244
 msgid "Broken XML feed. Verify "
@@ -226,7 +208,7 @@ msgstr "Error intern de servidor remot"
 msgid "Network is unreachable"
 msgstr "Xarxa no accessible"
 
-#: frontend/fetch.php:294 js/v1/core.js:980 js/v2/core.js:1165
+#: frontend/fetch.php:294 js/v2/core.js:1166
 msgid "Unknown error"
 msgstr "Error desconegut"
 
@@ -234,8 +216,8 @@ msgstr "Error desconegut"
 msgid "Bad feedId"
 msgstr "feedId no vàlid"
 
-#: frontend/fetch.php:304 frontend/import.php:68 frontend/invite.php:50
-#: frontend/mdb.php:84 frontend/xnotes.php:53
+#: frontend/fetch.php:304 frontend/import.php:68 frontend/mdb.php:84
+#: frontend/xnotes.php:53
 msgid "Operation not permitted. Access denied"
 msgstr "Operació no permesa. S'ha denegat l'accés"
 
@@ -263,55 +245,6 @@ msgstr "El fitxer ha estat carregat parcialment"
 msgid "No file was uploaded"
 msgstr "No s'ha carregat cap fitxer"
 
-#: frontend/invite.php:33
-msgid "You have been invited to open Cheetah News Aggregator account"
-msgstr "Esteu invitats a obrir un compte en el agregador de notícies Cheetah"
-
-#: frontend/invite.php:34
-#, php-format
-msgid "%s has invited you to open a free Cheetah News Aggregator account."
-msgstr ""
-"%s us invita a obrir un compte en Cheetah: un agregador llibre de notícies"
-
-#: frontend/invite.php:35
-#, php-format
-msgid "Learn more about Cheetah News Aggregator at %s."
-msgstr "Més informació sobre el agregador de notícies Cheetah trobaràs a %s."
-
-#: frontend/invite.php:36
-#, php-format
-msgid "To accept this invitation and register for your account, visit: %s"
-msgstr "Per a acceptar aquesta invitació i registrar el seu compte, visiteu %s"
-
-#: frontend/invite.php:37
-#, php-format
-msgid ""
-"Please do not reply to this email. If you need further assistance,\n"
-"please mail to %s."
-msgstr ""
-"Per favor, no responeu a aquest missatge. Si necessiteu més ajuda\n"
-"envieu-nos un missatge a %s."
-
-#: frontend/invite.php:126
-msgid "No invitations left"
-msgstr "No es queden més invitacions"
-
-#: frontend/invite.php:132 frontend/login.php:101 frontend/login.php:116
-#: frontend/login.php:134 frontend/signup.php:55
-msgid "Please specify a valid e-mail address."
-msgstr "Per favor, introduïu una adreça de correu vàlida: "
-
-#: frontend/invite.php:139
-msgid "This user is already subscribed."
-msgstr "Aquest usuari ja està subscrit."
-
-#: frontend/invite.php:189 frontend/login.php:105 frontend/login.php:138
-#: frontend/signup.php:59
-msgid "Service temporarily unavailable. Please try again later."
-msgstr ""
-"El recurs no està disponible temporalment. Per favor, intenteu-ho de nou més "
-"endavant."
-
 #: frontend/login.php:67 frontend/openid_manage.php:53
 msgid "Verification cancelled."
 msgstr "Verificació ha estat cancel·lada."
@@ -328,6 +261,17 @@ msgstr "Adreça de correu i la contrasenya no concorden."
 #: frontend/login.php:98
 msgid "E-mail has been sent to you."
 msgstr "Un correu-e li ha estat enviat."
+
+#: frontend/login.php:101 frontend/login.php:116 frontend/login.php:134
+#: frontend/signup.php:55
+msgid "Please specify a valid e-mail address."
+msgstr "Per favor, introduïu una adreça de correu vàlida: "
+
+#: frontend/login.php:105 frontend/login.php:138 frontend/signup.php:59
+msgid "Service temporarily unavailable. Please try again later."
+msgstr ""
+"El recurs no està disponible temporalment. Per favor, intenteu-ho de nou més "
+"endavant."
 
 #: frontend/login.php:109
 msgid "Account doesn't exist."
@@ -415,6 +359,11 @@ msgstr "Registració"
 msgid "I already have an account"
 msgstr "Tinc un compte ja"
 
+#: frontend/login.php:322
+#, php-format
+msgid "Bleeding-Edge Personal News Aggregator %s"
+msgstr "Avançat agregador de notícies personal %s"
+
 #: frontend/login.php:332
 msgid "[External link] Help Save the Wild Cheetah"
 msgstr "[Enllaç extern] Ajuda a salvar al guepard salvatge"
@@ -463,8 +412,8 @@ msgstr "Gestionar OpenIDs"
 msgid "Are you sure you want to detach this OpenID?"
 msgstr "Esteu segur de voler esborrar aquest OpenID?"
 
-#: frontend/openid_manage.php:162 js/v1/gui.js:1540 js/v1/gui.js:1573
-#: js/v1/notes.js:271 js/v2/gui.js:1324 js/v2/gui.js:1357 js/v2/notes.js:292
+#: frontend/openid_manage.php:162 js/v2/gui.js:1324 js/v2/gui.js:1357
+#: js/v2/notes.js:292
 msgid "Remove"
 msgstr "Elimina"
 
@@ -585,9 +534,7 @@ msgstr ""
 msgid "Error %s: %s"
 msgstr "Error %s: %s"
 
-#: frontend/html/loading.php:50 js/v1/gui.js:91 js/v1/gui.js:700
-#: js/v1/gui.js:855 js/v1/gui.js:902 js/v1/media.js:79 js/v1/notes.js:300
-#: js/v1/opml.js:45 js/v1/weather.js:183 js/v2/core.js:2408 js/v2/gui.js:60
+#: frontend/html/loading.php:50 js/v2/core.js:2411 js/v2/gui.js:60
 #: js/v2/gui.js:571 js/v2/gui.js:725 js/v2/gui.js:775 js/v2/notes.js:317
 #: js/v2/opml.js:33 js/v2/opml.js:130 js/v2/weather.js:236
 msgid "Loading..."
@@ -638,7 +585,7 @@ msgstr ""
 "Disculpi, el seu navegador no és actualment suportat pel agregador de "
 "notícies Cheetah."
 
-#: frontend/help/kshortcuts.php:57 js/v1/gui.js:1910 js/v2/gui.js:1524
+#: frontend/help/kshortcuts.php:57 js/v2/gui.js:1524
 msgid "Keyboard shortcuts"
 msgstr "Vincles de tecla"
 
@@ -650,23 +597,23 @@ msgstr "Tecla"
 msgid "Action"
 msgstr "Acció"
 
-#: frontend/help/kshortcuts.php:65 js/v1/gui.js:1911 js/v2/gui.js:1525
+#: frontend/help/kshortcuts.php:65 js/v2/gui.js:1525
 msgid "next item"
 msgstr "element següent"
 
-#: frontend/help/kshortcuts.php:66 js/v1/gui.js:1912 js/v2/gui.js:1526
+#: frontend/help/kshortcuts.php:66 js/v2/gui.js:1526
 msgid "previous item"
 msgstr "element anterior"
 
-#: frontend/help/kshortcuts.php:67 js/v1/gui.js:1913 js/v2/gui.js:1527
+#: frontend/help/kshortcuts.php:67 js/v2/gui.js:1527
 msgid "next feed"
 msgstr "alimentació següent"
 
-#: frontend/help/kshortcuts.php:68 js/v1/gui.js:1914 js/v2/gui.js:1528
+#: frontend/help/kshortcuts.php:68 js/v2/gui.js:1528
 msgid "previous feed"
 msgstr "alimentació anterior"
 
-#: frontend/help/kshortcuts.php:69 js/v1/gui.js:1915 js/v2/gui.js:1529
+#: frontend/help/kshortcuts.php:69 js/v2/gui.js:1529
 msgid "open selected feed/entry"
 msgstr "obrir alimentació/article"
 
@@ -674,7 +621,7 @@ msgstr "obrir alimentació/article"
 msgid "append selected feed"
 msgstr "afegir alimentació seleccionada"
 
-#: frontend/help/kshortcuts.php:71 js/v1/gui.js:1916 js/v2/gui.js:1530
+#: frontend/help/kshortcuts.php:71 js/v2/gui.js:1530
 msgid "open feeds from folder/more"
 msgstr "obrir alimentació de la carpeta/més"
 
@@ -706,30 +653,27 @@ msgstr "mostrar totes alimentacions carregades"
 msgid "open/close My Stuff window"
 msgstr "obrir/tancar finestra \"Les meues coses\""
 
-#: frontend/help/kshortcuts.php:79 js/v1/gui.js:1925 js/v2/gui.js:1539
+#: frontend/help/kshortcuts.php:79 js/v2/gui.js:1539
 msgid "collapse"
 msgstr "plegar"
 
-#: frontend/help/kshortcuts.php:80 js/v1/gui.js:124 js/v1/gui.js:1926
-#: js/v2/gui.js:94 js/v2/gui.js:1540
+#: frontend/help/kshortcuts.php:80 js/v2/gui.js:94 js/v2/gui.js:1540
 msgid "refresh visible"
 msgstr "refrescar"
 
-#: frontend/help/kshortcuts.php:81 js/v1/gui.js:1928 js/v2/gui.js:1542
+#: frontend/help/kshortcuts.php:81 js/v2/gui.js:1542
 msgid "mark entry as read"
 msgstr "marcar la entrada com a llegida"
 
-#: frontend/help/kshortcuts.php:82 js/v1/gui.js:1929 js/v2/gui.js:1543
+#: frontend/help/kshortcuts.php:82 js/v2/gui.js:1543
 msgid "mark entry as unread"
 msgstr "marcar la entrada com a no llegida"
 
-#: frontend/help/kshortcuts.php:83 js/v1/gui.js:126 js/v1/gui.js:1931
-#: js/v2/gui.js:96 js/v2/gui.js:1545
+#: frontend/help/kshortcuts.php:83 js/v2/gui.js:96 js/v2/gui.js:1545
 msgid "filter visible"
 msgstr "filtrar visibles"
 
-#: frontend/help/kshortcuts.php:84 js/v1/gui.js:1923 js/v1/notes.js:71
-#: js/v2/gui.js:1537 js/v2/notes.js:69
+#: frontend/help/kshortcuts.php:84 js/v2/gui.js:1537 js/v2/notes.js:69
 msgid "save link"
 msgstr "guardar enllaç"
 
@@ -741,1235 +685,47 @@ msgstr "obrir/tancar el previsió del temps"
 msgid "open/close Notes and Bookmarks"
 msgstr "obrir/tancar els notes i adreces d'interès"
 
-#: js/v1/boot.js:31 js/v2/boot.js:41
+#: js/v2/boot.js:40
 msgid "initializing..."
 msgstr "inicialització..."
 
-#: js/v1/core.js:285 js/v2/core.js:287
+#: js/v2/core.js:287
 msgid "Your browser is working offline!"
 msgstr "El seu navegador està desconnectat de la xarxa!"
 
-#: js/v1/core.js:303 js/v2/core.js:305
+#: js/v2/core.js:305
 msgid "You need to enable active scripting and ActiveX controls."
 msgstr ""
 "Necessiteu de activar les funcions \"active scripting\" i \"ActiveX controls"
 "\" del seu navegador."
 
-#: js/v1/core.js:312 js/v1/gui.js:529 js/v1/gui.js:624 js/v1/gui.js:837
-#: js/v1/gui.js:889 js/v1/gui.js:942 js/v1/invite.js:77 js/v2/core.js:314
-#: js/v2/gui.js:482 js/v2/gui.js:707 js/v2/gui.js:762 js/v2/gui.js:794
+#: js/v2/core.js:314 js/v2/gui.js:482 js/v2/gui.js:707 js/v2/gui.js:762
+#: js/v2/gui.js:794
 msgid "Timeout Error!"
 msgstr "Temps esgotat!"
 
-#: js/v1/core.js:349 js/v1/core.js:509 js/v1/core.js:519 js/v1/media.js:74
-#: js/v1/notes.js:569 js/v2/core.js:335 js/v2/core.js:347 js/v2/core.js:390
-#: js/v2/core.js:554 js/v2/core.js:590 js/v2/notes.js:485
+#: js/v2/core.js:336 js/v2/core.js:348 js/v2/core.js:391 js/v2/core.js:555
+#: js/v2/core.js:591 js/v2/notes.js:485
 msgid "error"
 msgstr "error"
 
-#: js/v1/core.js:446
-msgid "Your browser can't handle this script."
-msgstr "El seu navegador no pot manejar aquest script."
-
-#: js/v1/core.js:613 js/v1/gui.js:252 js/v2/core.js:771 js/v2/gui.js:195
-msgid "fetching data..."
-msgstr "recollint dades..."
-
-#: js/v1/core.js:655 js/v2/core.js:813
-msgid "Open feeds from this folder"
-msgstr "Obrir alimentacions d'aquesta carpeta"
-
-#: js/v1/core.js:875 js/v2/core.js:1051
-msgid "loading..."
-msgstr "s'està carregant..."
-
-#: js/v1/core.js:1073 js/v1/gui.js:1093 js/v2/core.js:1268 js/v2/gui.js:959
-msgid "stories"
-msgstr "articles"
-
-#: js/v1/core.js:1077 js/v1/gui.js:140 js/v2/core.js:1272 js/v2/gui.js:109
-msgid "Expand"
-msgstr "Desplegar"
-
-#: js/v1/core.js:1079 js/v2/core.js:1274
-msgid "Expand entries"
-msgstr "Desplegar articles"
-
-#: js/v1/core.js:1085 js/v1/gui.js:145 js/v2/core.js:1280 js/v2/gui.js:115
-msgid "Collapse"
-msgstr "Plegar"
-
-#: js/v1/core.js:1086 js/v2/core.js:1281
-msgid "Collapse entries"
-msgstr "Plegar articles"
-
-#: js/v1/core.js:1098 js/v2/core.js:1293
-msgid "Mark as read"
-msgstr "Marcar com a llegit"
-
-#: js/v1/core.js:1099 js/v2/core.js:1294
-msgid "Mark all entries as read"
-msgstr "Marcar totes les entrades com llegides"
-
-#: js/v1/core.js:1106 js/v2/core.js:1301
-msgid "Mark as unread"
-msgstr "Marcar com a no llegit"
-
-#: js/v1/core.js:1107 js/v2/core.js:1302
-msgid "Mark all entries as unread"
-msgstr "Marcar totes les entrades com no llegides"
-
-#: js/v1/core.js:1125 js/v2/core.js:1399
-msgid "See enclosed multimedia"
-msgstr "Veges la imatge adjunta"
-
-#: js/v1/core.js:1132 js/v2/core.js:1410 js/v2/core.js:1576
-msgid "See enclosed image"
-msgstr "Veges la imatge adjunta"
-
-#: js/v1/core.js:1195 js/v1/core.js:1208 js/v1/weather.js:225
-#: js/v2/core.js:1370 js/v2/core.js:1383 js/v2/core.js:1392
-#: js/v2/weather.js:306
-msgid "External link"
-msgstr "Enllaç extern"
-
-#: js/v1/core.js:1207 js/v1/weather.js:224 js/v2/core.js:1382
-#: js/v2/core.js:1391 js/v2/gui.js:1551 js/v2/weather.js:305
-msgid "more"
-msgstr "més"
-
-#: js/v1/core.js:1217
-msgid "email this"
-msgstr "Enviar això"
-
-#: js/v1/core.js:1218
-msgid "Email this to a friend"
-msgstr "Enviar això a un amic"
-
-#: js/v1/core.js:1510 js/v2/core.js:1744
-msgid "progress"
-msgstr "progrés"
-
-#: js/v1/core.js:1578
-msgid "You don't have any active feeds."
-msgstr "No tens cap alimentació activa."
-
-#: js/v1/core.js:2008 js/v2/core.js:2210
-msgid "A popup blocker may be preventing Cheetah News from opening the page."
-msgstr ""
-"Possiblement és el bloqueig de finestres emergents que impedeix a obrir la "
-"pàgina."
-
-#: js/v1/core.js:2009 js/v2/core.js:2211
-msgid "If you have a popup blocker, try disabling it to open the window."
-msgstr "Si tens bloqueig activat, deshabilita'l per a obrir la finestra."
-
-#: js/v1/filter.js:30 js/v2/filter.js:30
-msgid "Filter"
-msgstr "Filtre"
-
-#: js/v1/filter.js:32 js/v2/filter.js:32
-msgid "filtering..."
-msgstr "filtrant..."
-
-#: js/v1/filter.js:40 js/v2/filter.js:40
-msgid "%d entry"
-msgid_plural "%d entries"
-msgstr[0] "%d entrada"
-msgstr[1] "%d entrades"
-
-#: js/v1/filter.js:98 js/v2/filter.js:99
-msgid "filtered"
-msgstr "filtrat"
-
-#: js/v1/filter.js:99 js/v1/filter.js:183 js/v2/filter.js:100
-#: js/v2/filter.js:184
-msgid "Remove filtering"
-msgstr "Cancel·lar el filtre"
-
-#: js/v1/filter.js:184 js/v2/filter.js:185
-msgid "Remove filtering from all feeds"
-msgstr "Cancel·lar la filtració de totes les alimentacions"
-
-#: js/v1/gui.js:43
-msgid "Error Information"
-msgstr "Informació de error"
-
-#: js/v1/gui.js:47
-msgid "clear"
-msgstr "buida"
-
-#: js/v1/gui.js:84 js/v2/gui.js:54
-msgid "My Stuff"
-msgstr "Les meues coses"
-
-#: js/v1/gui.js:116 js/v2/gui.js:86
-msgid "Welcome"
-msgstr "Benvinguts"
-
-#: js/v1/gui.js:117 js/v1/gui.js:998 js/v2/gui.js:87 js/v2/gui.js:860
-msgid "About Cheetah News"
-msgstr "Quant a Cheetah News"
-
-#: js/v1/gui.js:118 js/v2/gui.js:88
-msgid "show active"
-msgstr "mostrar actives"
-
-#: js/v1/gui.js:118 js/v2/gui.js:88
-msgid "Show all active feeds"
-msgstr "Mostrar totes alimentacions actives"
-
-#: js/v1/gui.js:119 js/v2/gui.js:89
-msgid "show loaded"
-msgstr "mostrar carregades"
-
-#: js/v1/gui.js:119 js/v2/gui.js:89
-msgid "Show all loaded feeds"
-msgstr "Mostrar totes alimentacions carregades"
-
-#: js/v1/gui.js:120 js/v2/gui.js:90
-msgid "hide all"
-msgstr "amagar totes"
-
-#: js/v1/gui.js:120 js/v2/gui.js:90
-msgid "Hide all feeds"
-msgstr "Amagar totes les alimentacions"
-
-#: js/v1/gui.js:124 js/v2/gui.js:94
-msgid "Refresh all visible feeds"
-msgstr "Refrescar totes les alimentacions visibles"
-
-#: js/v1/gui.js:126 js/v2/gui.js:96
-msgid "Filter visible feeds"
-msgstr "Filtrar totes les alimentacions visibles"
-
-#: js/v1/gui.js:141 js/v2/gui.js:110
-msgid "Expand folders"
-msgstr "Desplegar articles"
-
-#: js/v1/gui.js:146 js/v2/gui.js:116
-msgid "Collapse folders"
-msgstr "Plegar articles"
-
-#: js/v1/gui.js:151 js/v2/gui.js:121
-msgid "Show My Stuff"
-msgstr "Mostrar les meues coses"
-
-#: js/v1/gui.js:152 js/v1/gui.js:1085 js/v2/gui.js:122 js/v2/gui.js:947
-msgid "Add New Feed"
-msgstr "Afegir nova alimentació"
-
-#: js/v1/gui.js:153 js/v1/gui.js:1086 js/v2/gui.js:123 js/v2/gui.js:948
-msgid "Manage Subscriptions"
-msgstr "Gestionar subscripcions"
-
-#: js/v1/gui.js:154 js/v1/gui.js:1087 js/v2/gui.js:124 js/v2/gui.js:949
-msgid "Manage Folders"
-msgstr "Gestionar carpetes"
-
-#: js/v1/gui.js:155 js/v1/gui.js:1088 js/v2/gui.js:125 js/v2/gui.js:950
-msgid "User Settings"
-msgstr "Paràmetres del usuari"
-
-#: js/v1/gui.js:156 js/v2/gui.js:127
-msgid "Logout"
-msgstr "Fi de sessió"
-
-#: js/v1/gui.js:186 js/v1/gui.js:242 js/v2/gui.js:165 js/v2/gui.js:185
-msgid "Close Window"
-msgstr "Tancar la finestra"
-
-#: js/v1/gui.js:239 js/v2/gui.js:182
-msgid "Reload this feed"
-msgstr "Recarregar aquesta alimentació"
-
-#: js/v1/gui.js:337 js/v1/gui.js:1210 js/v2/gui.js:289 js/v2/gui.js:1073
-msgid "Root folder"
-msgstr "Carpeta principal"
-
-#: js/v1/gui.js:403 js/v2/gui.js:353
-msgid "Menu"
-msgstr "Menú"
-
-#: js/v1/gui.js:404 js/v2/gui.js:354
-msgid "menu"
-msgstr "menú"
-
-#: js/v1/gui.js:518 js/v1/gui.js:609 js/v2/gui.js:463 js/v2/gui.js:520
-msgid "Invalid URL"
-msgstr "URL incorrecte."
-
-#: js/v1/gui.js:524 js/v1/gui.js:619 js/v2/gui.js:478
-msgid "Validating URL..."
-msgstr "Verificant la URL..."
-
-#: js/v1/gui.js:543 js/v1/gui.js:574 js/v1/gui.js:699 js/v1/gui.js:741
-#: js/v1/weather.js:330 js/v2/gui.js:496 js/v2/gui.js:569 js/v2/gui.js:605
-#: js/v2/gui.js:727 js/v2/gui.js:777 js/v2/weather.js:389
-msgid "OK"
-msgstr "D'acord"
-
-#: js/v1/gui.js:614
-msgid "Subscribing to %s..."
-msgstr "Subscripció a %s..."
-
-#: js/v1/gui.js:633
-msgid "Info Window"
-msgstr "Finestra de informació"
-
-#: js/v1/gui.js:655
-msgid "Or add feed by URL"
-msgstr "O afegeix la alimentació a través de URL"
-
-#: js/v1/gui.js:661 js/v1/gui.js:1089
-msgid "Or import an OPML file"
-msgstr "O importeu un fitxer OPML"
-
-#: js/v1/gui.js:675 js/v2/gui.js:545
-msgid "Importing file..."
-msgstr "Important el fitxer..."
-
-#: js/v1/gui.js:722 js/v2/gui.js:586
-msgid "Invalid folder name"
-msgstr "Nom de fitxer no vàlid"
-
-#: js/v1/gui.js:728 js/v2/gui.js:592
-msgid "Adding folder..."
-msgstr "S'està afegint el fitxer..."
-
-#: js/v1/gui.js:822
-msgid ""
-"You have checked more than 10 active feeds.\n"
-"This might slow down the startup process.\n"
-"Would you like to proceed?"
-msgstr ""
-"Heu seleccionat més de 10 alimentacions actives.\n"
-"Això pot alentir el procés de inicialització.\n"
-"Voleu continuar?        "
-
-#: js/v1/gui.js:1030 js/v2/gui.js:903
-msgid "Settings"
-msgstr "Paràmetres"
-
-#: js/v1/gui.js:1041 js/v2/gui.js:913
-msgid "Save changes"
-msgstr "Guardar canvis"
-
-#: js/v1/gui.js:1043 js/v1/weather.js:82 js/v2/gui.js:915 js/v2/notes.js:55
-#: js/v2/weather.js:117
-msgid "Cancel"
-msgstr "Cancel·lar"
-
-#: js/v1/gui.js:1051
-msgid ""
-"Add a specific RSS, RDF, or ATOM feed by entering the URL below "
-"(Autodiscovery supported)."
-msgstr ""
-"Afegeix una alimentació RSS, RDF o ATOM, introduint la seua URL (amb suport "
-"de descobriment automàtic)."
-
-#: js/v1/gui.js:1052 js/v2/gui.js:923
-msgid "Import your subscriptions from an OPML file."
-msgstr "Importeu les seues subscripcions des d'un fitxer OPML."
-
-#: js/v1/gui.js:1053 js/v2/gui.js:924
-msgid "Refresh rate (active feeds)"
-msgstr "Període de refresca (alimentacions actives)"
-
-#: js/v1/gui.js:1054 js/v2/gui.js:925
-msgid "Show active feeds on startup"
-msgstr "Mostrar totes alimentacions actives en iniciar-se"
-
-#: js/v1/gui.js:1055 js/v2/gui.js:926
-msgid "Oldest entries first"
-msgstr "Ordenació temporal inversa"
-
-#: js/v1/gui.js:1056 js/v2/gui.js:927
-msgid "Add new folder."
-msgstr "Afegir una nova carpeta."
-
-#: js/v1/gui.js:1057 js/v2/gui.js:928
-msgid "Display language:"
-msgstr "Llenguatge:"
-
-#: js/v1/gui.js:1058
-msgid "Interface (cookie-based):"
-msgstr "Interfície (cookie):"
-
-#: js/v1/gui.js:1059 js/v2/gui.js:929
-msgid "System:"
-msgstr "Sistema:"
-
-#: js/v1/gui.js:1066 js/v2/gui.js:971
-msgid "Close without saving?"
-msgstr "Tancar sense guardar canvis?"
-
-#: js/v1/gui.js:1077 js/v1/gui.js:1082 js/v2/gui.js:944
-msgid "add"
-msgstr "afegir"
-
-#: js/v1/gui.js:1080 js/v2/gui.js:942
-msgid "Import"
-msgstr "Importar"
-
-#: js/v1/gui.js:1094 js/v2/gui.js:960
-msgid "expand"
-msgstr "desplegar"
-
-#: js/v1/gui.js:1095 js/v2/gui.js:961
-msgid "active"
-msgstr "actiu"
-
-#: js/v1/gui.js:1096 js/v2/gui.js:962
-msgid "minutes"
-msgstr "minuts"
-
-#: js/v1/gui.js:1159 js/v2/gui.js:1024
-msgid "Switch without saving?"
-msgstr "Canviar sense guardar canvis?"
-
-#: js/v1/gui.js:1214 js/v2/gui.js:1077
-msgid "Select folder"
-msgstr "Seleccioneu una carpeta"
-
-#: js/v1/gui.js:1221 js/v2/gui.js:1084
-msgid "Export selected folder"
-msgstr "Exportar carpeta seleccionada"
-
-#: js/v1/gui.js:1222 js/v2/gui.js:1085
-msgid "Export feeds from selected folder to OPML"
-msgstr "Exportar a OPML les alimentacions de la carpeta seleccionada"
-
-#: js/v1/gui.js:1229 js/v2/gui.js:1092
-msgid "Export all feeds"
-msgstr "Exportar totes les alimentacions"
-
-#: js/v1/gui.js:1230 js/v2/gui.js:1093
-msgid "Export all feeds to OPML"
-msgstr "Exportar totes les alimentacions a OPML"
-
-#: js/v1/gui.js:1528 js/v1/gui.js:1565 js/v2/gui.js:1312 js/v2/gui.js:1349
-msgid "Move up"
-msgstr "Mou amunt"
-
-#: js/v1/gui.js:1532 js/v1/gui.js:1569 js/v2/gui.js:1316 js/v2/gui.js:1353
-msgid "Move down"
-msgstr "Mou avall"
-
-#: js/v1/gui.js:1536 js/v2/gui.js:1320
-msgid "Move to other folder"
-msgstr "Mou a altra carpeta"
-
-#: js/v1/gui.js:1917 js/v2/gui.js:1531
-msgid "close feed"
-msgstr "tancar la alimentació"
-
-#: js/v1/gui.js:1918 js/v2/gui.js:1532
-msgid "left"
-msgstr "al'esquerra"
-
-#: js/v1/gui.js:1919 js/v2/gui.js:1533
-msgid "right"
-msgstr "dreta"
-
-#: js/v1/gui.js:1920 js/v2/gui.js:1534
-msgid "hide/show all active"
-msgstr "amagar/mostrar totes actives"
-
-#: js/v1/gui.js:1921 js/v2/gui.js:1535
-msgid "show all loaded"
-msgstr "mostrar totes carregades"
-
-#: js/v1/gui.js:1924 js/v2/gui.js:1538
-msgid "my stuff"
-msgstr "les meues coses"
-
-#: js/v1/invite.js:35 js/v1/invite.js:47
-msgid "Invite a friend"
-msgstr "Invitar a un amic"
-
-#: js/v1/invite.js:38
-msgid "First Name:"
-msgstr "Nom:"
-
-#: js/v1/invite.js:39
-msgid "Last Name:"
-msgstr "Cognom:"
-
-#: js/v1/invite.js:40
-msgid "E-mail:"
-msgstr "Correu-e:"
-
-#: js/v1/invite.js:41
-msgid "Optional note:"
-msgstr "Nota opcional:"
-
-#: js/v1/invite.js:42
-msgid "Invitation language:"
-msgstr "Llenguatge de invitació:"
-
-#: js/v1/invite.js:44
-msgid "Send invitation"
-msgstr "Enviar la invitació"
-
-#: js/v1/invite.js:59
-msgid "You have %d invitation left, send invitation to:"
-msgid_plural "You have %d invitations left, send invitation to:"
-msgstr[0] "Teniu %d invitació més. Enviar-la a:"
-msgstr[1] "Teniu %d invitacions més. Enviar-ne una a:"
-
-#: js/v1/media.js:33
-msgid "Thumbnail"
-msgstr "Miniatura"
-
-#: js/v1/media.js:77
-msgid "aborted"
-msgstr "cancel·lat"
-
-#: js/v1/media.js:85
-msgid "Multimedia"
-msgstr "Multimèdia"
-
-#: js/v1/notes.js:37 js/v1/notes.js:43
-msgid "My Notes and Bookmarks"
-msgstr "Les meues notes i adreces d'interès"
-
-#: js/v1/notes.js:49 js/v2/notes.js:48
-msgid "Your publicly visible notes and links (Atom feed)"
-msgstr "Les seues notes i enllaces (alimentacions Atom), visibles públicament"
-
-#: js/v1/notes.js:51 js/v2/notes.js:50
-msgid "Title:"
-msgstr "Títol:"
-
-#: js/v1/notes.js:52 js/v2/notes.js:51
-msgid "Tags:"
-msgstr "Etiquetes:"
-
-#: js/v1/notes.js:53
-msgid "Color:"
-msgstr "Color:"
-
-#: js/v1/notes.js:54 js/v2/notes.js:52
-msgid "Publicly visible:"
-msgstr "Visible públicament:"
-
-#: js/v1/notes.js:55 js/v2/notes.js:53
-msgid "Note (double-click or tab to edit):"
-msgstr "Nota (doble clic o tab per a editar):"
-
-#: js/v1/notes.js:56 js/v1/notes.js:515 js/v2/notes.js:54 js/v2/notes.js:447
-msgid "Save Note"
-msgstr "Guardar la nota"
-
-#: js/v1/notes.js:72 js/v2/notes.js:70
-msgid "Save link to this entry"
-msgstr "Guardar enllaç a aquest article"
-
-#: js/v1/notes.js:120 js/v2/notes.js:134
-msgid "Create Note"
-msgstr "Crear nota"
-
-#: js/v1/notes.js:132 js/v2/notes.js:138
-msgid "Tag:"
-msgstr "Etiqueta:"
-
-#: js/v1/notes.js:137 js/v1/websearch.js:116 js/v2/notes.js:141
-msgid "Search"
-msgstr "Cerca"
-
-#: js/v1/notes.js:143 js/v1/notes.js:166 js/v2/notes.js:147 js/v2/notes.js:191
-msgid "Searching..."
-msgstr "Cercant..."
-
-#: js/v1/notes.js:157
-msgid "Title"
-msgstr "Títol"
-
-#: js/v1/notes.js:158
-msgid "Date"
-msgstr "Data"
-
-#: js/v1/notes.js:159
-msgid "Public"
-msgstr "Pública"
-
-#: js/v1/notes.js:200 js/v2/notes.js:217
-msgid "Found %d note tagged with \"%s\"."
-msgid_plural "Found %d notes tagged with \"%s\"."
-msgstr[0] "S'ha trobat %d nota marcada amb \"%s\"."
-msgstr[1] "S'ha trobat %d notes marcades amb \"%s\"."
-
-#: js/v1/notes.js:205 js/v2/notes.js:222
-msgid "Found %d latest note."
-msgid_plural "Found %d latest notes."
-msgstr[0] "S'ha trobat %d última nota."
-msgstr[1] "S'ha trobat %d últimes notes."
-
-#: js/v1/notes.js:260 js/v2/notes.js:263
-msgid "rem"
-msgstr "esborrar"
-
-#: js/v1/notes.js:312 js/v2/notes.js:328
-msgid "Are you sure you want to delete this note?"
-msgstr "Esteu segur de voler esborrar aqueixa nota?"
-
-#: js/v1/notes.js:367
-msgid "Edit Window"
-msgstr "Finestra de edició"
-
-#: js/v1/notes.js:445 js/v2/notes.js:177
-msgid "Comma-separated list of tags"
-msgstr "Llista de etiquetes, separats per comes"
-
-#: js/v1/notes.js:483 js/v2/notes.js:416
-msgid "Finish editing"
-msgstr "Acabar l'edició"
-
-#: js/v1/notes.js:588 js/v2/notes.js:508
-msgid "At least one tag is required."
-msgstr "Es requereix almenys una etiqueta."
-
-#: js/v1/notes.js:593 js/v2/notes.js:513
-msgid "Empty note title and body."
-msgstr "No s'han subministrat ni el títol ni el cos de la nota."
-
-#: js/v1/notes.js:603 js/v2/notes.js:523
-msgid "No title"
-msgstr "Cap títol"
-
-#: js/v1/opml.js:24
-msgid "Feed Directory"
-msgstr "Directori de alimentacions"
-
-#: js/v1/opml.js:25
-msgid "Popular Feeds (Cheetah)"
-msgstr "Alimentacions populars (Cheetah)"
-
-#: js/v1/opml.js:123
-msgid "Subscribe to %s"
-msgstr "Subscriure's a %s"
-
-#: js/v1/translate.js:35 js/v2/translate.js:35
-msgid "translate"
-msgstr "traduir"
-
-#: js/v1/translate.js:36 js/v2/translate.js:36
-msgid "Translate this entry"
-msgstr "Traducció d'aquest article"
-
-#: js/v1/translate.js:93 js/v2/translate.js:88
-msgid "to English"
-msgstr "al anglès"
-
-#: js/v1/translate.js:96 js/v2/translate.js:91
-msgid "to Polish"
-msgstr "al polonès"
-
-#: js/v1/translate.js:99 js/v2/translate.js:94
-msgid "to Ukrainian"
-msgstr "al ucraïnès"
-
-#: js/v1/translate.js:102 js/v2/translate.js:97
-msgid "to German"
-msgstr "al alemany"
-
-#: js/v1/translate.js:105 js/v2/translate.js:100
-msgid "to Spanish"
-msgstr "al castellà"
-
-#: js/v1/translate.js:108 js/v2/translate.js:103
-msgid "to French"
-msgstr "al francès"
-
-#: js/v1/translate.js:111 js/v2/translate.js:106
-msgid "to Italian"
-msgstr "al italià"
-
-#: js/v1/translate.js:114 js/v2/translate.js:109
-msgid "to Portuguese"
-msgstr "al portuguès"
-
-#: js/v1/translate.js:117 js/v2/translate.js:112
-msgid "to Arabic"
-msgstr "al àrab"
-
-#: js/v1/translate.js:120 js/v2/translate.js:115
-msgid "to Japanese"
-msgstr "al japonès"
-
-#: js/v1/translate.js:123 js/v2/translate.js:118
-msgid "to Korean"
-msgstr "al coreà"
-
-#: js/v1/translate.js:126 js/v2/translate.js:121
-msgid "to Chinese"
-msgstr "al xinès"
-
-#: js/v1/translate.js:131 js/v2/translate.js:126
-msgid "Not available"
-msgstr "no és disponible"
-
-#: js/v1/weather.js:33 js/v1/weather.js:34 js/v2/weather.js:33
-#: js/v2/weather.js:185
-msgid "Weather Report"
-msgstr "Previsió del temps"
-
-#: js/v1/weather.js:53 js/v2/weather.js:92
-msgid "Add"
-msgstr "Afegir"
-
-#: js/v1/weather.js:54 js/v2/weather.js:93
-msgid "Add location"
-msgstr "Afegir localitat"
-
-#: js/v1/weather.js:65 js/v2/weather.js:102
-msgid "Refresh"
-msgstr "Refrescar"
-
-#: js/v1/weather.js:66 js/v2/weather.js:103
-msgid "Refresh Weather News"
-msgstr "Refrescar la previsió del temps"
-
-#: js/v1/weather.js:71 js/v2/weather.js:106
-msgid "Location ID:"
-msgstr "ID de la localitat:"
-
-#: js/v1/weather.js:72 js/v2/weather.js:107
-msgid "Description:"
-msgstr "Descripció:"
-
-#: js/v1/weather.js:73 js/v2/weather.js:108
-msgid "Unit:"
-msgstr "Unitat:"
-
-#: js/v1/weather.js:75 js/v2/weather.js:110
-msgid "Save"
-msgstr "Guardar"
-
-#: js/v1/weather.js:78 js/v2/weather.js:113
-msgid "Delete"
-msgstr "Esborrar"
-
-#: js/v1/weather.js:228 js/v2/weather.js:280
-msgid "Wrong location or data temporarily unavailable."
-msgstr "Locació desconeguda o dades no estan disponibles temporalment."
-
-#: js/v1/weather.js:231 js/v2/weather.js:283
-msgid "Edit this location"
-msgstr "Editar aquesta localitat"
-
-#: js/v1/weather.js:245 js/v2/weather.js:297
-msgid "Tomorrow's weather forecast"
-msgstr "Previsió per demà"
-
-#: js/v1/weather.js:267 js/v2/weather.js:324
-msgid "Editing location"
-msgstr "Edició de la localitat"
-
-#: js/v1/weather.js:275 js/v2/weather.js:332
-msgid "Add new location."
-msgstr "Afegir una nova localitat."
-
-#: js/v1/weather.js:300 js/v2/weather.js:359
-msgid "Invalid location ID"
-msgstr "ID de localitat invàlida"
-
-#: js/v1/weather.js:312 js/v2/weather.js:371
-msgid "Saving location..."
-msgstr "Conservació de la localitat..."
-
-#: js/v1/weather.js:351 js/v2/weather.js:410
-msgid "Are you sure you want to delete this location?"
-msgstr "Esteu segur de voler esborrar aqueixa localitat?"
-
-#: js/v1/weather.js:355 js/v2/weather.js:414
-msgid "Deleting..."
-msgstr "Eliminació..."
-
-#. TRANSLATORS: BEGIN JS 
-#: js/v1/weather.js:362 js/v2/weather.js:421
-msgid "Location"
-msgstr "Localitat"
-
-#: js/v1/weather.js:362 js/v2/weather.js:421
-msgid "Forecast"
-msgstr "Previsió"
-
-#: js/v1/weather.js:362 js/v2/weather.js:421
-msgid "Now"
-msgstr "Ara"
-
-#: js/v1/weather.js:362 js/v2/weather.js:421
-msgid "Today"
-msgstr "Avui"
-
-#: js/v1/weather.js:362 js/v2/weather.js:421
-msgid "Tomorrow"
-msgstr "Demà"
-
-#: js/v1/weather.js:362 js/v2/weather.js:421
-msgid "Feels like"
-msgstr "Sensació tèrmica"
-
-#: js/v1/weather.js:363 js/v2/weather.js:422
-msgid "Wind"
-msgstr "Vent"
-
-#: js/v1/weather.js:363 js/v2/weather.js:422
-msgid "Humidity"
-msgstr "Humitat"
-
-#: js/v1/weather.js:363 js/v2/weather.js:422
-msgid "Pressure"
-msgstr "Pressió"
-
-#: js/v1/weather.js:363 js/v2/weather.js:422
-msgid "Sunrise"
-msgstr "Sortida del sol"
-
-#: js/v1/weather.js:363 js/v2/weather.js:422
-msgid "Sunset"
-msgstr "Posta del sol"
-
-#: js/v1/weather.js:364 js/v2/weather.js:423
-msgid "Temp"
-msgstr "Temp."
-
-#: js/v1/weather.js:364 js/v2/weather.js:423
-msgid "High"
-msgstr "Alta"
-
-#: js/v1/weather.js:364 js/v2/weather.js:423
-msgid "Low"
-msgstr "Baixa"
-
-#: js/v1/weather.js:364 js/v2/weather.js:423
-msgid "Sun"
-msgstr "Dg"
-
-#: js/v1/weather.js:364 js/v2/weather.js:423
-msgid "Mon"
-msgstr "Dl"
-
-#: js/v1/weather.js:364 js/v2/weather.js:423
-msgid "Tue"
-msgstr "Dt"
-
-#: js/v1/weather.js:364 js/v2/weather.js:423
-msgid "Wed"
-msgstr "Dc"
-
-#: js/v1/weather.js:365 js/v2/weather.js:424
-msgid "Thu"
-msgstr "Dj"
-
-#: js/v1/weather.js:365 js/v2/weather.js:424
-msgid "Fri"
-msgstr "Dv"
-
-#: js/v1/weather.js:365 js/v2/weather.js:424
-msgid "Sat"
-msgstr "Ds"
-
-#: js/v1/weather.js:365 js/v2/weather.js:424
-msgid "kph"
-msgstr "km/h"
-
-#: js/v1/weather.js:365 js/v2/weather.js:424
-msgid "mb"
-msgstr "mb"
-
-#: js/v1/weather.js:365 js/v2/weather.js:424
-msgid "Windy"
-msgstr "Vent"
-
-#: js/v1/weather.js:366 js/v2/weather.js:425
-msgid "Mist"
-msgstr "Boira"
-
-#: js/v1/weather.js:366 js/v2/weather.js:425
-msgid "Fair"
-msgstr "Serè"
-
-#: js/v1/weather.js:366 js/v2/weather.js:425
-msgid "Clear"
-msgstr "Clar"
-
-#: js/v1/weather.js:366 js/v2/weather.js:425
-msgid "Mostly Clear"
-msgstr "Majorment clar"
-
-#: js/v1/weather.js:366 js/v2/weather.js:425
-msgid "Mostly Cloudy"
-msgstr "Majorment ennuvolat"
-
-#: js/v1/weather.js:367 js/v2/weather.js:426
-msgid "Partly Cloudy"
-msgstr "Parcialment ennuvolat"
-
-#: js/v1/weather.js:367 js/v2/weather.js:426
-msgid "Cloudy"
-msgstr "Ennuvolat"
-
-#: js/v1/weather.js:367 js/v2/weather.js:426
-msgid "Mostly Sunny"
-msgstr "Majorment assolellat"
-
-#: js/v1/weather.js:367 js/v2/weather.js:426
-msgid "Sunny"
-msgstr "Assolellat"
-
-#: js/v1/weather.js:368 js/v2/weather.js:427
-msgid "Rain"
-msgstr "Pluja"
-
-#: js/v1/weather.js:368 js/v2/weather.js:427
-msgid "Light Rain"
-msgstr "Pluja feble"
-
-#: js/v1/weather.js:368 js/v2/weather.js:427
-msgid "Freezing Rain"
-msgstr "Pluja glaçada"
-
-#: js/v1/weather.js:368 js/v2/weather.js:427
-msgid "Heavy Rain"
-msgstr "Pluja intensa"
-
-#: js/v1/weather.js:368 js/v2/weather.js:427
-msgid "Snow"
-msgstr "Neu"
-
-#: js/v1/weather.js:369 js/v2/weather.js:428
-msgid "Light Snow"
-msgstr "Neu feble"
-
-#: js/v1/weather.js:369 js/v2/weather.js:428
-msgid "AM Light Snow"
-msgstr "Neu feble matutí"
-
-#: js/v1/weather.js:369 js/v2/weather.js:428
-msgid "PM Light Snow"
-msgstr "Neu feble vespertí"
-
-#: js/v1/weather.js:369 js/v2/weather.js:428
-msgid "Snow Showers"
-msgstr "Neu forta"
-
-#: js/v1/weather.js:370 js/v2/weather.js:429
-msgid "AM Snow"
-msgstr "Neu matutí"
-
-#: js/v1/weather.js:370 js/v2/weather.js:429
-msgid "PM Snow"
-msgstr "Neu vespertí"
-
-#: js/v1/weather.js:370 js/v2/weather.js:429
-msgid "AM Snow Showers"
-msgstr "Xàfecs de neu matutins"
-
-#: js/v1/weather.js:370 js/v2/weather.js:429
-msgid "PM Snow Showers"
-msgstr "Xàfecs de neu vespertins"
-
-#: js/v1/weather.js:371 js/v2/weather.js:430
-msgid "Scattered Snow Showers"
-msgstr "Pluges de neu disperses"
-
-#: js/v1/weather.js:371 js/v2/weather.js:430
-msgid "Flurries"
-msgstr "Pluges amb vent"
-
-#: js/v1/weather.js:371 js/v2/weather.js:430
-msgid "Drizzle"
-msgstr "Plugims"
-
-#: js/v1/weather.js:371 js/v2/weather.js:430
-msgid "Freezing Drizzle"
-msgstr "Pluja glaçada"
-
-#: js/v1/weather.js:372 js/v2/weather.js:431
-msgid "Haze"
-msgstr "Boirina"
-
-#: js/v1/weather.js:372 js/v2/weather.js:431
-msgid "Showers"
-msgstr "Pluges"
-
-#: js/v1/weather.js:372 js/v2/weather.js:431
-msgid "AM Showers"
-msgstr "Pluges matinales"
-
-#: js/v1/weather.js:372 js/v2/weather.js:431
-msgid "PM Showers"
-msgstr "Pluges vespertines"
-
-#: js/v1/weather.js:373 js/v2/weather.js:432
-msgid "Showers Early"
-msgstr "Pluges matinales"
-
-#: js/v1/weather.js:373 js/v2/weather.js:432
-msgid "Showers Late"
-msgstr "Pluges cap al vespre"
-
-#: js/v1/weather.js:373 js/v2/weather.js:432
-msgid "Few Showers"
-msgstr "Alguns pluges"
-
-#: js/v1/weather.js:373 js/v2/weather.js:432
-msgid "Heavy Snow"
-msgstr "Neu intensa"
-
-#: js/v1/weather.js:374 js/v2/weather.js:433
-msgid "Fog"
-msgstr "Boira"
-
-#: js/v1/weather.js:374 js/v2/weather.js:433
-msgid "Fog Early"
-msgstr "Boira matinal"
-
-#: js/v1/weather.js:374 js/v2/weather.js:433
-msgid "Fog Late"
-msgstr "Boira cap al vespre"
-
-#: js/v1/weather.js:374 js/v2/weather.js:433
-msgid "Foggy"
-msgstr "Boira"
-
-#: js/v1/weather.js:374 js/v2/weather.js:433
-msgid "AM Clouds"
-msgstr "Ennuvolat al matí"
-
-#: js/v1/weather.js:374 js/v2/weather.js:433
-msgid "PM Sun"
-msgstr "Assolellat al vespre"
-
-#: js/v1/weather.js:375 js/v2/weather.js:434
-msgid "Thunder"
-msgstr "Tempesta"
-
-#: js/v1/weather.js:375 js/v2/weather.js:434
-msgid "Thunderstorms"
-msgstr "Tempestes"
-
-#: js/v1/weather.js:375 js/v2/weather.js:434
-msgid "Isolated Thunderstorms"
-msgstr "Tempestes aïllades"
-
-#: js/v1/weather.js:375 js/v2/weather.js:434
-msgid "AM Fog"
-msgstr "Boira matutina"
-
-#: js/v1/weather.js:376 js/v2/weather.js:435
-msgid "AM Drizzle"
-msgstr "Plugims matutins"
-
-#: js/v1/weather.js:376 js/v2/weather.js:435
-msgid "AM Light Rain"
-msgstr "Pluja feble matutí"
-
-#: js/v1/weather.js:376 js/v2/weather.js:435
-msgid "PM Light Rain"
-msgstr "Pluja feble vespertí"
-
-#: js/v1/weather.js:376 js/v2/weather.js:435
-msgid "PM Clouds"
-msgstr "Ennuvolat al vespre"
-
-#: js/v1/weather.js:377 js/v2/weather.js:436
-msgid "Light Rain Early"
-msgstr "Pluja feble vespertí"
-
-#: js/v1/weather.js:377 js/v2/weather.js:436
-msgid "Snow Showers Late"
-msgstr "Xàfecs de neu vespertins"
-
-#: js/v1/weather.js:377 js/v2/weather.js:436
-msgid "Few Snow Showers"
-msgstr "Xàfecs aïllats de neu"
-
-#: js/v1/weather.js:378 js/v2/weather.js:437
-msgid "Snow to Wintry Mix"
-msgstr "Neu o aiguaneu"
-
-#: js/v1/weather.js:378 js/v2/weather.js:437
-msgid "Wintry Mix"
-msgstr "Aiguaneu"
-
-#: js/v1/weather.js:378 js/v2/weather.js:437
-msgid "Thundershowers"
-msgstr "Xàfecs amb tempesta"
-
-#: js/v1/weather.js:378 js/v2/weather.js:437
-msgid "Rain to Snow"
-msgstr "Aiguaneu"
-
-#: js/v1/weather.js:379 js/v2/weather.js:438
-msgid "Clouds Early"
-msgstr "Ennuvolat al matí"
-
-#: js/v1/weather.js:379 js/v2/weather.js:438
-msgid "Clouds Late"
-msgstr "Ennuvolat al vespre"
-
-#: js/v1/weather.js:379 js/v2/weather.js:438
-msgid "Clearing Late"
-msgstr "Aclarit al vespre"
-
-#: js/v1/weather.js:379 js/v2/weather.js:438
-msgid "AM Ice"
-msgstr "Glaç al matí"
-
-#: js/v1/weather.js:380 js/v2/weather.js:439
-msgid "Sleet"
-msgstr "Aiguaneu"
-
-#: js/v1/weather.js:380 js/v2/weather.js:439
-msgid "Scattered Flurries"
-msgstr "Tempestes disperses"
-
-#: js/v1/weather.js:380 js/v2/weather.js:439
-msgid "Snow Showers Early"
-msgstr "Xàfecs de neu matinals"
-
-#: js/v1/weather.js:380 js/v2/weather.js:439
-msgid "Light Snow Late"
-msgstr "Neu feble vespertí"
-
-#: js/v1/weather.js:381 js/v2/weather.js:440
-msgid "Snow Early"
-msgstr "Neu matinal"
-
-#: js/v1/weather.js:381 js/v2/weather.js:440
-msgid "Snow Late"
-msgstr "Neu vespertí"
-
-#: js/v1/weather.js:381 js/v2/weather.js:440
-msgid "Wind Early"
-msgstr "Vent matutí"
-
-#: js/v1/weather.js:381 js/v2/weather.js:440
-msgid "AM Rain"
-msgstr "Pluja matutina"
-
-#: js/v1/weather.js:381 js/v2/weather.js:440
-msgid "PM Rain"
-msgstr "Pluja vespertina"
-
-#: js/v1/weather.js:382 js/v2/weather.js:441
-msgid "PM Fog"
-msgstr "Boira vespertina"
-
-#: js/v1/weather.js:382 js/v2/weather.js:441
-msgid "Drizzle Early"
-msgstr "Plugims matutins"
-
-#: js/v1/weather.js:382 js/v2/weather.js:441
-msgid "Drizzle Late"
-msgstr "Plugims vespertins"
-
-#: js/v1/weather.js:382 js/v2/weather.js:441
-msgid "PM Drizzle"
-msgstr "Plugims a partir de migdia"
-
-#: js/v1/weather.js:383 js/v2/weather.js:442
-msgid "Light Rain Late"
-msgstr "Pluja feble vespertí"
-
-#: js/v1/weather.js:383 js/v2/weather.js:442
-msgid "Wind Late"
-msgstr "Vent vespertí"
-
-#: js/v1/weather.js:383 js/v2/weather.js:442
-msgid "Scattered Strong Storms"
-msgstr "Tempestes fortes disperses"
-
-#: js/v1/weather.js:383 js/v2/weather.js:442
-msgid "Strong Storms"
-msgstr "Tempestes fortes"
-
-#: js/v1/weather.js:384 js/v2/weather.js:443
-msgid "AM Light Wintry Mix"
-msgstr "Aiguaneu feble matutí"
-
-#: js/v1/weather.js:384 js/v2/weather.js:443
-msgid "PM Light Wintry Mix"
-msgstr "Aiguaneu feble a partir de migdia"
-
-#: js/v1/weather.js:384 js/v2/weather.js:443
-msgid "Light Wintry Mix"
-msgstr "Aiguaneu feble"
-
-#: js/v1/weather.js:385 js/v2/weather.js:444
-msgid "AM Thunderstorms"
-msgstr "Tempestes al matí"
-
-#: js/v1/weather.js:385 js/v2/weather.js:444
-msgid "PM Thunderstorms"
-msgstr "Tempestes a partir de migdia"
-
-#: js/v1/weather.js:385 js/v2/weather.js:444
-msgid "Thunderstorms Late"
-msgstr "Tempestes vespertins"
-
-#: js/v1/weather.js:385 js/v2/weather.js:444
-msgid "Rain Early"
-msgstr "Pluja matutí"
-
-#: js/v1/weather.js:386 js/v2/weather.js:445
-msgid "Thunderstorms Early"
-msgstr "Tempestes matutins"
-
-#: js/v1/weather.js:386 js/v2/weather.js:445
-msgid "AM Thundershowers"
-msgstr "Xàfecs amb tempestes al matí"
-
-#: js/v1/weather.js:386 js/v2/weather.js:445
-msgid "PM Thundershowers"
-msgstr "Xàfecs amb tempestes a partir de migdia"
-
-#: js/v1/weather.js:387 js/v2/weather.js:446
-msgid "Thundershowers Early"
-msgstr "Tempestes matutins"
-
-#: js/v1/weather.js:387 js/v2/weather.js:446
-msgid "Thundershowers Late"
-msgstr "Tempestes vespertins"
-
-#: js/v1/weather.js:387 js/v2/weather.js:446
-msgid "Rain Late"
-msgstr "Pluja vespertí"
-
-#: js/v1/weather.js:387 js/v2/weather.js:446
-msgid "Ice to Rain"
-msgstr "Pluja gelada"
-
-#. TRANSLATORS: END JS 
-#: js/v1/weather.js:389 js/v2/weather.js:448
-msgid "Scattered Thunderstorms"
-msgstr "Tempestes disperses"
-
-#: js/v1/websearch.js:44 js/v1/websearch.js:46
-msgid "Web Search"
-msgstr "Cerca a Web"
-
-#: js/v1/websearch.js:118
-msgid "Native language search"
-msgstr "Cerca en el llenguatge matern"
-
-#: js/v1/websearch.js:119
-msgid "Search in all simultaneously"
-msgstr "Cercar en tots els cercadors simultàniament"
-
-#: js/v2/core.js:571 js/v2/core.js:665
+#: js/v2/core.js:572 js/v2/core.js:666
 msgid "Subscribe"
 msgstr "Subscriure's"
 
-#: js/v2/core.js:576 js/v2/core.js:670
+#: js/v2/core.js:577 js/v2/core.js:671
 msgid "You are not subscribed to this feed."
 msgstr "No esteu subscrit a aqueixa alimentació."
 
-#: js/v2/core.js:992
+#: js/v2/core.js:772 js/v2/gui.js:195
+msgid "fetching data..."
+msgstr "recollint dades..."
+
+#: js/v2/core.js:814
+msgid "Open feeds from this folder"
+msgstr "Obrir alimentacions d'aquesta carpeta"
+
+#: js/v2/core.js:993
 msgid ""
 "No subscriptions yet?! Add new subscriptions or import them by visiting Menu/"
 "Add New Feed."
@@ -1977,23 +733,85 @@ msgstr ""
 "No us heu subscrit encara? Subscriviu-vos o importeu subscripcions a través "
 "de Menú/Afegir nova alimentació"
 
-#: js/v2/core.js:1000
+#: js/v2/core.js:1001
 msgid "Feed Preview"
 msgstr "Previsualitzar alimentació"
 
-#: js/v2/core.js:1021
+#: js/v2/core.js:1022
 msgid "weather"
 msgstr "temps"
 
-#: js/v2/core.js:1023
+#: js/v2/core.js:1024
 msgid "notes"
 msgstr "notes"
 
-#: js/v2/core.js:1669
+#: js/v2/core.js:1052
+msgid "loading..."
+msgstr "s'està carregant..."
+
+#: js/v2/core.js:1269 js/v2/gui.js:959
+msgid "stories"
+msgstr "articles"
+
+#: js/v2/core.js:1273 js/v2/gui.js:109
+msgid "Expand"
+msgstr "Desplegar"
+
+#: js/v2/core.js:1275
+msgid "Expand entries"
+msgstr "Desplegar articles"
+
+#: js/v2/core.js:1281 js/v2/gui.js:115
+msgid "Collapse"
+msgstr "Plegar"
+
+#: js/v2/core.js:1282
+msgid "Collapse entries"
+msgstr "Plegar articles"
+
+#: js/v2/core.js:1294
+msgid "Mark as read"
+msgstr "Marcar com a llegit"
+
+#: js/v2/core.js:1295
+msgid "Mark all entries as read"
+msgstr "Marcar totes les entrades com llegides"
+
+#: js/v2/core.js:1302
+msgid "Mark as unread"
+msgstr "Marcar com a no llegit"
+
+#: js/v2/core.js:1303
+msgid "Mark all entries as unread"
+msgstr "Marcar totes les entrades com no llegides"
+
+#: js/v2/core.js:1371 js/v2/core.js:1385 js/v2/core.js:1394
+#: js/v2/weather.js:306
+msgid "External link"
+msgstr "Enllaç extern"
+
+#: js/v2/core.js:1384 js/v2/core.js:1393 js/v2/gui.js:1551
+#: js/v2/weather.js:305
+msgid "more"
+msgstr "més"
+
+#: js/v2/core.js:1401
+msgid "See enclosed multimedia"
+msgstr "Veges la imatge adjunta"
+
+#: js/v2/core.js:1412 js/v2/core.js:1578
+msgid "See enclosed image"
+msgstr "Veges la imatge adjunta"
+
+#: js/v2/core.js:1671
 msgid "Feed Preview: %s"
 msgstr "Previsualització d'alimentació: %s"
 
-#: js/v2/core.js:1795
+#: js/v2/core.js:1746
+msgid "progress"
+msgstr "progrés"
+
+#: js/v2/core.js:1797
 msgid ""
 "You don't have any active feeds. Active feeds are automatically loaded at "
 "startup. You can set them in Menu/Manage Subscriptions."
@@ -2002,13 +820,158 @@ msgstr ""
 "automàticament en iniciar la sessió. Podeu definir-les usant Menú/Gestionar "
 "subscripcions"
 
-#: js/v2/core.js:2502
+#: js/v2/core.js:2212
+msgid "A popup blocker may be preventing Cheetah News from opening the page."
+msgstr ""
+"Possiblement és el bloqueig de finestres emergents que impedeix a obrir la "
+"pàgina."
+
+#: js/v2/core.js:2213
+msgid "If you have a popup blocker, try disabling it to open the window."
+msgstr "Si tens bloqueig activat, deshabilita'l per a obrir la finestra."
+
+#: js/v2/core.js:2511
 msgid "Sorry, but this operation is not supported by your browser."
 msgstr "Perdoneu, el seu navegador no suporta aquesta operació."
+
+#: js/v2/filter.js:30
+msgid "Filter"
+msgstr "Filtre"
+
+#: js/v2/filter.js:32
+msgid "filtering..."
+msgstr "filtrant..."
+
+#: js/v2/filter.js:40
+msgid "%d entry"
+msgid_plural "%d entries"
+msgstr[0] "%d entrada"
+msgstr[1] "%d entrades"
+
+#: js/v2/filter.js:99
+msgid "filtered"
+msgstr "filtrat"
+
+#: js/v2/filter.js:100 js/v2/filter.js:184
+msgid "Remove filtering"
+msgstr "Cancel·lar el filtre"
+
+#: js/v2/filter.js:185
+msgid "Remove filtering from all feeds"
+msgstr "Cancel·lar la filtració de totes les alimentacions"
+
+#: js/v2/gui.js:54
+msgid "My Stuff"
+msgstr "Les meues coses"
 
 #: js/v2/gui.js:79
 msgid "About"
 msgstr "Qui som"
+
+#: js/v2/gui.js:86
+msgid "Welcome"
+msgstr "Benvinguts"
+
+#: js/v2/gui.js:87 js/v2/gui.js:860
+msgid "About Cheetah News"
+msgstr "Quant a Cheetah News"
+
+#: js/v2/gui.js:88
+msgid "show active"
+msgstr "mostrar actives"
+
+#: js/v2/gui.js:88
+msgid "Show all active feeds"
+msgstr "Mostrar totes alimentacions actives"
+
+#: js/v2/gui.js:89
+msgid "show loaded"
+msgstr "mostrar carregades"
+
+#: js/v2/gui.js:89
+msgid "Show all loaded feeds"
+msgstr "Mostrar totes alimentacions carregades"
+
+#: js/v2/gui.js:90
+msgid "hide all"
+msgstr "amagar totes"
+
+#: js/v2/gui.js:90
+msgid "Hide all feeds"
+msgstr "Amagar totes les alimentacions"
+
+#: js/v2/gui.js:94
+msgid "Refresh all visible feeds"
+msgstr "Refrescar totes les alimentacions visibles"
+
+#: js/v2/gui.js:96
+msgid "Filter visible feeds"
+msgstr "Filtrar totes les alimentacions visibles"
+
+#: js/v2/gui.js:110
+msgid "Expand folders"
+msgstr "Desplegar articles"
+
+#: js/v2/gui.js:116
+msgid "Collapse folders"
+msgstr "Plegar articles"
+
+#: js/v2/gui.js:121
+msgid "Show My Stuff"
+msgstr "Mostrar les meues coses"
+
+#: js/v2/gui.js:122 js/v2/gui.js:947
+msgid "Add New Feed"
+msgstr "Afegir nova alimentació"
+
+#: js/v2/gui.js:123 js/v2/gui.js:948
+msgid "Manage Subscriptions"
+msgstr "Gestionar subscripcions"
+
+#: js/v2/gui.js:124 js/v2/gui.js:949
+msgid "Manage Folders"
+msgstr "Gestionar carpetes"
+
+#: js/v2/gui.js:125 js/v2/gui.js:950
+msgid "User Settings"
+msgstr "Paràmetres del usuari"
+
+#: js/v2/gui.js:127
+msgid "Logout"
+msgstr "Fi de sessió"
+
+#: js/v2/gui.js:165 js/v2/gui.js:185
+msgid "Close Window"
+msgstr "Tancar la finestra"
+
+#: js/v2/gui.js:182
+msgid "Reload this feed"
+msgstr "Recarregar aquesta alimentació"
+
+#: js/v2/gui.js:289 js/v2/gui.js:1073
+msgid "Root folder"
+msgstr "Carpeta principal"
+
+#: js/v2/gui.js:353
+msgid "Menu"
+msgstr "Menú"
+
+#: js/v2/gui.js:354
+msgid "menu"
+msgstr "menú"
+
+#: js/v2/gui.js:463 js/v2/gui.js:520
+msgid "Invalid URL"
+msgstr "URL incorrecte."
+
+#: js/v2/gui.js:478
+msgid "Validating URL..."
+msgstr "Verificant la URL..."
+
+#: js/v2/gui.js:496 js/v2/gui.js:569 js/v2/gui.js:605 js/v2/gui.js:727
+#: js/v2/gui.js:777 js/v2/weather.js:389
+msgid "OK"
+msgstr "D'acord"
 
 #: js/v2/gui.js:532
 msgid "Add feed by URL"
@@ -2017,6 +980,18 @@ msgstr "Afegeix la alimentació a través de URL"
 #: js/v2/gui.js:538 js/v2/gui.js:951
 msgid "Import an OPML file"
 msgstr "Importeu un fitxer OPML"
+
+#: js/v2/gui.js:545
+msgid "Importing file..."
+msgstr "Important el fitxer..."
+
+#: js/v2/gui.js:586
+msgid "Invalid folder name"
+msgstr "Nom de fitxer no vàlid"
+
+#: js/v2/gui.js:592
+msgid "Adding folder..."
+msgstr "S'està afegint el fitxer..."
 
 #: js/v2/gui.js:688
 msgid ""
@@ -2036,6 +1011,10 @@ msgstr[1] ""
 "Això pot alentir el procés de inicialització.\n"
 "Voleu continuar?"
 
+#: js/v2/gui.js:903
+msgid "Settings"
+msgstr "Paràmetres"
+
 #: js/v2/gui.js:906 js/v2/notes.js:41 js/v2/weather.js:87
 msgid "&laquo; return to reader"
 msgstr "&laquo; tornar a lectura"
@@ -2043,6 +1022,14 @@ msgstr "&laquo; tornar a lectura"
 #: js/v2/gui.js:909 js/v2/notes.js:44 js/v2/weather.js:82
 msgid "Close"
 msgstr "Tancar"
+
+#: js/v2/gui.js:913
+msgid "Save changes"
+msgstr "Guardar canvis"
+
+#: js/v2/gui.js:915 js/v2/notes.js:55 js/v2/weather.js:117
+msgid "Cancel"
+msgstr "Cancel·lar"
 
 #: js/v2/gui.js:922
 msgid ""
@@ -2052,6 +1039,34 @@ msgstr ""
 "Afegeix una alimentació, introduint la seua URL (amb suport de descobriment "
 "automàtic) o un terme a cercar."
 
+#: js/v2/gui.js:923
+msgid "Import your subscriptions from an OPML file."
+msgstr "Importeu les seues subscripcions des d'un fitxer OPML."
+
+#: js/v2/gui.js:924
+msgid "Refresh rate (active feeds)"
+msgstr "Període de refresca (alimentacions actives)"
+
+#: js/v2/gui.js:925
+msgid "Show active feeds on startup"
+msgstr "Mostrar totes alimentacions actives en iniciar-se"
+
+#: js/v2/gui.js:926
+msgid "Oldest entries first"
+msgstr "Ordenació temporal inversa"
+
+#: js/v2/gui.js:927
+msgid "Add new folder."
+msgstr "Afegir una nova carpeta."
+
+#: js/v2/gui.js:928
+msgid "Display language:"
+msgstr "Llenguatge:"
+
+#: js/v2/gui.js:929
+msgid "System:"
+msgstr "Sistema:"
+
 #: js/v2/gui.js:930
 msgid "Goodies:"
 msgstr "Suplements:"
@@ -2060,9 +1075,93 @@ msgstr "Suplements:"
 msgid "open"
 msgstr "obrir"
 
+#: js/v2/gui.js:942
+msgid "Import"
+msgstr "Importar"
+
+#: js/v2/gui.js:944
+msgid "add"
+msgstr "afegir"
+
 #: js/v2/gui.js:952
 msgid "Register Cheetah News as feed handler in your browser"
 msgstr "Configureu el seu navegador per usar Cheetah News per defecte"
+
+#: js/v2/gui.js:960
+msgid "expand"
+msgstr "desplegar"
+
+#: js/v2/gui.js:961
+msgid "active"
+msgstr "actiu"
+
+#: js/v2/gui.js:962
+msgid "minutes"
+msgstr "minuts"
+
+#: js/v2/gui.js:971
+msgid "Close without saving?"
+msgstr "Tancar sense guardar canvis?"
+
+#: js/v2/gui.js:1024
+msgid "Switch without saving?"
+msgstr "Canviar sense guardar canvis?"
+
+#: js/v2/gui.js:1077
+msgid "Select folder"
+msgstr "Seleccioneu una carpeta"
+
+#: js/v2/gui.js:1084
+msgid "Export selected folder"
+msgstr "Exportar carpeta seleccionada"
+
+#: js/v2/gui.js:1085
+msgid "Export feeds from selected folder to OPML"
+msgstr "Exportar a OPML les alimentacions de la carpeta seleccionada"
+
+#: js/v2/gui.js:1092
+msgid "Export all feeds"
+msgstr "Exportar totes les alimentacions"
+
+#: js/v2/gui.js:1093
+msgid "Export all feeds to OPML"
+msgstr "Exportar totes les alimentacions a OPML"
+
+#: js/v2/gui.js:1312 js/v2/gui.js:1349
+msgid "Move up"
+msgstr "Mou amunt"
+
+#: js/v2/gui.js:1316 js/v2/gui.js:1353
+msgid "Move down"
+msgstr "Mou avall"
+
+#: js/v2/gui.js:1320
+msgid "Move to other folder"
+msgstr "Mou a altra carpeta"
+
+#: js/v2/gui.js:1531
+msgid "close feed"
+msgstr "tancar la alimentació"
+
+#: js/v2/gui.js:1532
+msgid "left"
+msgstr "al'esquerra"
+
+#: js/v2/gui.js:1533
+msgid "right"
+msgstr "dreta"
+
+#: js/v2/gui.js:1534
+msgid "hide/show all active"
+msgstr "amagar/mostrar totes actives"
+
+#: js/v2/gui.js:1535
+msgid "show all loaded"
+msgstr "mostrar totes carregades"
+
+#: js/v2/gui.js:1538
+msgid "my stuff"
+msgstr "les meues coses"
 
 #. TRANSLATORS: The second %d is fixed, see the source for its value 
 #: js/v2/marker.js:189
@@ -2097,6 +1196,70 @@ msgstr "Ocultar les estadístiques"
 msgid "Notes and Bookmarks"
 msgstr "Notes i adreces d'interès"
 
+#: js/v2/notes.js:48
+msgid "Your publicly visible notes and links (Atom feed)"
+msgstr "Les seues notes i enllaces (alimentacions Atom), visibles públicament"
+
+#: js/v2/notes.js:50
+msgid "Title:"
+msgstr "Títol:"
+
+#: js/v2/notes.js:51
+msgid "Tags:"
+msgstr "Etiquetes:"
+
+#: js/v2/notes.js:52
+msgid "Publicly visible:"
+msgstr "Visible públicament:"
+
+#: js/v2/notes.js:53
+msgid "Note (double-click or tab to edit):"
+msgstr "Nota (doble clic o tab per a editar):"
+
+#: js/v2/notes.js:54 js/v2/notes.js:447
+msgid "Save Note"
+msgstr "Guardar la nota"
+
+#: js/v2/notes.js:70
+msgid "Save link to this entry"
+msgstr "Guardar enllaç a aquest article"
+
+#: js/v2/notes.js:134
+msgid "Create Note"
+msgstr "Crear nota"
+
+#: js/v2/notes.js:138
+msgid "Tag:"
+msgstr "Etiqueta:"
+
+#: js/v2/notes.js:141
+msgid "Search"
+msgstr "Cerca"
+
+#: js/v2/notes.js:147 js/v2/notes.js:191
+msgid "Searching..."
+msgstr "Cercant..."
+
+#: js/v2/notes.js:177
+msgid "Comma-separated list of tags"
+msgstr "Llista de etiquetes, separats per comes"
+
+#: js/v2/notes.js:217
+msgid "Found %d note tagged with \"%s\"."
+msgid_plural "Found %d notes tagged with \"%s\"."
+msgstr[0] "S'ha trobat %d nota marcada amb \"%s\"."
+msgstr[1] "S'ha trobat %d notes marcades amb \"%s\"."
+
+#: js/v2/notes.js:222
+msgid "Found %d latest note."
+msgid_plural "Found %d latest notes."
+msgstr[0] "S'ha trobat %d última nota."
+msgstr[1] "S'ha trobat %d últimes notes."
+
+#: js/v2/notes.js:263
+msgid "rem"
+msgstr "esborrar"
+
 #: js/v2/notes.js:270
 msgid "Publicly visible"
 msgstr "Visible públicament"
@@ -2104,6 +1267,26 @@ msgstr "Visible públicament"
 #: js/v2/notes.js:272
 msgid "Not publicly visible"
 msgstr "No visible públicament:"
+
+#: js/v2/notes.js:328
+msgid "Are you sure you want to delete this note?"
+msgstr "Esteu segur de voler esborrar aqueixa nota?"
+
+#: js/v2/notes.js:416
+msgid "Finish editing"
+msgstr "Acabar l'edició"
+
+#: js/v2/notes.js:508
+msgid "At least one tag is required."
+msgstr "Es requereix almenys una etiqueta."
+
+#: js/v2/notes.js:513
+msgid "Empty note title and body."
+msgstr "No s'han subministrat ni el títol ni el cos de la nota."
+
+#: js/v2/notes.js:523
+msgid "No title"
+msgstr "Cap títol"
 
 #: js/v2/opml.js:24
 msgid "Browse feed directory"
@@ -2153,6 +1336,762 @@ msgstr "compartir això"
 msgid "Share this entry"
 msgstr "compartir aquesta entrada"
 
+#: js/v2/translate.js:35
+msgid "translate"
+msgstr "traduir"
+
+#: js/v2/translate.js:36
+msgid "Translate this entry"
+msgstr "Traducció d'aquest article"
+
+#: js/v2/translate.js:88
+msgid "to English"
+msgstr "al anglès"
+
+#: js/v2/translate.js:91
+msgid "to Polish"
+msgstr "al polonès"
+
+#: js/v2/translate.js:94
+msgid "to Ukrainian"
+msgstr "al ucraïnès"
+
+#: js/v2/translate.js:97
+msgid "to German"
+msgstr "al alemany"
+
+#: js/v2/translate.js:100
+msgid "to Spanish"
+msgstr "al castellà"
+
+#: js/v2/translate.js:103
+msgid "to French"
+msgstr "al francès"
+
+#: js/v2/translate.js:106
+msgid "to Italian"
+msgstr "al italià"
+
+#: js/v2/translate.js:109
+msgid "to Portuguese"
+msgstr "al portuguès"
+
+#: js/v2/translate.js:112
+msgid "to Arabic"
+msgstr "al àrab"
+
+#: js/v2/translate.js:115
+msgid "to Japanese"
+msgstr "al japonès"
+
+#: js/v2/translate.js:118
+msgid "to Korean"
+msgstr "al coreà"
+
+#: js/v2/translate.js:121
+msgid "to Chinese"
+msgstr "al xinès"
+
+#: js/v2/translate.js:126
+msgid "Not available"
+msgstr "no és disponible"
+
+#: js/v2/weather.js:33 js/v2/weather.js:185
+msgid "Weather Report"
+msgstr "Previsió del temps"
+
+#: js/v2/weather.js:92
+msgid "Add"
+msgstr "Afegir"
+
+#: js/v2/weather.js:93
+msgid "Add location"
+msgstr "Afegir localitat"
+
+#: js/v2/weather.js:102
+msgid "Refresh"
+msgstr "Refrescar"
+
+#: js/v2/weather.js:103
+msgid "Refresh Weather News"
+msgstr "Refrescar la previsió del temps"
+
+#: js/v2/weather.js:106
+msgid "Location ID:"
+msgstr "ID de la localitat:"
+
+#: js/v2/weather.js:107
+msgid "Description:"
+msgstr "Descripció:"
+
+#: js/v2/weather.js:108
+msgid "Unit:"
+msgstr "Unitat:"
+
+#: js/v2/weather.js:110
+msgid "Save"
+msgstr "Guardar"
+
+#: js/v2/weather.js:113
+msgid "Delete"
+msgstr "Esborrar"
+
+#: js/v2/weather.js:280
+msgid "Wrong location or data temporarily unavailable."
+msgstr "Locació desconeguda o dades no estan disponibles temporalment."
+
 #: js/v2/weather.js:282
 msgid "edit"
 msgstr "editar"
+
+#: js/v2/weather.js:283
+msgid "Edit this location"
+msgstr "Editar aquesta localitat"
+
+#: js/v2/weather.js:297
+msgid "Tomorrow's weather forecast"
+msgstr "Previsió per demà"
+
+#: js/v2/weather.js:324
+msgid "Editing location"
+msgstr "Edició de la localitat"
+
+#: js/v2/weather.js:332
+msgid "Add new location."
+msgstr "Afegir una nova localitat."
+
+#: js/v2/weather.js:359
+msgid "Invalid location ID"
+msgstr "ID de localitat invàlida"
+
+#: js/v2/weather.js:371
+msgid "Saving location..."
+msgstr "Conservació de la localitat..."
+
+#: js/v2/weather.js:410
+msgid "Are you sure you want to delete this location?"
+msgstr "Esteu segur de voler esborrar aqueixa localitat?"
+
+#: js/v2/weather.js:414
+msgid "Deleting..."
+msgstr "Eliminació..."
+
+#. TRANSLATORS: BEGIN JS 
+#: js/v2/weather.js:421
+msgid "Location"
+msgstr "Localitat"
+
+#: js/v2/weather.js:421
+msgid "Forecast"
+msgstr "Previsió"
+
+#: js/v2/weather.js:421
+msgid "Now"
+msgstr "Ara"
+
+#: js/v2/weather.js:421
+msgid "Today"
+msgstr "Avui"
+
+#: js/v2/weather.js:421
+msgid "Tomorrow"
+msgstr "Demà"
+
+#: js/v2/weather.js:421
+msgid "Feels like"
+msgstr "Sensació tèrmica"
+
+#: js/v2/weather.js:422
+msgid "Wind"
+msgstr "Vent"
+
+#: js/v2/weather.js:422
+msgid "Humidity"
+msgstr "Humitat"
+
+#: js/v2/weather.js:422
+msgid "Pressure"
+msgstr "Pressió"
+
+#: js/v2/weather.js:422
+msgid "Sunrise"
+msgstr "Sortida del sol"
+
+#: js/v2/weather.js:422
+msgid "Sunset"
+msgstr "Posta del sol"
+
+#: js/v2/weather.js:423
+msgid "Temp"
+msgstr "Temp."
+
+#: js/v2/weather.js:423
+msgid "High"
+msgstr "Alta"
+
+#: js/v2/weather.js:423
+msgid "Low"
+msgstr "Baixa"
+
+#: js/v2/weather.js:423
+msgid "Sun"
+msgstr "Dg"
+
+#: js/v2/weather.js:423
+msgid "Mon"
+msgstr "Dl"
+
+#: js/v2/weather.js:423
+msgid "Tue"
+msgstr "Dt"
+
+#: js/v2/weather.js:423
+msgid "Wed"
+msgstr "Dc"
+
+#: js/v2/weather.js:424
+msgid "Thu"
+msgstr "Dj"
+
+#: js/v2/weather.js:424
+msgid "Fri"
+msgstr "Dv"
+
+#: js/v2/weather.js:424
+msgid "Sat"
+msgstr "Ds"
+
+#: js/v2/weather.js:424
+msgid "kph"
+msgstr "km/h"
+
+#: js/v2/weather.js:424
+msgid "mb"
+msgstr "mb"
+
+#: js/v2/weather.js:424
+msgid "Windy"
+msgstr "Vent"
+
+#: js/v2/weather.js:425
+msgid "Mist"
+msgstr "Boira"
+
+#: js/v2/weather.js:425
+msgid "Fair"
+msgstr "Serè"
+
+#: js/v2/weather.js:425
+msgid "Clear"
+msgstr "Clar"
+
+#: js/v2/weather.js:425
+msgid "Mostly Clear"
+msgstr "Majorment clar"
+
+#: js/v2/weather.js:425
+msgid "Mostly Cloudy"
+msgstr "Majorment ennuvolat"
+
+#: js/v2/weather.js:426
+msgid "Partly Cloudy"
+msgstr "Parcialment ennuvolat"
+
+#: js/v2/weather.js:426
+msgid "Cloudy"
+msgstr "Ennuvolat"
+
+#: js/v2/weather.js:426
+msgid "Mostly Sunny"
+msgstr "Majorment assolellat"
+
+#: js/v2/weather.js:426
+msgid "Sunny"
+msgstr "Assolellat"
+
+#: js/v2/weather.js:427
+msgid "Rain"
+msgstr "Pluja"
+
+#: js/v2/weather.js:427
+msgid "Light Rain"
+msgstr "Pluja feble"
+
+#: js/v2/weather.js:427
+msgid "Freezing Rain"
+msgstr "Pluja glaçada"
+
+#: js/v2/weather.js:427
+msgid "Heavy Rain"
+msgstr "Pluja intensa"
+
+#: js/v2/weather.js:427
+msgid "Snow"
+msgstr "Neu"
+
+#: js/v2/weather.js:428
+msgid "Light Snow"
+msgstr "Neu feble"
+
+#: js/v2/weather.js:428
+msgid "AM Light Snow"
+msgstr "Neu feble matutí"
+
+#: js/v2/weather.js:428
+msgid "PM Light Snow"
+msgstr "Neu feble vespertí"
+
+#: js/v2/weather.js:428
+msgid "Snow Showers"
+msgstr "Neu forta"
+
+#: js/v2/weather.js:429
+msgid "AM Snow"
+msgstr "Neu matutí"
+
+#: js/v2/weather.js:429
+msgid "PM Snow"
+msgstr "Neu vespertí"
+
+#: js/v2/weather.js:429
+msgid "AM Snow Showers"
+msgstr "Xàfecs de neu matutins"
+
+#: js/v2/weather.js:429
+msgid "PM Snow Showers"
+msgstr "Xàfecs de neu vespertins"
+
+#: js/v2/weather.js:430
+msgid "Scattered Snow Showers"
+msgstr "Pluges de neu disperses"
+
+#: js/v2/weather.js:430
+msgid "Flurries"
+msgstr "Pluges amb vent"
+
+#: js/v2/weather.js:430
+msgid "Drizzle"
+msgstr "Plugims"
+
+#: js/v2/weather.js:430
+msgid "Freezing Drizzle"
+msgstr "Pluja glaçada"
+
+#: js/v2/weather.js:431
+msgid "Haze"
+msgstr "Boirina"
+
+#: js/v2/weather.js:431
+msgid "Showers"
+msgstr "Pluges"
+
+#: js/v2/weather.js:431
+msgid "AM Showers"
+msgstr "Pluges matinales"
+
+#: js/v2/weather.js:431
+msgid "PM Showers"
+msgstr "Pluges vespertines"
+
+#: js/v2/weather.js:432
+msgid "Showers Early"
+msgstr "Pluges matinales"
+
+#: js/v2/weather.js:432
+msgid "Showers Late"
+msgstr "Pluges cap al vespre"
+
+#: js/v2/weather.js:432
+msgid "Few Showers"
+msgstr "Alguns pluges"
+
+#: js/v2/weather.js:432
+msgid "Heavy Snow"
+msgstr "Neu intensa"
+
+#: js/v2/weather.js:433
+msgid "Fog"
+msgstr "Boira"
+
+#: js/v2/weather.js:433
+msgid "Fog Early"
+msgstr "Boira matinal"
+
+#: js/v2/weather.js:433
+msgid "Fog Late"
+msgstr "Boira cap al vespre"
+
+#: js/v2/weather.js:433
+msgid "Foggy"
+msgstr "Boira"
+
+#: js/v2/weather.js:433
+msgid "AM Clouds"
+msgstr "Ennuvolat al matí"
+
+#: js/v2/weather.js:433
+msgid "PM Sun"
+msgstr "Assolellat al vespre"
+
+#: js/v2/weather.js:434
+msgid "Thunder"
+msgstr "Tempesta"
+
+#: js/v2/weather.js:434
+msgid "Thunderstorms"
+msgstr "Tempestes"
+
+#: js/v2/weather.js:434
+msgid "Isolated Thunderstorms"
+msgstr "Tempestes aïllades"
+
+#: js/v2/weather.js:434
+msgid "AM Fog"
+msgstr "Boira matutina"
+
+#: js/v2/weather.js:435
+msgid "AM Drizzle"
+msgstr "Plugims matutins"
+
+#: js/v2/weather.js:435
+msgid "AM Light Rain"
+msgstr "Pluja feble matutí"
+
+#: js/v2/weather.js:435
+msgid "PM Light Rain"
+msgstr "Pluja feble vespertí"
+
+#: js/v2/weather.js:435
+msgid "PM Clouds"
+msgstr "Ennuvolat al vespre"
+
+#: js/v2/weather.js:436
+msgid "Light Rain Early"
+msgstr "Pluja feble vespertí"
+
+#: js/v2/weather.js:436
+msgid "Snow Showers Late"
+msgstr "Xàfecs de neu vespertins"
+
+#: js/v2/weather.js:436
+msgid "Few Snow Showers"
+msgstr "Xàfecs aïllats de neu"
+
+#: js/v2/weather.js:437
+msgid "Snow to Wintry Mix"
+msgstr "Neu o aiguaneu"
+
+#: js/v2/weather.js:437
+msgid "Wintry Mix"
+msgstr "Aiguaneu"
+
+#: js/v2/weather.js:437
+msgid "Thundershowers"
+msgstr "Xàfecs amb tempesta"
+
+#: js/v2/weather.js:437
+msgid "Rain to Snow"
+msgstr "Aiguaneu"
+
+#: js/v2/weather.js:438
+msgid "Clouds Early"
+msgstr "Ennuvolat al matí"
+
+#: js/v2/weather.js:438
+msgid "Clouds Late"
+msgstr "Ennuvolat al vespre"
+
+#: js/v2/weather.js:438
+msgid "Clearing Late"
+msgstr "Aclarit al vespre"
+
+#: js/v2/weather.js:438
+msgid "AM Ice"
+msgstr "Glaç al matí"
+
+#: js/v2/weather.js:439
+msgid "Sleet"
+msgstr "Aiguaneu"
+
+#: js/v2/weather.js:439
+msgid "Scattered Flurries"
+msgstr "Tempestes disperses"
+
+#: js/v2/weather.js:439
+msgid "Snow Showers Early"
+msgstr "Xàfecs de neu matinals"
+
+#: js/v2/weather.js:439
+msgid "Light Snow Late"
+msgstr "Neu feble vespertí"
+
+#: js/v2/weather.js:440
+msgid "Snow Early"
+msgstr "Neu matinal"
+
+#: js/v2/weather.js:440
+msgid "Snow Late"
+msgstr "Neu vespertí"
+
+#: js/v2/weather.js:440
+msgid "Wind Early"
+msgstr "Vent matutí"
+
+#: js/v2/weather.js:440
+msgid "AM Rain"
+msgstr "Pluja matutina"
+
+#: js/v2/weather.js:440
+msgid "PM Rain"
+msgstr "Pluja vespertina"
+
+#: js/v2/weather.js:441
+msgid "PM Fog"
+msgstr "Boira vespertina"
+
+#: js/v2/weather.js:441
+msgid "Drizzle Early"
+msgstr "Plugims matutins"
+
+#: js/v2/weather.js:441
+msgid "Drizzle Late"
+msgstr "Plugims vespertins"
+
+#: js/v2/weather.js:441
+msgid "PM Drizzle"
+msgstr "Plugims a partir de migdia"
+
+#: js/v2/weather.js:442
+msgid "Light Rain Late"
+msgstr "Pluja feble vespertí"
+
+#: js/v2/weather.js:442
+msgid "Wind Late"
+msgstr "Vent vespertí"
+
+#: js/v2/weather.js:442
+msgid "Scattered Strong Storms"
+msgstr "Tempestes fortes disperses"
+
+#: js/v2/weather.js:442
+msgid "Strong Storms"
+msgstr "Tempestes fortes"
+
+#: js/v2/weather.js:443
+msgid "AM Light Wintry Mix"
+msgstr "Aiguaneu feble matutí"
+
+#: js/v2/weather.js:443
+msgid "PM Light Wintry Mix"
+msgstr "Aiguaneu feble a partir de migdia"
+
+#: js/v2/weather.js:443
+msgid "Light Wintry Mix"
+msgstr "Aiguaneu feble"
+
+#: js/v2/weather.js:444
+msgid "AM Thunderstorms"
+msgstr "Tempestes al matí"
+
+#: js/v2/weather.js:444
+msgid "PM Thunderstorms"
+msgstr "Tempestes a partir de migdia"
+
+#: js/v2/weather.js:444
+msgid "Thunderstorms Late"
+msgstr "Tempestes vespertins"
+
+#: js/v2/weather.js:444
+msgid "Rain Early"
+msgstr "Pluja matutí"
+
+#: js/v2/weather.js:445
+msgid "Thunderstorms Early"
+msgstr "Tempestes matutins"
+
+#: js/v2/weather.js:445
+msgid "AM Thundershowers"
+msgstr "Xàfecs amb tempestes al matí"
+
+#: js/v2/weather.js:445
+msgid "PM Thundershowers"
+msgstr "Xàfecs amb tempestes a partir de migdia"
+
+#: js/v2/weather.js:446
+msgid "Thundershowers Early"
+msgstr "Tempestes matutins"
+
+#: js/v2/weather.js:446
+msgid "Thundershowers Late"
+msgstr "Tempestes vespertins"
+
+#: js/v2/weather.js:446
+msgid "Rain Late"
+msgstr "Pluja vespertí"
+
+#: js/v2/weather.js:446
+msgid "Ice to Rain"
+msgstr "Pluja gelada"
+
+#. TRANSLATORS: END JS 
+#: js/v2/weather.js:448
+msgid "Scattered Thunderstorms"
+msgstr "Tempestes disperses"
+
+#~ msgid "You have been invited to open Cheetah News Aggregator account"
+#~ msgstr ""
+#~ "Esteu invitats a obrir un compte en el agregador de notícies Cheetah"
+
+#~ msgid "%s has invited you to open a free Cheetah News Aggregator account."
+#~ msgstr ""
+#~ "%s us invita a obrir un compte en Cheetah: un agregador llibre de notícies"
+
+#~ msgid "Learn more about Cheetah News Aggregator at %s."
+#~ msgstr ""
+#~ "Més informació sobre el agregador de notícies Cheetah trobaràs a %s."
+
+#~ msgid "To accept this invitation and register for your account, visit: %s"
+#~ msgstr ""
+#~ "Per a acceptar aquesta invitació i registrar el seu compte, visiteu %s"
+
+#~ msgid ""
+#~ "Please do not reply to this email. If you need further assistance,\n"
+#~ "please mail to %s."
+#~ msgstr ""
+#~ "Per favor, no responeu a aquest missatge. Si necessiteu més ajuda\n"
+#~ "envieu-nos un missatge a %s."
+
+#~ msgid "No invitations left"
+#~ msgstr "No es queden més invitacions"
+
+#~ msgid "This user is already subscribed."
+#~ msgstr "Aquest usuari ja està subscrit."
+
+#~ msgid "Currently used language"
+#~ msgstr "Idioma actualment usada"
+
+#~ msgid "Bookmark to del.icio.us"
+#~ msgstr "Guardar enllaç en del.icio.us"
+
+#~ msgid "Digg it"
+#~ msgstr "Guardar enllaç en digg.com"
+
+#~ msgid "Your browser can't handle this script."
+#~ msgstr "El seu navegador no pot manejar aquest script."
+
+#~ msgid "email this"
+#~ msgstr "Enviar això"
+
+#~ msgid "Email this to a friend"
+#~ msgstr "Enviar això a un amic"
+
+#~ msgid "You don't have any active feeds."
+#~ msgstr "No tens cap alimentació activa."
+
+#~ msgid "Error Information"
+#~ msgstr "Informació de error"
+
+#~ msgid "clear"
+#~ msgstr "buida"
+
+#~ msgid "Subscribing to %s..."
+#~ msgstr "Subscripció a %s..."
+
+#~ msgid "Info Window"
+#~ msgstr "Finestra de informació"
+
+#~ msgid "Or add feed by URL"
+#~ msgstr "O afegeix la alimentació a través de URL"
+
+#~ msgid "Or import an OPML file"
+#~ msgstr "O importeu un fitxer OPML"
+
+#~ msgid ""
+#~ "You have checked more than 10 active feeds.\n"
+#~ "This might slow down the startup process.\n"
+#~ "Would you like to proceed?"
+#~ msgstr ""
+#~ "Heu seleccionat més de 10 alimentacions actives.\n"
+#~ "Això pot alentir el procés de inicialització.\n"
+#~ "Voleu continuar?        "
+
+#~ msgid ""
+#~ "Add a specific RSS, RDF, or ATOM feed by entering the URL below "
+#~ "(Autodiscovery supported)."
+#~ msgstr ""
+#~ "Afegeix una alimentació RSS, RDF o ATOM, introduint la seua URL (amb "
+#~ "suport de descobriment automàtic)."
+
+#~ msgid "Interface (cookie-based):"
+#~ msgstr "Interfície (cookie):"
+
+#~ msgid "Invite a friend"
+#~ msgstr "Invitar a un amic"
+
+#~ msgid "First Name:"
+#~ msgstr "Nom:"
+
+#~ msgid "Last Name:"
+#~ msgstr "Cognom:"
+
+#~ msgid "E-mail:"
+#~ msgstr "Correu-e:"
+
+#~ msgid "Optional note:"
+#~ msgstr "Nota opcional:"
+
+#~ msgid "Invitation language:"
+#~ msgstr "Llenguatge de invitació:"
+
+#~ msgid "Send invitation"
+#~ msgstr "Enviar la invitació"
+
+#~ msgid "You have %d invitation left, send invitation to:"
+#~ msgid_plural "You have %d invitations left, send invitation to:"
+#~ msgstr[0] "Teniu %d invitació més. Enviar-la a:"
+#~ msgstr[1] "Teniu %d invitacions més. Enviar-ne una a:"
+
+#~ msgid "Thumbnail"
+#~ msgstr "Miniatura"
+
+#~ msgid "aborted"
+#~ msgstr "cancel·lat"
+
+#~ msgid "Multimedia"
+#~ msgstr "Multimèdia"
+
+#~ msgid "My Notes and Bookmarks"
+#~ msgstr "Les meues notes i adreces d'interès"
+
+#~ msgid "Color:"
+#~ msgstr "Color:"
+
+#~ msgid "Title"
+#~ msgstr "Títol"
+
+#~ msgid "Date"
+#~ msgstr "Data"
+
+#~ msgid "Public"
+#~ msgstr "Pública"
+
+#~ msgid "Edit Window"
+#~ msgstr "Finestra de edició"
+
+#~ msgid "Feed Directory"
+#~ msgstr "Directori de alimentacions"
+
+#~ msgid "Popular Feeds (Cheetah)"
+#~ msgstr "Alimentacions populars (Cheetah)"
+
+#~ msgid "Subscribe to %s"
+#~ msgstr "Subscriure's a %s"
+
+#~ msgid "Web Search"
+#~ msgstr "Cerca a Web"
+
+#~ msgid "Native language search"
+#~ msgstr "Cerca en el llenguatge matern"
+
+#~ msgid "Search in all simultaneously"
+#~ msgstr "Cercar en tots els cercadors simultàniament"

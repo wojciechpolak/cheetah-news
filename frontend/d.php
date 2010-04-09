@@ -24,7 +24,7 @@ require 'lib/include.php';
 
 $copyright = "/*
    Cheetah News Aggregator.
-   Copyright (C) 2005, 2006, 2007, 2008, 2009 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010 Wojciech Polak.
    Copyright (C) 2006 The Cheetah News Team.
 
    This program is free software; you can redistribute it and/or modify it
@@ -41,24 +41,11 @@ $copyright = "/*
    with this program.  If not, see <http://www.gnu.org/licenses/>.
 */\n\n";
 
-$files = array ('bt/1'       => array ('js',  array ('js/v1/i18n.js',
-						     'js/v1/boot.js')),
-		'bt/2'       => array ('js',  array ('js/v2/i18n.js',
+$files = array ('bt/2'       => array ('js',  array ('js/v2/i18n.js',
 						     'js/v2/boot.js',
 						     'js/v2/jquery.js',
 						     'js/v2/jquery-ui.js',
 						     'js/v2/jquery-extra.js')),
-		'js/1'       => array ('js',  array ('js/v1/core.js',
-						     'js/v1/gui.js',
-						     'js/v1/opml.js',
-						     'js/v1/filter.js',
-						     'js/v1/media.js',
-						     'js/v1/marker.js',
-						     'js/v1/translate.js',
-						     'js/v1/notes.js',
-						     'js/v1/websearch.js',
-						     'js/v1/weather.js',
-						     'js/v1/invite.js')),
 		'js/2'       => array ('js',  array ('js/v2/core.js',
 						     'js/v2/gui.js',
 						     'js/v2/opml.js',
@@ -70,11 +57,8 @@ $files = array ('bt/1'       => array ('js',  array ('js/v1/i18n.js',
 						     'js/v2/weather.js',
 						     'js/v2/niftycube.js')),
 		'login'      => array ('js',  array ('js/v2/login.js')),
-		'tr'         => array ('xml', array ('xslt/v1/feed.xsl')),
 		'tr/2'       => array ('xml', array ('xslt/v2/feed.xsl')),
-		'op'         => array ('xml', array ('xslt/v1/opml.xsl')),
 		'op/2'       => array ('xml', array ('xslt/v2/opml.xsl')),
-		'wt'         => array ('xml', array ('xslt/v1/weather.xsl')),
 		'wt/2'       => array ('xml', array ('xslt/v2/weather.xsl')),
 		'css/2'      => array ('css', array ('css/v2/style1.css',
 						     'css/v2/niftyCorners.css')),
@@ -98,15 +82,7 @@ $session->auth ('iflogged');
 $headers = getallheaders ();
 $logged = $session->status['afterlogged'] == 'yes';
 
-if ($q == 'css/1') {
-  $files = array ('css/v1/style1.css');
-  if (isset ($_GET['sticky']))
-    $files[] = 'css/v1/sticky.css';
-  checkModification ($files, false);
-  header ('Content-Type: text/css');
-  printCode ($files);
-}
-else if (isset ($files[$q])) {
+if (isset ($files[$q])) {
   $d = $files[$q];
   if ($d[0] == 'js') {
     if (!$logged && $q != 'login')
