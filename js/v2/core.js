@@ -582,7 +582,7 @@ function transformFeed (xmlDocument, feedid, latest, expand) {
 	}
       }
 
-      $(bWindowContent).intercept ('mousedown', 'span.entryLink', ecItem);
+      $(bWindowContent).delegate ('span.entryLink', 'mousedown', ecItem);
     }
   }
   catch (e) {
@@ -676,7 +676,7 @@ function transformJsonFeed (json, feedid, latest, expand) {
       }
     }
 
-    $(bWindowContent).intercept ('mousedown', 'span.entryLink', ecItem);
+    $(bWindowContent).delegate ('span.entryLink', 'mousedown', ecItem);
   }
 }
 

@@ -60,7 +60,8 @@ if (isset ($files[$q])) {
     if (!$logged && $q != 'login')
       return;
     $m = $d[1];
-    array_push ($m, $mofile);
+    if ($mofile)
+      array_push ($m, $mofile);
     checkModification ($m, true);
     header ('Content-Type: application/x-javascript; charset=UTF-8');
     echo $copyright;
