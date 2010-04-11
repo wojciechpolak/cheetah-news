@@ -158,7 +158,7 @@ if ($qs)
       <td align="left">
 	<a href="?remove=<?php echo urlencode ($db->f ('identity')); ?>"
 	   onclick="return confirm ('<?php echo _('Are you sure you want to detach this OpenID?'); ?>');">
-	  <img src="images/16_delete.png" style="border:none"
+	  <img class="img-16-delete" src="images/t.gif" width="16" height="16" style="border:none"
 	       alt="<?php echo _('Remove'); ?>" title="<?php echo _('Remove'); ?>" />
 	</a>
       </td>

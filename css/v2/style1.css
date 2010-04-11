@@ -1097,3 +1097,42 @@ span.outlink:hover {
   background-color: #7c99ad;
   color: white;
 }
+
+/* CSS Sprites */
+.img-10-down {background: transparent url(images/master-icons.png?v=0) no-repeat 0px 0px; }
+.img-10-remove {background: transparent url(images/master-icons.png?v=0) no-repeat -10px 0px;}
+.img-10-right {background: transparent url(images/master-icons.png?v=0) no-repeat -20px 0px;}
+.img-10-up {background: transparent url(images/master-icons.png?v=0) no-repeat -30px 0px;}
+.img-12-reload {background: transparent url(images/master-icons.png?v=0) no-repeat -40px 0px;}
+.img-12-remove {background: transparent url(images/master-icons.png?v=0) no-repeat -52px 0px;}
+.img-16-delete {background: transparent url(images/master-icons.png?v=0) no-repeat -64px 0px;}
+.img-16-feed {background: transparent url(images/master-icons.png?v=0) no-repeat -107px 0px; width: 16px; height: 16px;}
+.img-16-folderclose {background: transparent url(images/master-icons.png?v=0) no-repeat -123px 0px;}
+.img-16-folderopen {background: transparent url(images/master-icons.png?v=0) no-repeat -139px 0px;}
+.img-16-notifier {background: transparent url(images/master-icons.png?v=0) no-repeat -299px 0px;}
+.img-16-world {background: transparent url(images/master-icons.png?v=0) no-repeat -315px 0px;}
+.img-16-world-i {background: transparent url(images/master-icons.png?v=0) no-repeat -331px 0px;}
+.img-elink {background: transparent url(images/master-icons.png?v=0) no-repeat -80px 0px; width: 27px; height: 12px;}
+
+#menuOpenSWindow img {background: transparent url(images/master-icons.png?v=0) no-repeat -251px 0px;} /* mstuff */
+#menuOpenNotes img {background: transparent url(images/master-icons.png?v=0) no-repeat -235px 0px;} /* mnotes */
+#menuOpenWeather img {background: transparent url(images/master-icons.png?v=0) no-repeat -283px 0px;} /* mweather */
+#menuOpenGFConnect img {background: transparent url(images/master-icons.png?v=0) no-repeat -203px 0px;} /* gfc */
+#menuOpenCWindow1 img {background: transparent url(images/master-icons.png?v=0) no-repeat -155px 0px;} /* madd */
+#menuOpenCWindow2 img {background: transparent url(images/master-icons.png?v=0) no-repeat -267px 0px;} /* msubs */
+#menuOpenCWindow3 img {background: transparent url(images/master-icons.png?v=0) no-repeat -187px 0px;} /* mfolders */
+#menuOpenCWindow4 img {background: transparent url(images/master-icons.png?v=0) no-repeat -171px 0px;} /* medit */
+#logout img {background: transparent url(images/master-icons.png?v=0) no-repeat -219px 0px;} /* mlogout */
+
+.share-email {background: transparent url(images/master-share.png?v=0) no-repeat -32px 0px;}
+.share-facebook {background: transparent url(images/master-share.png?v=0) no-repeat -48px 0px;}
+.share-ff {background: transparent url(images/master-share.png?v=0) no-repeat -64px 0px;}
+.share-delicious {background: transparent url(images/master-share.png?v=0) no-repeat 0px 0px;}
+.share-digg {background: transparent url(images/master-share.png?v=0) no-repeat -16px 0px;}
+.share-reddit {background: transparent url(images/master-share.png?v=0) no-repeat -96px 0px;}
+.share-stumbleupon {background: transparent url(images/master-share.png?v=0) no-repeat -112px 0px;}
+.share-google {background: transparent url(images/master-share.png?v=0) no-repeat -80px 0px;}
+
+.img-image {background: transparent url(images/eye.png?v=0) no-repeat 0 0; width: 18px; height: 10px;}
+.img-video {background: transparent url(images/video.png?v=0) no-repeat 0 0; width: 18px; height: 12px;}
+.img-audio {background: transparent url(images/sound.png?v=0) no-repeat 0 0; width: 20px; height: 17px;}

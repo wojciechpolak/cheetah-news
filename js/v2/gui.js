@@ -28,7 +28,6 @@ var menuInvt = null;
 var sChanged = false;
 var mFeed = null;
 var con = null;
-var imageFO = null;
 
 var reader = null;
 var settings = null;
@@ -127,11 +126,6 @@ function initGui () {
 	'logout' : '&nbsp;' + _('Logout') + '&nbsp;'}, true);
 
   initMenu ();
-  if (document.images) {
-    imageFO = new Image (16, 16);
-    imageFO.src = 'images/folderopen.png';
-  }
-
   resizeChrome ();
   window.onresize = resizeChrome;
 
@@ -163,7 +157,7 @@ function createEmptyWindow (id, classTitle, title) {
   wtb.className = 'WindowTitleBarInactive';
   wtb.innerHTML = '<table width="100%"><tr><td align="left">' + title + '</td><td align="right"><span id="'
     + id + 'WindowClose" class="link" title="' + _('Close Window')
-    + '"><img src="images/12_remove.png" width="12" height="12" />'
+    + '"><img class="img-12-remove" src="images/t.gif" width="12" height="12" />'
     + '</span></td></tr></table>';
   win.appendChild (wtb);
   reader.appendChild (win);
@@ -180,10 +174,10 @@ function createBWindow (id, desc) {
   wtb.innerHTML = '<table width="100%"><tr><td align="left" style="cursor:default"><span id="bWindowTitle_' + id
     + '">' + desc + '</span>&nbsp;&nbsp;<span id="bWindowReload_' + id
     + '" class="link" title="' + _('Reload this feed') +'">'
-    + '<img src="images/12_reload.png" width="12" height="12" /></span><span id="bWindowFiltered_' + id
+    + '<img class="img-12-reload" src="images/t.gif" width="12" height="12" /></span><span id="bWindowFiltered_' + id
     + '" class="feedFiltered"></span></td><td align="right"><span id="bWindowClose_' + id
     + '" class="link" title="' + _('Close Window') + '">'
-    + '<img src="images/12_remove.png" width="12" height="12" /></span></td></tr></table>';
+    + '<img class="img-12-remove" src="images/t.gif" width="12" height="12" /></span></td></tr></table>';
   wtb.ondblclick = function () {
     clearSelection ();
     scrollToElement (win);

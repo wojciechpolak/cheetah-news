@@ -47,8 +47,8 @@ Modules.OPML = new function () {
 		  [res.entries[i].title.stripTags ()]);
 		l.onclick = validateIFeed;
 		var t = DCE ('span', {},
-			     [DCE ('img', {width:16, height:16,
-					   src:'images/feed.png', vAlign:'middle'}),
+			     [DCE ('img', {className: 'img-16-feed', width:16, height:16,
+					   src:'images/t.gif', vAlign:'middle'}),
 			       document.createTextNode (String.fromCharCode (160) +
 							String.fromCharCode (160)),
 			       l, DCE ('br')]);

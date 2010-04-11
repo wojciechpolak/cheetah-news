@@ -84,8 +84,8 @@ function recodeToUTF8 (&$xml) {
 }
 
 function alterXML (&$xml) {
-  $xml = preg_replace ('/(<img.*?|<iframe.*?)(src)(=[\'"].*?[\'"].*?>)/ims', "\\1osrc\\3", $xml);
-  $xml = preg_replace ('/(&lt;img.*?|&lt;iframe.*?)(src)(=.*?&gt;)/ims', "\\1osrc\\3", $xml);
+  $xml = preg_replace ('/(<img.*?|<iframe.*?|<embed.*?)(src)(=[\'"].*?[\'"].*?>)/ims', "\\1osrc\\3", $xml);
+  $xml = preg_replace ('/(&lt;img.*?|&lt;iframe.*?|&lt;embed.*?)(src)(=.*?&gt;)/ims', "\\1osrc\\3", $xml);
 }
 
 function printJsError ($message) {

@@ -71,7 +71,7 @@ var SIGS = {'js':'<?=$SIGS["js"]?>', 'tr':'<?=$SIGS["tr"]?>', 'wt':'<?=$SIGS["wt
 <div id="settings" style="display:none">
   <div id="cWindowBar">
     <span id="cWindowClose2" class="link pointer">
-      <img src="images/12_remove.png" width="12" height="12" alt="" />
+      <img class="img-12-remove" src="images/t.gif" width="12" height="12" alt="" />
     </span>
     <span id="cWindowTitle"></span>
     <span id="cWindowClose1" class="link"></span>
@@ -180,7 +180,7 @@ var SIGS = {'js':'<?=$SIGS["js"]?>', 'tr':'<?=$SIGS["tr"]?>', 'wt':'<?=$SIGS["wt
 <div id="weatherContent" style="display:none">
   <div id="weatherHeader">
     <span id="weClose2" class="link pointer" style="display:none">
-      <img src="images/12_remove.png" width="12" height="12" alt="" />
+      <img class="img-12-remove" src="images/t.gif" width="12" height="12" alt="" />
     </span>
     <span id="weLogo">
       <a class="channelLink" href="http://weather.yahoo.com/" target="weather.yahoo.com">
@@ -221,7 +221,7 @@ var SIGS = {'js':'<?=$SIGS["js"]?>', 'tr':'<?=$SIGS["tr"]?>', 'wt':'<?=$SIGS["wt
 
 <div id="notesContent" style="display:none">
   <div id="nbClose">
-    <span id="nbClose2" class="pointer"><img src="images/12_remove.png" width="12" height="12" alt="" /></span>
+    <span id="nbClose2" class="pointer"><img class="img-12-remove" src="images/t.gif" width="12" height="12" alt="" /></span>
     <span id="nbClose1" class="link"></span>
   </div>
   <form id="nbForm" action="#">
@@ -229,7 +229,7 @@ var SIGS = {'js':'<?=$SIGS["js"]?>', 'tr':'<?=$SIGS["tr"]?>', 'wt':'<?=$SIGS["wt
     <input type="submit" id="nbSearch" />
     <input type="button" id="nbCreate" />
     <a id="nbXmlFeed" href="http://<?php echo $CONF['site'].'/notes/'.$session->email; ?>" target="_blank">
-      <img src="images/feedicon.png" width="16" height="16" alt="[WebFeed]" style="vertical-align:middle" />
+      <img class="img-16-feed" src="images/t.gif" width="16" height="16" alt="[WebFeed]" style="vertical-align:middle" />
     </a>
   </form>
   <div id="nbProgress"></div>
@@ -300,10 +300,10 @@ var SIGS = {'js':'<?=$SIGS["js"]?>', 'tr':'<?=$SIGS["tr"]?>', 'wt':'<?=$SIGS["wt
   &nbsp; <span id="mActive"></span>: <input type="checkbox" name="active" value="1" />
   &nbsp;&nbsp;
   <span>
-    <span class="link" action="moveDown"><img src="images/10_down.png" width="10" height="10" alt="" /></span>
-    <span class="link" action="moveUp"><img src="images/10_up.png" width="10" height="10" alt="" /></span>
-    <span class="link" action="moveRight"><img src="images/10_right.png" width="10" height="10" alt="" /></span>
-    <span class="link" action="rem"><img src="images/10_remove.png" width="10" height="10" alt="" /></span><br />
+    <span class="link" action="moveDown"><img class="img-10-down" src="images/t.gif" width="10" height="10" alt="" /></span>
+    <span class="link" action="moveUp"><img  class="img-10-up" src="images/t.gif" width="10" height="10" alt="" /></span>
+    <span class="link" action="moveRight"><img class="img-10-right" src="images/t.gif" width="10" height="10" alt="" /></span>
+    <span class="link" action="rem"><img  class="img-10-remove" src="images/t.gif" width="10" height="10" alt="" /></span><br />
   </span>
 </div>
 
@@ -311,9 +311,9 @@ var SIGS = {'js':'<?=$SIGS["js"]?>', 'tr':'<?=$SIGS["tr"]?>', 'wt':'<?=$SIGS["wt
   <input type="hidden" name="folderid" maxlength="255" />
   <input type="text" name="desc" size="30" maxlength="30" />
   <span>
-    <span class="link" action="moveDown"><img src="images/10_down.png" width="10" height="10" alt="" /></span>
-    <span class="link" action="moveUp"><img src="images/10_up.png" width="10" height="10" alt="" /></span>
-    <span class="link" action="rem"><img src="images/10_remove.png" width="10" height="10" alt="" /></span><br />
+    <span class="link" action="moveDown"><img class="img-10-down" src="images/t.gif" width="10" height="10" alt="" /></span>
+    <span class="link" action="moveUp"><img class="img-10-up" src="images/t.gif" width="10" height="10" alt="" /></span>
+    <span class="link" action="rem"><img class="img-10-remove" src="images/t.gif" width="10" height="10" alt="" /></span><br />
   </span>
 </div>
 
@@ -338,15 +338,15 @@ var SIGS = {'js':'<?=$SIGS["js"]?>', 'tr':'<?=$SIGS["tr"]?>', 'wt':'<?=$SIGS["wt
 </div>
 
 <div id="menu">
-  <span id="menuOpenSWindow" class="ilinkCM">&nbsp;<img src="images/mstuff.png" width="16" height="16" alt="" /></span>
-  <span id="menuOpenNotes" class="linkCM">&nbsp;<img src="images/mnotes.png" width="16" height="16" alt="" /></span>
-  <span id="menuOpenWeather" class="linkCM">&nbsp;<img src="images/mweather.png" width="16" height="16" alt="" /></span>
-  <span id="menuOpenGFConnect" class="linkCM">&nbsp;<img src="images/mgfc.png" width="16" height="16" alt="" /></span><hr />
-  <span id="menuOpenCWindow1" class="linkCM">&nbsp;<img src="images/madd.png" width="16" height="16" alt="" /></span>
-  <span id="menuOpenCWindow2" class="linkCM">&nbsp;<img src="images/msubs.png" width="16" height="16" alt="" /></span>
-  <span id="menuOpenCWindow3" class="linkCM">&nbsp;<img src="images/mfolders.png" width="16" height="16" alt="" /></span>
-  <span id="menuOpenCWindow4" class="linkCM">&nbsp;<img src="images/medit.png" width="16" height="16" alt="" /></span>
-  <hr /><span id="logout" class="linkCM">&nbsp;<img src="images/mlogout.png" width="16" height="16" alt="" /></span>
+  <span id="menuOpenSWindow" class="ilinkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
+  <span id="menuOpenNotes" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
+  <span id="menuOpenWeather" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
+  <span id="menuOpenGFConnect" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span><hr />
+  <span id="menuOpenCWindow1" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
+  <span id="menuOpenCWindow2" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
+  <span id="menuOpenCWindow3" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
+  <span id="menuOpenCWindow4" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
+  <hr /><span id="logout" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
 </div>
 
 <?php if (isset ($CONF['google.analytics'])) { ?>

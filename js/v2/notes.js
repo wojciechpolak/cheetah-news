@@ -259,16 +259,16 @@ Modules.Notes = new function () {
 
 	var row_rem = DCE ('span', {id: 'noteRowRem_' + n},
 			   ['<span class="link" id="removeNote_' + n +
-			    '"action="rem"><img src="images/10_remove.png" class="iremove" alt="'
+			    '"action="rem"><img class="img-10-remove iremove" src="images/t.gif" width="10" height="10" alt="'
 			    + _('rem') + '" /></span>']);
 	row_rem.onmouseover = selectRow;
  	row_rem.onmouseout = unselectRow;
 
 	var row_pstatus = DCE ('span', {id: 'notePStatus' + n},
 			       [cheetahNoteList[n][3] == 'yes' ?
-				'<img src="images/world.png" width="16" height="16" alt="P" title="'
+				'<img class="img-16-world" src="images/t.gif" width="16" height="16" alt="P" title="'
 				+ _('Publicly visible')+'" />' :
-				'<img src="images/world_i.png" width="16" height="16" alt="NP" title="'
+				'<img class="img-16-world-i" src="images/t.gif" width="16" height="16" alt="NP" title="'
 				+ _('Not publicly visible')+'" />']);
 
 	var tags = '<span class="nb_tags">' + cheetahNoteList[n][4].replace (/,/g, ', ') + '</span>';

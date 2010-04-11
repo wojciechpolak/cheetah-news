@@ -75,35 +75,35 @@ Modules.Share = new function () {
       {className:'linkCM',
        href:'mailto:?subject=' + encodeURIComponent ('[Cheetah News] ' + n.getAttribute ('desc'))
        + '&body=' + encodeURIComponent (n.getAttribute ('desc') + ':\n' + n.getAttribute ('href'))},
-      ['&nbsp;<img src="images/share/email.png" width="16" height="16" alt="" />&nbsp;E-mail&nbsp;</span>']);
+      ['&nbsp;<img class="share-email" src="images/t.gif" width="16" height="16" alt="" />&nbsp;E-mail&nbsp;</span>']);
     var ff = DCE ('a',
       {className:'linkCM', target:'friendfeed',
        href:'http://friendfeed.com/share?url=' + href + '&title=' + desc},
-      ['&nbsp;<img src="images/share/ff.png" width="16" height="16" alt="" />&nbsp;FriendFeed&nbsp;</span>']);
+      ['&nbsp;<img class="share-ff" src="images/t.gif" width="16" height="16" alt="" />&nbsp;FriendFeed&nbsp;</span>']);
     var dlc = DCE ('a',
       {className:'linkCM', target:'delicious',
        href:'http://delicious.com/save?url=' + href + '&title=' + desc},
-      ['&nbsp;<img src="images/share/delicious.png" width="16" height="16" alt="" />&nbsp;Delicious&nbsp;</span>']);
+      ['&nbsp;<img class="share-delicious" src="images/t.gif" width="16" height="16" alt="" />&nbsp;Delicious&nbsp;</span>']);
     var dig = DCE ('a',
       {className:'linkCM', target:'digg',
        href:'http://digg.com/submit?phase=2&url=' + href + '&title=' + desc},
-      ['&nbsp;<img src="images/share/digg.png" width="16" height="16" alt="" />&nbsp;Digg&nbsp;</span>']);
+      ['&nbsp;<img class="share-digg" src="images/t.gif" width="16" height="16" alt="" />&nbsp;Digg&nbsp;</span>']);
     var red = DCE ('a',
       {className:'linkCM', target:'reddit',
        href:'http://reddit.com/submit?url=' + href + '&title=' + desc},
-      ['&nbsp;<img src="images/share/reddit.png" width="16" height="16" alt="" />&nbsp;Reddit&nbsp;</span>']);
+      ['&nbsp;<img class="share-reddit" src="images/t.gif" width="16" height="16" alt="" />&nbsp;Reddit&nbsp;</span>']);
     var fac = DCE ('a',
       {className:'linkCM', target:'facebook',
        href:'http://www.facebook.com/sharer.php?u=' + href + '&t=' + desc},
-      ['&nbsp;<img src="images/share/facebook.png" width="16" height="16" alt="" />&nbsp;Facebook&nbsp;</span>']);
+      ['&nbsp;<img class="share-facebook" src="images/t.gif" width="16" height="16" alt="" />&nbsp;Facebook&nbsp;</span>']);
     var stu = DCE ('a',
       {className:'linkCM', target:'stumbleupon',
        href:'http://www.stumbleupon.com/submit?url=' + href + '&title=' + desc},
-      ['&nbsp;<img src="images/share/stumbleupon.png" width="16" height="16" alt="" />&nbsp;StumbleUpon&nbsp;</span>']);
+      ['&nbsp;<img class="share-stumbleupon" src="images/t.gif" width="16" height="16" alt="" />&nbsp;StumbleUpon&nbsp;</span>']);
     var goo = DCE ('a',
       {className:'linkCM', target:'google',
        href:'http://www.google.com/bookmarks/mark?op=add&bkmk=' + href + '&title=' + desc},
-      ['&nbsp;<img src="images/share/google.png" width="16" height="16" alt="" />&nbsp;Google&nbsp;</span>']);
+      ['&nbsp;<img class="share-google" src="images/t.gif" width="16" height="16" alt="" />&nbsp;Google&nbsp;</span>']);
 
     setCmhLink (mail, null);
     setCmhLink (ff, null);

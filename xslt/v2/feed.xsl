@@ -98,20 +98,20 @@
       </xsl:attribute>
       <xsl:choose>
 	<xsl:when test="atomW3:icon">
-	  <img src="{atomW3:icon}" onerror="this.src='images/elink.png'"
+	  <img src="{atomW3:icon}" onerror="this.className='img-elink'"
 	       style="vertical-align:top" />
 	</xsl:when>
 	<xsl:when test="atom:link[@rel = 'icon']">
 	  <img src="{atom:link[@rel = 'icon']/@href}"
-	       onerror="this.src='images/elink.png'"
+	       onerror="this.className='img-elink'"
 	       style="vertical-align:top" />
 	</xsl:when>
 	<xsl:when test="atomW3:logo">
-	  <img src="{atomW3:logo}" onerror="this.src='images/elink.png'"
+	  <img src="{atomW3:logo}" onerror="this.className='img-elink'"
 	       style="vertical-align:top" />
 	</xsl:when>
 	<xsl:otherwise>
-	  <img src="images/elink.png" style="vertical-align:top" />
+	  <img class="img-elink" src="images/t.gif" style="vertical-align:top" />
 	</xsl:otherwise>
       </xsl:choose>
     </a>
@@ -194,11 +194,11 @@
       <xsl:attribute name="target"><xsl:value-of select="link"/></xsl:attribute>
       <xsl:choose>
 	<xsl:when test="image">
-	  <img src="{image/url}" onerror="this.src='images/elink.png'"
+	  <img src="{image/url}" onerror="this.className='img-elink'"
 	       style="vertical-align:top" />
 	</xsl:when>
 	<xsl:otherwise>
-	  <img src="images/elink.png" style="vertical-align:top" />
+	  <img class="img-elink" src="images/t.gif" style="vertical-align:top" />
 	</xsl:otherwise>
       </xsl:choose>
     </a>
@@ -225,11 +225,11 @@
     <xsl:choose>
       <xsl:when test="rss10:image">
 	<img src="{rss10:image/@rdf:resource}"
-	     onerror="this.src='images/elink.png'"
+	     onerror="this.className='img-elink'"
 	     style="vertical-align:top" />
       </xsl:when>
       <xsl:otherwise>
-	<img src="images/elink.png" style="vertical-align:top" />
+	<img class="img-elink" src="images/t.gif" style="vertical-align:top" />
       </xsl:otherwise>
     </xsl:choose>
   </a>
@@ -246,11 +246,11 @@
     <xsl:choose>
       <xsl:when test="../rdf09:image">
 	<img src="{../rdf09:image/rdf09:url}"
-	     onerror="this.src='images/elink.png'"
+	     onerror="this.className='img-elink'"
 	     style="vertical-align:top" />
       </xsl:when>
       <xsl:otherwise>
-	<img src="images/elink.png" style="vertical-align:top" />
+	<img class="img-elink" src="images/t.gif" style="vertical-align:top" />
       </xsl:otherwise>
     </xsl:choose>
   </a>
@@ -954,7 +954,7 @@
 	  <xsl:attribute name="href">
 	    <xsl:value-of select="@url|@href"/>
 	  </xsl:attribute>
-	  <img src="images/eye.png" width="18" height="10" alt="media" />
+	  <img class="img-image" src="images/t.gif" alt="media" />
 	</a>
       </xsl:when>
       <xsl:when test="@type = 'application/x-shockwave-flash'">
@@ -962,7 +962,7 @@
 	  <xsl:attribute name="href">
 	    <xsl:value-of select="@url|@href"/>
 	  </xsl:attribute>
-	  <img src="images/video.png" width="18" height="12" alt="media" />
+	  <img class="img-video" src="images/t.gif" alt="media" />
 	</a>
       </xsl:when>
       <xsl:when test="@type = 'audio/mpeg'">
@@ -970,7 +970,7 @@
 	  <xsl:attribute name="href">
 	    <xsl:value-of select="@url|@href"/>
 	  </xsl:attribute>
-	  <img src="images/sound.png" width="20" height="17" alt="media" />
+	  <img class="img-audio" src="images/t.gif" alt="media" />
 	</a>
 	<xsl:if test="@length and @length &gt; 0">
 	  <xsl:text> (</xsl:text>
@@ -985,7 +985,7 @@
 	  <xsl:attribute name="href">
 	    <xsl:value-of select="@url|@href"/>
 	  </xsl:attribute>
-	  <img src="images/video.png" width="18" height="12" alt="media" />
+	  <img class="img-video" src="images/t.gif" alt="media" />
 	</a>
 	<xsl:if test="@length and @length &gt; 0">
 	  <xsl:text> (</xsl:text>

@@ -599,11 +599,11 @@ function transformJsonFeed (json, feedid, latest, expand) {
 
     bWindowContent.appendChild (DCE ('div', {className:'channelOptions'},
 				     [DCE ('a', {id:'cl_'+feedid, className:'channelLink',
-					       href:json.link, target:json.link,
-					       title:'[External link]'},
-					   [DCE ('img', {src:'images/elink.png'})]),
-				      DCE ('span', {id:'emax_'+feedid, className:'emax',
-					       count:json.entries.length})]));
+					     href:json.link, target:json.link,
+					     title:'[External link]'},
+					 [DCE ('img', {className:'img-elink', src:'images/t.gif'})]),
+				       DCE ('span', {id:'emax_'+feedid, className:'emax',
+					     count:json.entries.length})]));
 
     for (var i = 0; i < json.entries.length; i++) {
       if (i >= latest) continue;
@@ -815,7 +815,7 @@ function appendFolder (id, desc, itr) {
   ef.onmouseover = styleLink;
   ef.onmouseout  = styleILink;
   cont.innerHTML = '<img id="fImage_'+
-    id +'" src="images/folderclose.png" width="16" height="16" alt="(F)">&nbsp;';
+    id +'" class="img-16-folderclose" src="images/t.gif" width="16" height="16" alt="(F)">&nbsp;';
   cont.appendChild (link);
   var space = document.createElement ('SPAN');
   space.innerHTML = '&nbsp;&nbsp;';
@@ -862,12 +862,12 @@ function ecFolder (folderid) {
   if (folder.className == 'folderCollapsed') {
     folder.className = 'folderExpanded';
     folder.style.display = 'block';
-    GID ('fImage_' + folderid).src = 'images/folderopen.png';
+    GID ('fImage_' + folderid).className = 'img-16-folderopen';
   }
   else {
     folder.className = 'folderCollapsed';
     folder.style.display = 'none';
-    GID ('fImage_' + folderid).src = 'images/folderclose.png';
+    GID ('fImage_' + folderid).className = 'img-16-folderclose';
   }
 }
 
@@ -880,7 +880,7 @@ function collapseFolders () {
     if (folder.className != 'folderCollapsed') {
       folder.className = 'folderCollapsed';
       folder.style.display = 'none';
-      GID ('fImage_' + id).src = 'images/folderclose.png';
+      GID ('fImage_' + id).className = 'img-16-folderclose';
     }
   }
   sWindowFeeds.scrollTop = 0;
@@ -896,7 +896,7 @@ function expandFolders () {
     if (folder.className != 'folderExpanded') {
       folder.className = 'folderExpanded';
       folder.style.display = 'block';
-      GID ('fImage_' + id).src = 'images/folderopen.png';
+      GID ('fImage_' + id).className = 'img-16-folderopen';
     }
   }
   return false;
@@ -2192,7 +2192,7 @@ function stderr (e) {
   if (!errorNotifier) {
     errorNotifier = GID ('errorNotifier');
     if (errorNotifier) {
-      errorNotifier.innerHTML = '<img src="images/notifier.png" alt="!" />';
+      errorNotifier.innerHTML = '<img class="img-16-notifier" src="images/t.gif" width="16" height="16" alt="!" />';
     }
   }
   if (errorNotifier && errorNotifier.style.display == 'none')
