@@ -44,12 +44,6 @@ function initGui () {
   progressBar  = GID ('progressBar');
   movContainer = GID ('movContainer');
 
-  for (var module in Modules) {
-    var rs = Modules[module].init ();
-    if (!rs)
-      delete Modules[module];
-  }
-
   sWindow = createEmptyWindow ('s', null, _('My Stuff'));
   if (opera) sWindow.style.marginRight = 0;
   var sWindowOptions = GID ('sWindowOptions');

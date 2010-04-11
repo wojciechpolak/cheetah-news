@@ -34,7 +34,7 @@ Modules.Weather = new function () {
       setCmhLink (module, openWindow);
       if (!msie && !iphone)
 	Nifty ('div#weatherContent');
-      initWeather (fetchWeatherList);
+      initWeather (getWeatherList);
       return true;
     }
     else {
@@ -143,7 +143,7 @@ Modules.Weather = new function () {
   }
 
   function initWeather (cb) {
-    if (transformerWeather) {
+    if (transformerWeather && typeof cb == 'function') {
       cb (); return;
     }
     var xh = initHouseholdCleanser ();
@@ -154,7 +154,7 @@ Modules.Weather = new function () {
 	if (xh.readyState == 4) {
 	  if (xh.status == 200) {
 	    transformerWeather = new Transformer (xh);
-	    cb ();
+	    if (typeof cb == 'function') cb ();
 	  }
 	  else {
 	    stderr ('initWeather Error: ' + xh.status +': '+ xh.statusText);
@@ -178,6 +178,10 @@ Modules.Weather = new function () {
     } catch (e) {
       stderr ('getWeatherList: ' + e.name +': '+ e.message);
       return;
+    }
+
+    if (!cheetahWeather && cheetahData && cheetahData.weather) {
+      cheetahWeather = cheetahData.weather;
     }
 
     GID ('weLocations').innerHTML = '';

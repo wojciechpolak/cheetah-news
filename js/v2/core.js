@@ -33,7 +33,7 @@ var fCursor = null;
 var sWindowCursor = null;
 var bWindowCursor = null;
 var bWindowTopEntries = null;
-var Modules = new Object ();
+var Modules = {};
 
 function GID (x) {
   return document.getElementById (x);
@@ -693,10 +693,16 @@ function initData (data) {
   } catch (e) {
     stderr ('initData: ' + e.name +': '+ e.message);
   }
+
   if (cheetahData != null) {
     progressBar.style.display = 'none';
     setRefreshRate ();
     initXSLT (loadFeeds);
+  }
+  for (var module in Modules) {
+    var rs = Modules[module].init ();
+    if (!rs)
+      delete Modules[module];
   }
 }
 

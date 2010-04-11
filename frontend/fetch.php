@@ -130,8 +130,26 @@ if ($session->status['afterlogged'] == 'yes')
       if ($i++ < $end)
 	echo ",\n";
     }
-    echo " };
-};";
+    echo " };\n";
+
+    /* weather data */
+    $db->query ("SELECT * FROM weather WHERE userid='".$session->id."'");
+    $i = 1; $end = $db->num_rows ();
+    if ($end > 0) {
+      echo "  this.weather = {\n";
+      while ($db->next_record ()) {
+	echo "    '".$db->f ('id')."': ['".encodeJsEntities ($db->f ('description')).
+	  "','".encodeJsEntities ($db->f ('code')).
+	  "','".encodeJsEntities ($db->f ('unit'))."']";
+	if ($i++ < $end) echo ',';
+	echo "\n";
+      }
+      echo "  };";
+    }
+    else {
+      echo "  this.weather = null;\n";
+    }
+    echo "\n};";
   }
 
   // feed fetch

@@ -350,10 +350,15 @@ var SIGS = {'js':'<?=$SIGS["js"]?>', 'tr':'<?=$SIGS["tr"]?>', 'wt':'<?=$SIGS["wt
 </div>
 
 <?php if (isset ($CONF['google.analytics'])) { ?>
-<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
-<script type="text/javascript">if (typeof _gat != 'undefined') {
-var tracker = _gat._getTracker ('<?=$CONF["google.analytics"]?>');
-tracker._initData (); tracker._trackPageview (); }</script>
+<script type="text/javascript">
+var tracker;
+setTimeout (function () {
+  $.getScript ('http://www.google-analytics.com/ga.js', function () {
+    if (typeof _gat != 'undefined') {
+      tracker = _gat._getTracker ('<?=$CONF["google.analytics"]?>');
+      tracker._initData (); tracker._trackPageview ();
+    }}); }, 5000);
+</script>
 <?php } ?>
 
 </body>
