@@ -325,7 +325,7 @@ if ((!hasXSLT || fbe == 'google') && typeof google != 'undefined')  {
       feed.setResultFormat (google.feeds.Feed.XML_FORMAT);
       feed.load (function (result) {
 	  if (!result.error) {
-	    $(result.xmlDocument).find ('content, encoded, content\\:encoded').
+	    $(result.xmlDocument).find ('content, encoded, content\\:encoded, description').
 	      each (function () {
 		  $(this).text ($(this).text().replace (/src=\"/g, 'osrc="'));
 		});

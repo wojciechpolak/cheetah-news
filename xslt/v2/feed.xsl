@@ -98,16 +98,16 @@
       </xsl:attribute>
       <xsl:choose>
 	<xsl:when test="atomW3:icon">
-	  <img src="{atomW3:icon}" onerror="this.className='img-elink'"
+	  <img src="{atomW3:icon}" onerror="this.src='images/t.gif';this.className='img-elink'"
 	       style="vertical-align:top" />
 	</xsl:when>
 	<xsl:when test="atom:link[@rel = 'icon']">
 	  <img src="{atom:link[@rel = 'icon']/@href}"
-	       onerror="this.className='img-elink'"
+	       onerror="this.src='images/t.gif';this.className='img-elink'"
 	       style="vertical-align:top" />
 	</xsl:when>
 	<xsl:when test="atomW3:logo">
-	  <img src="{atomW3:logo}" onerror="this.className='img-elink'"
+	  <img src="{atomW3:logo}" onerror="this.src='images/t.gif';this.className='img-elink'"
 	       style="vertical-align:top" />
 	</xsl:when>
 	<xsl:otherwise>
@@ -194,7 +194,7 @@
       <xsl:attribute name="target"><xsl:value-of select="link"/></xsl:attribute>
       <xsl:choose>
 	<xsl:when test="image">
-	  <img src="{image/url}" onerror="this.className='img-elink'"
+	  <img src="{image/url}" onerror="this.src='images/t.gif';this.className='img-elink'"
 	       style="vertical-align:top" />
 	</xsl:when>
 	<xsl:otherwise>
@@ -225,7 +225,7 @@
     <xsl:choose>
       <xsl:when test="rss10:image">
 	<img src="{rss10:image/@rdf:resource}"
-	     onerror="this.className='img-elink'"
+	     onerror="this.src='images/t.gif';this.className='img-elink'"
 	     style="vertical-align:top" />
       </xsl:when>
       <xsl:otherwise>
@@ -246,7 +246,7 @@
     <xsl:choose>
       <xsl:when test="../rdf09:image">
 	<img src="{../rdf09:image/rdf09:url}"
-	     onerror="this.className='img-elink'"
+	     onerror="this.src='images/t.gif';this.className='img-elink'"
 	     style="vertical-align:top" />
       </xsl:when>
       <xsl:otherwise>

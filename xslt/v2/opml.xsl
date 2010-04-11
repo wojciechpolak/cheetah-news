@@ -41,7 +41,7 @@
         <xsl:choose>
 	  <xsl:when test="@icon">
 	    <img src="images/t.gif" osrc="{@icon}" width="16" height="16"
-		 onerror="this.className='img-16-feed'" valign="middle" />
+		 onerror="this.src='images/t.gif';this.className='img-16-feed'" valign="middle" />
 	  </xsl:when>
 	  <xsl:otherwise>
 	    <img class="img-16-feed" src="images/t.gif" width="16" height="16" valign="middle" />
@@ -65,7 +65,7 @@
         <xsl:choose>
 	  <xsl:when test="@icon">
 	    <img src="images/t.gif" osrc="{@icon}" width="16" height="16"
-		 onerror="this.className='img-16-feed'" valign="middle" />
+		 onerror="this.src='images/t.gif';this.className='img-16-feed'" valign="middle" />
 	    <xsl:text disable-output-escaping="yes">&amp;nbsp;&amp;nbsp;</xsl:text>
 	  </xsl:when>
 	  <xsl:otherwise>
