@@ -45,7 +45,6 @@ function initGui () {
   movContainer = GID ('movContainer');
 
   sWindow = createEmptyWindow ('s', null, _('My Stuff'));
-  if (opera) sWindow.style.marginRight = 0;
   var sWindowOptions = GID ('sWindowOptions');
   sWindowOptions.style.marginTop = '3px';
   sWindowFeeds = document.createElement ('DIV');
@@ -845,7 +844,7 @@ function resizeSWindow () {
 
 function openAWindow () {
   Greybox.open ({type: 'inline', content: 'aboutContentWrap',
-	width:'44em', height:'28em', title: _('About Cheetah News')});
+	width:'44em', height:'26em', title: _('About Cheetah News')});
   return false;
 }
 

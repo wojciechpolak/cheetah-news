@@ -1133,6 +1133,6 @@ span.outlink:hover {
 .share-stumbleupon {background: transparent url(images/master-share.png?v=0) no-repeat -112px 0px;}
 .share-google {background: transparent url(images/master-share.png?v=0) no-repeat -80px 0px;}
 
-.img-image {background: transparent url(images/eye.png?v=0) no-repeat 0 0; width: 18px; height: 10px;}
-.img-video {background: transparent url(images/video.png?v=0) no-repeat 0 0; width: 18px; height: 12px;}
-.img-audio {background: transparent url(images/sound.png?v=0) no-repeat 0 0; width: 20px; height: 17px;}
+.img-audio {background: transparent url(images/master-media.png?v=0) no-repeat 0 0; width: 32px; height: 32px;}
+.img-image {background: transparent url(images/master-media.png?v=0) no-repeat -32px 0; width: 32px; height: 32px;}
+.img-video {background: transparent url(images/master-media.png?v=0) no-repeat -64px 0; width: 32px; height: 32px;}

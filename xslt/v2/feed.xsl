@@ -31,7 +31,8 @@
   xmlns:media="http://search.yahoo.com/mrss/"
   xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
   xmlns:georss="http://www.georss.org/georss"
-  xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0">
+  xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0"
+  exclude-result-prefixes="xsl rdf rdf09 rss10 content atom atomW3 dc media geo georss feedburner">
 <xsl:output method="html" encoding="UTF-8" indent="no"/>
 <xsl:param name="FEEDID">0</xsl:param>
 <xsl:param name="LATEST">5</xsl:param>
@@ -946,7 +947,9 @@
 <xsl:template match="enclosure|atom:link[@rel = 'enclosure']|
 		     atomW3:link[@rel = 'enclosure']|
 		     media:thumbnail|media:content">
-  <div style="margin-top:5px; margin-bottom:5px">
+    <xsl:if test="position() = 1">
+      <div style="margin-top:5px"></div>
+    </xsl:if>
     <xsl:choose>
       <xsl:when test="@type = 'image/jpeg' or @type = 'jpg' or
 		      name() = 'media:thumbnail'">
@@ -994,7 +997,12 @@
 	</xsl:if>
       </xsl:when>
     </xsl:choose>
-  </div>
+    <xsl:if test="position() != last()">
+      <xsl:text> </xsl:text>
+    </xsl:if>
+    <xsl:if test="position() = last()">
+      <div style="margin-bottom:7px"></div>
+    </xsl:if>
 </xsl:template>
 
 <xsl:template name="show-map">
