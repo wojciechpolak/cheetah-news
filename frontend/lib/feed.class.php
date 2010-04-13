@@ -2,7 +2,7 @@
 
 /*
    Cheetah News lib/feed.class.php
-   Copyright (C) 2005, 2006, 2008 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2008, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -58,8 +58,8 @@ class Feed
     if ($client->status == 200)
     {
       if (preg_match ('/<\?xml version=[\'"].*?[\'"].*?\?>/m', $client->xml) &&
-	  !preg_match ('|text/html|', $client->headers['Content-Type']) &&
-	  !preg_match ('|application/xhtml\+xml|', $client->headers['Content-Type']))
+	  !matchContentType ($client->headers['Content-Type'],
+			     array ('text/html', 'application/xhtml+xml')))
       {
 	if (isFeedValid ($client)) {
 	  recodeToUTF8 ($client->xml);
@@ -73,8 +73,12 @@ class Feed
       }
       else if ((preg_match ('/^<rss version=".*?".*?>/im', $client->xml) ||
 		preg_match ('|^<feed xmlns="http://www.w3.org/2005/Atom".*?>|im', $client->xml)) &&
-	       (preg_match ('|application/xml|', $client->headers['Content-Type']) ||
-		preg_match ('|text/xml|', $client->headers['Content-Type'])))
+	       matchContentType ($client->headers['Content-Type'],
+				 array ('text/xml',
+					'application/xml',
+					'application/rss+xml',
+					'application/rdf+xml',
+					'application/atom+xml')))
       {
 	/* invalid xml type, but this is common */
 	if (isFeedValid ($client)) {
@@ -369,6 +373,15 @@ function isFeedValid (&$client)
   $ret = @xml_parse ($xml_parser, $client->xml, true);
   xml_parser_free ($xml_parser);
   return $ret;
+}
+
+function matchContentType ($h, $types=array())
+{
+  $p = strpos ($h, ';');
+  if ($p !== false) {
+    $h = substr ($h, 0, $p);
+  }
+  return in_array ($h, $types);
 }
 
 ?>
