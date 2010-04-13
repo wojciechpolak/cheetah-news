@@ -47,13 +47,7 @@ $validPass = true;
 $validPassLen = true;
 $message = false;
 $mode = 'signIn';
-
-$fa = isset ($CONF['initInvUsers']) ? $CONF['initInvUsers'] : 0;
-$db = new Database;
-$db->query ("SELECT COUNT(*) nf FROM user WHERE regtype='R'");
-if ($db->next_record ()) {
-  $fa -= $db->f ('nf');
-}
+$SignUpEnabled = true;
 
 if (isset ($_GET['openid_mode']) && !empty ($_GET['openid_mode']))
 {
@@ -111,7 +105,7 @@ else if ($RecoverPassword)
       $mode = 'passwordRecovery';
   }
 }
-else if ($SignUp && $fa > 0)
+else if ($SignUp && $SignUpEnabled)
 {
   if (empty ($cEmail)) {
     $message = _('Please specify a valid e-mail address.');
@@ -224,7 +218,7 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="'.$CHEETAH_LANG.'" la
     <tr>
       <td colspan="2" align="left">
 	<span class="smaller"><?php echo _("Don't have an account?"); ?></span>
-	<span id="signUp" class="<?php echo ($fa > 0) ? 'link' : 'deadlink'; ?>"><?php echo _('Sign Up'); ?></span>
+	<span id="signUp" class="<?php echo ($SignUpEnabled) ? 'link' : 'deadlink'; ?>"><?php echo _('Sign Up'); ?></span>
 	<span class="smaller">&nbsp;<?php echo _('or'); ?>&nbsp;</span>
 	<span id="guestLogin" class="link"><?php echo _('Guest login'); ?></span>
       </td>

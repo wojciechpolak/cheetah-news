@@ -31,11 +31,6 @@ $confvars = array("dbDatabase" => "cheetah-database",
 		  "localePath" => "cheetah-locale-path",
                   "miscDir" => "cheetah-misc-dir",
 		  "guestAccount" => "cheetah-guest-account",
-		  "initInvUsers" => "cheetah-init-inv-users",
-		  "invBase" => "cheetah-inv-base",
-		  "invMod" => "cheetah-inv-mod",
-		  "invLastAccessDays" => "cheetah-inv-last-access-days",
-		  "invLogCount" => "cheetah-inv-log-count",
 		  "baseDir" => "cheetah-base-dir",
 		  "trsExpireDays" => "cheetah-trs-expire-days"
 		  );

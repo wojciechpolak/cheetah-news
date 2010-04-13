@@ -96,10 +96,6 @@ Cheetah News Statistics
        
        (display-header)
        (format #t "Number of users: ~A~%" (format-number #f (- nusers 1)))
-
-       (format #t "Max. users:      ~A~%"
-	       (format-number #f (cheetah-max-user-count)))
-
        (format #t "User  logcount:  ~A~%" (format-number #f 
                                            (- total-logins guest-logins)))
        (format #t "Guest logcount:  ~A~%" (format-number #f guest-logins))

@@ -1,6 +1,6 @@
 --
 --  Cheetah News SQL
---  Copyright (C) 2005, 2006, 2007, 2008 Wojciech Polak.
+--  Copyright (C) 2005, 2006, 2007, 2008, 2010 Wojciech Polak.
 --
 --  This program is free software; you can redistribute it and/or modify it
 --  under the terms of the GNU General Public License as published by the
@@ -22,7 +22,6 @@ CREATE TABLE user (
   email varchar(128) NOT NULL default '',
   pass varchar(255) NOT NULL default '',
   active enum('yes','no','suspended') NOT NULL default 'yes',
-  regtype enum('R','I') NOT NULL default 'I',
   lastLog datetime default NULL,
   lastAccess datetime default NULL,
   lastUC datetime default NULL,
@@ -32,12 +31,8 @@ CREATE TABLE user (
   showActive tinyint(1) NOT NULL default '1',
   oldestFirst tinyint(1) NOT NULL default '0',
   refresh int(4) NOT NULL default '0',
-  invitation tinyint(3) unsigned NOT NULL default '0',
-  invited tinyint(3) unsigned NOT NULL default '0',
   PRIMARY KEY  (id),
   UNIQUE KEY email (email),
-  KEY regtype (regtype),
-  KEY inv (invitation,invited),
   KEY active (active),
   KEY lastAccess (lastAccess)
 ) ENGINE=InnoDB CHARSET=utf8;
@@ -122,8 +117,6 @@ CREATE TABLE registration (
   pass varchar(255) NOT NULL default '',
   hash varchar(255) NOT NULL,
   openid_identity varchar(255),
-  invitation tinyint(1) NOT NULL default '1',
-  regtype enum('R','I') NOT NULL default 'I',
   rdate datetime NOT NULL,
   PRIMARY KEY (id),
   UNIQUE KEY (hash)

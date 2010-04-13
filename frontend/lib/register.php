@@ -2,7 +2,7 @@
 
 /*
    Cheetah News lib/register.php
-   Copyright (C) 2005, 2006 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -54,7 +54,7 @@ function rpNewSendEmail ($cEmail, $regPassword, $openid_identity = '')
 	      "Content-Transfer-Encoding: base64\r\nContent-Disposition: inline\r\n"))
     {
       if ($newEntry) {
-	$db->query ("INSERT INTO registration SET email='".$db->escape ($cEmail)."', invitation=0, regtype='R', ".
+	$db->query ("INSERT INTO registration SET email='".$db->escape ($cEmail)."', ".
 		    "rdate=UTC_TIMESTAMP(), hash='".$hash."', pass='".
 		    md5 ($regPassword)."', openid_identity='".$db->escape ($openid_identity)."'");
       }
@@ -62,59 +62,6 @@ function rpNewSendEmail ($cEmail, $regPassword, $openid_identity = '')
     }
     else
       return -2; /* sending mail problem */
-  }
-  else
-    return -3; /* account already exists */    
-}
-
-function rpInvSendEmail ($hash, $cEmail, $regPassword)
-{
-  global $CONF, $mail_subject, $mail_text1, $mail_text2;
-
-  if (empty ($cEmail) || !ereg ("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)+$", $cEmail))
-    return -1;
-
-  $db = new Database ();
-  
-  $db->query ("SELECT email FROM user WHERE email='".$db->escape ($cEmail)."'");
-  if (!$db->next_record ())
-  {
-    $db->query ("SELECT invitation, UNIX_TIMESTAMP(rdate) AS reg_date ".
-		"FROM registration WHERE hash='".$db->escape ($hash)."'");
-    if ($db->next_record ())
-    {
-      $invitation = $db->f ('invitation');
-      $reg_date = $db->f ('reg_date');
-
-      if ($invitation == 1)
-      {
-	$now = 0;
-	$db->query ("SELECT UNIX_TIMESTAMP(UTC_TIMESTAMP()) AS now");
-	if ($db->next_record ())
-	  $now = $db->f ('now');
-
-	$diff = $now - $reg_date;
-	if ($diff > (86400 * 14))
-	  return -4; /* expired */
-
-	$newHash = sha1 (time().$cEmail.rand());
-	if (mail ($cEmail, qp_encode ($mail_subject),
-		  chunk_split (base64_encode ($mail_text1.$newHash."\n\n".$mail_text2)),
-		  'From: '.$CONF['mailFrom']."\r\n".
-		  "MIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\n".
-		  "Content-Transfer-Encoding: base64\r\nContent-Disposition: inline\r\n"))
-	{
-	  $db->query ("UPDATE registration SET email='".$db->escape ($cEmail)."', invitation=0, ".
-		      "rdate=UTC_TIMESTAMP(), hash='".$newHash."', pass='".
-		      md5 ($regPassword)."' WHERE hash='".$db->escape ($hash)."'");
-	  return 0; /* OK */
-	}
-	else
-	  return -2; /* sending mail problem */
-      }
-    }
-    else
-      return -4; /* expired */
   }
   else
     return -3; /* account already exists */

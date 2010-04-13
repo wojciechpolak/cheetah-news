@@ -45,12 +45,6 @@
 (define-public cheetah-locale-path "/usr/share/locale:/usr/local/share/locale")
 (define-public cheetah-misc-dir #f)
 
-(define-public cheetah-init-inv-users 0)
-(define-public cheetah-inv-base 25)
-(define-public cheetah-inv-mod 10)
-(define-public cheetah-inv-last-access-days 1)
-(define-public cheetah-inv-log-count 10)
-
 (define-public (diag . rest)
   (with-output-to-port
       (current-error-port)
@@ -142,24 +136,6 @@
      (else
       (diag prog " terminated due to unknown reason")))))
 
-(define-public (cheetah-max-user-count)
-  (let ((exp-count (+ (/ (* cheetah-inv-mod
-			    (+ cheetah-inv-base 1)
-			    cheetah-inv-base)
-			 2)
-		      1)))
-    (if (> cheetah-init-inv-users 0)
-	(let ((k (quotient cheetah-init-inv-users cheetah-inv-mod))
-	      (l (remainder cheetah-init-inv-users cheetah-inv-mod)))
-	  (set! exp-count (+ (- exp-count
-				(- (* cheetah-inv-base cheetah-init-inv-users)
-				   (/ (* cheetah-inv-mod k (- k 1)) 2)
-				   (* k l))
-				1)
-			     (* (+ cheetah-inv-base 1)
-				cheetah-init-inv-users)))))
-    exp-count))
-       
 (load-from-path "cheetah.conf.scm")
 
 ;;;; End of config.scm
