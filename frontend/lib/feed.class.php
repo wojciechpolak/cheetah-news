@@ -23,7 +23,6 @@ require_once 'lib/feedparser.class.php';
 class Feed
 {
   var $id;
-  var $hash;
   var $url;
   var $lastModified;
   var $eTag;
@@ -34,7 +33,6 @@ class Feed
   function Feed ()
   {
     $this->id           = null;
-    $this->hash         = null;
     $this->url          = null;
     $this->lastModified = null;
     $this->eTag         = null;
@@ -279,14 +277,13 @@ class Feed
       }
       $url_parts = parse_url ($this->url);
       $url = $url_parts['host'].(!empty ($url_parts['path']) ? $url_parts['path'] : '');
-      $this->hash = md5 ($url);
 
       if (empty ($this->description)) {
 	$this->description = $url;
       }
       $this->description = str_replace ("\n", ' ', $this->description);
 
-      $db->query ("INSERT INTO feed SET hash='".$this->hash."', url='".$this->url."', ".
+      $db->query ("INSERT INTO feed SET url='".$this->url."', ".
 		  "description='".$db->escape ($this->description)."'");
       if ($db->affected_rows () == 1)
       {

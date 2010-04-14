@@ -50,7 +50,6 @@ CREATE TABLE openid (
 -- DROP TABLE IF EXISTS feed;
 CREATE TABLE feed (
   id int(11) NOT NULL auto_increment,
-  hash varchar(64) NOT NULL default '',
   url varchar(255) NOT NULL default '',
   description varchar(255) NOT NULL default '',
   PRIMARY KEY (id)

@@ -2,7 +2,7 @@
 
 /*
    Cheetah News import.php
-   Copyright (C) 2005, 2006 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2010 Wojciech Polak.
    Copyright (C) 2006 The Cheetah News Team.
 
    This program is free software; you can redistribute it and/or modify it
@@ -72,7 +72,6 @@ class OPMLProcessor
 {
   var $isOPML = false;
   var $feedId = -1;
-  var $feedHash = '';
   var $folderId = -1;
   var $insideFeed = false;
   var $insideFolder = false;
@@ -149,17 +148,13 @@ class OPMLProcessor
 	    if ($this->xmlUrl[strlen ($this->xmlUrl) - 1] == '/') {
 	      $this->xmlUrl = substr ($this->xmlUrl, 0, -1);
 	    }
-	    $url_parts  = parse_url ($this->xmlUrl);
-	    $url = $url_parts['host'].(!empty ($url_parts['path'])
-				       ? $url_parts['path'] : '');
-	    $this->feedHash = md5 ($url);
 	  }
 	  else
 	    $this->xmlUrl = '';
 
 	  if ($this->insideFolder) {
 	    $this->insideFeed = true;
-	    if ($this->xmlUrl != '') { // feed w folderze
+	    if ($this->xmlUrl != '') { // feed in folder
 
 	      if (!preg_match ('/^http:\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}'
 			       .'((:[0-9]{1,5})?\/.*)?$/i' , $this->xmlUrl))
@@ -178,8 +173,7 @@ class OPMLProcessor
 		}
 	      }
 	      else {
-		$this->db->query ("INSERT INTO feed SET hash='".
-				  $this->feedHash."', url='".
+		$this->db->query ("INSERT INTO feed SET url='".
 				  $this->xmlUrl."'");
 		$this->db->query ("SELECT LAST_INSERT_ID() AS id FROM feed");
 		if ($this->db->next_record ()) {
@@ -237,7 +231,7 @@ class OPMLProcessor
 		}
 	      }
 	    }
-	    else { // feed bez folderu
+	    else { // feed without a folder
 	      $this->insideFeed = true;
 
 	      if (!preg_match ('/^http:\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}'
@@ -258,8 +252,7 @@ class OPMLProcessor
 		}
 	      }
 	      else {
-		$this->db->query ("INSERT INTO feed SET hash='".
-				  $this->feedHash."', url='".$this->xmlUrl."'");
+		$this->db->query ("INSERT INTO feed SET url='".$this->xmlUrl."'");
 		$this->db->query ("SELECT LAST_INSERT_ID() AS id FROM feed");
 		if ($this->db->next_record ()) {
 		  $this->feedId = $this->db->f ('id');
