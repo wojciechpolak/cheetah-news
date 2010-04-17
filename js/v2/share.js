@@ -104,6 +104,14 @@ Modules.Share = new function () {
       {className:'linkCM', target:'google',
        href:'http://www.google.com/bookmarks/mark?op=add&bkmk=' + href + '&title=' + desc},
       ['&nbsp;<img class="share-google" src="images/t.gif" width="16" height="16" alt="" />&nbsp;Google&nbsp;</span>']);
+    var bzz = DCE ('a',
+      {className:'linkCM', target:'buzz',
+       href:'http://www.google.com/buzz/post?url=' + href},
+      ['&nbsp;<img class="share-buzz" src="images/t.gif" width="16" height="16" alt="" />&nbsp;Buzz&nbsp;</span>']);
+    var twt = DCE ('a',
+      {className:'linkCM', target:'twitter',
+       href:'http://twitter.com/?status=' + href},
+      ['&nbsp;<img class="share-twitter" src="images/t.gif" width="16" height="16" alt="" />&nbsp;Twitter&nbsp;</span>']);
 
     setCmhLink (mail, null);
     setCmhLink (ff, null);
@@ -113,14 +121,18 @@ Modules.Share = new function () {
     setCmhLink (fac, null);
     setCmhLink (stu, null);
     setCmhLink (goo, null);
+    setCmhLink (bzz, null);
+    setCmhLink (twt, null);
 
     menu.appendChild (mail);
     menu.appendChild (fac);
+    menu.appendChild (bzz);
     menu.appendChild (ff);
     menu.appendChild (dlc);
     menu.appendChild (dig);
     menu.appendChild (red);
     menu.appendChild (stu);
+    menu.appendChild (twt);
     menu.appendChild (goo);
 
     menu.style.width = (menuLength * 0.50 + 1) + 'em';

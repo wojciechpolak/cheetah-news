@@ -1124,14 +1124,16 @@ span.outlink:hover {
 #menuOpenCWindow4 img {background: transparent url(images/master-icons.png?v=0) no-repeat -171px 0px;} /* medit */
 #logout img {background: transparent url(images/master-icons.png?v=0) no-repeat -219px 0px;} /* mlogout */
 
-.share-email {background: transparent url(images/master-share.png?v=0) no-repeat -32px 0px;}
-.share-facebook {background: transparent url(images/master-share.png?v=0) no-repeat -48px 0px;}
-.share-ff {background: transparent url(images/master-share.png?v=0) no-repeat -64px 0px;}
-.share-delicious {background: transparent url(images/master-share.png?v=0) no-repeat 0px 0px;}
-.share-digg {background: transparent url(images/master-share.png?v=0) no-repeat -16px 0px;}
-.share-reddit {background: transparent url(images/master-share.png?v=0) no-repeat -96px 0px;}
-.share-stumbleupon {background: transparent url(images/master-share.png?v=0) no-repeat -112px 0px;}
-.share-google {background: transparent url(images/master-share.png?v=0) no-repeat -80px 0px;}
+.share-buzz {background: transparent url(images/master-share.png?v=1) no-repeat 0 0;}
+.share-delicious {background: transparent url(images/master-share.png?v=1) no-repeat -16px 0px;}
+.share-digg {background: transparent url(images/master-share.png?v=1) no-repeat -32px 0px;}
+.share-email {background: transparent url(images/master-share.png?v=1) no-repeat -48px 0px;}
+.share-facebook {background: transparent url(images/master-share.png?v=1) no-repeat -64px 0px;}
+.share-ff {background: transparent url(images/master-share.png?v=1) no-repeat -80px 0px;}
+.share-google {background: transparent url(images/master-share.png?v=1) no-repeat -96px 0px;}
+.share-reddit {background: transparent url(images/master-share.png?v=1) no-repeat -112px 0px;}
+.share-stumbleupon {background: transparent url(images/master-share.png?v=1) no-repeat -128px 0px;}
+.share-twitter {background: transparent url(images/master-share.png?v=1) no-repeat -144px 0px;}
 
 .img-audio {background: transparent url(images/master-media.png?v=0) no-repeat 0 0; width: 32px; height: 32px;}
 .img-image {background: transparent url(images/master-media.png?v=0) no-repeat -32px 0; width: 32px; height: 32px;}
