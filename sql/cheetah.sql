@@ -31,6 +31,7 @@ CREATE TABLE user (
   showActive tinyint(1) NOT NULL default '1',
   oldestFirst tinyint(1) NOT NULL default '0',
   refresh int(4) NOT NULL default '0',
+  fbUID bigint unsigned NOT NULL default '0',
   PRIMARY KEY  (id),
   UNIQUE KEY email (email),
   KEY active (active),

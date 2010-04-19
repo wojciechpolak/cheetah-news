@@ -31,7 +31,7 @@ if (typeof google != 'undefined') {
   google.load ('feeds', '1', {'nocss': true});
 }
 else {
-  fbe = 'cth';
+  CONF.fbe = 'cth';
 }
 
 function reader () {
@@ -51,7 +51,7 @@ function reader () {
     window.location = 'html/noactivex';
   if (!xh) return;
   try {
-    xh.open ('GET', dsp ('js', '&lang=' + LANG), true);
+    xh.open ('GET', dsp ('js', '&lang=' + CONF.lang), true);
     xh.onreadystatechange = function () {
       if (xh.readyState == 4) {
 	if (xh.status == 200) {
@@ -80,4 +80,10 @@ function dsp (res, p) {
   return d;
 }
 
+function load_fb () {
+  $.getScript ('http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php',
+	       function () { FB.init (CONF.fb_api_key, 'xd_receiver.html'); });
+}
+
+setTimeout (load_fb, 2500);
 window.onload = reader;

@@ -24,7 +24,12 @@ $CONF['trsExpireDays'] = 7;
 $CONF['feedEngine'] = 'cth';
 $CONF['google.key'] = 'GOOGLE-API-KEY';
 $CONF['google.mapkey'] = 'GOOGLE-MAP-KEY';
-$CONF['google.fcid'] = 'FC-CODE';
 $CONF['google.analytics'] = 'GA-CODE';
+
+$CONF['fb.app_id'] = 'FACEBOOK-APP-ID';
+$CONF['fb.api_key'] = 'FACEBOOK-API-KEY';
+$CONF['fb.secret_key'] = 'FACEBOOK-SECRET-KEY';
+
+$CONF['whatsnew'] = false;
 
 ?>

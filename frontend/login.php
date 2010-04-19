@@ -23,10 +23,11 @@ require_once 'lib/d-sigs.php';
 require_once 'lib/register.php';
 require_once 'Auth/OpenID/Consumer.php';
 require_once 'Auth/OpenID/FileStore.php';
-require_once "Auth/OpenID/SReg.php";
+require_once 'Auth/OpenID/SReg.php';
 
-getvars ('cEmail,cPassword,openid_identifier,SignIn');
-postvars ('feedurl,regPassword,regRPassword,PersistentCookie,SignUp,RecoverPassword');
+getvars ('cEmail,cPassword,openid_identifier,PersistentCookie,SignIn');
+getvars ('fbConnect,fb_sig_in_iframe');
+postvars ('feedurl,regPassword,regRPassword,SignUp,RecoverPassword');
 
 if (empty ($feedurl) && isset ($_SERVER['QUERY_STRING']))
 {
@@ -74,6 +75,20 @@ if (isset ($_GET['openid_mode']) && !empty ($_GET['openid_mode']))
       $email = strip_tags ($sreg['email']);
     $message = $_SESSION['session']->openid2 ($response->identity_url,
 					      $email);
+  }
+}
+else if ($fbConnect && isset ($CONF['fb.api_key']) &&
+	 isset ($CONF['fb.secret_key'])) {
+  require 'facebook-platform/facebook.php';
+  $fb = new Facebook ($CONF['fb.api_key'], $CONF['fb.secret_key']);
+  $fb_uid = $fb->get_loggedin_user ();
+  if ($fb_uid) {
+    $insideFB = $fb_sig_in_iframe == '1' ? true : false;
+    $message = $_SESSION['session']->fb_login ($fb, $fb_uid, $insideFB,
+					       $feedurl);
+  }
+  else {
+    $fb->set_user (null, null);
   }
 }
 else if ($SignIn)
@@ -149,7 +164,8 @@ else
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <?php
-echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="'.$CHEETAH_LANG.'" lang="'.$CHEETAH_LANG.'">';
+echo '<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:fb="http://www.facebook.com/2008/fbml">';
 ?>
 
 <head>
@@ -184,6 +200,12 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="'.$CHEETAH_LANG.'" la
       <td align="left">
 	<input type="text" id="openid_identifier" name="openid_identifier"
 	       class="openid_identifier" style="width:90%" maxlength="255" />
+      </td>
+    </tr>
+    <tr id="trFBConnect">
+      <td align="right"><?php echo 'Facebook: '; ?></td>
+      <td align="left">
+        <fb:login-button length="long" background="light" size="medium" onlogin="fb_login()"></fb:login-button>
       </td>
     </tr>
     <tr>
@@ -334,6 +356,16 @@ if ($message)
 ?>
 
 </div>
+
+<?php if (isset ($CONF['fb.api_key'])) { ?>
+<script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php"></script>
+<script type="text/javascript">
+FB_RequireFeatures (['XFBML'], function () {
+  FB.init ('<?=$CONF["fb.api_key"]?>', 'xd_receiver.html',
+    {'permsToRequestOnConnect': 'email'});
+});
+</script>
+<?php } ?>
 
 <?php if (isset ($CONF['google.analytics']) && !isset ($_GET['openid_mode'])) { ?>
 <script type="text/javascript">

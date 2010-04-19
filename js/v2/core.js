@@ -317,7 +317,7 @@ function timeoutAXML (xh, feedid) {
   }
 }
 
-if ((!hasXSLT || fbe == 'google') && typeof google != 'undefined')  {
+if ((!hasXSLT || CONF.fbe == 'google') && typeof google != 'undefined')  {
   var fetchAXML = function (feedid, latest, expand, url) {
     var feed = new google.feeds.Feed (url);
     feed.setNumEntries (20);
@@ -2514,34 +2514,6 @@ function registerCheetahHandler () {
 				      'Cheetah News');
   else
     alert (_('Sorry, but this operation is not supported by your browser.'));
-}
-
-function dload (src, cb) {
-  var c = document.getElementsByTagName ('head')[0];
-  var script = document.createElement ('script');
-  script.type = 'text/javascript';
-  script.src = src;
-  var f = function () {
-    script.onload = null;
-    var p = script.parentNode;
-    p.removeChild (script);
-    delete script;
-    if (typeof cb == 'function')
-      cb ();
-  };
-  var g = function (h) {
-    var s = (h ? h : window.event).target ? (h ? h : window.event).target
-    : (h ? h : window.event).srcElement;
-    if (s.readyState == 'loaded' || s.readyState == 'complete') {
-      s.onreadystatechange = null;
-      f ();
-    }
-  };
-  if (navigator.product == 'Gecko')
-    script.onload = f;
-  else
-    script.onreadystatechange = g;
-  c.appendChild (script);
 }
 
 var hParser = new function () {

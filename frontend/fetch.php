@@ -47,14 +47,17 @@ if ($session->status['afterlogged'] == 'yes')
     $safs = 0;
     $oldestFirst = 0;
     $refresh = 0;
+    $fbUID = 0;
     $lucid = '';
-    $db->query ("SELECT showActive,oldestFirst,refresh,lastUC ".
+
+    $db->query ("SELECT showActive,oldestFirst,refresh,lastUC,fbUID ".
 		"FROM user WHERE id='".$session->id."'");
     if ($db->next_record ()) {
       $safs = $db->f ('showActive');
       $oldestFirst = $db->f ('oldestFirst');
       $refresh = $db->f ('refresh');
       $lucid = $db->f ('lastUC');
+      $fbUID = $db->f ('fbUID');
       if (!empty ($lucid)) $lucid = md5 ($lucid);
     }
 
@@ -81,6 +84,7 @@ if ($session->status['afterlogged'] == 'yes')
     echo "cheetahData = new function () {
   this.lucid = '$lucid';
   this.lang = '".$session->lang."';
+  this.fbUID = '$fbUID';
   this.safs = $safs;
   this.oldf = $oldestFirst;
   this.frequency = $refresh;\n";

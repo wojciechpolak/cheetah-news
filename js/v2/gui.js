@@ -115,7 +115,7 @@ function initGui () {
 	'menuOpenCWindow2' : '&nbsp;' + _('Manage Subscriptions') + '&nbsp;',
 	'menuOpenCWindow3' : '&nbsp;' + _('Manage Folders') + '&nbsp;',
 	'menuOpenCWindow4' : '&nbsp;' + _('User Settings') + '&nbsp;',
-	'menuOpenGFConnect': '&nbsp;Google Friend Connect&nbsp;',
+	'menuOpenFanbox': '&nbsp;' + _('Facebook Fanbox') + '&nbsp;',
 	'logout' : '&nbsp;' + _('Logout') + '&nbsp;'}, true);
 
   initMenu ();
@@ -128,7 +128,7 @@ function initGui () {
   $('#addURLForm,#addFolderForm,#weLocationForm,#nbForm').attr ('autocomplete', 'off');
 
   var whatsnew = GID ('whatsnew');
-  if (false && whatsnew) {
+  if (CONF.whatsnew && whatsnew) {
     whatsnew.className = 'link';
     whatsnew.onmousedown = function () {
       openFeedPreview ('http://blog.cheetah-news.com/feed', 'Cheetah News Blog');
@@ -344,8 +344,21 @@ function initMenu () {
     menuLink.oncontextmenu = showMenu;
   }
 
-  setCmhLink (GID ('logout'), function () { window.location = 'logout'; });
-  setCmhLink (GID ('menuOpenGFConnect'),function () { this.className = 'linkCM'; openFriendConnect (); });
+  setCmhLink (GID ('logout'), function () {
+      if (cheetahData.fbUID && typeof FB != 'undefined') {
+	if (confirm (_('Log out also from Facebook?'))) {
+	  FB.Connect.get_status ().waitUntilReady (function (status) {
+	      if (status == FB.ConnectState.connected)
+		FB.Connect.logoutAndRedirect ('logout');
+	      else
+		window.location = 'logout';
+	    });
+	  return;
+	}
+      }
+      window.location = 'logout';
+    });
+  setCmhLink (GID ('menuOpenFanbox'),function () { this.className = 'linkCM'; openFanbox (); });
   setCmhLink (GID ('menuOpenCWindow1'), function () { this.className = 'linkCM'; openCWindow (1); });
   setCmhLink (GID ('menuOpenCWindow2'), function () { this.className = 'linkCM'; openCWindow (2); });
   setCmhLink (GID ('menuOpenCWindow3'), function () { this.className = 'linkCM'; openCWindow (3); });
@@ -848,38 +861,11 @@ function openAWindow () {
   return false;
 }
 
-function openFriendConnect () {
+function openFanbox () {
   hideMenu ();
-  Greybox.open ({type: 'empty', width:500, height:300,
-	title: 'Google Friend Connect'});
-  if (!window.loaded_gfc) {
-    dload ('http://www.google.com/friendconnect/script/friendconnect.js',
-	   runFriendConnect);
-  }
-  else
-    runFriendConnect ();
+  Greybox.open ({type: 'inline', content: 'fbFanbox',
+	width:500, height:300, title: 'Facebook Fanbox'});
   return false;
-}
-
-function runFriendConnect () {
-  if (typeof google.friendconnect == 'undefined') return;
-  window.loaded_gfc = true;
-  var skin = {};
-  skin['HEIGHT'] = '300';
-  skin['BORDER_COLOR'] = '#cccccc';
-  skin['ENDCAP_BG_COLOR'] = '#e0ecff';
-  skin['ENDCAP_TEXT_COLOR'] = '#333333';
-  skin['ENDCAP_LINK_COLOR'] = '#0000cc';
-  skin['ALTERNATE_BG_COLOR'] = '#ffffff';
-  skin['CONTENT_BG_COLOR'] = '#ffffff';
-  skin['CONTENT_LINK_COLOR'] = '#0000cc';
-  skin['CONTENT_TEXT_COLOR'] = '#333333';
-  skin['CONTENT_SECONDARY_LINK_COLOR'] = '#7777cc';
-  skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
-  skin['CONTENT_HEADLINE_COLOR'] = '#333333';
-  google.friendconnect.container.setParentUrl ('/');
-  google.friendconnect.container.renderMembersGadget ({
-    id: 'greybox', site: '06312725982851846630'}, skin);
 }
 
 function initCWindow () {
@@ -940,6 +926,8 @@ function initCWindow () {
 	       '', registerCheetahHandler);
   prepareLink ('cWindowLabel_4_OpenID', _('Manage your OpenIDs'), '',
 	       function () { openSysLink ('openid_manage', true); });
+  prepareLink ('cWindowLabel_4_LinkFB', _('Link your Facebook account'), '',
+	       function () { openSysLink ('fb_connect', true); });
   prepareLink ('cWindowLabel_4_ChangePassword', _('Change Password'), '',
 	       function () { openSysLink ('changepassword', true); });
 

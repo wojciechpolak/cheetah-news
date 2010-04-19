@@ -4,6 +4,7 @@
 *.so
 .htaccess
 errorlog
+frontend/facebook-platform/
 frontend/lib/config.php
 frontend/lib/d-sigs.php
 frontend/trs/*

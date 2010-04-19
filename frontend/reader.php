@@ -25,24 +25,29 @@ start_session (null);
 $session->auth ('afterlogged');
 if ($session->status['afterlogged'] == 'yes')
 {
+  getvars ('insideFB');
+
   $db = new Database;
   $db->query ("UPDATE user SET lastAccess=UTC_TIMESTAMP(), logCount=logCount+1 WHERE id='".$session->id."'");
   header ('Content-Type: text/html; charset=UTF-8');
   header ('Last-Modified: ' . gmdate ('D, d M Y H:i:s T'));
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link id="style" rel="stylesheet" type="text/css" href="<?=dsp('css')?>" />
 <?php if ($CONF['feedEngine'] != 'cthonly') { ?><script type="text/javascript" src="http://www.google.com/jsapi?key=<?=$CONF['google.key']?>"></script>
 <? } ?>
 <script type="text/javascript">
-var fbe = '<?=$CONF['feedEngine']?>';
-var LANG = '<?=$session->lang?>';
-var SIGS = {'js':'<?=$SIGS["js"]?>', 'tr':'<?=$SIGS["tr"]?>', 'wt':'<?=$SIGS["wt"]?>', 'op':'<?=$SIGS["op"]?>', 'dir':'<?=$SIGS["dir"]?>'};
+<?php echo "var CONF = {'fbe': '".($insideFB ? 'google' : $CONF['feedEngine']).
+   "', 'lang': '".$session->lang."', 'whatsnew': ".(int)$CONF['whatsnew']."};
+var SIGS = {'js':'".$SIGS["js"]."', 'tr':'".$SIGS["tr"]."', 'wt':'".
+   $SIGS["wt"]."', 'op':'".$SIGS["op"]."', 'dir':'".$SIGS["dir"]."'};\n"; ?>
 </script>
 <script type="text/javascript" src="<?=dsp('bt')?><?php if (!empty ($session->lang)) echo '&amp;lang='.$session->lang; ?>"></script>
+<?php if ($insideFB) { ?><style type="text/css">body { font-size: 75%; }</style><?php } ?>
 
 <title>Cheetah News</title>
 </head>
@@ -172,6 +177,7 @@ var SIGS = {'js':'<?=$SIGS["js"]?>', 'tr':'<?=$SIGS["tr"]?>', 'wt':'<?=$SIGS["wt
       <tr><td colspan="2"><div class="cth-separator"></div></td></tr>
       <tr><td id="cWindowLabel_4_System"></td></tr>
       <tr><td><span id="cWindowLabel_4_OpenID" class="link"></span></td></tr>
+      <tr><td><span id="cWindowLabel_4_LinkFB" class="link"></span></td></tr>
       <tr><td><span id="cWindowLabel_4_ChangePassword" class="link"></span></td></tr>
     </table>
   </div>
@@ -341,13 +347,20 @@ var SIGS = {'js':'<?=$SIGS["js"]?>', 'tr':'<?=$SIGS["tr"]?>', 'wt':'<?=$SIGS["wt
   <span id="menuOpenSWindow" class="ilinkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
   <span id="menuOpenNotes" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
   <span id="menuOpenWeather" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
-  <span id="menuOpenGFConnect" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span><hr />
+  <span id="menuOpenFanbox" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span><hr />
   <span id="menuOpenCWindow1" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
   <span id="menuOpenCWindow2" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
   <span id="menuOpenCWindow3" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
   <span id="menuOpenCWindow4" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
   <hr /><span id="logout" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
 </div>
+
+<?php if (isset ($CONF['fb.api_key'])) { ?>
+<script type="text/javascript">CONF.fb_api_key = '<?=$CONF["fb.api_key"]?>';</script>
+<div id="fbFanbox" style="display:none">
+  <fb:fan profile_id="<?=$CONF['fb.app_id']?>" stream="0" connections="10" logobar="1" width="500" height="300"></fb:fan>
+</div>
+<?php } ?>
 
 <?php if (isset ($CONF['google.analytics'])) { ?>
 <script type="text/javascript">

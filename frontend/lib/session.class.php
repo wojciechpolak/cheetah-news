@@ -41,7 +41,7 @@ function start_session ($persistentCookie, $noCache = true, $age = 30)
     session_start ();
   }
 
-  if (!isset($_SESSION['session'])) 
+  if (!isset($_SESSION['session']))
     $_SESSION['session'] = new Session ();
 
   $session = $_SESSION['session'];
@@ -87,7 +87,7 @@ class Session
     $this->status['iflogged'] = '';
   }
 
-  function login ($email, $pass, $feedurl = '')
+  function login ($email, $pass, $feedurl='')
   {
     global $CONF;
 
@@ -145,7 +145,7 @@ class Session
     }
   }
 
-  function openid1 ($openid_identifier, $feedurl = '')
+  function openid1 ($openid_identifier, $feedurl='')
   {
     global $CONF;
 
@@ -180,7 +180,7 @@ class Session
     redirect ($redirect_url);
   }
 
-  function openid2 ($identity, $email, $feedurl = '')
+  function openid2 ($identity, $email, $feedurl='')
   {
     global $CONF;
 
@@ -243,15 +243,80 @@ class Session
       return _("New OpenID accounts without email address are not supported.");
   }
 
+  function fb_login (&$fb, $fb_uid, $insideFB=false, $feedurl='')
+  {
+    global $CONF;
+
+    $db = new Database ();
+    $db->query ("SELECT id,email,pass,lang,fbUID FROM user ".
+		"WHERE fbUID=".$fb_uid." AND active != 'no'");
+    if ($db->next_record ())
+    {
+      $this->id    = $db->f('id');
+      $this->email = $db->f('email');
+      $this->pass  = $db->f('pass');
+      $this->lang  = $db->f('lang');
+      $this->status['afterlogged'] = 'yes';
+      $this->status['iflogged'] = 'yes';
+
+      $db->query ("UPDATE user SET lastLog='".gmdate ('Y-m-d H:i:s')."', ".
+		  "active='yes' WHERE id='".$this->id."'");
+
+      if ($insideFB) {
+	$r = 'http://'.$CONF['site'].'/reader?insideFB=1';
+      }
+      else {
+	if (!empty ($feedurl))
+	  $r = 'http://'.$CONF['site'].'/rd?feedurl='.urlencode ($feedurl);
+	else
+	  $r = 'http://'.$CONF['site'].'/';
+      }
+      redirect ($r);
+    }
+    else
+    {
+      $user_details = $fb->api_client->users_getInfo ($fb_uid,
+						      array ('email'));
+      if ($user_details && isset ($user_details[0]['email']))
+	$email = $user_details[0]['email'];
+      else
+	return _('E-mail address is required.');
+
+      $db->query ("SELECT id FROM user WHERE email='".$db->escape($email)."'");
+      if ($db->next_record ()) {
+	return _('To link your Facebook account, please visit Menu/User Settings');
+      }
+
+      $pass = uniqid (rand(), true);
+      $db->query ("INSERT INTO user SET email='".$email.
+		  "', pass='".$pass."', fbUID=".$fb_uid);
+      $db->query ("SELECT LAST_INSERT_ID() as last_id FROM user");
+      if ($db->next_record ()) {
+	$last_id = $db->f ('last_id');
+	$this->id    = $last_id;
+	$this->email = $email;
+	$this->pass  = $pass;
+	$this->lang  = 'null';
+	$this->status['afterlogged'] = 'yes';
+	$this->status['iflogged'] = 'yes';
+
+	if ($insideFB)
+	  redirect ('http://'.$CONF['site'].'/reader?insideFB=1');
+	else
+	  redirect ('http://'.$CONF['site'].'/');
+      }
+    }
+  }
+
   function logout ()
   {
     global $CONF;
 
-    $this->id    = 0;
-    $this->email = '';
-    $this->pass  = '';
-    $this->lang  = '';
-    $this->status  = array ();
+    $this->id     = 0;
+    $this->email  = '';
+    $this->pass   = '';
+    $this->lang   = '';
+    $this->status = array ();
     $this->status['public'] = 'yes';
     $this->status['afterlogged'] = '';
     $this->status['iflogged'] = '';

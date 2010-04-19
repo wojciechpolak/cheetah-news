@@ -1,6 +1,6 @@
 /*
    Cheetah News JS/v2 Login
-   Copyright (C) 2005, 2006, 2007, 2008 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -70,6 +70,7 @@ function useOpenID () {
   GID ('trCEmail').className = 'hidden';
   GID ('trCPassword').className = 'hidden';
   GID ('trOpenID').className = '';
+  GID ('trFBConnect').className = '';
   GID ('useOpenID').style.display = 'none';
   GID ('useCommon').style.display = 'inline';
   GID ('trForgotPassword').className = 'hidden';
@@ -82,6 +83,7 @@ function useCommon () {
   GID ('trCEmail').className = '';
   GID ('trCPassword').className = '';
   GID ('trOpenID').className = 'hidden';
+  GID ('trFBConnect').className = 'hidden';
   GID ('useOpenID').style.display = 'inline';
   GID ('useCommon').style.display = 'none';
   GID ('trWhatIsOpenID').className = 'hidden';
@@ -198,4 +200,11 @@ function readCookie (name) {
       return c.substring (nameEq.length, c.length);
   }
   return null;
+}
+
+function fb_login () {
+  var pc = GID ('PersistentCookie');
+  var r = 'login?fbConnect=1';
+  if (pc && pc.checked) r += '&PersistentCookie=yes';
+  window.location.replace (r);
 }
