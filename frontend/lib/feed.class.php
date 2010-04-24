@@ -55,9 +55,10 @@ class Feed
 
     if ($client->status == 200)
     {
-      if (preg_match ('/<\?xml version=[\'"].*?[\'"].*?\?>/m', $client->xml) &&
+      if (preg_match ('/<\?xml version=[\'"].*?[\'"].*?\?>/m',
+		      substr ($client->xml, 0, 160)) &&
 	  !matchContentType ($client->headers['Content-Type'],
-			     array ('text/html', 'application/xhtml+xml')))
+			     array ('application/xhtml+xml')))
       {
 	if (isFeedValid ($client)) {
 	  recodeToUTF8 ($client->xml);
