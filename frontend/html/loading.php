@@ -24,7 +24,7 @@ header ("Content-Type: text/html; charset=UTF-8");
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<?php echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="'.$CHEETAH_LANG.'" lang="'.$CHEETAH_LANG.'">'."\n"; ?>
+<?php echo '<html xmlns="http://www.w3.org/1999/xhtml">'."\n"; ?>
 <head>
 <title>Cheetah News</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -35,13 +35,6 @@ div.notice {
   text-align: center;
   font-weight: bold;
   font-size: 120%;
-  margin-top: 2em;
-}
-div.error {
-  text-align: center;
-  font-weight: bold;
-  font-size: 120%;
-  color: red;	
   margin-top: 2em;
 }
 </style>

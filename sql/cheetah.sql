@@ -80,7 +80,7 @@ CREATE TABLE subscription (
   userid int(11) NOT NULL REFERENCES user.id,
   feedid int(11) NOT NULL REFERENCES feed.id,
   pri int(11) NOT NULL default '1',
-  latest tinyint NOT NULL default '7',
+  latest tinyint NOT NULL default '10',
   expand tinyint NOT NULL default '0',
   folder int(11) NOT NULL default '0',
   active tinyint(1) NOT NULL default '0',

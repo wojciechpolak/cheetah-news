@@ -175,6 +175,8 @@
 		 url="http://feeds.feedburner.com/OpticalIllusions"/>
 	<outline text="New Urban Legends" type="link" icon="http://snopes.com/favicon.ico"
 		 url="http://snopes.com/info/whatsnew.xml"/>
+	<outline text="Vimeo Staff Picks" type="link" icon="http://vimeo.com/favicon.ico"
+		 url="http://vimeo.com/channels/staffpicks/videos/rss"/>
 	<outline text="9GAG - What The Fun!" type="link" icon="http://9gag.com/img/favicon.ico"
 		 url="http://feeds2.feedburner.com/9GAG"/>
       </outline>
@@ -286,6 +288,10 @@
 		 url="http://paradowska.blog.polityka.pl/?feed=atom"/>
 	<outline text="Blog Bartka Pogody: Podróże, zdjęcia, reportaże" type="link"
 		 url="http://bartpogoda.net/rss.php"/>
+      </outline>
+      <outline text="Humor">
+	<outline text="bash.org.pl" type="link" icon="http://bash.org.pl/favicon.ico"
+		 url="http://bash.org.pl/rss"/>
       </outline>
     </outline>
 
