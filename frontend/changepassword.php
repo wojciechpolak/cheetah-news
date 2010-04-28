@@ -4,7 +4,7 @@
 
 /*
    Cheetah News changepassword.php
-   Copyright (C) 2005, 2006 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -21,17 +21,18 @@
 */
 
 require_once 'lib/include.php';
+require_once 'lib/d-sigs.php';
 
 start_session (null, true);
 $session->auth ('iflogged');
 
-echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="'.$CHEETAH_LANG.'" lang="'.$CHEETAH_LANG.'">';
+echo '<html xmlns="http://www.w3.org/1999/xhtml">';
 ?>
 <head>
 <title>Cheetah News</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="robots" content="noindex,nofollow" />
-<link rel="stylesheet" href="d?q=css.changepassword" type="text/css" />
+<link rel="stylesheet" href="<?=dsp('css.cswindow')?>" type="text/css" />
 <link rel="icon" href="images/favicon.png" type="image/png" />
 </head>
 <body>

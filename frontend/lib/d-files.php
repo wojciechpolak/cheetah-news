@@ -42,7 +42,7 @@ $files = array ('bt'       => array ('js',  array ('js/v2/i18n.js',
 		'css.login'  => array ('css', array ('css/v2/login.css')),
 		'css.notice' => array ('css', array ('css/v2/notice.css')),
 		'css.signup' => array ('css', array ('css/v2/signup.css')),
-		'css.changepassword' => array ('css', array ('css/v2/changepassword.css')),
+		'css.cswindow' => array ('css', array ('css/v2/cswindow.css')),
 		'dir'        => array ('xml', array ('gen/directory.xml')),
 		'popular'    => array ('xml', array ('gen/popular.xml'))
 		);

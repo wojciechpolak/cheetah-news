@@ -2,7 +2,7 @@
 
 /*
    Cheetah News openid_manage.php
-   Copyright (C) 2008 Wojciech Polak.
+   Copyright (C) 2008, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -19,6 +19,7 @@
 */
 
 require_once 'lib/include.php';
+require_once 'lib/d-sigs.php';
 require_once 'Auth/OpenID/Consumer.php';
 require_once 'Auth/OpenID/FileStore.php';
 require_once 'Auth/OpenID/SReg.php';
@@ -117,12 +118,12 @@ else if (!empty ($remove)) {
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$CHEETAH_LANG?>" lang="<?=$CHEETAH_LANG?>">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Cheetah News</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="robots" content="noindex,nofollow" />
-<link rel="stylesheet" href="d?q=css.changepassword" type="text/css" />
+<link rel="stylesheet" href="<?=dsp('css.cswindow')?>" type="text/css" />
 <link rel="icon" href="images/favicon.png" type="image/png" />
 </head>
 <body>

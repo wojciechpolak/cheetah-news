@@ -19,6 +19,7 @@
 */
 
 require_once 'lib/include.php';
+require_once 'lib/d-sigs.php';
 require_once 'lib/facebook.php';
 
 start_session (null, true);
@@ -90,12 +91,12 @@ if ($auth) {
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:fb="http://www.facebook.com/2008/fbml">
+  xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
 <title>Cheetah News</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="robots" content="noindex,nofollow" />
-<link rel="stylesheet" href="d?q=css.changepassword" type="text/css" />
+<link rel="stylesheet" href="<?=dsp('css.cswindow')?>" type="text/css" />
 <link rel="icon" href="images/favicon.png" type="image/png" />
 </head>
 <body>
