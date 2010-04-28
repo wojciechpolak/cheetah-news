@@ -275,10 +275,9 @@ class Session
     }
     else
     {
-      $user_details = $fb->api_client->users_getInfo ($fb_uid,
-						      array ('email'));
-      if ($user_details && isset ($user_details[0]['email']))
-	$email = $user_details[0]['email'];
+      $me = $fb->api ('/me');
+      if ($me && isset ($me['email']))
+	$email = $me['email'];
       else
 	return _('E-mail address is required.');
 

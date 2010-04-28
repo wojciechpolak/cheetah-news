@@ -4,9 +4,9 @@
 *.so
 .htaccess
 errorlog
-frontend/facebook-platform/
 frontend/lib/config.php
 frontend/lib/d-sigs.php
+frontend/lib/facebook.php
 frontend/trs/*
 gen/popular.xml
 po/*-js.po

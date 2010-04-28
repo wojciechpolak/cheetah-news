@@ -77,18 +77,20 @@ if (isset ($_GET['openid_mode']) && !empty ($_GET['openid_mode']))
 					      $email);
   }
 }
-else if ($fbConnect && isset ($CONF['fb.api_key']) &&
+else if ($fbConnect && isset ($CONF['fb.app_id']) &&
 	 isset ($CONF['fb.secret_key'])) {
-  require 'facebook-platform/facebook.php';
-  $fb = new Facebook ($CONF['fb.api_key'], $CONF['fb.secret_key']);
-  $fb_uid = $fb->get_loggedin_user ();
-  if ($fb_uid) {
-    $insideFB = $fb_sig_in_iframe == '1' ? true : false;
-    $message = $_SESSION['session']->fb_login ($fb, $fb_uid, $insideFB,
-					       $feedurl);
-  }
-  else {
-    $fb->set_user (null, null);
+  require 'lib/facebook.php';
+  $fb = new Facebook (array ('appId'  => $CONF['fb.app_id'],
+			     'secret' => $CONF['fb.secret_key'],
+			     'cookie' => true));
+  $fb_session = $fb->getSession ();
+  if ($fb_session) {
+    $fb_uid = $fb->getUser ();
+    if ($fb_uid) {
+      $insideFB = $fb_sig_in_iframe == '1' ? true : false;
+      $message = $_SESSION['session']->fb_login ($fb, $fb_uid, $insideFB,
+						 $feedurl);
+    }
   }
 }
 else if ($SignIn)
@@ -205,7 +207,7 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml"
     <tr id="trFBConnect">
       <td align="right"><?php echo 'Facebook: '; ?></td>
       <td align="left">
-        <fb:login-button length="long" background="light" size="medium" onlogin="fb_login()"></fb:login-button>
+        <fb:login-button length="long" onlogin="fb_login()" perms="email" />
       </td>
     </tr>
     <tr>
@@ -265,7 +267,7 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml"
         var addthis_logo_background = 'ffffff';
         var addthis_logo_color      = '666699';
         var addthis_brand           = 'Cheetah News';
-        var addthis_options         = 'favorites,email,delicious,twitter,facebook,friendfeed,google,digg,reddit,more';
+        var addthis_options         = 'delicious,twitter,facebook,friendfeed,googlebuzz,google,stumbleupon,digg,reddit,more';
 	</script>
 	<a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', 'http://www.cheetah-news.com/', 'Cheetah News -- Web-based Personal News Aggregator')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="images/share.png" width="83" height="16" alt="Bookmark and Share" style="border-style:none" /></a>
 <?php if (isset ($_SERVER['HTTPS'])) { ?>
@@ -357,13 +359,12 @@ if ($message)
 
 </div>
 
-<?php if (isset ($CONF['fb.api_key'])) { ?>
-<script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php"></script>
+<?php if (isset ($CONF['fb.app_id'])) { ?>
+<div id="fb-root"></div>
+<script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
 <script type="text/javascript">
-FB_RequireFeatures (['XFBML'], function () {
-  FB.init ('<?=$CONF["fb.api_key"]?>', 'xd_receiver.html',
-    {'permsToRequestOnConnect': 'email'});
-});
+  FB.init ({appId: '<?=$CONF['fb.app_id']?>', status: true, cookie: true,
+	    xfbml: true});
 </script>
 <?php } ?>
 

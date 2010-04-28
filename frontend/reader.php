@@ -355,10 +355,11 @@ var SIGS = {'js':'".$SIGS["js"]."', 'tr':'".$SIGS["tr"]."', 'wt':'".
   <hr /><span id="logout" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
 </div>
 
-<?php if (isset ($CONF['fb.api_key'])) { ?>
-<script type="text/javascript">CONF.fb_api_key = '<?=$CONF["fb.api_key"]?>';</script>
+<?php if (isset ($CONF['fb.app_id'])) { ?>
+<script type="text/javascript">CONF.fb_app_id = '<?=$CONF["fb.app_id"]?>';</script>
+<div id="fb-root"></div>
 <div id="fbFanbox" style="display:none">
-  <fb:fan profile_id="<?=$CONF['fb.app_id']?>" stream="0" connections="10" logobar="1" width="500" height="300"></fb:fan>
+  <iframe src="http://www.facebook.com/plugins/fan.php?id=<?=$CONF['fb.app_id']?>&amp;width=500&amp;height=300&amp;connections=10&amp;stream=false&amp;header=false" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:500px; height:300px"></iframe>
 </div>
 <?php } ?>
 

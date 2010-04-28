@@ -18,8 +18,8 @@
    with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-require 'facebook-platform/facebook.php';
 require_once 'lib/include.php';
+require_once 'lib/facebook.php';
 
 start_session (null, true);
 $session->auth ('iflogged');
@@ -37,19 +37,21 @@ if ($session->status['afterlogged'] != 'yes' ||
 else if ($link == '1')
 {
   try {
-    $fb = new Facebook ($CONF['fb.api_key'], $CONF['fb.secret_key']);
-    $fb_user = $fb->get_loggedin_user ();
-    if ($fb_user) {
-      $db = new Database ();
-      $db->query ("UPDATE user SET fbUID=".$fb_user." WHERE id='".
-		  $session->id."'");
-    }
-    else {
-      $fb->set_user (null, null);
+    $fb = new Facebook (array ('appId'  => $CONF['fb.app_id'],
+			       'secret' => $CONF['fb.secret_key'],
+			       'cookie' => true));
+    $fb_session = $fb->getSession ();
+    if ($fb_session) {
+      $fb_uid = $fb->getUser ();
+      if ($fb_uid) {
+	$db = new Database ();
+	$db->query ("UPDATE user SET fbUID=".$fb_uid." WHERE id='".
+		    $session->id."'");
+      }
     }
   }
-  catch (Exception $e) {
-    echo $e->getMessage ();
+  catch (FacebookApiException $e) {
+    error_log ($e);
   }
 }
 else if ($link == '0')
@@ -65,12 +67,22 @@ if ($auth) {
   if ($db->next_record ()) {
     $fbUID = $db->f ('fbUID');
 
-    $fb = new Facebook ($CONF['fb.api_key'], $CONF['fb.secret_key']);
-    $fb_user = $fb->get_loggedin_user ();
-    if ($fb_user) {
-      $ud = $fb->api_client->users_getInfo ($fb_user, array ('profile_url'));
-      if ($ud && isset ($ud[0]['profile_url']))
-	$profile_url = $ud[0]['profile_url'];
+    try {
+      $fb = new Facebook (array ('appId'  => $CONF['fb.app_id'],
+				 'secret' => $CONF['fb.secret_key'],
+				 'cookie' => true));
+      $fb_session = $fb->getSession ();
+      if ($fb_session) {
+	$fb_uid = $fb->getUser ();
+	if ($fb_uid) {
+	  $me = $fb->api ('/me');
+	  if ($me && isset ($me['link']))
+	    $profile_url = $me['link'];
+	}
+      }
+    }
+    catch (FacebookApiException $e) {
+      error_log ($e);
     }
   }
 }
@@ -108,18 +120,17 @@ if ($auth) {
   }
   else {
     echo '<p>Your account is not connected with Facebook</p>'."\n";
-    echo '<p><fb:login-button length="long" background="light" size="medium" onlogin="fb_link()"></fb:login-button></p>'."\n";
+    echo '<p><fb:login-button length="long" onlogin="fb_link()" perms="email" /></p>'."\n";
   }
 ?>
 
-<?php if (isset ($CONF['fb.api_key'])) { ?>
-<script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php"></script>
+<?php if (isset ($CONF['fb.app_id'])) { ?>
+<div id="fb-root"></div>
+<script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
 <script type="text/javascript">
   function fb_link () { window.location = 'fb_connect?link=1'; }
-  FB_RequireFeatures (['XFBML'], function () {
-    FB.init ('<?=$CONF["fb.api_key"]?>', 'xd_receiver.html',
-	     {'permsToRequestOnConnect': 'email'});
-  });
+  FB.init ({appId: '<?=$CONF['fb.app_id']?>', status: true, cookie: true,
+	    xfbml: true});
 </script>
 <?php } }?>
 

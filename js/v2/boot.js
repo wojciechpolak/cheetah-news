@@ -81,8 +81,9 @@ function dsp (res, p) {
 }
 
 function load_fb () {
-  $.getScript ('http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php',
-	       function () { FB.init (CONF.fb_api_key, 'xd_receiver.html'); });
+  $.getScript ('http://connect.facebook.net/en_US/all.js', function () {
+      FB.init ({appId: CONF.fb_app_id, status: true});
+    });
 }
 
 setTimeout (load_fb, 2500);

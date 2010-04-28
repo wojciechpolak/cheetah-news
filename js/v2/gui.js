@@ -347,9 +347,9 @@ function initMenu () {
   setCmhLink (GID ('logout'), function () {
       if (cheetahData.fbUID && typeof FB != 'undefined') {
 	if (confirm (_('Log out also from Facebook?'))) {
-	  FB.Connect.get_status ().waitUntilReady (function (status) {
-	      if (status == FB.ConnectState.connected)
-		FB.Connect.logoutAndRedirect ('logout');
+	  FB.getLoginStatus (function (res) {
+	      if (res.session)
+		FB.logout (function (r) { window.location = 'logout'; });
 	      else
 		window.location = 'logout';
 	    });
