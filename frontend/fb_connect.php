@@ -129,9 +129,8 @@ if ($auth) {
 <div id="fb-root"></div>
 <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
 <script type="text/javascript">
-  function fb_link () { window.location = 'fb_connect?link=1'; }
-  FB.init ({appId: '<?=$CONF['fb.app_id']?>', status: true, cookie: true,
-	    xfbml: true});
+function fb_link () { window.location = 'fb_connect?link=1'; }
+FB.init ({appId: '<?=$CONF['fb.app_id']?>', status: true, cookie: true, xfbml: true});
 </script>
 <?php } }?>
 

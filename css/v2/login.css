@@ -21,7 +21,6 @@ ul, p {
   font-size: 90%;
   text-decoration: underline;
   cursor: pointer;
-  cursor: hand;
 }
 
 .deadlink {
@@ -92,7 +91,6 @@ input.openid_identifier {
   filter: alpha(opacity=85);
   display: none;
 }
-
 #registration table {
   margin-left: auto;
   margin-right: auto;
@@ -113,7 +111,6 @@ input.openid_identifier {
   filter: alpha(opacity=85);
   display: none;
 }
-
 #passwordRecovery table {
   margin-left: auto;
   margin-right: auto;
@@ -161,7 +158,6 @@ input.openid_identifier {
   filter: alpha(opacity=80);
   padding-left: 1px;
 }
-
 #banner a {
   color: white;
   text-decoration: none;

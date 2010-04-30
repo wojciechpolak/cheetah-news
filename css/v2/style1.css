@@ -51,7 +51,6 @@ form {
 
 .pointer {
   cursor: pointer;
-  cursor: hand;
 }
 .ifocus {
   background-color: #fffeba;
@@ -132,9 +131,7 @@ form {
   color: black;
   text-decoration: none;
   cursor: pointer;
-  cursor: hand;
 }
-
 .entryLink:hover {
   color: #641212;
   text-decoration: none;
@@ -150,7 +147,6 @@ form {
   margin-left: 2em;
   margin-right: 2em;
 }
-
 .entryBody h1, .entryBody h2, .entryBody h3 {
   padding: 0;
   margin: 0;
@@ -171,7 +167,6 @@ form {
   color: gray;
   text-decoration: underline;
   cursor: pointer;
-  cursor: hand;
   font-size: 90%;
 }
 .linkMore {
@@ -184,7 +179,6 @@ a.linkMore {
 
 .linkThumbnail {
   cursor: pointer;
-  cursor: hand;
 }
 
 #header {
@@ -207,7 +201,6 @@ a.linkMore {
   margin-left: 2em;
   vertical-align: middle;
   cursor: pointer;
-  cursor: hand;
 }
 
 #weatherContent {
@@ -301,7 +294,6 @@ h4.weatherTemp {
   color: gray;
   text-decoration: underline;
   cursor: pointer;
-  cursor: hand;
   font-size: 90%;
 }
 
@@ -309,7 +301,6 @@ h4.weatherTemp {
   color: black;
   text-decoration: underline;
   cursor: pointer;
-  cursor: hand;
   margin-right: 5px;
 }
 #about:hover {
@@ -328,18 +319,15 @@ h4.weatherTemp {
   -moz-user-select: none;
   -webkit-user-select: none;
 }
-
 .WindowTitleBar table {
   font-family: sans-serif, serif;
   font-size: 100%;
   font-weight: bold;
   color: #feffff;
 }
-
 .WindowTitleBar img {
   border: 1px solid #5a77ab;
 }
-
 .WindowTitleBar img:hover {
   border: 1px solid black;
 }
@@ -352,18 +340,15 @@ h4.weatherTemp {
   -moz-user-select: none;
   -webkit-user-select: none;
 }
-
 .WindowTitleBarInactive table {
   font-family: sans-serif, serif;
   font-size: 100%;
   font-weight: bold;
   color: #feffff;
 }
-
 .WindowTitleBarInactive img {
   border: 1px solid #747474;
 }
-
 .WindowTitleBarInactive img:hover {
   border: 1px solid black;
 }
@@ -415,7 +400,6 @@ h4.weatherTemp {
   color: white;
   text-decoration: underline;
   cursor: pointer;
-  cursor: hand;
   margin-right: 3px;
   padding: 5px;
   padding-left: 10px;
@@ -535,13 +519,11 @@ h4.weatherTemp {
   font-weight: bold;
   color: yellow;
   cursor: pointer;
-  cursor: hand;
 }
 
 .bWindowContent .feedflare {
   display: none;
 }
-
 .bWindowContent .tags a,
 .bWindowContent .meta a {
   color: #5f86b1;
@@ -651,7 +633,6 @@ h4.weatherTemp {
   color: black;
   text-decoration: none;
   cursor: pointer;
-  cursor: hand;
 }
 
 .linkCMH, a.linkCMH {
@@ -661,7 +642,6 @@ h4.weatherTemp {
   background-color: Highlight;
   color: HighlightText;
   cursor: pointer;
-  cursor: hand;
 }
 
 .ilinkCM {
@@ -676,14 +656,12 @@ h4.weatherTemp {
   color: white;
   text-decoration: underline;
   cursor: pointer;
-  cursor: hand;
 }
 
 .link {
   color: #0000f0;
   text-decoration: underline;
   cursor: pointer;
-  cursor: hand;
 }
 
 span.link:hover {
@@ -695,7 +673,6 @@ span.link:hover {
   text-decoration: underline;
   font-weight: bold;
   cursor: pointer;
-  cursor: hand;
 }
 
 .deadlink {
@@ -714,7 +691,6 @@ span.link:hover {
   background-color: #d2d2d2;
   text-decoration: none;
   cursor: pointer;
-  cursor: hand;
   white-space: nowrap;
 }
 
@@ -726,7 +702,6 @@ span.link:hover {
   background-color: #ffffe0;
   text-decoration: none;
   cursor: pointer;
-  cursor: hand;
   white-space: nowrap;
 }
 
@@ -734,7 +709,6 @@ span.link:hover {
   background-color: Highlight;
   color: HighlightText;
   cursor: pointer;
-  cursor: hand;
 }
 
 .folderCollapsed {
@@ -763,7 +737,6 @@ span.link:hover {
   -moz-user-select: none;
   -webkit-user-select: none;
 }
-
 #popularFeeds p {
   line-height: 120%;
   margin-left: 3px;
@@ -773,15 +746,12 @@ span.link:hover {
   padding-top: 2px;
   padding-bottom: 4px;
   cursor: pointer;
-  cursor: hand;
 }
 
 .outlink {
   cursor: pointer;
-  cursor: hand;
   text-decoration: underline;
 }
-
 span.outlink:hover {
   background-color: red;
   color: white;
@@ -913,7 +883,6 @@ span.outlink:hover {
 
 .colorSelection div {
   cursor: pointer;
-  cursor: hand;
   border: 1px solid black;
   width: 15px;
   height: 15px;
@@ -949,7 +918,6 @@ span.outlink:hover {
   -webkit-border-radius: 12px;
   border-radius: 12px;
 }
-
 #filterDialog input {
   font-size: 140%;
   background-color: black;
@@ -970,7 +938,6 @@ span.outlink:hover {
   background-color: black;
   color: yellow;
   cursor: pointer;
-  cursor: hand;
   opacity: 0.80;
   filter: alpha(opacity=80);
   -moz-border-radius: 8px 8px 0 0;

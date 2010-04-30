@@ -132,7 +132,7 @@
 	<outline text="Newsvine Technology" type="link" icon="http://www.newsvine.com/favicon.ico"
 		 url="http://www.newsvine.com/_feeds/rss2/tag?id=technology"/>
 	<outline text="Slashdot" type="link" icon="http://slashdot.org/favicon.ico"
-		 url="http://rss.slashdot.org/Slashdot/slashdot"/>
+		 url="http://rss.slashdot.org/slashdot/classic"/>
 	<outline text="The Register" type="link" icon="http://www.theregister.co.uk/favicon.ico"
 		 url="http://www.theregister.co.uk/headlines.rss"/>
 	<outline text="Wikipedia Featured Articles" type="link" icon="http://www.wikipedia.org/favicon.ico"
