@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cheetah 2.0\n"
 "Report-Msgid-Bugs-To: cheetah-admins@gnu.org.ua\n"
-"POT-Creation-Date: 2010-04-09 18:15+0300\n"
+"POT-Creation-Date: 2010-05-10 20:34+0300\n"
 "PO-Revision-Date: 2009-12-29 23:37+0200\n"
 "Last-Translator: Sergey Poznyakoff <gray@gnu.org.ua>\n"
 "Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
@@ -49,178 +49,169 @@ msgstr ""
 msgid "Your Cheetah account is due to expire"
 msgstr "Термін дії вашого рахунку Cheetah закінчується"
 
-#: frontend/changepassword.php:54 frontend/import.php:30 frontend/mdb.php:35
-#: frontend/openid_manage.php:40 frontend/xnotes.php:34
+#: frontend/changepassword.php:55 frontend/import.php:30 frontend/mdb.php:35
+#: frontend/openid_manage.php:41 frontend/xnotes.php:33
 msgid "You are using a guest account. You must register in order to do this."
 msgstr ""
 "Ви користаєтесь гостьовим рахунком, але для здійснення цієї операції ви "
 "повинні бути зареєстрованим користувачем."
 
-#: frontend/changepassword.php:71 frontend/changepassword.php:110
+#: frontend/changepassword.php:72 frontend/changepassword.php:111
 msgid "Your password has been successfully changed."
 msgstr "Пароль відновлено успішно."
 
-#: frontend/changepassword.php:97 frontend/changepassword.php:118
+#: frontend/changepassword.php:98 frontend/changepassword.php:119
 msgid "Your password recovery session has expired."
 msgstr "Час дійсності сесії відновлення паролю вийшов."
 
-#: frontend/changepassword.php:115
+#: frontend/changepassword.php:116
 #, php-format
 msgid "Account %s doesn't exist."
 msgstr "Рахунок %s не існує."
 
-#: frontend/changepassword.php:126 frontend/changepassword.php:168
-#: frontend/login.php:208 frontend/login.php:283 frontend/login.php:327
-#: frontend/signup.php:223
+#: frontend/changepassword.php:127 frontend/changepassword.php:169
+#: frontend/login.php:227 frontend/login.php:302 frontend/login.php:346
+#: frontend/signup.php:128
 msgid "Sign in"
 msgstr "Вхід"
 
-#: frontend/changepassword.php:130
+#: frontend/changepassword.php:131
 msgid "Set New Password"
 msgstr "Встановлення нового пароля"
 
-#: frontend/changepassword.php:130 frontend/signup.php:152
+#: frontend/changepassword.php:131 frontend/signup.php:102
 msgid "account"
 msgstr "рахунок"
 
-#: frontend/changepassword.php:135
+#: frontend/changepassword.php:136
 msgid "Old password: "
 msgstr "Старий пароль: "
 
-#: frontend/changepassword.php:142
+#: frontend/changepassword.php:143
 msgid "New password: "
 msgstr "Новий пароль: "
 
-#: frontend/changepassword.php:149 frontend/login.php:304
-#: frontend/signup.php:192
+#: frontend/changepassword.php:150 frontend/login.php:323
 msgid "Re-type password: "
 msgstr "Повторіть пароль: "
 
-#: frontend/changepassword.php:154 frontend/login.php:120
-#: frontend/signup.php:199
+#: frontend/changepassword.php:155 frontend/login.php:132
 msgid "Password cannot be an empty string."
 msgstr "Пароль не може бути пустим."
 
-#: frontend/changepassword.php:156 frontend/login.php:124
-#: frontend/signup.php:201
+#: frontend/changepassword.php:157 frontend/login.php:136
 msgid "Passwords do not match."
 msgstr "Паролі не співпадають."
 
-#: frontend/changepassword.php:158
+#: frontend/changepassword.php:159
 msgid "Invalid old password."
 msgstr "Старий пароль невірний."
 
-#: frontend/changepassword.php:162 js/v2/gui.js:956
+#: frontend/changepassword.php:163 js/v2/gui.js:934
 msgid "Change Password"
 msgstr "Змінити пароль"
 
-#: frontend/reader.php:46
+#: frontend/reader.php:55
 msgid "JavaScript is required"
 msgstr "Потрібна підтримка JavaScript"
 
-#: frontend/reader.php:55
+#: frontend/reader.php:64
 msgid "What's New"
 msgstr "Що нового"
 
-#: frontend/reader.php:102 frontend/login.php:227
+#: frontend/reader.php:111 frontend/login.php:246
 msgid "or"
 msgstr "або"
 
-#: frontend/reader.php:159
+#: frontend/reader.php:168
 msgid "Browser preferred language"
 msgstr "Згідно з налаштуваннями переглядача"
 
-#: frontend/reader.php:261
+#: frontend/reader.php:271
 #, php-format
 msgid "Personal News Aggregator %s"
 msgstr "Персональний збірщик новин, версія %s"
 
-#: frontend/reader.php:263 frontend/login.php:237 frontend/signup.php:167
-#: frontend/signup.php:211
+#: frontend/reader.php:273 frontend/login.php:256 frontend/signup.php:117
 msgid "Privacy Policy"
 msgstr "Охорона приватности"
 
-#: frontend/reader.php:264 frontend/login.php:238 frontend/signup.php:168
-#: frontend/signup.php:212
+#: frontend/reader.php:274 frontend/login.php:257 frontend/signup.php:118
 msgid "Terms of Service"
 msgstr "Умови користування послугами"
 
-#: frontend/reader.php:266
+#: frontend/reader.php:276
 msgid "Credits:"
 msgstr "Автори:"
 
-#: frontend/reader.php:268
+#: frontend/reader.php:278
 msgid "main programming and lead developer"
 msgstr "провідний розробник та координатор проекту"
 
-#: frontend/reader.php:269 frontend/reader.php:270
+#: frontend/reader.php:279 frontend/reader.php:280
 msgid "additional programming"
 msgstr "додаткове програмування"
 
-#: frontend/reader.php:271
-msgid "graphics (icons)"
-msgstr "графіка (іконки)"
-
-#: frontend/reader.php:275
+#: frontend/reader.php:284
 msgid "Feedback:"
 msgstr "Відгуки:"
 
-#: frontend/reader.php:279
+#: frontend/reader.php:288
 msgid "-- send us your bug reports and suggestions (public list)."
 msgstr ""
 "-- повідомте нас про помічені помилки та надійшліть Ваші пропозиції "
 "(публічний список розсилки)."
 
-#: frontend/reader.php:281
+#: frontend/reader.php:290
 msgid "-- private list."
 msgstr "-- приватний список розсилки."
 
-#: frontend/fetch.php:244
+#: frontend/fetch.php:262
 msgid "Broken XML feed. Verify "
 msgstr "Неправильний канал XML. Перевірте "
 
-#: frontend/fetch.php:267
+#: frontend/fetch.php:285
 msgid "The requested URL was not found on this server"
 msgstr "Бажаний URL не знайдено на цьому сервері"
 
-#: frontend/fetch.php:273 frontend/lib/feed.class.php:202
+#: frontend/fetch.php:291 frontend/lib/feed.class.php:205
 msgid "Request timed out"
 msgstr "Вичерпано час дійсности запиту"
 
-#: frontend/fetch.php:276
+#: frontend/fetch.php:294
 msgid "Connection timed out"
 msgstr "Вичерпано час встановлення з'єднання"
 
-#: frontend/fetch.php:279
+#: frontend/fetch.php:297
 msgid "Connection refused"
 msgstr "Відмова у з'єднанні"
 
-#: frontend/fetch.php:282
+#: frontend/fetch.php:300
 msgid "Host is down"
 msgstr "Машіна не відповідає"
 
-#: frontend/fetch.php:285
+#: frontend/fetch.php:303
 msgid "No route to host"
 msgstr "Не знайдено шлях до вузла"
 
-#: frontend/fetch.php:288
+#: frontend/fetch.php:306
 msgid "Internal server error on remote host"
 msgstr "Внутрішня помилка сервера на віддаленій машині"
 
-#: frontend/fetch.php:291 frontend/lib/feed.class.php:205
+#: frontend/fetch.php:309 frontend/lib/feed.class.php:208
 msgid "Network is unreachable"
 msgstr "Мережа недоступна"
 
-#: frontend/fetch.php:294 js/v2/core.js:1166
+#: frontend/fetch.php:312 js/v2/core.js:1178
 msgid "Unknown error"
 msgstr "Невідома помилка"
 
-#: frontend/fetch.php:299
+#: frontend/fetch.php:317
 msgid "Bad feedId"
 msgstr "Недійсний feedId"
 
-#: frontend/fetch.php:304 frontend/import.php:68 frontend/mdb.php:84
-#: frontend/xnotes.php:53
+#: frontend/fetch.php:322 frontend/import.php:68 frontend/mdb.php:84
+#: frontend/xnotes.php:52
 msgid "Operation not permitted. Access denied"
 msgstr "Операція заборонена. Відмова у доступі"
 
@@ -248,128 +239,125 @@ msgstr "Файл завантажений не повністю"
 msgid "No file was uploaded"
 msgstr "Не завантажений жоден файл"
 
-#: frontend/login.php:67 frontend/openid_manage.php:53
+#: frontend/login.php:63 frontend/openid_manage.php:54
 msgid "Verification cancelled."
 msgstr "Перевірку скасовано."
 
-#: frontend/login.php:70 frontend/openid_manage.php:56
+#: frontend/login.php:66 frontend/openid_manage.php:57
 #, php-format
 msgid "OpenID authentication failed: %s"
 msgstr "Авторизація OpenID не вдалася: %s"
 
-#: frontend/login.php:90
+#: frontend/login.php:102
 msgid "E-mail and password do not match."
 msgstr "Адреса електронної пошти або пароль не є дійсними."
 
-#: frontend/login.php:98
+#: frontend/login.php:110
 msgid "E-mail has been sent to you."
 msgstr "Пароль висланий на вашу адресу електронної пошти."
 
-#: frontend/login.php:101 frontend/login.php:116 frontend/login.php:134
-#: frontend/signup.php:55
+#: frontend/login.php:113 frontend/login.php:128 frontend/login.php:146
 msgid "Please specify a valid e-mail address."
 msgstr "Вкажіть, будь-ласка, дійсну адресу електронної пошти."
 
-#: frontend/login.php:105 frontend/login.php:138 frontend/signup.php:59
+#: frontend/login.php:117 frontend/login.php:150
 msgid "Service temporarily unavailable. Please try again later."
 msgstr "Сервіс тимчасово недоступний. Спробуйте, будь-ласка, пізніше."
 
-#: frontend/login.php:109
+#: frontend/login.php:121
 msgid "Account doesn't exist."
 msgstr "Рахунок не існує."
 
-#: frontend/login.php:131 frontend/signup.php:51
+#: frontend/login.php:143
 msgid "A registration confirmation e-mail has been sent to you."
 msgstr "Пароль висланий на вашу адресу електронної пошти."
 
-#: frontend/login.php:142 frontend/signup.php:63 frontend/signup.php:92
+#: frontend/login.php:154 frontend/signup.php:48
 msgid "Account already exists."
 msgstr "Рахунок вже існує."
 
-#: frontend/login.php:161
+#: frontend/login.php:174
 msgid "Welcome to Cheetah News"
 msgstr "Ласкаво просимо до системи новин Cheetah"
 
-#: frontend/login.php:178 frontend/login.php:269 frontend/login.php:294
-#: frontend/signup.php:183
+#: frontend/login.php:191 frontend/login.php:288 frontend/login.php:313
 msgid "E-mail: "
 msgstr "Адреса електронної пошти:"
 
-#: frontend/login.php:184 frontend/login.php:300 frontend/signup.php:188
+#: frontend/login.php:197 frontend/login.php:319
 msgid "Password: "
 msgstr "Пароль: "
 
-#: frontend/login.php:188
+#: frontend/login.php:201
 msgid "OpenID: "
 msgstr "OpenID: "
 
-#: frontend/login.php:197
+#: frontend/login.php:216
 msgid "Use OpenID"
 msgstr "Скористатися OpenIDом"
 
-#: frontend/login.php:198
+#: frontend/login.php:217
 msgid "Use username / password"
 msgstr "Ім'я користувача / пароль"
 
-#: frontend/login.php:203
+#: frontend/login.php:222
 msgid "Remember me on this computer."
 msgstr "Запам'ятати мене на цій машині"
 
-#: frontend/login.php:209
+#: frontend/login.php:228
 msgid "About SSL"
 msgstr "Про SSL"
 
-#: frontend/login.php:215
+#: frontend/login.php:234
 msgid "Forgot your password?"
 msgstr "Забув пароль?"
 
-#: frontend/login.php:220
+#: frontend/login.php:239
 msgid "What is OpenID?"
 msgstr "Що таке OpenID?"
 
-#: frontend/login.php:225
+#: frontend/login.php:244
 msgid "Don't have an account?"
 msgstr "Не маєш рахунка?"
 
-#: frontend/login.php:226 frontend/login.php:309 frontend/signup.php:179
-#: frontend/signup.php:205
+#: frontend/login.php:245 frontend/login.php:328
 msgid "Sign Up"
 msgstr "Реєстрація"
 
-#: frontend/login.php:228
+#: frontend/login.php:247
 msgid "Guest login"
 msgstr "Гостьовий доступ"
 
-#: frontend/login.php:233
+#: frontend/login.php:252
 msgid "Learn more"
 msgstr "Більше даних"
 
-#: frontend/login.php:267
+#: frontend/login.php:286
 msgid "Password Recovery"
 msgstr "Відновлення паролю"
 
-#: frontend/login.php:277
+#: frontend/login.php:296
 msgid "Submit"
 msgstr "Відіслати"
 
-#: frontend/login.php:292
+#: frontend/login.php:311
 msgid "Registration Process"
 msgstr "Реєстрація"
 
-#: frontend/login.php:314 frontend/signup.php:210
+#: frontend/login.php:333
 msgid "I already have an account"
 msgstr "Я вже маю рахунок"
 
-#: frontend/login.php:322
+#: frontend/login.php:341
 #, php-format
 msgid "Bleeding-Edge Personal News Aggregator %s"
 msgstr "Найновішій персональний збірщик новин, версія %s"
 
-#: frontend/login.php:332
+#: frontend/login.php:351
 msgid "[External link] Help Save the Wild Cheetah"
 msgstr "[Зовнішнє посилання] Врятуємо дикого гепарда"
 
-#: frontend/login.php:333
+#: frontend/login.php:352
 msgid "Help Save the Wild Cheetah"
 msgstr "Врятуємо дикого гепарда"
 
@@ -385,7 +373,7 @@ msgstr ""
 msgid "This folder already exists."
 msgstr "Ця тека вже існує."
 
-#: frontend/mdb.php:189 frontend/lib/feed.class.php:294
+#: frontend/mdb.php:189 frontend/lib/feed.class.php:296
 msgid "Unknown error."
 msgstr "Невідома помилка."
 
@@ -393,52 +381,52 @@ msgstr "Невідома помилка."
 msgid "Nameless"
 msgstr "Без назви"
 
-#: frontend/openid_manage.php:69 frontend/openid_manage.php:108
+#: frontend/openid_manage.php:70 frontend/openid_manage.php:109
 msgid "This OpenID is already attached."
 msgstr "Цей OpenID вже долучено."
 
-#: frontend/openid_manage.php:74
+#: frontend/openid_manage.php:75
 msgid "Your OpenID has been successfully attached."
 msgstr "Ваш OpenID долучено успішно."
 
-#: frontend/openid_manage.php:88
+#: frontend/openid_manage.php:89
 msgid "OpenID authentication failed."
 msgstr "Авторизація OpenID не вдалася."
 
-#: frontend/openid_manage.php:150 js/v2/gui.js:954
+#: frontend/openid_manage.php:151 js/v2/gui.js:930
 msgid "Manage your OpenIDs"
 msgstr "Керування вашими OpenID-ами"
 
-#: frontend/openid_manage.php:160
+#: frontend/openid_manage.php:161
 msgid "Are you sure you want to detach this OpenID?"
 msgstr "Ви впевнені, що хочете вилучити цей OpenID?"
 
-#: frontend/openid_manage.php:162 js/v2/gui.js:1324 js/v2/gui.js:1357
+#: frontend/openid_manage.php:163 js/v2/gui.js:1302 js/v2/gui.js:1335
 #: js/v2/notes.js:292
 msgid "Remove"
 msgstr "Видалити"
 
-#: frontend/openid_manage.php:173
+#: frontend/openid_manage.php:174
 msgid "Attach new OpenID"
 msgstr "Долучити новий OpenID"
 
-#: frontend/signup.php:67 frontend/signup.php:134
-msgid "Your confirmation period or invitation has expired."
-msgstr "Час дійсності запрошення вийшов."
-
-#: frontend/signup.php:124
+#: frontend/signup.php:77
 msgid "Done, rejected."
 msgstr "Запит відкинутою"
 
-#: frontend/signup.php:152
+#: frontend/signup.php:84
+msgid "Your confirmation period or invitation has expired."
+msgstr "Час дійсності запрошення вийшов."
+
+#: frontend/signup.php:102
 msgid "Do you confirm signing up?"
 msgstr "Ви підтверджуєте реєстрацію?"
 
-#: frontend/signup.php:158
+#: frontend/signup.php:108
 msgid "Yes, I confirm"
 msgstr "Так, підтверджую"
 
-#: frontend/signup.php:161
+#: frontend/signup.php:111
 msgid "No, I decline"
 msgstr "Ні, я відмовляюся"
 
@@ -472,40 +460,40 @@ msgstr ""
 "Будь-ласка, не відповідайте на це повідомлення. Якщо Вам потрібна\n"
 "допомога, надійшліть листа за адресою %s."
 
-#: frontend/lib/feed.class.php:72 frontend/lib/feed.class.php:88
-#: frontend/lib/feed.class.php:149
+#: frontend/lib/feed.class.php:71 frontend/lib/feed.class.php:91
+#: frontend/lib/feed.class.php:152
 msgid "XML Syntax Error. Verify the given URL"
 msgstr "Помилка синтаксису XML. Перевірте вказаний URL"
 
-#: frontend/lib/feed.class.php:152
+#: frontend/lib/feed.class.php:155
 msgid "This is not a valid XML resource"
 msgstr "Цей ресурс XML не є дійсним"
 
-#: frontend/lib/feed.class.php:164 frontend/lib/feed.class.php:169
+#: frontend/lib/feed.class.php:167 frontend/lib/feed.class.php:172
 msgid "This is not a valid feed"
 msgstr "Цей канал не є дійсним"
 
-#: frontend/lib/feed.class.php:187
+#: frontend/lib/feed.class.php:190
 msgid "Unauthorized"
 msgstr "Відмовлено у доступі"
 
-#: frontend/lib/feed.class.php:190
+#: frontend/lib/feed.class.php:193
 msgid "Forbidden"
 msgstr "Заборонено"
 
-#: frontend/lib/feed.class.php:193
+#: frontend/lib/feed.class.php:196
 msgid "Resource Not Found"
 msgstr "Ресурс не знайдений"
 
-#: frontend/lib/feed.class.php:196
+#: frontend/lib/feed.class.php:199
 msgid "Internal Server Error"
 msgstr "Внутрішня помилка сервера"
 
-#: frontend/lib/feed.class.php:199
+#: frontend/lib/feed.class.php:202
 msgid "Service Unavailable"
 msgstr "Служба недоступна"
 
-#: frontend/lib/feed.class.php:231
+#: frontend/lib/feed.class.php:234
 msgid "You are already subscribed to this feed"
 msgstr "Ви вже підписалися на цей канал"
 
@@ -534,9 +522,9 @@ msgstr ""
 msgid "Error %s: %s"
 msgstr "Помилка %s: %s"
 
-#: frontend/html/loading.php:50 js/v2/core.js:2411 js/v2/gui.js:60
-#: js/v2/gui.js:571 js/v2/gui.js:725 js/v2/gui.js:775 js/v2/notes.js:317
-#: js/v2/opml.js:33 js/v2/opml.js:130 js/v2/weather.js:236
+#: frontend/html/loading.php:43 js/v2/core.js:2428 js/v2/gui.js:52
+#: js/v2/gui.js:574 js/v2/gui.js:728 js/v2/gui.js:778 js/v2/notes.js:317
+#: js/v2/opml.js:33 js/v2/opml.js:130 js/v2/weather.js:239
 msgid "Loading..."
 msgstr "Завантаження..."
 
@@ -582,103 +570,103 @@ msgstr ""
 "Пробачте, ваш переглядач наразі не підтримується системою Cheetah News "
 "Aggregator."
 
-#: frontend/help/kshortcuts.php:57 js/v2/gui.js:1524
+#: frontend/help/kshortcuts.php:56 js/v2/gui.js:1502
 msgid "Keyboard shortcuts"
 msgstr "Комбінації клавіш"
 
-#: frontend/help/kshortcuts.php:61
+#: frontend/help/kshortcuts.php:60
 msgid "Keystroke"
 msgstr "Клавіша"
 
-#: frontend/help/kshortcuts.php:61
+#: frontend/help/kshortcuts.php:60
 msgid "Action"
 msgstr "Дія"
 
-#: frontend/help/kshortcuts.php:65 js/v2/gui.js:1525
+#: frontend/help/kshortcuts.php:64 js/v2/gui.js:1503
 msgid "next item"
 msgstr "наступний елемент"
 
-#: frontend/help/kshortcuts.php:66 js/v2/gui.js:1526
+#: frontend/help/kshortcuts.php:65 js/v2/gui.js:1504
 msgid "previous item"
 msgstr "попередній елемент"
 
-#: frontend/help/kshortcuts.php:67 js/v2/gui.js:1527
+#: frontend/help/kshortcuts.php:66 js/v2/gui.js:1505
 msgid "next feed"
 msgstr "наступний канал"
 
-#: frontend/help/kshortcuts.php:68 js/v2/gui.js:1528
+#: frontend/help/kshortcuts.php:67 js/v2/gui.js:1506
 msgid "previous feed"
 msgstr "попередній канал"
 
-#: frontend/help/kshortcuts.php:69 js/v2/gui.js:1529
+#: frontend/help/kshortcuts.php:68 js/v2/gui.js:1507
 msgid "open selected feed/entry"
 msgstr "Відкрити вибраний канал/повідомлення"
 
-#: frontend/help/kshortcuts.php:70
+#: frontend/help/kshortcuts.php:69
 msgid "append selected feed"
 msgstr "додати вибраний канал/повідомлення"
 
-#: frontend/help/kshortcuts.php:71 js/v2/gui.js:1530
+#: frontend/help/kshortcuts.php:70 js/v2/gui.js:1508
 msgid "open feeds from folder/more"
 msgstr "відкрити канали з цієї теки/більше"
 
-#: frontend/help/kshortcuts.php:72
+#: frontend/help/kshortcuts.php:71
 msgid "append feeds from folder"
 msgstr "додати канали з цієї теки"
 
-#: frontend/help/kshortcuts.php:73
+#: frontend/help/kshortcuts.php:72
 msgid "close selected feed"
 msgstr "закрити вибраний канал"
 
-#: frontend/help/kshortcuts.php:74
+#: frontend/help/kshortcuts.php:73
 msgid "move left to My Stuff window"
 msgstr "перейти вліво, у вікно \"Мої канали\""
 
-#: frontend/help/kshortcuts.php:75
+#: frontend/help/kshortcuts.php:74
 msgid "move right to a feed window"
 msgstr "перейти вправо, у вікно каналу"
 
-#: frontend/help/kshortcuts.php:76
+#: frontend/help/kshortcuts.php:75
 msgid "hide/show all active feeds"
 msgstr "сховати/показати усі активні канали"
 
-#: frontend/help/kshortcuts.php:77
+#: frontend/help/kshortcuts.php:76
 msgid "show all loaded feeds"
 msgstr "показати усі завантажені канали"
 
-#: frontend/help/kshortcuts.php:78
+#: frontend/help/kshortcuts.php:77
 msgid "open/close My Stuff window"
 msgstr "відкрити/закрити вікно \"Мої канали\""
 
-#: frontend/help/kshortcuts.php:79 js/v2/gui.js:1539
+#: frontend/help/kshortcuts.php:78 js/v2/gui.js:1517
 msgid "collapse"
 msgstr "згорнути"
 
-#: frontend/help/kshortcuts.php:80 js/v2/gui.js:94 js/v2/gui.js:1540
+#: frontend/help/kshortcuts.php:79 js/v2/gui.js:86 js/v2/gui.js:1518
 msgid "refresh visible"
 msgstr "оновити видимі"
 
-#: frontend/help/kshortcuts.php:81 js/v2/gui.js:1542
+#: frontend/help/kshortcuts.php:80 js/v2/gui.js:1520
 msgid "mark entry as read"
 msgstr "помітити цю статтю як прочитану"
 
-#: frontend/help/kshortcuts.php:82 js/v2/gui.js:1543
+#: frontend/help/kshortcuts.php:81 js/v2/gui.js:1521
 msgid "mark entry as unread"
 msgstr "помітити цю статтю як непрочитану"
 
-#: frontend/help/kshortcuts.php:83 js/v2/gui.js:96 js/v2/gui.js:1545
+#: frontend/help/kshortcuts.php:82 js/v2/gui.js:88 js/v2/gui.js:1523
 msgid "filter visible"
 msgstr "фільтрувати видимі"
 
-#: frontend/help/kshortcuts.php:84 js/v2/gui.js:1537 js/v2/notes.js:69
+#: frontend/help/kshortcuts.php:83 js/v2/gui.js:1515 js/v2/notes.js:69
 msgid "save link"
 msgstr "зберегти посилання"
 
-#: frontend/help/kshortcuts.php:85
+#: frontend/help/kshortcuts.php:84
 msgid "open/close Weather Report"
 msgstr "відчинити/зачинити прогноз погоди"
 
-#: frontend/help/kshortcuts.php:86
+#: frontend/help/kshortcuts.php:85
 msgid "open/close Notes and Bookmarks"
 msgstr "відчинити/зачинити нотатки та закладки"
 
@@ -686,41 +674,41 @@ msgstr "відчинити/зачинити нотатки та закладки
 msgid "initializing..."
 msgstr "ініціалізація..."
 
-#: js/v2/core.js:287
+#: js/v2/core.js:288
 msgid "Your browser is working offline!"
 msgstr "Твій переглядач від'єднаний від мережі!"
 
-#: js/v2/core.js:305
+#: js/v2/core.js:306
 msgid "You need to enable active scripting and ActiveX controls."
 msgstr "Треба увімкнути підтримку active scripting та ActiveX"
 
-#: js/v2/core.js:314 js/v2/gui.js:482 js/v2/gui.js:707 js/v2/gui.js:762
-#: js/v2/gui.js:794
+#: js/v2/core.js:315 js/v2/gui.js:485 js/v2/gui.js:710 js/v2/gui.js:765
+#: js/v2/gui.js:797
 msgid "Timeout Error!"
 msgstr "Час очікування вийшов!"
 
-#: js/v2/core.js:336 js/v2/core.js:348 js/v2/core.js:391 js/v2/core.js:555
-#: js/v2/core.js:591 js/v2/notes.js:485
+#: js/v2/core.js:337 js/v2/core.js:349 js/v2/core.js:392 js/v2/core.js:555
+#: js/v2/core.js:592 js/v2/notes.js:485
 msgid "error"
 msgstr "помилка"
 
-#: js/v2/core.js:572 js/v2/core.js:666
+#: js/v2/core.js:573 js/v2/core.js:667
 msgid "Subscribe"
 msgstr "Підписатися"
 
-#: js/v2/core.js:577 js/v2/core.js:671
+#: js/v2/core.js:578 js/v2/core.js:672
 msgid "You are not subscribed to this feed."
 msgstr "Ви не підписалися на цей канал"
 
-#: js/v2/core.js:772 js/v2/gui.js:195
+#: js/v2/core.js:779 js/v2/gui.js:184
 msgid "fetching data..."
 msgstr "достачання даних..."
 
-#: js/v2/core.js:814
+#: js/v2/core.js:821
 msgid "Open feeds from this folder"
 msgstr "Відкрити канали з цієї теки"
 
-#: js/v2/core.js:993
+#: js/v2/core.js:1000
 msgid ""
 "No subscriptions yet?! Add new subscriptions or import them by visiting Menu/"
 "Add New Feed."
@@ -728,85 +716,90 @@ msgstr ""
 "Нічого не читаєш? Додай нові підписки або імпортуй їх через Меню/Додання "
 "нового каналу"
 
-#: js/v2/core.js:1001
+#: js/v2/core.js:1008 js/v2/gui.js:118
+#, fuzzy
+msgid "Facebook News Feed"
+msgstr "Додання нового каналу"
+
+#: js/v2/core.js:1009
 msgid "Feed Preview"
 msgstr "Перегляд каналу"
 
-#: js/v2/core.js:1022
+#: js/v2/core.js:1030
 msgid "weather"
 msgstr "погода"
 
-#: js/v2/core.js:1024
+#: js/v2/core.js:1032
 msgid "notes"
 msgstr "замітки"
 
-#: js/v2/core.js:1052
+#: js/v2/core.js:1060
 msgid "loading..."
 msgstr "Завантаження..."
 
-#: js/v2/core.js:1269 js/v2/gui.js:959
+#: js/v2/core.js:1281 js/v2/gui.js:937
 msgid "stories"
 msgstr "статті"
 
-#: js/v2/core.js:1273 js/v2/gui.js:109
+#: js/v2/core.js:1285 js/v2/gui.js:101
 msgid "Expand"
 msgstr "Розширити"
 
-#: js/v2/core.js:1275
+#: js/v2/core.js:1287
 msgid "Expand entries"
 msgstr "Розгорнути статті"
 
-#: js/v2/core.js:1281 js/v2/gui.js:115
+#: js/v2/core.js:1293 js/v2/gui.js:107
 msgid "Collapse"
 msgstr "Згорнути"
 
-#: js/v2/core.js:1282
+#: js/v2/core.js:1294
 msgid "Collapse entries"
 msgstr "Згорнути статті"
 
-#: js/v2/core.js:1294
+#: js/v2/core.js:1306
 msgid "Mark as read"
 msgstr "Помітити як прочитані"
 
-#: js/v2/core.js:1295
+#: js/v2/core.js:1307
 msgid "Mark all entries as read"
 msgstr "Помітити всі записи як прочитані"
 
-#: js/v2/core.js:1302
+#: js/v2/core.js:1314
 msgid "Mark as unread"
 msgstr "Помітити як непрочитані"
 
-#: js/v2/core.js:1303
+#: js/v2/core.js:1315
 msgid "Mark all entries as unread"
 msgstr "Почітити всі записи як непрочитані"
 
-#: js/v2/core.js:1371 js/v2/core.js:1385 js/v2/core.js:1394
-#: js/v2/weather.js:306
+#: js/v2/core.js:1383 js/v2/core.js:1397 js/v2/core.js:1406
+#: js/v2/weather.js:309
 msgid "External link"
 msgstr "Зовнішнє посилання"
 
-#: js/v2/core.js:1384 js/v2/core.js:1393 js/v2/gui.js:1551
-#: js/v2/weather.js:305
+#: js/v2/core.js:1396 js/v2/core.js:1405 js/v2/gui.js:1529 js/v2/social.js:189
+#: js/v2/weather.js:308
 msgid "more"
 msgstr "читай далі"
 
-#: js/v2/core.js:1401
+#: js/v2/core.js:1413
 msgid "See enclosed multimedia"
 msgstr "Див. долучені мультимедійні дані"
 
-#: js/v2/core.js:1412 js/v2/core.js:1578
+#: js/v2/core.js:1424 js/v2/core.js:1590
 msgid "See enclosed image"
 msgstr "Див. долучене зображення"
 
-#: js/v2/core.js:1671
+#: js/v2/core.js:1687
 msgid "Feed Preview: %s"
 msgstr "Перегляд каналу: %s"
 
-#: js/v2/core.js:1746
+#: js/v2/core.js:1762
 msgid "progress"
 msgstr "поступ"
 
-#: js/v2/core.js:1797
+#: js/v2/core.js:1813
 msgid ""
 "You don't have any active feeds. Active feeds are automatically loaded at "
 "startup. You can set them in Menu/Manage Subscriptions."
@@ -814,16 +807,16 @@ msgstr ""
 "Немає активних каналів. Активні канали автоматично завантажуються на старті. "
 "Їх можна встановити через Меню/Керування підпискою."
 
-#: js/v2/core.js:2212
+#: js/v2/core.js:2229
 msgid "A popup blocker may be preventing Cheetah News from opening the page."
 msgstr ""
 "Увімкнене блокування виринаючих вікон може заважати відкриттю цієї сторінки."
 
-#: js/v2/core.js:2213
+#: js/v2/core.js:2230
 msgid "If you have a popup blocker, try disabling it to open the window."
 msgstr "Спробуйте вимкнути блокування щоб відкрити сторінку."
 
-#: js/v2/core.js:2511
+#: js/v2/core.js:2571
 msgid "Sorry, but this operation is not supported by your browser."
 msgstr "Пробачте, ваш переглядач не підтримує цієї операції."
 
@@ -854,140 +847,148 @@ msgstr "Відмінити фільтрування"
 msgid "Remove filtering from all feeds"
 msgstr "Відмінити фільтрування усіх каналів"
 
-#: js/v2/gui.js:54
+#: js/v2/gui.js:47
 msgid "My Stuff"
 msgstr "Мої канали"
 
-#: js/v2/gui.js:79
+#: js/v2/gui.js:71
 msgid "About"
 msgstr "Про нас"
 
-#: js/v2/gui.js:86
+#: js/v2/gui.js:78
 msgid "Welcome"
 msgstr "Ласкаво просимо,"
 
-#: js/v2/gui.js:87 js/v2/gui.js:860
+#: js/v2/gui.js:79 js/v2/gui.js:863
 msgid "About Cheetah News"
 msgstr "Про систему новин Cheetah"
 
-#: js/v2/gui.js:88
+#: js/v2/gui.js:80
 msgid "show active"
 msgstr "показати активні"
 
-#: js/v2/gui.js:88
+#: js/v2/gui.js:80
 msgid "Show all active feeds"
 msgstr "Показати всі активні канали"
 
-#: js/v2/gui.js:89
+#: js/v2/gui.js:81
 msgid "show loaded"
 msgstr "показати завантажені"
 
-#: js/v2/gui.js:89
+#: js/v2/gui.js:81
 msgid "Show all loaded feeds"
 msgstr "Показати всі завантажені канали"
 
-#: js/v2/gui.js:90
+#: js/v2/gui.js:82
 msgid "hide all"
 msgstr "сховати всі"
 
-#: js/v2/gui.js:90
+#: js/v2/gui.js:82
 msgid "Hide all feeds"
 msgstr "Сховати всі канали"
 
-#: js/v2/gui.js:94
+#: js/v2/gui.js:86
 msgid "Refresh all visible feeds"
 msgstr "Оновити всі видимі канали"
 
-#: js/v2/gui.js:96
+#: js/v2/gui.js:88
 msgid "Filter visible feeds"
 msgstr "Фільтрувати всі видимі канали"
 
-#: js/v2/gui.js:110
+#: js/v2/gui.js:102
 msgid "Expand folders"
 msgstr "Розгорнути теки"
 
-#: js/v2/gui.js:116
+#: js/v2/gui.js:108
 msgid "Collapse folders"
 msgstr "Згорнути теки"
 
-#: js/v2/gui.js:121
+#: js/v2/gui.js:113
 msgid "Show My Stuff"
 msgstr "Показати мої канали"
 
-#: js/v2/gui.js:122 js/v2/gui.js:947
+#: js/v2/gui.js:114 js/v2/gui.js:923
 msgid "Add New Feed"
 msgstr "Додання нового каналу"
 
-#: js/v2/gui.js:123 js/v2/gui.js:948
+#: js/v2/gui.js:115 js/v2/gui.js:924
 msgid "Manage Subscriptions"
 msgstr "Керування підпискою"
 
-#: js/v2/gui.js:124 js/v2/gui.js:949
+#: js/v2/gui.js:116 js/v2/gui.js:925
 msgid "Manage Folders"
 msgstr "Керування теками"
 
-#: js/v2/gui.js:125 js/v2/gui.js:950
+#: js/v2/gui.js:117 js/v2/gui.js:926
 msgid "User Settings"
 msgstr "Налаштування користувача"
 
-#: js/v2/gui.js:127
+#: js/v2/gui.js:119
+msgid "Facebook Fanbox"
+msgstr ""
+
+#: js/v2/gui.js:120
 msgid "Logout"
 msgstr "Вихід"
 
-#: js/v2/gui.js:165 js/v2/gui.js:185
+#: js/v2/gui.js:154 js/v2/gui.js:174
 msgid "Close Window"
 msgstr "Закрити вікно"
 
-#: js/v2/gui.js:182
+#: js/v2/gui.js:171
 msgid "Reload this feed"
 msgstr "Перезавантажити цю подачу"
 
-#: js/v2/gui.js:289 js/v2/gui.js:1073
+#: js/v2/gui.js:278 js/v2/gui.js:1051
 msgid "Root folder"
 msgstr "Головна тека"
 
-#: js/v2/gui.js:353
+#: js/v2/gui.js:342
 msgid "Menu"
 msgstr "Меню"
 
-#: js/v2/gui.js:354
+#: js/v2/gui.js:343
 msgid "menu"
 msgstr "меню"
 
-#: js/v2/gui.js:463 js/v2/gui.js:520
+#: js/v2/gui.js:352
+msgid "Log out also from Facebook?"
+msgstr ""
+
+#: js/v2/gui.js:466 js/v2/gui.js:523
 msgid "Invalid URL"
 msgstr "URL не є дійсний"
 
-#: js/v2/gui.js:478
+#: js/v2/gui.js:481
 msgid "Validating URL..."
 msgstr "Перевірка правильності URL..."
 
-#: js/v2/gui.js:496 js/v2/gui.js:569 js/v2/gui.js:605 js/v2/gui.js:727
-#: js/v2/gui.js:777 js/v2/weather.js:389
+#: js/v2/gui.js:499 js/v2/gui.js:572 js/v2/gui.js:608 js/v2/gui.js:730
+#: js/v2/gui.js:780 js/v2/weather.js:392
 msgid "OK"
 msgstr "Гаразд"
 
-#: js/v2/gui.js:532
+#: js/v2/gui.js:535
 msgid "Add feed by URL"
 msgstr "Додайте канал через URL"
 
-#: js/v2/gui.js:538 js/v2/gui.js:951
+#: js/v2/gui.js:541 js/v2/gui.js:927
 msgid "Import an OPML file"
 msgstr "Імпортуйте файл OPML"
 
-#: js/v2/gui.js:545
+#: js/v2/gui.js:548
 msgid "Importing file..."
 msgstr "Імпортування файлу..."
 
-#: js/v2/gui.js:586
+#: js/v2/gui.js:589
 msgid "Invalid folder name"
 msgstr "Недійсна назва теки"
 
-#: js/v2/gui.js:592
+#: js/v2/gui.js:595
 msgid "Adding folder..."
 msgstr "Додання теки..."
 
-#: js/v2/gui.js:688
+#: js/v2/gui.js:691
 msgid ""
 "You have checked more than %d active feed.\n"
 "This might slow down the startup process.\n"
@@ -1009,27 +1010,27 @@ msgstr[2] ""
 "Це може сповільнити запуск системи.\n"
 "Бажаєте продовжити?"
 
-#: js/v2/gui.js:903
+#: js/v2/gui.js:879
 msgid "Settings"
 msgstr "Налаштування"
 
-#: js/v2/gui.js:906 js/v2/notes.js:41 js/v2/weather.js:87
+#: js/v2/gui.js:882 js/v2/notes.js:41 js/v2/weather.js:87
 msgid "&laquo; return to reader"
 msgstr "&laquo; закрити вікно"
 
-#: js/v2/gui.js:909 js/v2/notes.js:44 js/v2/weather.js:82
+#: js/v2/gui.js:885 js/v2/notes.js:44 js/v2/weather.js:82
 msgid "Close"
 msgstr "Закрити"
 
-#: js/v2/gui.js:913
+#: js/v2/gui.js:889
 msgid "Save changes"
 msgstr "Зберегти зміни"
 
-#: js/v2/gui.js:915 js/v2/notes.js:55 js/v2/weather.js:117
+#: js/v2/gui.js:891 js/v2/notes.js:55 js/v2/weather.js:117
 msgid "Cancel"
 msgstr "Відмінити"
 
-#: js/v2/gui.js:922
+#: js/v2/gui.js:898
 msgid ""
 "Open a specific feed by entering the URL below (Autodiscovery supported) or "
 "enter a search term."
@@ -1037,127 +1038,131 @@ msgstr ""
 "Впишіть URL бажаного каналу RSS, RDF або ATOM (підтримується автоматичне "
 "викриття), або введіть рядок для пошуку."
 
-#: js/v2/gui.js:923
+#: js/v2/gui.js:899
 msgid "Import your subscriptions from an OPML file."
 msgstr "Імпортування підписки з файлу OPML."
 
-#: js/v2/gui.js:924
+#: js/v2/gui.js:900
 msgid "Refresh rate (active feeds)"
 msgstr "Інтервал оновлення (активні канали)"
 
-#: js/v2/gui.js:925
+#: js/v2/gui.js:901
 msgid "Show active feeds on startup"
 msgstr "Показати усі активні канали після запуску"
 
-#: js/v2/gui.js:926
+#: js/v2/gui.js:902
 msgid "Oldest entries first"
 msgstr "Показувати першими найстаріші елементи"
 
-#: js/v2/gui.js:927
+#: js/v2/gui.js:903
 msgid "Add new folder."
 msgstr "Додати нову теку."
 
-#: js/v2/gui.js:928
+#: js/v2/gui.js:904
 msgid "Display language:"
 msgstr "Мова інтерфейсу:"
 
-#: js/v2/gui.js:929
+#: js/v2/gui.js:905
 msgid "System:"
 msgstr "Система:"
 
-#: js/v2/gui.js:930
+#: js/v2/gui.js:906
 msgid "Goodies:"
 msgstr "Додатки:"
 
-#: js/v2/gui.js:939 js/v2/opml.js:108
+#: js/v2/gui.js:915 js/v2/opml.js:108
 msgid "open"
 msgstr "відкрити"
 
-#: js/v2/gui.js:942
+#: js/v2/gui.js:918
 msgid "Import"
 msgstr "Імпортувати"
 
-#: js/v2/gui.js:944
+#: js/v2/gui.js:920
 msgid "add"
 msgstr "Додати"
 
-#: js/v2/gui.js:952
+#: js/v2/gui.js:928
 msgid "Register Cheetah News as feed handler in your browser"
 msgstr "Зареєструвати в переглядачі обробку каналів за допомогою Cheetah News"
 
-#: js/v2/gui.js:960
+#: js/v2/gui.js:932
+msgid "Link your Facebook account"
+msgstr ""
+
+#: js/v2/gui.js:938
 msgid "expand"
 msgstr "розширені"
 
-#: js/v2/gui.js:961
+#: js/v2/gui.js:939
 msgid "active"
 msgstr "активні"
 
-#: js/v2/gui.js:962
+#: js/v2/gui.js:940
 msgid "minutes"
 msgstr "(хвилини)"
 
-#: js/v2/gui.js:971
+#: js/v2/gui.js:949
 msgid "Close without saving?"
 msgstr "Вихід без запису змін?"
 
-#: js/v2/gui.js:1024
+#: js/v2/gui.js:1002
 msgid "Switch without saving?"
 msgstr "Переключити без запису змін?"
 
-#: js/v2/gui.js:1077
+#: js/v2/gui.js:1055
 msgid "Select folder"
 msgstr "Вибір теки"
 
-#: js/v2/gui.js:1084
+#: js/v2/gui.js:1062
 msgid "Export selected folder"
 msgstr "Експортувати вибрану теку"
 
-#: js/v2/gui.js:1085
+#: js/v2/gui.js:1063
 msgid "Export feeds from selected folder to OPML"
 msgstr "Експортувати до OPML канали з вибраної теки"
 
-#: js/v2/gui.js:1092
+#: js/v2/gui.js:1070
 msgid "Export all feeds"
 msgstr "Експортувати всі канали"
 
-#: js/v2/gui.js:1093
+#: js/v2/gui.js:1071
 msgid "Export all feeds to OPML"
 msgstr "Експортувати всі канали до OPML"
 
-#: js/v2/gui.js:1312 js/v2/gui.js:1349
+#: js/v2/gui.js:1290 js/v2/gui.js:1327
 msgid "Move up"
 msgstr "Перенести вверх"
 
-#: js/v2/gui.js:1316 js/v2/gui.js:1353
+#: js/v2/gui.js:1294 js/v2/gui.js:1331
 msgid "Move down"
 msgstr "Перенести вниз"
 
-#: js/v2/gui.js:1320
+#: js/v2/gui.js:1298
 msgid "Move to other folder"
 msgstr "Перенести до іншої теки"
 
-#: js/v2/gui.js:1531
+#: js/v2/gui.js:1509
 msgid "close feed"
 msgstr "закрити канал"
 
-#: js/v2/gui.js:1532
+#: js/v2/gui.js:1510
 msgid "left"
 msgstr "в ліво"
 
-#: js/v2/gui.js:1533
+#: js/v2/gui.js:1511
 msgid "right"
 msgstr "вправо"
 
-#: js/v2/gui.js:1534
+#: js/v2/gui.js:1512
 msgid "hide/show all active"
 msgstr "сховати/показати усі активні"
 
-#: js/v2/gui.js:1535
+#: js/v2/gui.js:1513
 msgid "show all loaded"
 msgstr "показати усі завантажені"
 
-#: js/v2/gui.js:1538
+#: js/v2/gui.js:1516
 msgid "my stuff"
 msgstr "мої канали"
 
@@ -1327,7 +1332,7 @@ msgstr ""
 "Слідкуй за новинами від твоїх друзів та родини. Введи ім'я користувача ш "
 "вибери сервіс:"
 
-#: js/v2/opml.js:207
+#: js/v2/opml.js:205
 msgid "Open \"%s\""
 msgstr "Відкрити \"%s\""
 
@@ -1338,6 +1343,13 @@ msgstr "Поділитися"
 #: js/v2/share.js:33
 msgid "Share this entry"
 msgstr "Поділитися цим записом зі знайомими"
+
+#: js/v2/social.js:167
+msgid "%d person like this"
+msgid_plural "%d people like this"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: js/v2/translate.js:35
 msgid "translate"
@@ -1399,7 +1411,7 @@ msgstr "на китайську"
 msgid "Not available"
 msgstr "недоступний"
 
-#: js/v2/weather.js:33 js/v2/weather.js:185
+#: js/v2/weather.js:33 js/v2/weather.js:188
 msgid "Weather Report"
 msgstr "Прогноз погоди"
 
@@ -1439,507 +1451,510 @@ msgstr "Зберегти"
 msgid "Delete"
 msgstr "Усунути"
 
-#: js/v2/weather.js:280
+#: js/v2/weather.js:283
 msgid "Wrong location or data temporarily unavailable."
 msgstr "Невідома місцевість або данні тимчасово недоступні."
 
-#: js/v2/weather.js:282
+#: js/v2/weather.js:285
 msgid "edit"
 msgstr "редагувати"
 
-#: js/v2/weather.js:283
+#: js/v2/weather.js:286
 msgid "Edit this location"
 msgstr "Редагувати дані про місцевість"
 
-#: js/v2/weather.js:297
+#: js/v2/weather.js:300
 msgid "Tomorrow's weather forecast"
 msgstr "Погода на завтра"
 
-#: js/v2/weather.js:324
+#: js/v2/weather.js:327
 msgid "Editing location"
 msgstr "Редагування місцевості"
 
-#: js/v2/weather.js:332
+#: js/v2/weather.js:335
 msgid "Add new location."
 msgstr "Додати нову місцевість."
 
-#: js/v2/weather.js:359
+#: js/v2/weather.js:362
 msgid "Invalid location ID"
 msgstr "Недійсний ідентифікатор місцевості"
 
-#: js/v2/weather.js:371
+#: js/v2/weather.js:374
 msgid "Saving location..."
 msgstr "Збереження даних про місцевість..."
 
-#: js/v2/weather.js:410
+#: js/v2/weather.js:413
 msgid "Are you sure you want to delete this location?"
 msgstr "Ви впевнені, що бажаєте скасувати цю місцевість?"
 
-#: js/v2/weather.js:414
+#: js/v2/weather.js:417
 msgid "Deleting..."
 msgstr "Усування..."
 
 #. TRANSLATORS: BEGIN JS 
-#: js/v2/weather.js:421
+#: js/v2/weather.js:424
 msgid "Location"
 msgstr "Місцевість"
 
-#: js/v2/weather.js:421
+#: js/v2/weather.js:424
 msgid "Forecast"
 msgstr "Прогноз"
 
-#: js/v2/weather.js:421
+#: js/v2/weather.js:424
 msgid "Now"
 msgstr "Нині"
 
-#: js/v2/weather.js:421
+#: js/v2/weather.js:424
 msgid "Today"
 msgstr "Сьогодні"
 
-#: js/v2/weather.js:421
+#: js/v2/weather.js:424
 msgid "Tomorrow"
 msgstr "Завтра"
 
-#: js/v2/weather.js:421
+#: js/v2/weather.js:424
 msgid "Feels like"
 msgstr "Відчувана темп."
 
-#: js/v2/weather.js:422
+#: js/v2/weather.js:425
 msgid "Wind"
 msgstr "Вітер"
 
-#: js/v2/weather.js:422
+#: js/v2/weather.js:425
 msgid "Humidity"
 msgstr "Вологість"
 
-#: js/v2/weather.js:422
+#: js/v2/weather.js:425
 msgid "Pressure"
 msgstr "Тиск"
 
-#: js/v2/weather.js:422
+#: js/v2/weather.js:425
 msgid "Sunrise"
 msgstr "Схід"
 
-#: js/v2/weather.js:422
+#: js/v2/weather.js:425
 msgid "Sunset"
 msgstr "Захід"
 
-#: js/v2/weather.js:423
+#: js/v2/weather.js:426
 msgid "Temp"
 msgstr "Темп."
 
-#: js/v2/weather.js:423
+#: js/v2/weather.js:426
 msgid "High"
 msgstr "Верхня"
 
-#: js/v2/weather.js:423
+#: js/v2/weather.js:426
 msgid "Low"
 msgstr "Нижня"
 
-#: js/v2/weather.js:423
+#: js/v2/weather.js:426
 msgid "Sun"
 msgstr "Ндл"
 
-#: js/v2/weather.js:423
+#: js/v2/weather.js:426
 msgid "Mon"
 msgstr "Пнд"
 
-#: js/v2/weather.js:423
+#: js/v2/weather.js:426
 msgid "Tue"
 msgstr "Втр"
 
-#: js/v2/weather.js:423
+#: js/v2/weather.js:426
 msgid "Wed"
 msgstr "Срд"
 
-#: js/v2/weather.js:424
+#: js/v2/weather.js:427
 msgid "Thu"
 msgstr "Чтв"
 
-#: js/v2/weather.js:424
+#: js/v2/weather.js:427
 msgid "Fri"
 msgstr "Птн"
 
-#: js/v2/weather.js:424
+#: js/v2/weather.js:427
 msgid "Sat"
 msgstr "Сбт"
 
-#: js/v2/weather.js:424
+#: js/v2/weather.js:427
 msgid "kph"
 msgstr "км/г"
 
-#: js/v2/weather.js:424
+#: js/v2/weather.js:427
 msgid "mb"
 msgstr "мБар"
 
-#: js/v2/weather.js:424
+#: js/v2/weather.js:427
 msgid "Windy"
 msgstr "Вітряно"
 
-#: js/v2/weather.js:425
+#: js/v2/weather.js:428
 msgid "Mist"
 msgstr "Туман"
 
-#: js/v2/weather.js:425
+#: js/v2/weather.js:428
 msgid "Fair"
 msgstr "Переважно ясно"
 
-#: js/v2/weather.js:425
+#: js/v2/weather.js:428
 msgid "Clear"
 msgstr "Ясно"
 
-#: js/v2/weather.js:425
+#: js/v2/weather.js:428
 msgid "Mostly Clear"
 msgstr "Переважно ясно"
 
-#: js/v2/weather.js:425
+#: js/v2/weather.js:428
 msgid "Mostly Cloudy"
 msgstr "Переважно хмарно"
 
-#: js/v2/weather.js:426
+#: js/v2/weather.js:429
 msgid "Partly Cloudy"
 msgstr "Частково хмарно"
 
-#: js/v2/weather.js:426
+#: js/v2/weather.js:429
 msgid "Cloudy"
 msgstr "Хмарно"
 
-#: js/v2/weather.js:426
+#: js/v2/weather.js:429
 msgid "Mostly Sunny"
 msgstr "Переважно сонячно"
 
-#: js/v2/weather.js:426
+#: js/v2/weather.js:429
 msgid "Sunny"
 msgstr "Сонячно"
 
-#: js/v2/weather.js:427
+#: js/v2/weather.js:430
 msgid "Rain"
 msgstr "Дощ"
 
-#: js/v2/weather.js:427
+#: js/v2/weather.js:430
 msgid "Light Rain"
 msgstr "Незначні опади"
 
-#: js/v2/weather.js:427
+#: js/v2/weather.js:430
 msgid "Freezing Rain"
 msgstr "Замерзаючий дощ"
 
-#: js/v2/weather.js:427
+#: js/v2/weather.js:430
 msgid "Heavy Rain"
 msgstr "Рясний дощ"
 
-#: js/v2/weather.js:427
+#: js/v2/weather.js:430
 msgid "Snow"
 msgstr "Сніг"
 
-#: js/v2/weather.js:428
+#: js/v2/weather.js:431
 msgid "Light Snow"
 msgstr "Незначні опади снігу"
 
-#: js/v2/weather.js:428
+#: js/v2/weather.js:431
 msgid "AM Light Snow"
 msgstr "Вранці незначні опади снігу"
 
-#: js/v2/weather.js:428
+#: js/v2/weather.js:431
 msgid "PM Light Snow"
 msgstr "Удень незначні опади снігу"
 
-#: js/v2/weather.js:428
+#: js/v2/weather.js:431
 msgid "Snow Showers"
 msgstr "Опади снігу"
 
-#: js/v2/weather.js:429
+#: js/v2/weather.js:432
 msgid "AM Snow"
 msgstr "Вранці сніг"
 
-#: js/v2/weather.js:429
+#: js/v2/weather.js:432
 msgid "PM Snow"
 msgstr "Удень сніг"
 
-#: js/v2/weather.js:429
+#: js/v2/weather.js:432
 msgid "AM Snow Showers"
 msgstr "Вранці сильні опади снігу"
 
-#: js/v2/weather.js:429
+#: js/v2/weather.js:432
 msgid "PM Snow Showers"
 msgstr "Удень сильні опади снігу"
 
-#: js/v2/weather.js:430
+#: js/v2/weather.js:433
 msgid "Scattered Snow Showers"
 msgstr "Окремі опади снігу"
 
-#: js/v2/weather.js:430
+#: js/v2/weather.js:433
 msgid "Flurries"
 msgstr "Дощ з поривами вітру"
 
-#: js/v2/weather.js:430
+#: js/v2/weather.js:433
 msgid "Drizzle"
 msgstr "Мряка"
 
-#: js/v2/weather.js:430
+#: js/v2/weather.js:433
 msgid "Freezing Drizzle"
 msgstr "Замерзаючий дощ"
 
-#: js/v2/weather.js:431
+#: js/v2/weather.js:434
 msgid "Haze"
 msgstr "Димка"
 
-#: js/v2/weather.js:431
+#: js/v2/weather.js:434
 msgid "Showers"
 msgstr "Зливи"
 
-#: js/v2/weather.js:431
+#: js/v2/weather.js:434
 msgid "AM Showers"
 msgstr "Поранні зливи"
 
-#: js/v2/weather.js:431
+#: js/v2/weather.js:434
 msgid "PM Showers"
 msgstr "Післяполудневі зливи"
 
-#: js/v2/weather.js:432
+#: js/v2/weather.js:435
 msgid "Showers Early"
 msgstr "Зливи рано в ранці"
 
-#: js/v2/weather.js:432
+#: js/v2/weather.js:435
 msgid "Showers Late"
 msgstr "Зливи пізно в вечорі"
 
-#: js/v2/weather.js:432
+#: js/v2/weather.js:435
 msgid "Few Showers"
 msgstr "Незначні опади"
 
-#: js/v2/weather.js:432
+#: js/v2/weather.js:435
 msgid "Heavy Snow"
 msgstr "Рясний сніг"
 
-#: js/v2/weather.js:433
+#: js/v2/weather.js:436
 msgid "Fog"
 msgstr "Туман"
 
-#: js/v2/weather.js:433
+#: js/v2/weather.js:436
 msgid "Fog Early"
 msgstr "Туман рано в ранці"
 
-#: js/v2/weather.js:433
+#: js/v2/weather.js:436
 msgid "Fog Late"
 msgstr "Туман увечері"
 
-#: js/v2/weather.js:433
+#: js/v2/weather.js:436
 msgid "Foggy"
 msgstr "Туман"
 
-#: js/v2/weather.js:433
+#: js/v2/weather.js:436
 msgid "AM Clouds"
 msgstr "Вранці хмарно"
 
-#: js/v2/weather.js:433
+#: js/v2/weather.js:436
 msgid "PM Sun"
 msgstr "Вдень сонячно"
 
-#: js/v2/weather.js:434
+#: js/v2/weather.js:437
 msgid "Thunder"
 msgstr "Гроза"
 
-#: js/v2/weather.js:434
+#: js/v2/weather.js:437
 msgid "Thunderstorms"
 msgstr "Грози"
 
-#: js/v2/weather.js:434
+#: js/v2/weather.js:437
 msgid "Isolated Thunderstorms"
 msgstr "Окремі грози"
 
-#: js/v2/weather.js:434
+#: js/v2/weather.js:437
 msgid "AM Fog"
 msgstr "Вранці туман"
 
-#: js/v2/weather.js:435
+#: js/v2/weather.js:438
 msgid "AM Drizzle"
 msgstr "Вранці мряка"
 
-#: js/v2/weather.js:435
+#: js/v2/weather.js:438
 msgid "AM Light Rain"
 msgstr "Вранці незначні опади"
 
-#: js/v2/weather.js:435
+#: js/v2/weather.js:438
 msgid "PM Light Rain"
 msgstr "Вдень незначні опади"
 
-#: js/v2/weather.js:435
+#: js/v2/weather.js:438
 msgid "PM Clouds"
 msgstr "Вдень хмарно"
 
-#: js/v2/weather.js:436
+#: js/v2/weather.js:439
 msgid "Light Rain Early"
 msgstr "Рано вранці незначні опади"
 
-#: js/v2/weather.js:436
+#: js/v2/weather.js:439
 msgid "Snow Showers Late"
 msgstr "Увечері сильні опади снігу"
 
-#: js/v2/weather.js:436
+#: js/v2/weather.js:439
 msgid "Few Snow Showers"
 msgstr "Невеликі опади снігу"
 
-#: js/v2/weather.js:437
+#: js/v2/weather.js:440
 msgid "Snow to Wintry Mix"
 msgstr "Сніг або дощ зі снігом"
 
-#: js/v2/weather.js:437
+#: js/v2/weather.js:440
 msgid "Wintry Mix"
 msgstr "Дощ зі снігом"
 
-#: js/v2/weather.js:437
+#: js/v2/weather.js:440
 msgid "Thundershowers"
 msgstr "Грозові бурі"
 
-#: js/v2/weather.js:437
+#: js/v2/weather.js:440
 msgid "Rain to Snow"
 msgstr "Дощ або сніг"
 
-#: js/v2/weather.js:438
+#: js/v2/weather.js:441
 msgid "Clouds Early"
 msgstr "Вранці хмарно"
 
-#: js/v2/weather.js:438
+#: js/v2/weather.js:441
 msgid "Clouds Late"
 msgstr "Увечері хмарно"
 
-#: js/v2/weather.js:438
+#: js/v2/weather.js:441
 msgid "Clearing Late"
 msgstr "Увечері прояснення"
 
-#: js/v2/weather.js:438
+#: js/v2/weather.js:441
 msgid "AM Ice"
 msgstr "Вранці ожеледиця"
 
-#: js/v2/weather.js:439
+#: js/v2/weather.js:442
 msgid "Sleet"
 msgstr "Дощ зі снігом"
 
-#: js/v2/weather.js:439
+#: js/v2/weather.js:442
 msgid "Scattered Flurries"
 msgstr "Окремі дощі з поривами вітру"
 
-#: js/v2/weather.js:439
+#: js/v2/weather.js:442
 msgid "Snow Showers Early"
 msgstr "Рано вранці сильний сніг"
 
-#: js/v2/weather.js:439
+#: js/v2/weather.js:442
 msgid "Light Snow Late"
 msgstr "Увечері незначні опади снігу"
 
-#: js/v2/weather.js:440
+#: js/v2/weather.js:443
 msgid "Snow Early"
 msgstr "Сніг рано в ранці"
 
-#: js/v2/weather.js:440
+#: js/v2/weather.js:443
 msgid "Snow Late"
 msgstr "Сніг пізно ввечері"
 
-#: js/v2/weather.js:440
+#: js/v2/weather.js:443
 msgid "Wind Early"
 msgstr "Вранці вітряно"
 
-#: js/v2/weather.js:440
+#: js/v2/weather.js:443
 msgid "AM Rain"
 msgstr "Дощ уранці"
 
-#: js/v2/weather.js:440
+#: js/v2/weather.js:443
 msgid "PM Rain"
 msgstr "Дощ удень"
 
-#: js/v2/weather.js:441
+#: js/v2/weather.js:444
 msgid "PM Fog"
 msgstr "Туман опівдні"
 
-#: js/v2/weather.js:441
+#: js/v2/weather.js:444
 msgid "Drizzle Early"
 msgstr "Мряка вранці"
 
-#: js/v2/weather.js:441
+#: js/v2/weather.js:444
 msgid "Drizzle Late"
 msgstr "Мряка увечері"
 
-#: js/v2/weather.js:441
+#: js/v2/weather.js:444
 msgid "PM Drizzle"
 msgstr "Мряка опівдні"
 
-#: js/v2/weather.js:442
+#: js/v2/weather.js:445
 msgid "Light Rain Late"
 msgstr "Незначні опади ввечері"
 
-#: js/v2/weather.js:442
+#: js/v2/weather.js:445
 msgid "Wind Late"
 msgstr "Вітер увечері"
 
-#: js/v2/weather.js:442
+#: js/v2/weather.js:445
 msgid "Scattered Strong Storms"
 msgstr "Окремі сильні бурі"
 
-#: js/v2/weather.js:442
+#: js/v2/weather.js:445
 msgid "Strong Storms"
 msgstr "Сильні бурі"
 
-#: js/v2/weather.js:443
+#: js/v2/weather.js:446
 msgid "AM Light Wintry Mix"
 msgstr "Дощ зі снігом уранці"
 
-#: js/v2/weather.js:443
+#: js/v2/weather.js:446
 msgid "PM Light Wintry Mix"
 msgstr "Дощ зі снігом увечері"
 
-#: js/v2/weather.js:443
+#: js/v2/weather.js:446
 msgid "Light Wintry Mix"
 msgstr "Невеликий дощ зі снігом"
 
-#: js/v2/weather.js:444
+#: js/v2/weather.js:447
 msgid "AM Thunderstorms"
 msgstr "Грози вранці"
 
-#: js/v2/weather.js:444
+#: js/v2/weather.js:447
 msgid "PM Thunderstorms"
 msgstr "Грози ввечері"
 
-#: js/v2/weather.js:444
+#: js/v2/weather.js:447
 msgid "Thunderstorms Late"
 msgstr "Грози пізно ввечері"
 
-#: js/v2/weather.js:444
+#: js/v2/weather.js:447
 msgid "Rain Early"
 msgstr "Вранці дощ"
 
-#: js/v2/weather.js:445
+#: js/v2/weather.js:448
 msgid "Thunderstorms Early"
 msgstr "Грози вранці"
 
-#: js/v2/weather.js:445
+#: js/v2/weather.js:448
 msgid "AM Thundershowers"
 msgstr "Грозові бурі вранці"
 
-#: js/v2/weather.js:445
+#: js/v2/weather.js:448
 msgid "PM Thundershowers"
 msgstr "Грозові бурі опівдні"
 
-#: js/v2/weather.js:446
+#: js/v2/weather.js:449
 msgid "Thundershowers Early"
 msgstr "Грозові бурі рано вранці"
 
-#: js/v2/weather.js:446
+#: js/v2/weather.js:449
 msgid "Thundershowers Late"
 msgstr "Грозові бурі пізно ввечері"
 
-#: js/v2/weather.js:446
+#: js/v2/weather.js:449
 msgid "Rain Late"
 msgstr "Сніг пізно ввечері"
 
-#: js/v2/weather.js:446
+#: js/v2/weather.js:449
 msgid "Ice to Rain"
 msgstr "Холодний дощ"
 
 #. TRANSLATORS: END JS 
-#: js/v2/weather.js:448
+#: js/v2/weather.js:451
 msgid "Scattered Thunderstorms"
 msgstr "Грози"
+
+#~ msgid "graphics (icons)"
+#~ msgstr "графіка (іконки)"
 
 #~ msgid "You have been invited to open Cheetah News Aggregator account"
 #~ msgstr "Запрошення до системи збору повідомлень Cheetah"

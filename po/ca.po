@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cheetah 2.0\n"
 "Report-Msgid-Bugs-To: cheetah-admins@gnu.org.ua\n"
-"POT-Creation-Date: 2010-04-09 18:15+0300\n"
+"POT-Creation-Date: 2010-05-10 20:34+0300\n"
 "PO-Revision-Date: 2009-12-29 23:09+0200\n"
 "Last-Translator: Sergey Poznyakoff <gray@gnu.org>\n"
 "Language-Team: Catalan <ca@dodds.net>\n"
@@ -48,176 +48,167 @@ msgstr "Si tens preguntes, no dubtis a enviar-nos-les a <~A>."
 msgid "Your Cheetah account is due to expire"
 msgstr "El teu compte Cheetah està per expirar"
 
-#: frontend/changepassword.php:54 frontend/import.php:30 frontend/mdb.php:35
-#: frontend/openid_manage.php:40 frontend/xnotes.php:34
+#: frontend/changepassword.php:55 frontend/import.php:30 frontend/mdb.php:35
+#: frontend/openid_manage.php:41 frontend/xnotes.php:33
 msgid "You are using a guest account. You must register in order to do this."
 msgstr ""
 "Utilitzeu un compte del visitante. Per a executar aquesta operació heu "
 "d'estar un usuari registrat."
 
-#: frontend/changepassword.php:71 frontend/changepassword.php:110
+#: frontend/changepassword.php:72 frontend/changepassword.php:111
 msgid "Your password has been successfully changed."
 msgstr "La teua contrasenya ha estat canviada con èxit."
 
-#: frontend/changepassword.php:97 frontend/changepassword.php:118
+#: frontend/changepassword.php:98 frontend/changepassword.php:119
 msgid "Your password recovery session has expired."
 msgstr "La teua sessió de recuperació de la contrasenya ha caducat"
 
-#: frontend/changepassword.php:115
+#: frontend/changepassword.php:116
 #, php-format
 msgid "Account %s doesn't exist."
 msgstr "El compte «%s» no existeix."
 
-#: frontend/changepassword.php:126 frontend/changepassword.php:168
-#: frontend/login.php:208 frontend/login.php:283 frontend/login.php:327
-#: frontend/signup.php:223
+#: frontend/changepassword.php:127 frontend/changepassword.php:169
+#: frontend/login.php:227 frontend/login.php:302 frontend/login.php:346
+#: frontend/signup.php:128
 msgid "Sign in"
 msgstr "Entrar"
 
-#: frontend/changepassword.php:130
+#: frontend/changepassword.php:131
 msgid "Set New Password"
 msgstr "Establiu la nova contrasenya"
 
-#: frontend/changepassword.php:130 frontend/signup.php:152
+#: frontend/changepassword.php:131 frontend/signup.php:102
 msgid "account"
 msgstr "compte"
 
-#: frontend/changepassword.php:135
+#: frontend/changepassword.php:136
 msgid "Old password: "
 msgstr "Contrasenya antiga: "
 
-#: frontend/changepassword.php:142
+#: frontend/changepassword.php:143
 msgid "New password: "
 msgstr "Contrasenya nova: "
 
-#: frontend/changepassword.php:149 frontend/login.php:304
-#: frontend/signup.php:192
+#: frontend/changepassword.php:150 frontend/login.php:323
 msgid "Re-type password: "
 msgstr "Re-escriviu la contrasenya: "
 
-#: frontend/changepassword.php:154 frontend/login.php:120
-#: frontend/signup.php:199
+#: frontend/changepassword.php:155 frontend/login.php:132
 msgid "Password cannot be an empty string."
 msgstr "La contrasenya no pot ser buit."
 
-#: frontend/changepassword.php:156 frontend/login.php:124
-#: frontend/signup.php:201
+#: frontend/changepassword.php:157 frontend/login.php:136
 msgid "Passwords do not match."
 msgstr "Les contrasenyes no concorden."
 
-#: frontend/changepassword.php:158
+#: frontend/changepassword.php:159
 msgid "Invalid old password."
 msgstr "Contrasenya antiga no vàlida"
 
-#: frontend/changepassword.php:162 js/v2/gui.js:956
+#: frontend/changepassword.php:163 js/v2/gui.js:934
 msgid "Change Password"
 msgstr "Canviar contrasenya"
 
-#: frontend/reader.php:46
+#: frontend/reader.php:55
 msgid "JavaScript is required"
 msgstr "Es requereix JavaScript"
 
-#: frontend/reader.php:55
+#: frontend/reader.php:64
 msgid "What's New"
 msgstr "Què novetats"
 
-#: frontend/reader.php:102 frontend/login.php:227
+#: frontend/reader.php:111 frontend/login.php:246
 msgid "or"
 msgstr "o"
 
-#: frontend/reader.php:159
+#: frontend/reader.php:168
 msgid "Browser preferred language"
 msgstr "Idioma preferit del navegador"
 
-#: frontend/reader.php:261
+#: frontend/reader.php:271
 #, php-format
 msgid "Personal News Aggregator %s"
 msgstr "Agregador de notícies personal %s"
 
-#: frontend/reader.php:263 frontend/login.php:237 frontend/signup.php:167
-#: frontend/signup.php:211
+#: frontend/reader.php:273 frontend/login.php:256 frontend/signup.php:117
 msgid "Privacy Policy"
 msgstr "Política de privadesa"
 
-#: frontend/reader.php:264 frontend/login.php:238 frontend/signup.php:168
-#: frontend/signup.php:212
+#: frontend/reader.php:274 frontend/login.php:257 frontend/signup.php:118
 msgid "Terms of Service"
 msgstr "Condiciones de servicio"
 
-#: frontend/reader.php:266
+#: frontend/reader.php:276
 msgid "Credits:"
 msgstr "Crèdits:"
 
-#: frontend/reader.php:268
+#: frontend/reader.php:278
 msgid "main programming and lead developer"
 msgstr "programació principal i coordinació del projecto"
 
-#: frontend/reader.php:269 frontend/reader.php:270
+#: frontend/reader.php:279 frontend/reader.php:280
 msgid "additional programming"
 msgstr "programació addicional"
 
-#: frontend/reader.php:271
-msgid "graphics (icons)"
-msgstr "gràfica (icones)"
-
-#: frontend/reader.php:275
+#: frontend/reader.php:284
 msgid "Feedback:"
 msgstr "Re-alimentació:"
 
-#: frontend/reader.php:279
+#: frontend/reader.php:288
 msgid "-- send us your bug reports and suggestions (public list)."
 msgstr "-- envieu-nos informes d'error i suggeriments (llista pública)."
 
-#: frontend/reader.php:281
+#: frontend/reader.php:290
 msgid "-- private list."
 msgstr "-- llista privada."
 
-#: frontend/fetch.php:244
+#: frontend/fetch.php:262
 msgid "Broken XML feed. Verify "
 msgstr "La alimentació XML no és vàlida. Verifiqueu "
 
-#: frontend/fetch.php:267
+#: frontend/fetch.php:285
 msgid "The requested URL was not found on this server"
 msgstr "La URL requerida no s'ha trobat en aquest servidor"
 
-#: frontend/fetch.php:273 frontend/lib/feed.class.php:202
+#: frontend/fetch.php:291 frontend/lib/feed.class.php:205
 msgid "Request timed out"
 msgstr "Petició ha caducat"
 
-#: frontend/fetch.php:276
+#: frontend/fetch.php:294
 msgid "Connection timed out"
 msgstr "La connexió ha excedit el temps de resposta"
 
-#: frontend/fetch.php:279
+#: frontend/fetch.php:297
 msgid "Connection refused"
 msgstr "Connexió refusada"
 
-#: frontend/fetch.php:282
+#: frontend/fetch.php:300
 msgid "Host is down"
 msgstr "El sistema està fora de servei"
 
-#: frontend/fetch.php:285
+#: frontend/fetch.php:303
 msgid "No route to host"
 msgstr "No hi ha ruta cap a la màquina"
 
-#: frontend/fetch.php:288
+#: frontend/fetch.php:306
 msgid "Internal server error on remote host"
 msgstr "Error intern de servidor remot"
 
-#: frontend/fetch.php:291 frontend/lib/feed.class.php:205
+#: frontend/fetch.php:309 frontend/lib/feed.class.php:208
 msgid "Network is unreachable"
 msgstr "Xarxa no accessible"
 
-#: frontend/fetch.php:294 js/v2/core.js:1166
+#: frontend/fetch.php:312 js/v2/core.js:1178
 msgid "Unknown error"
 msgstr "Error desconegut"
 
-#: frontend/fetch.php:299
+#: frontend/fetch.php:317
 msgid "Bad feedId"
 msgstr "feedId no vàlid"
 
-#: frontend/fetch.php:304 frontend/import.php:68 frontend/mdb.php:84
-#: frontend/xnotes.php:53
+#: frontend/fetch.php:322 frontend/import.php:68 frontend/mdb.php:84
+#: frontend/xnotes.php:52
 msgid "Operation not permitted. Access denied"
 msgstr "Operació no permesa. S'ha denegat l'accés"
 
@@ -245,130 +236,127 @@ msgstr "El fitxer ha estat carregat parcialment"
 msgid "No file was uploaded"
 msgstr "No s'ha carregat cap fitxer"
 
-#: frontend/login.php:67 frontend/openid_manage.php:53
+#: frontend/login.php:63 frontend/openid_manage.php:54
 msgid "Verification cancelled."
 msgstr "Verificació ha estat cancel·lada."
 
-#: frontend/login.php:70 frontend/openid_manage.php:56
+#: frontend/login.php:66 frontend/openid_manage.php:57
 #, php-format
 msgid "OpenID authentication failed: %s"
 msgstr "Autenticació OpenID ha fallat: %s"
 
-#: frontend/login.php:90
+#: frontend/login.php:102
 msgid "E-mail and password do not match."
 msgstr "Adreça de correu i la contrasenya no concorden."
 
-#: frontend/login.php:98
+#: frontend/login.php:110
 msgid "E-mail has been sent to you."
 msgstr "Un correu-e li ha estat enviat."
 
-#: frontend/login.php:101 frontend/login.php:116 frontend/login.php:134
-#: frontend/signup.php:55
+#: frontend/login.php:113 frontend/login.php:128 frontend/login.php:146
 msgid "Please specify a valid e-mail address."
 msgstr "Per favor, introduïu una adreça de correu vàlida: "
 
-#: frontend/login.php:105 frontend/login.php:138 frontend/signup.php:59
+#: frontend/login.php:117 frontend/login.php:150
 msgid "Service temporarily unavailable. Please try again later."
 msgstr ""
 "El recurs no està disponible temporalment. Per favor, intenteu-ho de nou més "
 "endavant."
 
-#: frontend/login.php:109
+#: frontend/login.php:121
 msgid "Account doesn't exist."
 msgstr "El compte no existeix."
 
-#: frontend/login.php:131 frontend/signup.php:51
+#: frontend/login.php:143
 msgid "A registration confirmation e-mail has been sent to you."
 msgstr "Li ha estat enviat un correu-e de confirmació de la registració."
 
-#: frontend/login.php:142 frontend/signup.php:63 frontend/signup.php:92
+#: frontend/login.php:154 frontend/signup.php:48
 msgid "Account already exists."
 msgstr "Aquest compte ja existeix."
 
-#: frontend/login.php:161
+#: frontend/login.php:174
 msgid "Welcome to Cheetah News"
 msgstr "Benvinguts a Cheetah News"
 
-#: frontend/login.php:178 frontend/login.php:269 frontend/login.php:294
-#: frontend/signup.php:183
+#: frontend/login.php:191 frontend/login.php:288 frontend/login.php:313
 msgid "E-mail: "
 msgstr "Correu-e: "
 
-#: frontend/login.php:184 frontend/login.php:300 frontend/signup.php:188
+#: frontend/login.php:197 frontend/login.php:319
 msgid "Password: "
 msgstr "Contrasenya: "
 
-#: frontend/login.php:188
+#: frontend/login.php:201
 msgid "OpenID: "
 msgstr "OpenID: "
 
-#: frontend/login.php:197
+#: frontend/login.php:216
 msgid "Use OpenID"
 msgstr "Usa OpenID"
 
-#: frontend/login.php:198
+#: frontend/login.php:217
 msgid "Use username / password"
 msgstr "Usa un nom d'usuari i contrasenya"
 
-#: frontend/login.php:203
+#: frontend/login.php:222
 msgid "Remember me on this computer."
 msgstr "Recorda-m en aquesta màquina."
 
-#: frontend/login.php:209
+#: frontend/login.php:228
 msgid "About SSL"
 msgstr "Respecte a SSL"
 
-#: frontend/login.php:215
+#: frontend/login.php:234
 msgid "Forgot your password?"
 msgstr "Heu oblidat la contrasenya?"
 
-#: frontend/login.php:220
+#: frontend/login.php:239
 msgid "What is OpenID?"
 msgstr "Què és OpenID?"
 
-#: frontend/login.php:225
+#: frontend/login.php:244
 msgid "Don't have an account?"
 msgstr "Encara no teniu compte?"
 
-#: frontend/login.php:226 frontend/login.php:309 frontend/signup.php:179
-#: frontend/signup.php:205
+#: frontend/login.php:245 frontend/login.php:328
 msgid "Sign Up"
 msgstr "Podeu crear-ne un."
 
-#: frontend/login.php:228
+#: frontend/login.php:247
 msgid "Guest login"
 msgstr "Accés convidat"
 
-#: frontend/login.php:233
+#: frontend/login.php:252
 msgid "Learn more"
 msgstr "Més informació"
 
-#: frontend/login.php:267
+#: frontend/login.php:286
 msgid "Password Recovery"
 msgstr "Recuperació de la contrasenya"
 
-#: frontend/login.php:277
+#: frontend/login.php:296
 msgid "Submit"
 msgstr "Enviar"
 
-#: frontend/login.php:292
+#: frontend/login.php:311
 msgid "Registration Process"
 msgstr "Registració"
 
-#: frontend/login.php:314 frontend/signup.php:210
+#: frontend/login.php:333
 msgid "I already have an account"
 msgstr "Tinc un compte ja"
 
-#: frontend/login.php:322
+#: frontend/login.php:341
 #, php-format
 msgid "Bleeding-Edge Personal News Aggregator %s"
 msgstr "Avançat agregador de notícies personal %s"
 
-#: frontend/login.php:332
+#: frontend/login.php:351
 msgid "[External link] Help Save the Wild Cheetah"
 msgstr "[Enllaç extern] Ajuda a salvar al guepard salvatge"
 
-#: frontend/login.php:333
+#: frontend/login.php:352
 msgid "Help Save the Wild Cheetah"
 msgstr "Ajuda a salvar al guepard salvatge"
 
@@ -384,7 +372,7 @@ msgstr ""
 msgid "This folder already exists."
 msgstr "Aquesta carpeta ja existeix."
 
-#: frontend/mdb.php:189 frontend/lib/feed.class.php:294
+#: frontend/mdb.php:189 frontend/lib/feed.class.php:296
 msgid "Unknown error."
 msgstr "Error desconegut"
 
@@ -392,52 +380,52 @@ msgstr "Error desconegut"
 msgid "Nameless"
 msgstr "Sense nom"
 
-#: frontend/openid_manage.php:69 frontend/openid_manage.php:108
+#: frontend/openid_manage.php:70 frontend/openid_manage.php:109
 msgid "This OpenID is already attached."
 msgstr "Aquest OpenID ja està registrat."
 
-#: frontend/openid_manage.php:74
+#: frontend/openid_manage.php:75
 msgid "Your OpenID has been successfully attached."
 msgstr "El teu OpenID ha estat registrat con èxit."
 
-#: frontend/openid_manage.php:88
+#: frontend/openid_manage.php:89
 msgid "OpenID authentication failed."
 msgstr "Autenticació OpenID ha fallat."
 
-#: frontend/openid_manage.php:150 js/v2/gui.js:954
+#: frontend/openid_manage.php:151 js/v2/gui.js:930
 msgid "Manage your OpenIDs"
 msgstr "Gestionar OpenIDs"
 
-#: frontend/openid_manage.php:160
+#: frontend/openid_manage.php:161
 msgid "Are you sure you want to detach this OpenID?"
 msgstr "Esteu segur de voler esborrar aquest OpenID?"
 
-#: frontend/openid_manage.php:162 js/v2/gui.js:1324 js/v2/gui.js:1357
+#: frontend/openid_manage.php:163 js/v2/gui.js:1302 js/v2/gui.js:1335
 #: js/v2/notes.js:292
 msgid "Remove"
 msgstr "Elimina"
 
-#: frontend/openid_manage.php:173
+#: frontend/openid_manage.php:174
 msgid "Attach new OpenID"
 msgstr "Registrar un nou OpenID"
 
-#: frontend/signup.php:67 frontend/signup.php:134
-msgid "Your confirmation period or invitation has expired."
-msgstr "El període de la seua confirmació o invitació ha expirat."
-
-#: frontend/signup.php:124
+#: frontend/signup.php:77
 msgid "Done, rejected."
 msgstr "Fet. Rebutjat."
 
-#: frontend/signup.php:152
+#: frontend/signup.php:84
+msgid "Your confirmation period or invitation has expired."
+msgstr "El període de la seua confirmació o invitació ha expirat."
+
+#: frontend/signup.php:102
 msgid "Do you confirm signing up?"
 msgstr "Confirmeu la registració"
 
-#: frontend/signup.php:158
+#: frontend/signup.php:108
 msgid "Yes, I confirm"
 msgstr "Sí, la confirmo"
 
-#: frontend/signup.php:161
+#: frontend/signup.php:111
 msgid "No, I decline"
 msgstr "No, la declino"
 
@@ -471,40 +459,40 @@ msgstr ""
 "Per favor, no responeu a aquest missatge. Si necessiteu més ajuda\n"
 "envieu-nos un missatge a %s."
 
-#: frontend/lib/feed.class.php:72 frontend/lib/feed.class.php:88
-#: frontend/lib/feed.class.php:149
+#: frontend/lib/feed.class.php:71 frontend/lib/feed.class.php:91
+#: frontend/lib/feed.class.php:152
 msgid "XML Syntax Error. Verify the given URL"
 msgstr "Error de sintaxi XML. Verifiqueu la URL especificada"
 
-#: frontend/lib/feed.class.php:152
+#: frontend/lib/feed.class.php:155
 msgid "This is not a valid XML resource"
 msgstr "No és un recurs XML vàlid"
 
-#: frontend/lib/feed.class.php:164 frontend/lib/feed.class.php:169
+#: frontend/lib/feed.class.php:167 frontend/lib/feed.class.php:172
 msgid "This is not a valid feed"
 msgstr "Aquesta no és una alimentació vàlida"
 
-#: frontend/lib/feed.class.php:187
+#: frontend/lib/feed.class.php:190
 msgid "Unauthorized"
 msgstr "No autoritzat"
 
-#: frontend/lib/feed.class.php:190
+#: frontend/lib/feed.class.php:193
 msgid "Forbidden"
 msgstr "Prohibit"
 
-#: frontend/lib/feed.class.php:193
+#: frontend/lib/feed.class.php:196
 msgid "Resource Not Found"
 msgstr "No s'ha trobat el recurs"
 
-#: frontend/lib/feed.class.php:196
+#: frontend/lib/feed.class.php:199
 msgid "Internal Server Error"
 msgstr "Error intern de servidor"
 
-#: frontend/lib/feed.class.php:199
+#: frontend/lib/feed.class.php:202
 msgid "Service Unavailable"
 msgstr "Servei no disponible"
 
-#: frontend/lib/feed.class.php:231
+#: frontend/lib/feed.class.php:234
 msgid "You are already subscribed to this feed"
 msgstr "Ja esteu subscrit a aqueixa alimentació"
 
@@ -534,9 +522,9 @@ msgstr ""
 msgid "Error %s: %s"
 msgstr "Error %s: %s"
 
-#: frontend/html/loading.php:50 js/v2/core.js:2411 js/v2/gui.js:60
-#: js/v2/gui.js:571 js/v2/gui.js:725 js/v2/gui.js:775 js/v2/notes.js:317
-#: js/v2/opml.js:33 js/v2/opml.js:130 js/v2/weather.js:236
+#: frontend/html/loading.php:43 js/v2/core.js:2428 js/v2/gui.js:52
+#: js/v2/gui.js:574 js/v2/gui.js:728 js/v2/gui.js:778 js/v2/notes.js:317
+#: js/v2/opml.js:33 js/v2/opml.js:130 js/v2/weather.js:239
 msgid "Loading..."
 msgstr "S'està carregant..."
 
@@ -585,103 +573,103 @@ msgstr ""
 "Disculpi, el seu navegador no és actualment suportat pel agregador de "
 "notícies Cheetah."
 
-#: frontend/help/kshortcuts.php:57 js/v2/gui.js:1524
+#: frontend/help/kshortcuts.php:56 js/v2/gui.js:1502
 msgid "Keyboard shortcuts"
 msgstr "Vincles de tecla"
 
-#: frontend/help/kshortcuts.php:61
+#: frontend/help/kshortcuts.php:60
 msgid "Keystroke"
 msgstr "Tecla"
 
-#: frontend/help/kshortcuts.php:61
+#: frontend/help/kshortcuts.php:60
 msgid "Action"
 msgstr "Acció"
 
-#: frontend/help/kshortcuts.php:65 js/v2/gui.js:1525
+#: frontend/help/kshortcuts.php:64 js/v2/gui.js:1503
 msgid "next item"
 msgstr "element següent"
 
-#: frontend/help/kshortcuts.php:66 js/v2/gui.js:1526
+#: frontend/help/kshortcuts.php:65 js/v2/gui.js:1504
 msgid "previous item"
 msgstr "element anterior"
 
-#: frontend/help/kshortcuts.php:67 js/v2/gui.js:1527
+#: frontend/help/kshortcuts.php:66 js/v2/gui.js:1505
 msgid "next feed"
 msgstr "alimentació següent"
 
-#: frontend/help/kshortcuts.php:68 js/v2/gui.js:1528
+#: frontend/help/kshortcuts.php:67 js/v2/gui.js:1506
 msgid "previous feed"
 msgstr "alimentació anterior"
 
-#: frontend/help/kshortcuts.php:69 js/v2/gui.js:1529
+#: frontend/help/kshortcuts.php:68 js/v2/gui.js:1507
 msgid "open selected feed/entry"
 msgstr "obrir alimentació/article"
 
-#: frontend/help/kshortcuts.php:70
+#: frontend/help/kshortcuts.php:69
 msgid "append selected feed"
 msgstr "afegir alimentació seleccionada"
 
-#: frontend/help/kshortcuts.php:71 js/v2/gui.js:1530
+#: frontend/help/kshortcuts.php:70 js/v2/gui.js:1508
 msgid "open feeds from folder/more"
 msgstr "obrir alimentació de la carpeta/més"
 
-#: frontend/help/kshortcuts.php:72
+#: frontend/help/kshortcuts.php:71
 msgid "append feeds from folder"
 msgstr "afegir alimentacions de carpeta seleccionada"
 
-#: frontend/help/kshortcuts.php:73
+#: frontend/help/kshortcuts.php:72
 msgid "close selected feed"
 msgstr "tancar alimentació seleccionada"
 
-#: frontend/help/kshortcuts.php:74
+#: frontend/help/kshortcuts.php:73
 msgid "move left to My Stuff window"
 msgstr "moure al'esquerra, a finestra \"Les meues coses\""
 
-#: frontend/help/kshortcuts.php:75
+#: frontend/help/kshortcuts.php:74
 msgid "move right to a feed window"
 msgstr "moure a dreta, a la finestra de l'alimentació"
 
-#: frontend/help/kshortcuts.php:76
+#: frontend/help/kshortcuts.php:75
 msgid "hide/show all active feeds"
 msgstr "amagar/mostrar totes alimentacions actives"
 
-#: frontend/help/kshortcuts.php:77
+#: frontend/help/kshortcuts.php:76
 msgid "show all loaded feeds"
 msgstr "mostrar totes alimentacions carregades"
 
-#: frontend/help/kshortcuts.php:78
+#: frontend/help/kshortcuts.php:77
 msgid "open/close My Stuff window"
 msgstr "obrir/tancar finestra \"Les meues coses\""
 
-#: frontend/help/kshortcuts.php:79 js/v2/gui.js:1539
+#: frontend/help/kshortcuts.php:78 js/v2/gui.js:1517
 msgid "collapse"
 msgstr "plegar"
 
-#: frontend/help/kshortcuts.php:80 js/v2/gui.js:94 js/v2/gui.js:1540
+#: frontend/help/kshortcuts.php:79 js/v2/gui.js:86 js/v2/gui.js:1518
 msgid "refresh visible"
 msgstr "refrescar"
 
-#: frontend/help/kshortcuts.php:81 js/v2/gui.js:1542
+#: frontend/help/kshortcuts.php:80 js/v2/gui.js:1520
 msgid "mark entry as read"
 msgstr "marcar la entrada com a llegida"
 
-#: frontend/help/kshortcuts.php:82 js/v2/gui.js:1543
+#: frontend/help/kshortcuts.php:81 js/v2/gui.js:1521
 msgid "mark entry as unread"
 msgstr "marcar la entrada com a no llegida"
 
-#: frontend/help/kshortcuts.php:83 js/v2/gui.js:96 js/v2/gui.js:1545
+#: frontend/help/kshortcuts.php:82 js/v2/gui.js:88 js/v2/gui.js:1523
 msgid "filter visible"
 msgstr "filtrar visibles"
 
-#: frontend/help/kshortcuts.php:84 js/v2/gui.js:1537 js/v2/notes.js:69
+#: frontend/help/kshortcuts.php:83 js/v2/gui.js:1515 js/v2/notes.js:69
 msgid "save link"
 msgstr "guardar enllaç"
 
-#: frontend/help/kshortcuts.php:85
+#: frontend/help/kshortcuts.php:84
 msgid "open/close Weather Report"
 msgstr "obrir/tancar el previsió del temps"
 
-#: frontend/help/kshortcuts.php:86
+#: frontend/help/kshortcuts.php:85
 msgid "open/close Notes and Bookmarks"
 msgstr "obrir/tancar els notes i adreces d'interès"
 
@@ -689,43 +677,43 @@ msgstr "obrir/tancar els notes i adreces d'interès"
 msgid "initializing..."
 msgstr "inicialització..."
 
-#: js/v2/core.js:287
+#: js/v2/core.js:288
 msgid "Your browser is working offline!"
 msgstr "El seu navegador està desconnectat de la xarxa!"
 
-#: js/v2/core.js:305
+#: js/v2/core.js:306
 msgid "You need to enable active scripting and ActiveX controls."
 msgstr ""
 "Necessiteu de activar les funcions \"active scripting\" i \"ActiveX controls"
 "\" del seu navegador."
 
-#: js/v2/core.js:314 js/v2/gui.js:482 js/v2/gui.js:707 js/v2/gui.js:762
-#: js/v2/gui.js:794
+#: js/v2/core.js:315 js/v2/gui.js:485 js/v2/gui.js:710 js/v2/gui.js:765
+#: js/v2/gui.js:797
 msgid "Timeout Error!"
 msgstr "Temps esgotat!"
 
-#: js/v2/core.js:336 js/v2/core.js:348 js/v2/core.js:391 js/v2/core.js:555
-#: js/v2/core.js:591 js/v2/notes.js:485
+#: js/v2/core.js:337 js/v2/core.js:349 js/v2/core.js:392 js/v2/core.js:555
+#: js/v2/core.js:592 js/v2/notes.js:485
 msgid "error"
 msgstr "error"
 
-#: js/v2/core.js:572 js/v2/core.js:666
+#: js/v2/core.js:573 js/v2/core.js:667
 msgid "Subscribe"
 msgstr "Subscriure's"
 
-#: js/v2/core.js:577 js/v2/core.js:671
+#: js/v2/core.js:578 js/v2/core.js:672
 msgid "You are not subscribed to this feed."
 msgstr "No esteu subscrit a aqueixa alimentació."
 
-#: js/v2/core.js:772 js/v2/gui.js:195
+#: js/v2/core.js:779 js/v2/gui.js:184
 msgid "fetching data..."
 msgstr "recollint dades..."
 
-#: js/v2/core.js:814
+#: js/v2/core.js:821
 msgid "Open feeds from this folder"
 msgstr "Obrir alimentacions d'aquesta carpeta"
 
-#: js/v2/core.js:993
+#: js/v2/core.js:1000
 msgid ""
 "No subscriptions yet?! Add new subscriptions or import them by visiting Menu/"
 "Add New Feed."
@@ -733,85 +721,90 @@ msgstr ""
 "No us heu subscrit encara? Subscriviu-vos o importeu subscripcions a través "
 "de Menú/Afegir nova alimentació"
 
-#: js/v2/core.js:1001
+#: js/v2/core.js:1008 js/v2/gui.js:118
+#, fuzzy
+msgid "Facebook News Feed"
+msgstr "Afegir nova alimentació"
+
+#: js/v2/core.js:1009
 msgid "Feed Preview"
 msgstr "Previsualitzar alimentació"
 
-#: js/v2/core.js:1022
+#: js/v2/core.js:1030
 msgid "weather"
 msgstr "temps"
 
-#: js/v2/core.js:1024
+#: js/v2/core.js:1032
 msgid "notes"
 msgstr "notes"
 
-#: js/v2/core.js:1052
+#: js/v2/core.js:1060
 msgid "loading..."
 msgstr "s'està carregant..."
 
-#: js/v2/core.js:1269 js/v2/gui.js:959
+#: js/v2/core.js:1281 js/v2/gui.js:937
 msgid "stories"
 msgstr "articles"
 
-#: js/v2/core.js:1273 js/v2/gui.js:109
+#: js/v2/core.js:1285 js/v2/gui.js:101
 msgid "Expand"
 msgstr "Desplegar"
 
-#: js/v2/core.js:1275
+#: js/v2/core.js:1287
 msgid "Expand entries"
 msgstr "Desplegar articles"
 
-#: js/v2/core.js:1281 js/v2/gui.js:115
+#: js/v2/core.js:1293 js/v2/gui.js:107
 msgid "Collapse"
 msgstr "Plegar"
 
-#: js/v2/core.js:1282
+#: js/v2/core.js:1294
 msgid "Collapse entries"
 msgstr "Plegar articles"
 
-#: js/v2/core.js:1294
+#: js/v2/core.js:1306
 msgid "Mark as read"
 msgstr "Marcar com a llegit"
 
-#: js/v2/core.js:1295
+#: js/v2/core.js:1307
 msgid "Mark all entries as read"
 msgstr "Marcar totes les entrades com llegides"
 
-#: js/v2/core.js:1302
+#: js/v2/core.js:1314
 msgid "Mark as unread"
 msgstr "Marcar com a no llegit"
 
-#: js/v2/core.js:1303
+#: js/v2/core.js:1315
 msgid "Mark all entries as unread"
 msgstr "Marcar totes les entrades com no llegides"
 
-#: js/v2/core.js:1371 js/v2/core.js:1385 js/v2/core.js:1394
-#: js/v2/weather.js:306
+#: js/v2/core.js:1383 js/v2/core.js:1397 js/v2/core.js:1406
+#: js/v2/weather.js:309
 msgid "External link"
 msgstr "Enllaç extern"
 
-#: js/v2/core.js:1384 js/v2/core.js:1393 js/v2/gui.js:1551
-#: js/v2/weather.js:305
+#: js/v2/core.js:1396 js/v2/core.js:1405 js/v2/gui.js:1529 js/v2/social.js:189
+#: js/v2/weather.js:308
 msgid "more"
 msgstr "més"
 
-#: js/v2/core.js:1401
+#: js/v2/core.js:1413
 msgid "See enclosed multimedia"
 msgstr "Veges la imatge adjunta"
 
-#: js/v2/core.js:1412 js/v2/core.js:1578
+#: js/v2/core.js:1424 js/v2/core.js:1590
 msgid "See enclosed image"
 msgstr "Veges la imatge adjunta"
 
-#: js/v2/core.js:1671
+#: js/v2/core.js:1687
 msgid "Feed Preview: %s"
 msgstr "Previsualització d'alimentació: %s"
 
-#: js/v2/core.js:1746
+#: js/v2/core.js:1762
 msgid "progress"
 msgstr "progrés"
 
-#: js/v2/core.js:1797
+#: js/v2/core.js:1813
 msgid ""
 "You don't have any active feeds. Active feeds are automatically loaded at "
 "startup. You can set them in Menu/Manage Subscriptions."
@@ -820,17 +813,17 @@ msgstr ""
 "automàticament en iniciar la sessió. Podeu definir-les usant Menú/Gestionar "
 "subscripcions"
 
-#: js/v2/core.js:2212
+#: js/v2/core.js:2229
 msgid "A popup blocker may be preventing Cheetah News from opening the page."
 msgstr ""
 "Possiblement és el bloqueig de finestres emergents que impedeix a obrir la "
 "pàgina."
 
-#: js/v2/core.js:2213
+#: js/v2/core.js:2230
 msgid "If you have a popup blocker, try disabling it to open the window."
 msgstr "Si tens bloqueig activat, deshabilita'l per a obrir la finestra."
 
-#: js/v2/core.js:2511
+#: js/v2/core.js:2571
 msgid "Sorry, but this operation is not supported by your browser."
 msgstr "Perdoneu, el seu navegador no suporta aquesta operació."
 
@@ -860,140 +853,148 @@ msgstr "Cancel·lar el filtre"
 msgid "Remove filtering from all feeds"
 msgstr "Cancel·lar la filtració de totes les alimentacions"
 
-#: js/v2/gui.js:54
+#: js/v2/gui.js:47
 msgid "My Stuff"
 msgstr "Les meues coses"
 
-#: js/v2/gui.js:79
+#: js/v2/gui.js:71
 msgid "About"
 msgstr "Qui som"
 
-#: js/v2/gui.js:86
+#: js/v2/gui.js:78
 msgid "Welcome"
 msgstr "Benvinguts"
 
-#: js/v2/gui.js:87 js/v2/gui.js:860
+#: js/v2/gui.js:79 js/v2/gui.js:863
 msgid "About Cheetah News"
 msgstr "Quant a Cheetah News"
 
-#: js/v2/gui.js:88
+#: js/v2/gui.js:80
 msgid "show active"
 msgstr "mostrar actives"
 
-#: js/v2/gui.js:88
+#: js/v2/gui.js:80
 msgid "Show all active feeds"
 msgstr "Mostrar totes alimentacions actives"
 
-#: js/v2/gui.js:89
+#: js/v2/gui.js:81
 msgid "show loaded"
 msgstr "mostrar carregades"
 
-#: js/v2/gui.js:89
+#: js/v2/gui.js:81
 msgid "Show all loaded feeds"
 msgstr "Mostrar totes alimentacions carregades"
 
-#: js/v2/gui.js:90
+#: js/v2/gui.js:82
 msgid "hide all"
 msgstr "amagar totes"
 
-#: js/v2/gui.js:90
+#: js/v2/gui.js:82
 msgid "Hide all feeds"
 msgstr "Amagar totes les alimentacions"
 
-#: js/v2/gui.js:94
+#: js/v2/gui.js:86
 msgid "Refresh all visible feeds"
 msgstr "Refrescar totes les alimentacions visibles"
 
-#: js/v2/gui.js:96
+#: js/v2/gui.js:88
 msgid "Filter visible feeds"
 msgstr "Filtrar totes les alimentacions visibles"
 
-#: js/v2/gui.js:110
+#: js/v2/gui.js:102
 msgid "Expand folders"
 msgstr "Desplegar articles"
 
-#: js/v2/gui.js:116
+#: js/v2/gui.js:108
 msgid "Collapse folders"
 msgstr "Plegar articles"
 
-#: js/v2/gui.js:121
+#: js/v2/gui.js:113
 msgid "Show My Stuff"
 msgstr "Mostrar les meues coses"
 
-#: js/v2/gui.js:122 js/v2/gui.js:947
+#: js/v2/gui.js:114 js/v2/gui.js:923
 msgid "Add New Feed"
 msgstr "Afegir nova alimentació"
 
-#: js/v2/gui.js:123 js/v2/gui.js:948
+#: js/v2/gui.js:115 js/v2/gui.js:924
 msgid "Manage Subscriptions"
 msgstr "Gestionar subscripcions"
 
-#: js/v2/gui.js:124 js/v2/gui.js:949
+#: js/v2/gui.js:116 js/v2/gui.js:925
 msgid "Manage Folders"
 msgstr "Gestionar carpetes"
 
-#: js/v2/gui.js:125 js/v2/gui.js:950
+#: js/v2/gui.js:117 js/v2/gui.js:926
 msgid "User Settings"
 msgstr "Paràmetres del usuari"
 
-#: js/v2/gui.js:127
+#: js/v2/gui.js:119
+msgid "Facebook Fanbox"
+msgstr ""
+
+#: js/v2/gui.js:120
 msgid "Logout"
 msgstr "Fi de sessió"
 
-#: js/v2/gui.js:165 js/v2/gui.js:185
+#: js/v2/gui.js:154 js/v2/gui.js:174
 msgid "Close Window"
 msgstr "Tancar la finestra"
 
-#: js/v2/gui.js:182
+#: js/v2/gui.js:171
 msgid "Reload this feed"
 msgstr "Recarregar aquesta alimentació"
 
-#: js/v2/gui.js:289 js/v2/gui.js:1073
+#: js/v2/gui.js:278 js/v2/gui.js:1051
 msgid "Root folder"
 msgstr "Carpeta principal"
 
-#: js/v2/gui.js:353
+#: js/v2/gui.js:342
 msgid "Menu"
 msgstr "Menú"
 
-#: js/v2/gui.js:354
+#: js/v2/gui.js:343
 msgid "menu"
 msgstr "menú"
 
-#: js/v2/gui.js:463 js/v2/gui.js:520
+#: js/v2/gui.js:352
+msgid "Log out also from Facebook?"
+msgstr ""
+
+#: js/v2/gui.js:466 js/v2/gui.js:523
 msgid "Invalid URL"
 msgstr "URL incorrecte."
 
-#: js/v2/gui.js:478
+#: js/v2/gui.js:481
 msgid "Validating URL..."
 msgstr "Verificant la URL..."
 
-#: js/v2/gui.js:496 js/v2/gui.js:569 js/v2/gui.js:605 js/v2/gui.js:727
-#: js/v2/gui.js:777 js/v2/weather.js:389
+#: js/v2/gui.js:499 js/v2/gui.js:572 js/v2/gui.js:608 js/v2/gui.js:730
+#: js/v2/gui.js:780 js/v2/weather.js:392
 msgid "OK"
 msgstr "D'acord"
 
-#: js/v2/gui.js:532
+#: js/v2/gui.js:535
 msgid "Add feed by URL"
 msgstr "Afegeix la alimentació a través de URL"
 
-#: js/v2/gui.js:538 js/v2/gui.js:951
+#: js/v2/gui.js:541 js/v2/gui.js:927
 msgid "Import an OPML file"
 msgstr "Importeu un fitxer OPML"
 
-#: js/v2/gui.js:545
+#: js/v2/gui.js:548
 msgid "Importing file..."
 msgstr "Important el fitxer..."
 
-#: js/v2/gui.js:586
+#: js/v2/gui.js:589
 msgid "Invalid folder name"
 msgstr "Nom de fitxer no vàlid"
 
-#: js/v2/gui.js:592
+#: js/v2/gui.js:595
 msgid "Adding folder..."
 msgstr "S'està afegint el fitxer..."
 
-#: js/v2/gui.js:688
+#: js/v2/gui.js:691
 msgid ""
 "You have checked more than %d active feed.\n"
 "This might slow down the startup process.\n"
@@ -1011,27 +1012,27 @@ msgstr[1] ""
 "Això pot alentir el procés de inicialització.\n"
 "Voleu continuar?"
 
-#: js/v2/gui.js:903
+#: js/v2/gui.js:879
 msgid "Settings"
 msgstr "Paràmetres"
 
-#: js/v2/gui.js:906 js/v2/notes.js:41 js/v2/weather.js:87
+#: js/v2/gui.js:882 js/v2/notes.js:41 js/v2/weather.js:87
 msgid "&laquo; return to reader"
 msgstr "&laquo; tornar a lectura"
 
-#: js/v2/gui.js:909 js/v2/notes.js:44 js/v2/weather.js:82
+#: js/v2/gui.js:885 js/v2/notes.js:44 js/v2/weather.js:82
 msgid "Close"
 msgstr "Tancar"
 
-#: js/v2/gui.js:913
+#: js/v2/gui.js:889
 msgid "Save changes"
 msgstr "Guardar canvis"
 
-#: js/v2/gui.js:915 js/v2/notes.js:55 js/v2/weather.js:117
+#: js/v2/gui.js:891 js/v2/notes.js:55 js/v2/weather.js:117
 msgid "Cancel"
 msgstr "Cancel·lar"
 
-#: js/v2/gui.js:922
+#: js/v2/gui.js:898
 msgid ""
 "Open a specific feed by entering the URL below (Autodiscovery supported) or "
 "enter a search term."
@@ -1039,127 +1040,131 @@ msgstr ""
 "Afegeix una alimentació, introduint la seua URL (amb suport de descobriment "
 "automàtic) o un terme a cercar."
 
-#: js/v2/gui.js:923
+#: js/v2/gui.js:899
 msgid "Import your subscriptions from an OPML file."
 msgstr "Importeu les seues subscripcions des d'un fitxer OPML."
 
-#: js/v2/gui.js:924
+#: js/v2/gui.js:900
 msgid "Refresh rate (active feeds)"
 msgstr "Període de refresca (alimentacions actives)"
 
-#: js/v2/gui.js:925
+#: js/v2/gui.js:901
 msgid "Show active feeds on startup"
 msgstr "Mostrar totes alimentacions actives en iniciar-se"
 
-#: js/v2/gui.js:926
+#: js/v2/gui.js:902
 msgid "Oldest entries first"
 msgstr "Ordenació temporal inversa"
 
-#: js/v2/gui.js:927
+#: js/v2/gui.js:903
 msgid "Add new folder."
 msgstr "Afegir una nova carpeta."
 
-#: js/v2/gui.js:928
+#: js/v2/gui.js:904
 msgid "Display language:"
 msgstr "Llenguatge:"
 
-#: js/v2/gui.js:929
+#: js/v2/gui.js:905
 msgid "System:"
 msgstr "Sistema:"
 
-#: js/v2/gui.js:930
+#: js/v2/gui.js:906
 msgid "Goodies:"
 msgstr "Suplements:"
 
-#: js/v2/gui.js:939 js/v2/opml.js:108
+#: js/v2/gui.js:915 js/v2/opml.js:108
 msgid "open"
 msgstr "obrir"
 
-#: js/v2/gui.js:942
+#: js/v2/gui.js:918
 msgid "Import"
 msgstr "Importar"
 
-#: js/v2/gui.js:944
+#: js/v2/gui.js:920
 msgid "add"
 msgstr "afegir"
 
-#: js/v2/gui.js:952
+#: js/v2/gui.js:928
 msgid "Register Cheetah News as feed handler in your browser"
 msgstr "Configureu el seu navegador per usar Cheetah News per defecte"
 
-#: js/v2/gui.js:960
+#: js/v2/gui.js:932
+msgid "Link your Facebook account"
+msgstr ""
+
+#: js/v2/gui.js:938
 msgid "expand"
 msgstr "desplegar"
 
-#: js/v2/gui.js:961
+#: js/v2/gui.js:939
 msgid "active"
 msgstr "actiu"
 
-#: js/v2/gui.js:962
+#: js/v2/gui.js:940
 msgid "minutes"
 msgstr "minuts"
 
-#: js/v2/gui.js:971
+#: js/v2/gui.js:949
 msgid "Close without saving?"
 msgstr "Tancar sense guardar canvis?"
 
-#: js/v2/gui.js:1024
+#: js/v2/gui.js:1002
 msgid "Switch without saving?"
 msgstr "Canviar sense guardar canvis?"
 
-#: js/v2/gui.js:1077
+#: js/v2/gui.js:1055
 msgid "Select folder"
 msgstr "Seleccioneu una carpeta"
 
-#: js/v2/gui.js:1084
+#: js/v2/gui.js:1062
 msgid "Export selected folder"
 msgstr "Exportar carpeta seleccionada"
 
-#: js/v2/gui.js:1085
+#: js/v2/gui.js:1063
 msgid "Export feeds from selected folder to OPML"
 msgstr "Exportar a OPML les alimentacions de la carpeta seleccionada"
 
-#: js/v2/gui.js:1092
+#: js/v2/gui.js:1070
 msgid "Export all feeds"
 msgstr "Exportar totes les alimentacions"
 
-#: js/v2/gui.js:1093
+#: js/v2/gui.js:1071
 msgid "Export all feeds to OPML"
 msgstr "Exportar totes les alimentacions a OPML"
 
-#: js/v2/gui.js:1312 js/v2/gui.js:1349
+#: js/v2/gui.js:1290 js/v2/gui.js:1327
 msgid "Move up"
 msgstr "Mou amunt"
 
-#: js/v2/gui.js:1316 js/v2/gui.js:1353
+#: js/v2/gui.js:1294 js/v2/gui.js:1331
 msgid "Move down"
 msgstr "Mou avall"
 
-#: js/v2/gui.js:1320
+#: js/v2/gui.js:1298
 msgid "Move to other folder"
 msgstr "Mou a altra carpeta"
 
-#: js/v2/gui.js:1531
+#: js/v2/gui.js:1509
 msgid "close feed"
 msgstr "tancar la alimentació"
 
-#: js/v2/gui.js:1532
+#: js/v2/gui.js:1510
 msgid "left"
 msgstr "al'esquerra"
 
-#: js/v2/gui.js:1533
+#: js/v2/gui.js:1511
 msgid "right"
 msgstr "dreta"
 
-#: js/v2/gui.js:1534
+#: js/v2/gui.js:1512
 msgid "hide/show all active"
 msgstr "amagar/mostrar totes actives"
 
-#: js/v2/gui.js:1535
+#: js/v2/gui.js:1513
 msgid "show all loaded"
 msgstr "mostrar totes carregades"
 
-#: js/v2/gui.js:1538
+#: js/v2/gui.js:1516
 msgid "my stuff"
 msgstr "les meues coses"
 
@@ -1324,7 +1329,7 @@ msgstr ""
 "Poseu-vos al corrent de les últimes notícies dels seus amics i família. "
 "Introduïu el nom d'usuari i escolliu un servei popular:"
 
-#: js/v2/opml.js:207
+#: js/v2/opml.js:205
 msgid "Open \"%s\""
 msgstr "Obrir \"%s\""
 
@@ -1335,6 +1340,12 @@ msgstr "compartir això"
 #: js/v2/share.js:33
 msgid "Share this entry"
 msgstr "compartir aquesta entrada"
+
+#: js/v2/social.js:167
+msgid "%d person like this"
+msgid_plural "%d people like this"
+msgstr[0] ""
+msgstr[1] ""
 
 #: js/v2/translate.js:35
 msgid "translate"
@@ -1396,7 +1407,7 @@ msgstr "al xinès"
 msgid "Not available"
 msgstr "no és disponible"
 
-#: js/v2/weather.js:33 js/v2/weather.js:185
+#: js/v2/weather.js:33 js/v2/weather.js:188
 msgid "Weather Report"
 msgstr "Previsió del temps"
 
@@ -1436,507 +1447,510 @@ msgstr "Guardar"
 msgid "Delete"
 msgstr "Esborrar"
 
-#: js/v2/weather.js:280
+#: js/v2/weather.js:283
 msgid "Wrong location or data temporarily unavailable."
 msgstr "Locació desconeguda o dades no estan disponibles temporalment."
 
-#: js/v2/weather.js:282
+#: js/v2/weather.js:285
 msgid "edit"
 msgstr "editar"
 
-#: js/v2/weather.js:283
+#: js/v2/weather.js:286
 msgid "Edit this location"
 msgstr "Editar aquesta localitat"
 
-#: js/v2/weather.js:297
+#: js/v2/weather.js:300
 msgid "Tomorrow's weather forecast"
 msgstr "Previsió per demà"
 
-#: js/v2/weather.js:324
+#: js/v2/weather.js:327
 msgid "Editing location"
 msgstr "Edició de la localitat"
 
-#: js/v2/weather.js:332
+#: js/v2/weather.js:335
 msgid "Add new location."
 msgstr "Afegir una nova localitat."
 
-#: js/v2/weather.js:359
+#: js/v2/weather.js:362
 msgid "Invalid location ID"
 msgstr "ID de localitat invàlida"
 
-#: js/v2/weather.js:371
+#: js/v2/weather.js:374
 msgid "Saving location..."
 msgstr "Conservació de la localitat..."
 
-#: js/v2/weather.js:410
+#: js/v2/weather.js:413
 msgid "Are you sure you want to delete this location?"
 msgstr "Esteu segur de voler esborrar aqueixa localitat?"
 
-#: js/v2/weather.js:414
+#: js/v2/weather.js:417
 msgid "Deleting..."
 msgstr "Eliminació..."
 
 #. TRANSLATORS: BEGIN JS 
-#: js/v2/weather.js:421
+#: js/v2/weather.js:424
 msgid "Location"
 msgstr "Localitat"
 
-#: js/v2/weather.js:421
+#: js/v2/weather.js:424
 msgid "Forecast"
 msgstr "Previsió"
 
-#: js/v2/weather.js:421
+#: js/v2/weather.js:424
 msgid "Now"
 msgstr "Ara"
 
-#: js/v2/weather.js:421
+#: js/v2/weather.js:424
 msgid "Today"
 msgstr "Avui"
 
-#: js/v2/weather.js:421
+#: js/v2/weather.js:424
 msgid "Tomorrow"
 msgstr "Demà"
 
-#: js/v2/weather.js:421
+#: js/v2/weather.js:424
 msgid "Feels like"
 msgstr "Sensació tèrmica"
 
-#: js/v2/weather.js:422
+#: js/v2/weather.js:425
 msgid "Wind"
 msgstr "Vent"
 
-#: js/v2/weather.js:422
+#: js/v2/weather.js:425
 msgid "Humidity"
 msgstr "Humitat"
 
-#: js/v2/weather.js:422
+#: js/v2/weather.js:425
 msgid "Pressure"
 msgstr "Pressió"
 
-#: js/v2/weather.js:422
+#: js/v2/weather.js:425
 msgid "Sunrise"
 msgstr "Sortida del sol"
 
-#: js/v2/weather.js:422
+#: js/v2/weather.js:425
 msgid "Sunset"
 msgstr "Posta del sol"
 
-#: js/v2/weather.js:423
+#: js/v2/weather.js:426
 msgid "Temp"
 msgstr "Temp."
 
-#: js/v2/weather.js:423
+#: js/v2/weather.js:426
 msgid "High"
 msgstr "Alta"
 
-#: js/v2/weather.js:423
+#: js/v2/weather.js:426
 msgid "Low"
 msgstr "Baixa"
 
-#: js/v2/weather.js:423
+#: js/v2/weather.js:426
 msgid "Sun"
 msgstr "Dg"
 
-#: js/v2/weather.js:423
+#: js/v2/weather.js:426
 msgid "Mon"
 msgstr "Dl"
 
-#: js/v2/weather.js:423
+#: js/v2/weather.js:426
 msgid "Tue"
 msgstr "Dt"
 
-#: js/v2/weather.js:423
+#: js/v2/weather.js:426
 msgid "Wed"
 msgstr "Dc"
 
-#: js/v2/weather.js:424
+#: js/v2/weather.js:427
 msgid "Thu"
 msgstr "Dj"
 
-#: js/v2/weather.js:424
+#: js/v2/weather.js:427
 msgid "Fri"
 msgstr "Dv"
 
-#: js/v2/weather.js:424
+#: js/v2/weather.js:427
 msgid "Sat"
 msgstr "Ds"
 
-#: js/v2/weather.js:424
+#: js/v2/weather.js:427
 msgid "kph"
 msgstr "km/h"
 
-#: js/v2/weather.js:424
+#: js/v2/weather.js:427
 msgid "mb"
 msgstr "mb"
 
-#: js/v2/weather.js:424
+#: js/v2/weather.js:427
 msgid "Windy"
 msgstr "Vent"
 
-#: js/v2/weather.js:425
+#: js/v2/weather.js:428
 msgid "Mist"
 msgstr "Boira"
 
-#: js/v2/weather.js:425
+#: js/v2/weather.js:428
 msgid "Fair"
 msgstr "Serè"
 
-#: js/v2/weather.js:425
+#: js/v2/weather.js:428
 msgid "Clear"
 msgstr "Clar"
 
-#: js/v2/weather.js:425
+#: js/v2/weather.js:428
 msgid "Mostly Clear"
 msgstr "Majorment clar"
 
-#: js/v2/weather.js:425
+#: js/v2/weather.js:428
 msgid "Mostly Cloudy"
 msgstr "Majorment ennuvolat"
 
-#: js/v2/weather.js:426
+#: js/v2/weather.js:429
 msgid "Partly Cloudy"
 msgstr "Parcialment ennuvolat"
 
-#: js/v2/weather.js:426
+#: js/v2/weather.js:429
 msgid "Cloudy"
 msgstr "Ennuvolat"
 
-#: js/v2/weather.js:426
+#: js/v2/weather.js:429
 msgid "Mostly Sunny"
 msgstr "Majorment assolellat"
 
-#: js/v2/weather.js:426
+#: js/v2/weather.js:429
 msgid "Sunny"
 msgstr "Assolellat"
 
-#: js/v2/weather.js:427
+#: js/v2/weather.js:430
 msgid "Rain"
 msgstr "Pluja"
 
-#: js/v2/weather.js:427
+#: js/v2/weather.js:430
 msgid "Light Rain"
 msgstr "Pluja feble"
 
-#: js/v2/weather.js:427
+#: js/v2/weather.js:430
 msgid "Freezing Rain"
 msgstr "Pluja glaçada"
 
-#: js/v2/weather.js:427
+#: js/v2/weather.js:430
 msgid "Heavy Rain"
 msgstr "Pluja intensa"
 
-#: js/v2/weather.js:427
+#: js/v2/weather.js:430
 msgid "Snow"
 msgstr "Neu"
 
-#: js/v2/weather.js:428
+#: js/v2/weather.js:431
 msgid "Light Snow"
 msgstr "Neu feble"
 
-#: js/v2/weather.js:428
+#: js/v2/weather.js:431
 msgid "AM Light Snow"
 msgstr "Neu feble matutí"
 
-#: js/v2/weather.js:428
+#: js/v2/weather.js:431
 msgid "PM Light Snow"
 msgstr "Neu feble vespertí"
 
-#: js/v2/weather.js:428
+#: js/v2/weather.js:431
 msgid "Snow Showers"
 msgstr "Neu forta"
 
-#: js/v2/weather.js:429
+#: js/v2/weather.js:432
 msgid "AM Snow"
 msgstr "Neu matutí"
 
-#: js/v2/weather.js:429
+#: js/v2/weather.js:432
 msgid "PM Snow"
 msgstr "Neu vespertí"
 
-#: js/v2/weather.js:429
+#: js/v2/weather.js:432
 msgid "AM Snow Showers"
 msgstr "Xàfecs de neu matutins"
 
-#: js/v2/weather.js:429
+#: js/v2/weather.js:432
 msgid "PM Snow Showers"
 msgstr "Xàfecs de neu vespertins"
 
-#: js/v2/weather.js:430
+#: js/v2/weather.js:433
 msgid "Scattered Snow Showers"
 msgstr "Pluges de neu disperses"
 
-#: js/v2/weather.js:430
+#: js/v2/weather.js:433
 msgid "Flurries"
 msgstr "Pluges amb vent"
 
-#: js/v2/weather.js:430
+#: js/v2/weather.js:433
 msgid "Drizzle"
 msgstr "Plugims"
 
-#: js/v2/weather.js:430
+#: js/v2/weather.js:433
 msgid "Freezing Drizzle"
 msgstr "Pluja glaçada"
 
-#: js/v2/weather.js:431
+#: js/v2/weather.js:434
 msgid "Haze"
 msgstr "Boirina"
 
-#: js/v2/weather.js:431
+#: js/v2/weather.js:434
 msgid "Showers"
 msgstr "Pluges"
 
-#: js/v2/weather.js:431
+#: js/v2/weather.js:434
 msgid "AM Showers"
 msgstr "Pluges matinales"
 
-#: js/v2/weather.js:431
+#: js/v2/weather.js:434
 msgid "PM Showers"
 msgstr "Pluges vespertines"
 
-#: js/v2/weather.js:432
+#: js/v2/weather.js:435
 msgid "Showers Early"
 msgstr "Pluges matinales"
 
-#: js/v2/weather.js:432
+#: js/v2/weather.js:435
 msgid "Showers Late"
 msgstr "Pluges cap al vespre"
 
-#: js/v2/weather.js:432
+#: js/v2/weather.js:435
 msgid "Few Showers"
 msgstr "Alguns pluges"
 
-#: js/v2/weather.js:432
+#: js/v2/weather.js:435
 msgid "Heavy Snow"
 msgstr "Neu intensa"
 
-#: js/v2/weather.js:433
+#: js/v2/weather.js:436
 msgid "Fog"
 msgstr "Boira"
 
-#: js/v2/weather.js:433
+#: js/v2/weather.js:436
 msgid "Fog Early"
 msgstr "Boira matinal"
 
-#: js/v2/weather.js:433
+#: js/v2/weather.js:436
 msgid "Fog Late"
 msgstr "Boira cap al vespre"
 
-#: js/v2/weather.js:433
+#: js/v2/weather.js:436
 msgid "Foggy"
 msgstr "Boira"
 
-#: js/v2/weather.js:433
+#: js/v2/weather.js:436
 msgid "AM Clouds"
 msgstr "Ennuvolat al matí"
 
-#: js/v2/weather.js:433
+#: js/v2/weather.js:436
 msgid "PM Sun"
 msgstr "Assolellat al vespre"
 
-#: js/v2/weather.js:434
+#: js/v2/weather.js:437
 msgid "Thunder"
 msgstr "Tempesta"
 
-#: js/v2/weather.js:434
+#: js/v2/weather.js:437
 msgid "Thunderstorms"
 msgstr "Tempestes"
 
-#: js/v2/weather.js:434
+#: js/v2/weather.js:437
 msgid "Isolated Thunderstorms"
 msgstr "Tempestes aïllades"
 
-#: js/v2/weather.js:434
+#: js/v2/weather.js:437
 msgid "AM Fog"
 msgstr "Boira matutina"
 
-#: js/v2/weather.js:435
+#: js/v2/weather.js:438
 msgid "AM Drizzle"
 msgstr "Plugims matutins"
 
-#: js/v2/weather.js:435
+#: js/v2/weather.js:438
 msgid "AM Light Rain"
 msgstr "Pluja feble matutí"
 
-#: js/v2/weather.js:435
+#: js/v2/weather.js:438
 msgid "PM Light Rain"
 msgstr "Pluja feble vespertí"
 
-#: js/v2/weather.js:435
+#: js/v2/weather.js:438
 msgid "PM Clouds"
 msgstr "Ennuvolat al vespre"
 
-#: js/v2/weather.js:436
+#: js/v2/weather.js:439
 msgid "Light Rain Early"
 msgstr "Pluja feble vespertí"
 
-#: js/v2/weather.js:436
+#: js/v2/weather.js:439
 msgid "Snow Showers Late"
 msgstr "Xàfecs de neu vespertins"
 
-#: js/v2/weather.js:436
+#: js/v2/weather.js:439
 msgid "Few Snow Showers"
 msgstr "Xàfecs aïllats de neu"
 
-#: js/v2/weather.js:437
+#: js/v2/weather.js:440
 msgid "Snow to Wintry Mix"
 msgstr "Neu o aiguaneu"
 
-#: js/v2/weather.js:437
+#: js/v2/weather.js:440
 msgid "Wintry Mix"
 msgstr "Aiguaneu"
 
-#: js/v2/weather.js:437
+#: js/v2/weather.js:440
 msgid "Thundershowers"
 msgstr "Xàfecs amb tempesta"
 
-#: js/v2/weather.js:437
+#: js/v2/weather.js:440
 msgid "Rain to Snow"
 msgstr "Aiguaneu"
 
-#: js/v2/weather.js:438
+#: js/v2/weather.js:441
 msgid "Clouds Early"
 msgstr "Ennuvolat al matí"
 
-#: js/v2/weather.js:438
+#: js/v2/weather.js:441
 msgid "Clouds Late"
 msgstr "Ennuvolat al vespre"
 
-#: js/v2/weather.js:438
+#: js/v2/weather.js:441
 msgid "Clearing Late"
 msgstr "Aclarit al vespre"
 
-#: js/v2/weather.js:438
+#: js/v2/weather.js:441
 msgid "AM Ice"
 msgstr "Glaç al matí"
 
-#: js/v2/weather.js:439
+#: js/v2/weather.js:442
 msgid "Sleet"
 msgstr "Aiguaneu"
 
-#: js/v2/weather.js:439
+#: js/v2/weather.js:442
 msgid "Scattered Flurries"
 msgstr "Tempestes disperses"
 
-#: js/v2/weather.js:439
+#: js/v2/weather.js:442
 msgid "Snow Showers Early"
 msgstr "Xàfecs de neu matinals"
 
-#: js/v2/weather.js:439
+#: js/v2/weather.js:442
 msgid "Light Snow Late"
 msgstr "Neu feble vespertí"
 
-#: js/v2/weather.js:440
+#: js/v2/weather.js:443
 msgid "Snow Early"
 msgstr "Neu matinal"
 
-#: js/v2/weather.js:440
+#: js/v2/weather.js:443
 msgid "Snow Late"
 msgstr "Neu vespertí"
 
-#: js/v2/weather.js:440
+#: js/v2/weather.js:443
 msgid "Wind Early"
 msgstr "Vent matutí"
 
-#: js/v2/weather.js:440
+#: js/v2/weather.js:443
 msgid "AM Rain"
 msgstr "Pluja matutina"
 
-#: js/v2/weather.js:440
+#: js/v2/weather.js:443
 msgid "PM Rain"
 msgstr "Pluja vespertina"
 
-#: js/v2/weather.js:441
+#: js/v2/weather.js:444
 msgid "PM Fog"
 msgstr "Boira vespertina"
 
-#: js/v2/weather.js:441
+#: js/v2/weather.js:444
 msgid "Drizzle Early"
 msgstr "Plugims matutins"
 
-#: js/v2/weather.js:441
+#: js/v2/weather.js:444
 msgid "Drizzle Late"
 msgstr "Plugims vespertins"
 
-#: js/v2/weather.js:441
+#: js/v2/weather.js:444
 msgid "PM Drizzle"
 msgstr "Plugims a partir de migdia"
 
-#: js/v2/weather.js:442
+#: js/v2/weather.js:445
 msgid "Light Rain Late"
 msgstr "Pluja feble vespertí"
 
-#: js/v2/weather.js:442
+#: js/v2/weather.js:445
 msgid "Wind Late"
 msgstr "Vent vespertí"
 
-#: js/v2/weather.js:442
+#: js/v2/weather.js:445
 msgid "Scattered Strong Storms"
 msgstr "Tempestes fortes disperses"
 
-#: js/v2/weather.js:442
+#: js/v2/weather.js:445
 msgid "Strong Storms"
 msgstr "Tempestes fortes"
 
-#: js/v2/weather.js:443
+#: js/v2/weather.js:446
 msgid "AM Light Wintry Mix"
 msgstr "Aiguaneu feble matutí"
 
-#: js/v2/weather.js:443
+#: js/v2/weather.js:446
 msgid "PM Light Wintry Mix"
 msgstr "Aiguaneu feble a partir de migdia"
 
-#: js/v2/weather.js:443
+#: js/v2/weather.js:446
 msgid "Light Wintry Mix"
 msgstr "Aiguaneu feble"
 
-#: js/v2/weather.js:444
+#: js/v2/weather.js:447
 msgid "AM Thunderstorms"
 msgstr "Tempestes al matí"
 
-#: js/v2/weather.js:444
+#: js/v2/weather.js:447
 msgid "PM Thunderstorms"
 msgstr "Tempestes a partir de migdia"
 
-#: js/v2/weather.js:444
+#: js/v2/weather.js:447
 msgid "Thunderstorms Late"
 msgstr "Tempestes vespertins"
 
-#: js/v2/weather.js:444
+#: js/v2/weather.js:447
 msgid "Rain Early"
 msgstr "Pluja matutí"
 
-#: js/v2/weather.js:445
+#: js/v2/weather.js:448
 msgid "Thunderstorms Early"
 msgstr "Tempestes matutins"
 
-#: js/v2/weather.js:445
+#: js/v2/weather.js:448
 msgid "AM Thundershowers"
 msgstr "Xàfecs amb tempestes al matí"
 
-#: js/v2/weather.js:445
+#: js/v2/weather.js:448
 msgid "PM Thundershowers"
 msgstr "Xàfecs amb tempestes a partir de migdia"
 
-#: js/v2/weather.js:446
+#: js/v2/weather.js:449
 msgid "Thundershowers Early"
 msgstr "Tempestes matutins"
 
-#: js/v2/weather.js:446
+#: js/v2/weather.js:449
 msgid "Thundershowers Late"
 msgstr "Tempestes vespertins"
 
-#: js/v2/weather.js:446
+#: js/v2/weather.js:449
 msgid "Rain Late"
 msgstr "Pluja vespertí"
 
-#: js/v2/weather.js:446
+#: js/v2/weather.js:449
 msgid "Ice to Rain"
 msgstr "Pluja gelada"
 
 #. TRANSLATORS: END JS 
-#: js/v2/weather.js:448
+#: js/v2/weather.js:451
 msgid "Scattered Thunderstorms"
 msgstr "Tempestes disperses"
+
+#~ msgid "graphics (icons)"
+#~ msgstr "gràfica (icones)"
 
 #~ msgid "You have been invited to open Cheetah News Aggregator account"
 #~ msgstr ""
