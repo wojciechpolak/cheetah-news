@@ -42,7 +42,8 @@ if ($session->status['afterlogged'] == 'yes')
 <? } ?>
 <script type="text/javascript">
 <?php echo "var CONF = {'fbe': '".($insideFB ? 'google' : $CONF['feedEngine']).
-   "', 'lang': '".$session->lang."', 'whatsnew': ".(int)$CONF['whatsnew']."};
+   "', 'lang': '".($session->lang ? $session->lang : substr ($locale, 0, 2))
+   ."', 'whatsnew': ".(int)$CONF['whatsnew']."};
 var SIGS = {'js':'".$SIGS["js"]."', 'tr':'".$SIGS["tr"]."', 'wt':'".
    $SIGS["wt"]."', 'op':'".$SIGS["op"]."', 'dir':'".$SIGS["dir"]."'};\n"; ?>
 </script>

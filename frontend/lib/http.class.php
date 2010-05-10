@@ -212,7 +212,7 @@ class Http
       $xml = gzinflate (substr ($xml, 10));
     }
 
-    $this->xml = $xml;
+    $this->xml = trim ($xml);
     return true;
   }
 
