@@ -115,6 +115,7 @@ function initGui () {
 	'menuOpenCWindow2' : '&nbsp;' + _('Manage Subscriptions') + '&nbsp;',
 	'menuOpenCWindow3' : '&nbsp;' + _('Manage Folders') + '&nbsp;',
 	'menuOpenCWindow4' : '&nbsp;' + _('User Settings') + '&nbsp;',
+	'menuOpenFacebook': '&nbsp;' + _('Facebook News Feed') + '&nbsp;',
 	'menuOpenFanbox': '&nbsp;' + _('Facebook Fanbox') + '&nbsp;',
 	'logout' : '&nbsp;' + _('Logout') + '&nbsp;'}, true);
 
@@ -136,6 +137,7 @@ function initGui () {
     };
   }
 
+  $(reader).delegate ('div.play-video', 'click', play_video);
   try { window.focus (); } catch (E) {}
 }
 
@@ -345,7 +347,8 @@ function initMenu () {
   }
 
   setCmhLink (GID ('logout'), function () {
-      if (cheetahData.fbUID && typeof FB != 'undefined') {
+      if (cheetahData.fbUID && typeof FB != 'undefined' &&
+	  readCookie ('cheetahFBL')) {
 	if (confirm (_('Log out also from Facebook?'))) {
 	  FB.getLoginStatus (function (res) {
 	      if (res.session)
@@ -358,7 +361,7 @@ function initMenu () {
       }
       window.location = 'logout';
     });
-  setCmhLink (GID ('menuOpenFanbox'),function () { this.className = 'linkCM'; openFanbox (); });
+  setCmhLink (GID ('menuOpenFanbox'),   function () { this.className = 'linkCM'; openFanbox (); });
   setCmhLink (GID ('menuOpenCWindow1'), function () { this.className = 'linkCM'; openCWindow (1); });
   setCmhLink (GID ('menuOpenCWindow2'), function () { this.className = 'linkCM'; openCWindow (2); });
   setCmhLink (GID ('menuOpenCWindow3'), function () { this.className = 'linkCM'; openCWindow (3); });

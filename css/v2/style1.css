@@ -992,11 +992,12 @@ span.outlink:hover {
 .mapembedded {
   margin: 4px 0 7px 0;
 }
-.entryTwitter {
+.entry.social {
+  margin-top: 0.5em;
   padding-bottom: 0.5em;
   border-bottom: 1px dashed #d2dada;
 }
-.entryTitleTwitter {
+.social .entryTitle {
   font-family: "Lucida Grande", sans-serif;
   font-size: 100%;
   clear: both;
@@ -1004,27 +1005,70 @@ span.outlink:hover {
   border-bottom: none;
   margin-top: 0.5em;
   margin-bottom: 1em;
-  width: 38em;
+  width: 34em;
 }
-.entryDateTwitter {
+.social .entryTop {
+  clear: both;
+  padding-top: 0.5em;
+  border-bottom: none;
+  width: 34em;
+}
+.social .entryDate {
   font-family: georgia;
   font-style: italic;
-  margin-top: 2px;
+  margin: 2px 0 2px 0;
   color: #999999;
   font-size: 95%;
 }
-.entryBodyTwitter {
+.social .entryBody {
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 100%;
   margin-left: 58px;
+  width: 34em;
 }
-.entryMetaTwitter {
+.social .entryMeta {
   clear: both;
 }
-.twitterPhoto {
+.social .photo {
   float: left;
   padding-right: 0.8em;
   padding-bottom: 0.5em;
 }
-.twitterMore {
+.social .likes {
+  font-size: 95%;
+  font-style: italic;
+  padding: 5px 0 4px 0;
+}
+.social .comments {
+  margin-top: 10px;
+}
+.social .comment {
+  background-color: #eceff5;
+  border-bottom: 1px solid #e5eaf1;
+  margin-bottom: 2px;
+  padding: 5px 0 4px 5px;
+  clear: left;
+  font-size: 95%;
+}
+.social .comment img {
+  display: block;
+  float: left;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  border: none;
+}
+.social .comment a {
+  color: #3b5998;
+  text-decoration: none;
+  font-weight: bold;
+}
+.social .comment a:hover {
+  text-decoration: underline;
+}
+.social .comment .message { display: inline; }
+.social .morecomments { font-size: 85%; }
+.social .more {
   font-size: 110%;
   text-align: center;
   background: url(images/external1.png) center right no-repeat;
@@ -1065,6 +1109,34 @@ span.outlink:hover {
   color: white;
 }
 
+.fb-description,
+.fb-caption {
+  font-size: 90%;
+}
+
+table.vc { border-spacing: 0; }
+table.vc td { padding: 0; }
+
+.play-video {
+  position: relative;
+  overflow: hidden; /* IE and Opera */
+}
+.play-video img {
+  display: block;
+  padding: 1px;
+  border: 1px solid #dddddd;
+}
+.playbutton {
+  background: transparent url(images/play.png) no-repeat top left;
+  width: 29px;
+  height: 29px;
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  margin: -12px 0 0 -12px;
+}
+
 /* CSS Sprites */
 .img-10-down {background: transparent url(images/master-icons.png?v=0) no-repeat 0px 0px; }
 .img-10-remove {background: transparent url(images/master-icons.png?v=0) no-repeat -10px 0px;}
@@ -1082,6 +1154,7 @@ span.outlink:hover {
 .img-elink {background: transparent url(images/master-icons.png?v=0) no-repeat -80px 0px; width: 27px; height: 12px;}
 
 #menuOpenSWindow img {background: transparent url(images/master-icons.png?v=0) no-repeat -251px 0px;} /* mstuff */
+#menuOpenFacebook img {background: transparent url(images/master-share.png?v=1) no-repeat -64px 0px;}
 #menuOpenNotes img {background: transparent url(images/master-icons.png?v=0) no-repeat -235px 0px;} /* mnotes */
 #menuOpenWeather img {background: transparent url(images/master-icons.png?v=0) no-repeat -283px 0px;} /* mweather */
 #menuOpenFanbox img {background: transparent url(images/master-icons.png?v=0) no-repeat -203px 0px;} /* fanbox */

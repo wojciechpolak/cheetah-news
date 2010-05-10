@@ -27,5 +27,6 @@ js/v2/marker.js
 js/v2/notes.js
 js/v2/opml.js
 js/v2/share.js
+js/v2/social.js
 js/v2/translate.js
 js/v2/weather.js

@@ -345,6 +345,7 @@ var SIGS = {'js':'".$SIGS["js"]."', 'tr':'".$SIGS["tr"]."', 'wt':'".
 
 <div id="menu">
   <span id="menuOpenSWindow" class="ilinkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
+  <span id="menuOpenFacebook" class="ilinkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
   <span id="menuOpenNotes" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
   <span id="menuOpenWeather" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
   <span id="menuOpenFanbox" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span><hr />

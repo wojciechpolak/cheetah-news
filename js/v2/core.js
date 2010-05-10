@@ -225,7 +225,8 @@ function kShortcutsHandler (e) {
 	collapseFolders ();
       else if (fCursor !== null) {
 	var bw = GID ('bWindowContent_' + fCursor);
-	if (bw) traverseDOM (bw, ecEntries, false);
+	if (bw && fCursor != 'fb')
+	  traverseDOM (bw, ecEntries, false);
 	scrollToElement (GID ('bWindow_' + fCursor));
       }
       break;
@@ -558,6 +559,7 @@ function transformFeed (xmlDocument, feedid, latest, expand) {
       if (feedid != 0)
 	GID ('aps_' + feedid).className = 'feedLoaded';
       traverseDOM (bWindowContent, prepareEntry, feedid);
+      convertMediaLinks (bWindowContent);
 
       if (feedid == 0) {
 	var subd = false;
@@ -1003,6 +1005,7 @@ function loadSWindow () {
 
 function loadFeeds () {
   loadSWindow ();
+  createBWindow ('fb', _('Facebook News Feed'));
   createBWindow (0, _('Feed Preview'));
   for (var foi = 0; foi < cheetahData.feedOrder.length; foi++) {
     var feedid = cheetahData.feedOrder[foi];
@@ -1105,6 +1108,10 @@ function refreshVisible () {
 function reloadFeed () {
   if (!checkOnline ()) return;
   var feedid = this.id.split ('_')[1];
+  if (feedid == 'fb') {
+    Modules.Social.openFBStream ();
+    return;
+  }
   var fw = GID ('feedWaiting_' + feedid);
   if (fw && fw.style.display == 'none')
     feedCnt--;
@@ -1209,7 +1216,7 @@ function prepareFeed (n, feedid) {
       n.onclick = reloadFeed;
     else if (id == 'bWindowClose_' + feedid) {
       prepareWindowClose (n, function (obj) {
-	  closeFeed (parseInt (obj.id.split ('_')[1]));
+	  closeFeed (obj.id.split ('_')[1]);
 	});
     }
   }
@@ -1405,7 +1412,7 @@ function prepareEntry (n, feedid) {
       if (flash) {
 	n.title = _('See enclosed multimedia');
 	n.onclick = function () {
-	  Greybox.open ({src: n.href, width:480, height:295, type:'swf'});
+	  Greybox.open ({src: n.href, width:560, height:340, type:'swf'});
 	  this.blur ();
 	  return false;
 	};
@@ -1627,8 +1634,10 @@ function openFeed (feedid, append) {
   fCursor = feedid;
   bWindow.style.display = 'block';
   var open = GID ('open_' + feedid);
-  open.className = 'linkb';
-  open.setAttribute ('pclassName', 'linkb');
+  if (open) {
+    open.className = 'linkb';
+    open.setAttribute ('pclassName', 'linkb');
+  }
   highlightFCursor (bWindow);
   if (append)
     scrollToElement (bWindow);
@@ -1646,8 +1655,10 @@ function closeFeed (feedid) {
     fCursorForward ();
   if (feedid !== 0) {
     var open = GID ('open_' + feedid);
-    open.className = 'link';
-    open.setAttribute ('pclassName', 'link');
+    if (open) {
+      open.className = 'link';
+      open.setAttribute ('pclassName', 'link');
+    }
     for (var foi = 0; foi < cheetahData.feedOrder.length; foi++) {
       var feedid = cheetahData.feedOrder[foi];
       if (GID ('bWindow_' + feedid).style.display == 'block')
@@ -1836,6 +1847,7 @@ function hideAll () {
   fCursor = null;
   cursor = 0;
   allToggle = false;
+  Modules.Social.hideAll ();
   GID ('bWindow_0').style.display = 'none'; /* preview */
   if (cheetahData != null) {
     for (var feedid in cheetahData.feeds) {
@@ -2126,8 +2138,8 @@ function highlightFCursor (win) {
 }
 
 function findBWindowEntries (node) {
-  var children = node.getElementsByTagName ('*');
-  var elems = new Array ();
+  var children = node.getElementsByTagName ('span');
+  var elems = [];
   for (var i = 0; i < children.length; i++) {
     if (children[i].className == 'entryLink' &&
 	children[i].parentNode.parentNode.style.display != 'none') {
@@ -2406,7 +2418,7 @@ var Greybox = new function () {
     var content = opts.content || undefined;
 
     if (!type) {
-      if (src.match (/(\.jpg$|\.png$|\.gif$)/i))
+      if (src.match (/(\.jpg$|\.jpeg$|\.png$|\.gif$)/i))
 	type = 'img';
       else if (src.indexOf ('.swf') > 0)
 	type = 'swf';
@@ -2448,30 +2460,21 @@ var Greybox = new function () {
       else
 	img.onload = showImage;
     }
+    else if (type == 'embed') {
+      gb.innerHTML = content;
+    }
     else if (type == 'swf') {
-      gb.innerHTML = '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"'
-      + ' codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0"'
-      + ' align="middle" width="'+ width +'" height="'+ height +'">'
-      + '<param name="movie" value="'+ src +'">'
-      + '<param name="quality" value="best">'
-      + '<param name="allowScriptAccess" value="never">'
-      + '<param name="scale" value="noScale">'
-      + '<param name="wmode" value="window">'
-      + '<param name="salign" value="tl">'
-      + '<param name="bgcolor" value="#222">'
-      + '<embed type="application/x-shockwave-flash"'
-      + ' src="'+ src +'" quality="best" allowscriptaccess="never"'
-      + ' scale="noScale" wmode="window" salign="tl" bgcolor="#222"'
-      + ' flashvars="playerMode=embedded"'
-      + ' pluginspage="http://www.macromedia.com/go/getflashplayer"'
-      + ' width="'+ width +'" height="'+ height +'">'
-      + '</embed></object>';
+      gb.innerHTML = '<object type="application/x-shockwave-flash" '
+      + 'width="'+ width +'" height="'+ height +'" data="'+ src +'">'
+      + '<param name="movie" value="'+ src +'"/>'
+      + '<param name="allowFullScreen" value="true"/>'
+      + '<param name="allowScriptAccess" value="never"/>'
+      + '<param name="quality" value="best"/>'
+      + '</object>';
     }
     else if (type == 'inline') {
       var c = GID (content);
-      if (c) {
-	gb.innerHTML = c.innerHTML;
-      }
+      if (c) gb.innerHTML = c.innerHTML;
     }
   }
 
@@ -2504,6 +2507,58 @@ var Greybox = new function () {
 	gb.appendChild (img);
       });
   }
+}
+
+function play_video () {
+  var p = this.id.indexOf ('-');
+  if (p == -1)
+    var a = [this.id];
+  else
+    var a = [this.id.substring (0, p), this.id.substr (p + 1)];
+  var type = a[0];
+  var id = a[1];
+
+  if (type in video_embeds)
+    var embed = video_embeds[type];
+  else
+    return true;
+
+  $('a', this).blur ();
+  Greybox.open ({type: 'embed', content: embed.code.replace (/{ID}/g, id),
+	width: embed.width, height: embed.height});
+  return false;
+}
+
+function convertMediaLinks (ctx) {
+  $('.entryBody > span a:has(img)', ctx)
+    .each (function (i) {
+	if (this.parentNode.className == 'play-video')
+	  return;
+	var id = false;
+	try {
+	  if (this.href.indexOf ('http://www.youtube.com/watch') === 0)
+	    id = 'youtube-' + this.href.substr (31);
+	  else if (this.href.indexOf ('http://vimeo.com/') === 0)
+	    id = 'vimeo-' + this.href.substr (17);
+	  else if (this.href.indexOf ('http://www.collegehumor.com/video:') === 0)
+	    id = 'chtv-' + this.href.substr (34);
+	  else if (this.href.indexOf ('http://www.facebook.com/video/video.php?v=') === 0)
+	    id = 'facebook-' + this.href.substr (42);
+	  if (id) {
+	    $(this).wrap ('<table class="vc"><tr><td><div id="'+ id +'" class="play-video"></div></td></tr></table>');
+	    $(this).after ('<div class="playbutton"></div>');
+	  }
+	} catch (e) {}
+      });
+}
+
+var video_embeds = {
+  'youtube': {code: '<object type="application/x-shockwave-flash" width="560" height="340" data="http://www.youtube.com/v/{ID}&autoplay=1&showsearch=0&fs=1"><param name="movie" value="http://www.youtube.com/v/{ID}&autoplay=1&showsearch=0&fs=1"/><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/></object>', width: 560, height: 340},
+  'vimeo': {code: '<object type="application/x-shockwave-flash" width="560" height="315" data="http://vimeo.com/moogaloop.swf?clip_id={ID}&server=vimeo.com&fullscreen=1&show_title=1&show_byline=1&show_portrait=1&color=&autoplay=1"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id={ID}&server=vimeo.com&fullscreen=1&show_title=1&show_byline=1&show_portrait=1&color=&autoplay=1"/><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><param name="quality" value="best"/><param name="scale" value="showAll"/></object>', width: 560, height: 315},
+  'chtv': {code: '<object type="application/x-shockwave-flash" width="560" height="315" data="http://www.collegehumor.com/moogaloop/moogaloop.swf?clip_id={ID}&fullscreen=1&autoplay=1"><param name="movie" value="http://www.collegehumor.com/moogaloop/moogaloop.swf?clip_id={ID}&fullscreen=1&autoplay=1"/><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><param name="wmode" value="transparent"/></object>', width: 560, height: 315},
+  'dailymotion': {code: '<object type="application/x-shockwave-flash" width="480" height="381" data="http://www.dailymotion.com/swf/{ID}?autoplay=1"><param name="movie" value="http://www.dailymotion.com/swf/{ID}?autoplay=1"/><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/></object>', width: 480, height: 381},
+  'metacafe': {code: '<object type="application/x-shockwave-flash" width="498" height="423" data="http://www.metacafe.com/fplayer/{ID}/video.swf"><param name="movie" value="http://www.metacafe.com/fplayer/{ID}/video.swf"/><param name="name" value="Metacafe_{ID}"/><param name="flashvars" value="playerVars=showStats=no|autoPlay=yes"/><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/></object>', width: 498, height: 423},
+  'facebook': {code: '<object type="application/x-shockwave-flash" width="560" height="315" data="http://www.facebook.com/v/{ID}"><param name="movie" value="http://www.facebook.com/v/{ID}"/><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/></object>', width: 560, height: 315}
 }
 
 function registerCheetahHandler () {

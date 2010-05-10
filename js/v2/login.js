@@ -206,5 +206,6 @@ function fb_login () {
   var pc = GID ('PersistentCookie');
   var r = 'login?fbConnect=1';
   if (pc && pc.checked) r += '&PersistentCookie=yes';
+  writeCookie ('cheetahFBL', 1);
   window.location.replace (r);
 }

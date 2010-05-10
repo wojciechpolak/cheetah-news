@@ -80,11 +80,4 @@ function dsp (res, p) {
   return d;
 }
 
-function load_fb () {
-  $.getScript ('http://connect.facebook.net/en_US/all.js', function () {
-      FB.init ({appId: CONF.fb_app_id, status: true});
-    });
-}
-
-setTimeout (load_fb, 2500);
 window.onload = reader;

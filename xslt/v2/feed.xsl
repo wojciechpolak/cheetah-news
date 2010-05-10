@@ -132,7 +132,7 @@
 	<xsl:sort order="{$ORDERBY}" data-type="number" select="position()"/>
       </xsl:apply-templates>
       <br />
-      <a class="twitterMore">
+      <a class="more">
 	<xsl:attribute name="href">
 	  <xsl:value-of select="atomW3:link[@rel='alternate']/@href"/>
 	  <xsl:choose>
@@ -799,7 +799,7 @@
 
 <xsl:template match="atomW3:entry" mode="twitter">
   <xsl:variable name="eid" select="concat($FEEDID, generate-id())"/>
-  <div id="entry_{$eid}" class="entryTwitter">
+  <div id="entry_{$eid}" class="entry social">
     <xsl:if test="atomW3:content/@xml:lang|
 		  /atomW3:feed/@xml:lang">
       <xsl:attribute name="entrylang">
@@ -807,12 +807,12 @@
 			      /atomW3:feed/@xml:lang"/>
       </xsl:attribute>
     </xsl:if>
-    <div class="entryTitle entryTitleTwitter">
+    <div class="entryTitle">
       <a>
 	<xsl:attribute name="href">
 	  <xsl:value-of select="concat('http://twitter.com/', substring-before(atomW3:title, ':'))"/>
 	</xsl:attribute>
-	<img src="{atomW3:link[@rel = 'image']/@href}" class="twitterPhoto" width="48" height="48" />
+	<img src="{atomW3:link[@rel = 'image']/@href}" class="photo" width="48" height="48" alt="[img]"/>
       </a>
       <span id="el_{$eid}" class="entryLink">
 	<xsl:choose>
@@ -825,20 +825,20 @@
 	</xsl:choose>
       </span>
       <xsl:if test="atomW3:updated">
-	<div class="entryDate entryDateTwitter">
+	<div class="entryDate">
 	  <xsl:call-template name="formatAtomDate">
 	    <xsl:with-param name="node" select="atomW3:updated"/>
 	  </xsl:call-template>
 	</div>
       </xsl:if>
     </div>
-    <div id="eb_{$eid}" class="entryBody entryBodyTwitter">
+    <div id="eb_{$eid}" class="entryBody">
       <xsl:if test="position() &gt; $EXPAND">
 	<xsl:attribute name="style">display:none</xsl:attribute>
       </xsl:if>
       <span id="ebi_{$eid}"></span>
       <xsl:comment>/span_ebi</xsl:comment>
-      <div class="entryMeta entryMetaTwitter">
+      <div class="entryMeta">
 	<xsl:if test="atomW3:link">
 	  <span class="entryMore">
 	    <xsl:text> </xsl:text>
