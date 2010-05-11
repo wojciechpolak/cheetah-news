@@ -2,7 +2,7 @@
 
 /*
    Cheetah News add.php
-   Copyright (C) 2005, 2006 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -20,30 +20,15 @@
 
 require 'lib/include.php';
 
-$feedurl = '';
 if (isset ($_SERVER['QUERY_STRING']))
 {
-  if (substr ($_SERVER['QUERY_STRING'], 0, 8) == 'feedurl=')
+  if (substr ($_SERVER['QUERY_STRING'], 0, 8) == 'feedurl=') {
     $feedurl = urldecode (substr ($_SERVER['QUERY_STRING'], 8));
-}
-
-start_session (null);
-$session->auth ('afterlogged', $feedurl);
-
-$db = new Database ();
-if (!empty ($feedurl))
-{
-  if (!strstr ($feedurl, '://'))
-    $feedurl = 'http://' . $feedurl;
-  if ($feedurl[strlen ($feedurl) - 1] == '/')
-    $feedurl = substr ($feedurl, 0, -1);
-
-  $feedurl = $db->escape (strip_tags ($feedurl));
-  $db->query ("SELECT id FROM feedaddqueue WHERE userid='".
-	      $session->id."' AND url='$feedurl'");
-  if (!$db->next_record ()) {
-    $db->query ("INSERT INTO feedaddqueue SET userid=".
-		$session->id.", url='$feedurl'");
+    if (!strstr ($feedurl, '://'))
+      $feedurl = 'http://' . $feedurl;
+    if ($feedurl[strlen ($feedurl) - 1] == '/')
+      $feedurl = substr ($feedurl, 0, -1);
+    setcookie ('cheetahFeedUrl', strip_tags ($feedurl), 0, '/');
   }
 }
 

@@ -61,20 +61,6 @@ if ($session->status['afterlogged'] == 'yes')
       if (!empty ($lucid)) $lucid = md5 ($lucid);
     }
 
-    $feedAddUrl = null;
-    $feedAddSid = null;
-    $db->query ("SELECT url FROM feedaddqueue WHERE userid='".
-		$session->id."'");
-    if ($db->next_record ()) {
-      $feedAddUrl = $db->f ('url');
-      $db->query ("SELECT f.id FROM feed f, subscription s WHERE f.url='".
-		  $feedAddUrl."' AND f.id=s.feedid");
-      if ($db->next_record ())
-	$feedAddSid = $db->f ('id');
-      $db->query ("DELETE LOW_PRIORITY FROM feedaddqueue WHERE userid='".
-		  $session->id."'");
-    }
-
     $db->query ("SELECT s.feedid, s.latest, s.expand, s.folder, ".
 		"s.active, s.description, f.url FROM subscription s, feed f ".
 		"WHERE f.id=s.feedid AND s.userid='".$session->id.
@@ -88,10 +74,6 @@ if ($session->status['afterlogged'] == 'yes')
   this.safs = $safs;
   this.oldf = $oldestFirst;
   this.frequency = $refresh;\n";
-    if ($feedAddSid)
-      echo "  this.feedAddSid = '".encodeJsEntities ($feedAddSid)."';\n";
-    else if ($feedAddUrl)
-      echo "  this.feedAddUrl = '".encodeJsEntities ($feedAddUrl)."';\n";
 
     echo "  this.folderOrder = [";
     $end = count ($folders);

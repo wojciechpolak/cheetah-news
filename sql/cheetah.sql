@@ -56,14 +56,6 @@ CREATE TABLE feed (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB CHARSET=utf8;
 
--- DROP TABLE IF EXISTS feedaddqueue;
-CREATE TABLE feedaddqueue (
-  id int(11) NOT NULL auto_increment,
-  userid int(11) NOT NULL REFERENCES user.id,
-  url varchar(255) NOT NULL default '',
-  PRIMARY KEY (id)
-) ENGINE=InnoDB CHARSET=utf8;
-
 -- DROP TABLE IF EXISTS folder;
 CREATE TABLE folder (
   id int(11) NOT NULL auto_increment,

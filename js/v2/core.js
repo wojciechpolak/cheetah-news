@@ -1012,13 +1012,9 @@ function loadFeeds () {
     var feed = cheetahData.feeds[feedid];
     createBWindow (feedid, feed[0]);
   }
-  if (cheetahData.feedAddSid) {
-    totalFeeds++;
-    openFeed (cheetahData.feedAddSid, false);
-    refresh ();
-  }
-  else if (cheetahData.feedAddUrl) {
-    openFeedPreview (cheetahData.feedAddUrl);
+  if (readCookie ('cheetahFeedUrl')) {
+    openFeedPreview (decodeURIComponent (readCookie ('cheetahFeedUrl')));
+    writeCookie ('cheetahFeedUrl', '', -1);
     refresh ();
     resetTitle ();
   }
