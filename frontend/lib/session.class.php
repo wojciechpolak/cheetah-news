@@ -2,7 +2,7 @@
 
 /*
    Cheetah News lib/session.class.php
-   Copyright (C) 2005, 2006, 2007, 2008 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -18,7 +18,7 @@
    with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-function start_session ($persistentCookie, $noCache = true, $age = 30)
+function start_session ($persistentCookie, $noCache=true, $age=30)
 {
   global $session;
 
@@ -87,7 +87,7 @@ class Session
     $this->status['iflogged'] = '';
   }
 
-  function login ($email, $pass, $feedurl='')
+  function login ($email, $pass)
   {
     global $CONF;
 
@@ -131,10 +131,10 @@ class Session
 	$db->query ("UPDATE user SET lastLog='".gmdate ('Y-m-d H:i:s')."', ".
 		    "active='yes', failogCount=0 WHERE id='".$this->id."'");
 
-	$r = $CONF['secureProto'].'://'.$CONF['site'].'/rd';
-	if (!empty ($feedurl))
-	  $r .= '?feedurl=' . urlencode ($feedurl);
-	redirect ($r);
+	if (isset ($_SERVER['HTTPS']))
+	  redirect ($CONF['secureProto'].'://'.$CONF['site'].'/rd');
+	else
+	  redirect ('http://'.$CONF['site'].'/');
       }
       else /* failog, protection against dictionary attack */
       {
@@ -145,14 +145,14 @@ class Session
     }
   }
 
-  function openid1 ($openid_identifier, $feedurl='')
+  function openid1 ($openid_identifier)
   {
     global $CONF;
 
     session_regenerate_id ();
 
-    $process_url = $CONF['secureProto'].'://'.$CONF['site'].'/login';
-    $trust_root = $CONF['secureProto'].'://'.$CONF['site'].'/';
+    $process_url = 'http://'.$CONF['site'].'/login';
+    $trust_root = 'http://'.$CONF['site'].'/';
 
     $store = new Auth_OpenID_FileStore ($CONF['openIdStorePath']);
     $consumer = new Auth_OpenID_Consumer ($store);
@@ -180,7 +180,7 @@ class Session
     redirect ($redirect_url);
   }
 
-  function openid2 ($identity, $email, $feedurl='')
+  function openid2 ($identity, $email)
   {
     global $CONF;
 
@@ -208,10 +208,10 @@ class Session
 	$db->query ("UPDATE user SET lastLog='".gmdate ('Y-m-d H:i:s')."', ".
 		    "active='yes' WHERE id='".$this->id."'");
 
-	$r = $CONF['secureProto'].'://'.$CONF['site'].'/rd';
-	if (!empty ($feedurl))
-	  $r .= '?feedurl=' . urlencode ($feedurl);
-	redirect ($r);
+	if (isset ($_SERVER['HTTPS']))
+	  redirect ($CONF['secureProto'].'://'.$CONF['site'].'/rd');
+	else
+	  redirect ('http://'.$CONF['site'].'/');
       }
       else
 	return "OpenID account match error";
@@ -243,7 +243,7 @@ class Session
       return _("New OpenID accounts without email address are not supported.");
   }
 
-  function fb_login (&$fb, $fb_uid, $insideFB=false, $feedurl='')
+  function fb_login (&$fb, $fb_uid, $insideFB=false)
   {
     global $CONF;
 
@@ -262,15 +262,10 @@ class Session
       $db->query ("UPDATE user SET lastLog='".gmdate ('Y-m-d H:i:s')."', ".
 		  "active='yes' WHERE id='".$this->id."'");
 
-      if ($insideFB) {
+      if ($insideFB)
 	$r = 'http://'.$CONF['site'].'/reader?insideFB=1';
-      }
-      else {
-	if (!empty ($feedurl))
-	  $r = 'http://'.$CONF['site'].'/rd?feedurl='.urlencode ($feedurl);
-	else
-	  $r = 'http://'.$CONF['site'].'/';
-      }
+      else
+	$r = 'http://'.$CONF['site'].'/';
       redirect ($r);
     }
     else
@@ -328,7 +323,7 @@ class Session
     redirect ('http://'.$CONF['site'].'/');
   }
 
-  function auth ($res, $feedurl = '')
+  function auth ($res)
   {
     global $_ARGS, $CONF;
     
@@ -359,12 +354,8 @@ class Session
       }
       else if ($res == 'iflogged')
 	return false;
-      else {
-	$r = 'http://'.$CONF['site'].'/login';
-	if (!empty ($feedurl))
-	  $r .= '?feedurl=' . urlencode ($feedurl);
-	redirect ($r);
-      }
+      else
+	redirect ('http://'.$CONF['site'].'/login');
     }
   }
 

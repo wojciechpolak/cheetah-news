@@ -27,13 +27,7 @@ require_once 'Auth/OpenID/SReg.php';
 
 getvars ('cEmail,cPassword,openid_identifier,PersistentCookie,SignIn');
 getvars ('fbConnect,fb_sig_in_iframe');
-postvars ('feedurl,regPassword,regRPassword,SignUp,RecoverPassword');
-
-if (empty ($feedurl) && isset ($_SERVER['QUERY_STRING']))
-{
-  if (substr ($_SERVER['QUERY_STRING'], 0, 8) == 'feedurl=')
-    $feedurl = substr ($_SERVER['QUERY_STRING'], 8);
-}
+postvars ('regPassword,regRPassword,SignUp,RecoverPassword');
 
 if (!isset ($insideLogin)) {
   if ($cEmail == 'guest') $PersistentCookie = 'no';
@@ -42,7 +36,6 @@ if (!isset ($insideLogin)) {
 
 $cEmail = htmlspecialchars (strip_tags ($cEmail));
 $openid_identifier = htmlspecialchars (strip_tags ($openid_identifier));
-$feedurl = strip_tags (urldecode ($feedurl));
 
 $validPass = true;
 $validPassLen = true;
@@ -88,17 +81,16 @@ else if ($fbConnect && isset ($CONF['fb.app_id']) &&
     $fb_uid = $fb->getUser ();
     if ($fb_uid) {
       $insideFB = $fb_sig_in_iframe == '1' ? true : false;
-      $message = $_SESSION['session']->fb_login ($fb, $fb_uid, $insideFB,
-						 $feedurl);
+      $message = $_SESSION['session']->fb_login ($fb, $fb_uid, $insideFB);
     }
   }
 }
 else if ($SignIn)
 {
   if (!empty ($openid_identifier)) {
-    $message = $_SESSION['session']->openid1 ($openid_identifier, $feedurl);
+    $message = $_SESSION['session']->openid1 ($openid_identifier);
   }
-  else if (!$_SESSION['session']->login ($cEmail, $cPassword, $feedurl))
+  else if (!$_SESSION['session']->login ($cEmail, $cPassword))
     $message = _('E-mail and password do not match.');
 }
 else if ($RecoverPassword)
@@ -166,8 +158,7 @@ else
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <?php
-echo '<html xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:fb="http://www.facebook.com/2008/fbml">';
+echo '<html xmlns="http://www.w3.org/1999/xhtml">';
 ?>
 
 <head>
@@ -197,24 +188,25 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml"
       <td align="right"><?php echo _('Password: '); ?></td>
       <td align="left"><input type="password" id="cPassword" name="cPassword" style="width:95%" maxlength="255" /></td>
     </tr>
-    <tr id="trOpenID">
+    <tr id="trExtAuth">
+      <td colspan="2">
+	<div class="left">
+	  <p><?php echo _('Sign in using your account with: '); ?></p>
+	  <p id="providers">
+	    <a href="#" id="auth-facebook" title="Facebook"></a>
+	    <a href="#" id="auth-google" title="Google"></a>
+	    <a href="#" id="auth-yahoo" title="Yahoo"></a>
+	    <a href="#" id="auth-openid" title="OpenID"></a>
+	  </p>
+	  <div style="clear:both"></div>
+	</div>
+      </td>
+    </tr>
+    <tr id="trOpenID" class="hidden">
       <td align="right"><?php echo _('OpenID: '); ?></td>
-      <td align="left">
+      <td>
 	<input type="text" id="openid_identifier" name="openid_identifier"
-	       class="openid_identifier" style="width:90%" maxlength="255" />
-      </td>
-    </tr>
-    <tr id="trFBConnect">
-      <td align="right"><?php echo 'Facebook: '; ?></td>
-      <td align="left">
-        <fb:login-button length="long" onlogin="fb_login()" perms="email" />
-      </td>
-    </tr>
-    <tr>
-      <td align="right"></td>
-      <td align="left">
-	<span id="useOpenID" class="link" style="display:none"><?php echo _('Use OpenID'); ?></span>
-	<span id="useCommon" class="link"><?php echo _('Use username / password'); ?></span>
+	       style="width:90%" maxlength="255" />
       </td>
     </tr>
     <tr>
@@ -222,21 +214,24 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml"
       <td align="left"><label for="PersistentCookie"><?php echo _('Remember me on this computer.'); ?></label></td>
     </tr>
     <tr>
-      <td><?php if (!empty ($feedurl)) echo '<input type="hidden" name="feedurl" value="'.htmlspecialchars ($feedurl).'" />'; ?></td>
+      <td align="right"></td>
       <td align="left">
 	<input type="submit" id="SignIn" name="SignIn" value="<?php echo _('Sign in'); ?>" />
-	<?php echo '(<a id="l0" href="http://blog.cheetah-news.com/2008/09/ssl-certificate/">'._('About SSL').'</a>)'; ?>
+	<span id="l0wrap" class="hidden">
+	  <?php echo '(<a id="l0" href="http://blog.cheetah-news.com/2008/09/ssl-certificate/">'._('About SSL').'</a>)'; ?>
+	</span>
       </td>
     </tr>
     <tr style="height:10px"><td></td></tr>
+    <tr>
+      <td align="left" colspan="2">
+	<span id="useOpenID" class="link" style="display:none"><?php echo _('Use OpenID'); ?></span>
+	<span id="useCommon" class="link"><?php echo _('Use e-mail / password'); ?></span>
+      </td>
+    </tr>
     <tr id="trForgotPassword">
       <td colspan="2" align="left">
 	<span id="forgotPassword" class="link"><?php echo _('Forgot your password?'); ?></span>
-      </td>
-    </tr>
-    <tr id="trWhatIsOpenID">
-      <td colspan="2" align="left">
-	<a id="whatIsOpenID" href="http://www.wikipedia.org/wiki/OpenID"><?php echo _('What is OpenID?'); ?></a>
       </td>
     </tr>
     <tr>
@@ -260,20 +255,24 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml"
     <tr>
       <td align="right" colspan="2">
 	<script type="text/javascript">
-        var addthis_pub             = 'wojciechpolak'; 
-        var addthis_url             = 'http://www.cheetah-news.com/';
-        var addthis_title           = 'Cheetah News -- Web-based Personal News Aggregator';
-        var addthis_logo            = 'http://www.cheetah-news.com/favicon.ico';
-        var addthis_logo_background = 'ffffff';
-        var addthis_logo_color      = '666699';
-        var addthis_brand           = 'Cheetah News';
-        var addthis_options         = 'delicious,twitter,facebook,friendfeed,googlebuzz,google,stumbleupon,digg,reddit,more';
+	  var addthis_config = {
+	    username: 'wojciechpolak',
+	    ui_cobrand: 'Cheetah News',
+	    ui_header_color: '#ffffff',
+	    ui_header_background: '#000000',
+	    data_track_clickback: false,
+	    services_compact: 'delicious,twitter,facebook,friendfeed,googlebuzz,google,stumbleupon,digg,reddit,more'
+          };
+          var addthis_share = {
+	    url: 'http://www.cheetah-news.com/',
+	    title: 'Cheetah News -- Web-based Personal News Aggregator'
+          };
 	</script>
-	<a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', 'http://www.cheetah-news.com/', 'Cheetah News -- Web-based Personal News Aggregator')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="images/share.png" width="83" height="16" alt="Bookmark and Share" style="border-style:none" /></a>
+	<a href="http://www.addthis.com/bookmark.php?v=250" class="addthis_button"><img src="images/share.png" width="83" height="16" alt="Bookmark and Share" style="border-style:none" /></a>
 <?php if (isset ($_SERVER['HTTPS'])) { ?>
-	<script type="text/javascript" src="https://secure.addthis.com/js/200/addthis_widget.js"></script>
+	<script type="text/javascript" src="https://secure.addthis.com/js/250/addthis_widget.js"></script>
 <?php } else { ?>
-	<script type="text/javascript" src="http://s7.addthis.com/js/200/addthis_widget.js"></script>
+        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
 <?php } ?>
       </td>
     </tr>
@@ -363,7 +362,7 @@ if ($message)
 <div id="fb-root"></div>
 <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
 <script type="text/javascript">
-FB.init ({appId: '<?=$CONF['fb.app_id']?>', status: true, cookie: true, xfbml: true});
+FB.init ({appId: '<?=$CONF['fb.app_id']?>', status: true, cookie: true, xfbml: false});
 </script>
 <?php } ?>
 

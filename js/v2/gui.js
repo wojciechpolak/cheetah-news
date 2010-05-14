@@ -352,7 +352,10 @@ function initMenu () {
 	if (confirm (_('Log out also from Facebook?'))) {
 	  FB.getLoginStatus (function (res) {
 	      if (res.session)
-		FB.logout (function (r) { window.location = 'logout'; });
+		FB.logout (function (r) {
+		    writeCookie ('cheetahFBL', '', -1);
+		    window.location = 'logout';
+		  });
 	      else
 		window.location = 'logout';
 	    });
@@ -927,10 +930,8 @@ function initCWindow () {
   prepareLink ('addSwitcher', _('Import an OPML file'), '', addSwitcher);
   prepareLink ('cWindowLabel_4_AddHandler', _('Register Cheetah News as feed handler in your browser'),
 	       '', registerCheetahHandler);
-  prepareLink ('cWindowLabel_4_OpenID', _('Manage your OpenIDs'), '',
-	       function () { openSysLink ('openid_manage', true); });
-  prepareLink ('cWindowLabel_4_LinkFB', _('Link your Facebook account'), '',
-	       function () { openSysLink ('fb_connect', true); });
+  prepareLink ('cWindowLabel_4_LinkedAccounts', _('Linked Accounts'), '',
+	       function () { openSysLink ('linked-accounts', false); });
   prepareLink ('cWindowLabel_4_ChangePassword', _('Change Password'), '',
 	       function () { openSysLink ('changepassword', true); });
 
@@ -1479,8 +1480,11 @@ if (!msie && !opera && typeof Element != 'undefined' &&
 }
 
 function help (file) {
+  var p = getWinPosition (640, 650);
   var w = window.open ('help/' + file, file,
-		       'width=640,height=650,toolbar=no,status=no,location=no,resizable=yes,scrollbars=yes');
+		       'width='+ p.width +',height='+ p.height
+		       + ',left='+ p.left +',top='+ p.top
+		       + ',toolbar=no,status=no,location=no,resizable=yes,scrollbars=yes');
   if (!w) popupBlocked ();
 }
 
@@ -1491,9 +1495,25 @@ function openSysLink (name, secure) {
     file = 'https://' + window.location.host +
       pathname.substring (0, pathname.lastIndexOf ('/')) +'/'+ name;
   }
+  var p = getWinPosition (640, 400);
   var w = window.open (file, name,
-		       'width=640,height=400,toolbar=no,status=no,location=no,resizable=yes,scrollbars=yes');
+		       'width='+ p.width +',height='+ p.height
+		       + ',left='+ p.left +',top='+ p.top
+		       + ',toolbar=no,status=no,location=no,resizable=yes,scrollbars=yes');
   if (!w) popupBlocked ();
+}
+
+function getWinPosition (width, height) {
+  var screenX = typeof window.screenX != 'undefined' ? window.screenX : window.screenLeft;
+  var screenY = typeof window.screenY != 'undefined' ? window.screenY : window.screenTop;
+  var outerWidth = typeof window.outerWidth != 'undefined' ? window.outerWidth : document.body.clientWidth;
+  var outerHeight = typeof window.outerHeight != 'undefined' ? window.outerHeight : (document.body.clientHeight - 22);
+  return {
+    width: width,
+    height: height,
+    left: parseInt (screenX + ((outerWidth - width) / 2), 10),
+    top: parseInt (screenY + ((outerHeight - height) / 2.5), 10)
+  };
 }
 
 function setFooter () {

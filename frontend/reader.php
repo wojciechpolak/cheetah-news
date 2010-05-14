@@ -177,7 +177,8 @@ var SIGS = {'js':'".$SIGS["js"]."', 'tr':'".$SIGS["tr"]."', 'wt':'".
       <tr><td colspan="2"><span id="cWindowLabel_4_AddHandler" class="link"></span></td></tr>
       <tr><td colspan="2"><div class="cth-separator"></div></td></tr>
       <tr><td id="cWindowLabel_4_System"></td></tr>
-      <tr><td><span id="cWindowLabel_4_OpenID" class="link"></span></td></tr>
+      <tr><td><span id="cWindowLabel_4_LinkedAccounts" class="link"></span>
+	      <span class="cWindowHint">(OpenID, Facebook, etc.)</span></td></tr>
       <tr><td><span id="cWindowLabel_4_LinkFB" class="link"></span></td></tr>
       <tr><td><span id="cWindowLabel_4_ChangePassword" class="link"></span></td></tr>
     </table>

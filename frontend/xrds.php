@@ -2,7 +2,7 @@
 
 /*
    Cheetah News xrds.php
-   Copyright (C) 2008 Wojciech Polak.
+   Copyright (C) 2008, 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -29,8 +29,8 @@ echo '<?xml version="1.0" encoding="UTF-8"?>'."\n";
   <XRD>
     <Service priority="1">
       <Type>http://specs.openid.net/auth/2.0/return_to</Type>
-      <URI priority="1">https://www.cheetah-news.com/login</URI>
-      <URI priority="2">https://www.cheetah-news.com/openid_manage</URI>
+      <URI priority="1">http://www.cheetah-news.com/login</URI>
+      <URI priority="2">http://www.cheetah-news.com/linked-accounts</URI>
     </Service>
   </XRD>
 </xrds:XRDS>

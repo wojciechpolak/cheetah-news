@@ -5,7 +5,7 @@ frontend/fetch.php
 frontend/import.php
 frontend/login.php
 frontend/mdb.php
-frontend/openid_manage.php
+frontend/linked-accounts.php
 frontend/signup.php
 frontend/xnotes.php
 frontend/lib/forgotpassword.php
