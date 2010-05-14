@@ -475,6 +475,7 @@ h4.weatherTemp {
   width: 100%;
   min-width: 400px;
   clear: both;
+  -webkit-box-shadow: 3px 3px 6px #888;
 }
 
 .bWindowContent {
@@ -594,6 +595,8 @@ h4.weatherTemp {
   width: 12em;
   text-align: left;
   z-index: 100;
+  -moz-box-shadow: 2px 2px 6px #888;
+  -webkit-box-shadow: 2px 2px 6px #888;
   -moz-user-select: none;
   -webkit-user-select: none;
 }
@@ -611,6 +614,8 @@ h4.weatherTemp {
   width: 12em;
   text-align: left;
   z-index: 100;
+  -moz-box-shadow: 2px 2px 6px #888;
+  -webkit-box-shadow: 2px 2px 6px #888;
   -moz-user-select: none;
   -webkit-user-select: none;
 }
