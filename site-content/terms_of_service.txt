@@ -50,7 +50,7 @@ Service.</p>
 
     <li id="expiration">Your account will remain active for as long as you are using it at least
       once a month.  It will expire if you never access it within a term of
-      60 days.  Approximately two weeks before your account is due to expire,
+      90 days.  Approximately two weeks before your account is due to expire,
       you will receive an expiration notice via e-mail.</li>
    
     <li>Special <i>guest</i> account is provided for evaluation purposes.

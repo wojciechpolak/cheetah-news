@@ -22,7 +22,7 @@
 (define-public cheetah-trs-expire-days 2)
   
 (define-public cheetah-tmp-dir "/tmp")
-(define-public cheetah-expire-days 60)
+(define-public cheetah-expire-days 90)
 (define-public cheetah-notify-days 14)
 
 (define-public cheetah-iface "mysql")
