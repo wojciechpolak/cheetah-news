@@ -175,7 +175,7 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">';
 <body>
 
 <div id="main">
-<div id="signIn">
+<div id="signIn" class="box">
 <form id="f1" action="<?php echo $CONF['secureProto'].'://'.$CONF['site'].'/login'; ?>" method="post">
   <table width="100%" border="0">
     <tr id="trCEmail" class="hidden">
@@ -257,7 +257,6 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">';
 	<script type="text/javascript">
 	  var addthis_config = {
 	    username: 'wojciechpolak',
-	    ui_cobrand: 'Cheetah News',
 	    ui_header_color: '#ffffff',
 	    ui_header_background: '#000000',
 	    data_track_clickback: false,
@@ -279,7 +278,7 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">';
   </table>
 </form>
 </div>
-<div id="passwordRecovery">
+<div id="passwordRecovery" class="box">
 <form id="f2" action="login" method="post">
   <table width="100%" border="0">
     <tr><td colspan="2"><?php echo _('Password Recovery'); ?></td></tr>
@@ -304,7 +303,7 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">';
   </table>
 </form>
 </div>
-<div id="registration">
+<div id="registration" class="box">
 <form action="<?php echo $CONF['secureProto'].'://'.$CONF['site'].'/login'; ?>" method="post">
   <table width="100%" border="0">
     <tr><td colspan="2"><?php echo _('Registration Process'); ?></td></tr>
@@ -335,7 +334,7 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">';
   </table>
 </form>
 </div>
-<div id="about">
+<div id="about" class="box">
   <p style="font-weight:bold;text-align:left">
     <?php printf (_("Bleeding-Edge Personal News Aggregator %s"), 'v2'); ?>
   </p>

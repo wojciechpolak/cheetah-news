@@ -19,11 +19,14 @@
 */
 
 require_once 'lib/include.php';
+require_once 'lib/d-sigs.php';
+require_once 'lib/register.php';
 
 start_session ('no');
 
 getvars ('hash');
-postvars ('Confirm,Decline');
+postvars ('Confirm,Decline,cEmail');
+$cEmail = htmlspecialchars (strip_tags ($cEmail));
 
 $layout = '';
 $message = '';
@@ -43,45 +46,78 @@ if (!empty ($hash))
     $pass  = $db->f ('pass');
     $openid_identity = $db->f ('openid_identity');
 
-    $db->query ("SELECT email FROM user WHERE email='".$email."'");
-    if ($db->next_record ()) {
-      $message = _('Account already exists.');
+    if (strlen ($openid_identity) > 36)
+      $olabel = substr ($openid_identity, 0, 36).'...';
+    else
+      $olabel = $openid_identity;
+
+    if (empty ($email)) {
+      if (!empty ($cEmail)) {
+	$res = rpNewSendEmail ($cEmail, uniqid (rand(), true), $openid_identity);
+	switch ($res) {
+	case 0:
+	  $db->query ("DELETE FROM registration WHERE hash='".$db->escape ($hash)."'");
+	  $message = _('A registration confirmation e-mail has been sent to you.');
+	  break;
+	case -1:
+	  $message = _('Please specify a valid e-mail address.');
+	  $layout = 'needEmail';
+	  break;
+	case -2:
+	  $message = _('Service temporarily unavailable. Please try again later.');
+	  $layout = 'needEmail';
+	  break;
+	case -3:
+	  $message = _('That account already exists. Please visit Menu/User Settings/Linked Accounts.');
+	  $layout = 'needEmail';
+	  break;
+	}
+      }
+      else {
+	$layout = 'needEmail';
+      }
     }
     else {
-      if ($Confirm) {
-	$db->query ("INSERT INTO user SET email='".$email."', pass='".$pass."'");
-	$db->query ("SELECT LAST_INSERT_ID() as last_id FROM user");
-	if ($db->next_record ()) {
-	  $last_id = $db->f ('last_id');
-	}
-
-	if (!empty ($openid_identity)) {
-	  $db->query ("INSERT INTO openid SET userid='".$last_id.
-		      "', identity='".$openid_identity."'");
-	}
-
-	$db->query ("DELETE FROM registration WHERE hash='".$db->escape ($hash)."'");
-
-	$session->id    = $last_id;
-	$session->email = $email;
-	$session->pass  = $pass;
-	$session->lang  = 'null';
-	$session->status['afterlogged'] = 'yes';
-	$session->status['iflogged'] = 'yes';
-	$_SESSION['session'] = $session;
-
-	redirect ($CONF['secureProto'].'://'.$CONF['site'].'/rd');
+      $db->query ("SELECT email FROM user WHERE email='".$email."'");
+      if ($db->next_record ()) {
+	$message = _('Account already exists.');
       }
-      else if ($Decline) {
-	$db->query ("DELETE FROM registration WHERE hash='".$db->escape ($hash)."'");
-	$message = _('Done, rejected.');
+      else {
+	if ($Confirm) {
+	  $db->query ("INSERT INTO user SET email='".$email."', pass='".$pass."'");
+	  $db->query ("SELECT LAST_INSERT_ID() as last_id FROM user");
+	  if ($db->next_record ()) {
+	    $last_id = $db->f ('last_id');
+	  }
+
+	  if (!empty ($openid_identity)) {
+	    $db->query ("INSERT INTO openid SET userid='".$last_id.
+			"', identity='".$openid_identity."'");
+	  }
+
+	  $db->query ("DELETE FROM registration WHERE hash='".$db->escape ($hash)."'");
+
+	  $session->id    = $last_id;
+	  $session->email = $email;
+	  $session->pass  = $pass;
+	  $session->lang  = 'null';
+	  $session->status['afterlogged'] = 'yes';
+	  $session->status['iflogged'] = 'yes';
+	  $_SESSION['session'] = $session;
+
+	  redirect ($CONF['secureProto'].'://'.$CONF['site'].'/rd');
+	}
+	else if ($Decline) {
+	  $db->query ("DELETE FROM registration WHERE hash='".$db->escape ($hash)."'");
+	  $message = _('Done, rejected.');
+	}
+	else
+	  $layout = 'confirm';
       }
-      else
-	$layout = 'confirm';
     }
   }
   else if (!empty ($hash))
-    $message = _('Your confirmation period or invitation has expired.');
+    $message = _('Your confirmation period has expired.');
 }
 
 ?>
@@ -91,15 +127,43 @@ if (!empty ($hash))
 <title>Cheetah News</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="robots" content="noindex,nofollow" />
-<link rel="stylesheet" href="d?q=css.signup" type="text/css" />
+<link rel="stylesheet" href="<?=dsp('css.login')?>" type="text/css" />
 <link rel="icon" href="images/favicon.png" type="image/png" />
 </head>
 <body>
 
+<div id="main">
+
 <?php
-if ($layout == 'confirm') { ?>
-<div id="box">
-<h2>Cheetah: <?php echo _('Do you confirm signing up?'); echo '<br />('; echo _('account'); ?> <em><?php echo $email; ?></em>)</h2>
+if ($layout == 'needEmail') { ?>
+<div class="v box left">
+<h3><?php echo _('Please provide your e-mail address. It is required to continue the sign up process.'); ?></h3>
+<p><img src="images/openid.png" width="16" height="16" alt="OpenID" />
+   <a href="<?=$openid_identity?>" target="_blank"><?=$olabel?></a>
+</p>
+<form action="signup" method="post">
+  <table width="100%" border="0">
+    <tr>
+      <td align="left">
+	<input type="hidden" name="hash" value="<?php echo htmlspecialchars ($hash); ?>" />
+	<input type="text" name="cEmail" value="<?php echo $cEmail; ?>" maxlength="255" />
+	<input type="submit" name="Confirm" value="<?php echo _('Sign Up'); ?>" />
+      </td>
+    </tr>
+    <tr style="height:10px"><td></td></tr>
+    <tr>
+      <td colspan="2" align="left">
+	<a href="http://<?php echo $CONF['site']; ?>/privacy" target="_blank"><?php echo _('Privacy Policy'); ?></a>&nbsp;&nbsp;
+	<a href="http://<?php echo $CONF['site']; ?>/terms_of_service" target="_blank"><?php echo _('Terms of Service'); ?></a>
+      </td>
+    </tr>
+  </table>
+</form>
+</div>
+<?php } else if ($layout == 'confirm') { ?>
+<div class="v box">
+<h2><?php echo _('Do you confirm signing up?');
+echo '<br /><span class="smaller">('; echo _('account'); ?> <em><?php echo $email; ?></em>)</span></h2>
 <form action="signup" method="post">
   <table width="100%" border="0">
     <tr>
@@ -114,21 +178,18 @@ if ($layout == 'confirm') { ?>
     <tr style="height:10px"><td></td></tr>
     <tr>
       <td colspan="2" align="center">
-	<a href="http://<?php echo $CONF['site']; ?>/privacy"><?php echo _('Privacy Policy'); ?></a>&nbsp;&nbsp;
-	<a href="http://<?php echo $CONF['site']; ?>/terms_of_service"><?php echo _('Terms of Service'); ?></a>
+	<a href="http://<?php echo $CONF['site']; ?>/privacy" target="_blank"><?php echo _('Privacy Policy'); ?></a>&nbsp;&nbsp;
+	<a href="http://<?php echo $CONF['site']; ?>/terms_of_service" target="_blank"><?php echo _('Terms of Service'); ?></a>
       </td>
     </tr>
   </table>
 </form>
 </div>
-<?php } else if ($message) { ?>
-<div id="box">
-  <h2><?php echo $message; ?></h2>
-  <table width="100%" border="0">
-    <tr><td><a href="http://<?php echo $CONF['site']; ?>/"><?php echo _('Sign in'); ?></a></td></tr>
-  </table>
-</div>
-<?php } ?>
+<?php }
+if ($message)
+  echo '<div id="message">'.$message.'</div>';
+?>
+</div><!-- /main -->
 
 </body>
 </html>

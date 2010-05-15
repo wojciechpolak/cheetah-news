@@ -220,7 +220,7 @@ class Session
     {
       $db->query ("SELECT id FROM user WHERE email='".$db->escape ($email)."'");
       if ($db->next_record ()) {
-	return _("To enable OpenID support, please visit Menu/User Settings/Manage your OpenIDs.");
+	return _("To enable OpenID support, please visit Menu/User Settings/Linked Accounts.");
       }
 
       $res = rpNewSendEmail ($email, uniqid (rand(), true), $identity);
@@ -239,8 +239,28 @@ class Session
 	break;
       }
     }
-    else
-      return _("New OpenID accounts without email address are not supported.");
+    else {
+      /*
+       *  New account via OpenID.
+       */
+      $db->query ("SELECT id, hash FROM registration WHERE openid_identity='".
+		  $db->escape ($identity)."'");
+      if (!$db->next_record ()) {
+	$hash = sha1 (time().$identity.rand());
+	$pass = uniqid (rand(), true);
+	$db->query ("INSERT INTO registration SET rdate=UTC_TIMESTAMP(), ".
+		    "hash='".$hash."', pass='".$pass."', openid_identity='".
+		    $db->escape ($identity)."'");
+      }
+      else {
+	$hash = $db->f ('hash');
+      }
+      if (isset ($_SERVER['HTTPS']))
+	redirect ($CONF['secureProto'].'://'.$CONF['site'].
+		  '/signup?hash='.$hash);
+      else
+	redirect ('http://'.$CONF['site'].'/signup?hash='.$hash);
+    }
   }
 
   function fb_login (&$fb, $fb_uid, $insideFB=false)

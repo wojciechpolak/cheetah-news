@@ -69,6 +69,9 @@
 	  GID ('openid_identifier').value = 'https://www.google.com/accounts/o8/id';
 	else if (authMech == 'auth-yahoo')
 	  GID ('openid_identifier').value = 'http://www.yahoo.com/';
+
+	if (window.location.protocol == 'http:')
+	  this.action = this.action.replace (/https:/, 'http:');
 	return true;
       }
       return false;
