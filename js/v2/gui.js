@@ -398,6 +398,7 @@ function showMenu (e) {
   menu.style.top  = (findPosY (menuLink) + 17) + 'px';
   menu.style.display = 'inline';
   $(document).bind ('click', hideMenu);
+  return false;
 }
 
 function hideMenu () {

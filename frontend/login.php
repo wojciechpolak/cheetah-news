@@ -218,7 +218,7 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">';
       <td align="left">
 	<input type="submit" id="SignIn" name="SignIn" value="<?php echo _('Sign in'); ?>" />
 	<span id="l0wrap" class="hidden">
-	  <?php echo '(<a id="l0" href="http://blog.cheetah-news.com/2008/09/ssl-certificate/">'._('About SSL').'</a>)'; ?>
+	  (<a id="l0" href="http://blog.cheetah-news.com/2008/09/ssl-certificate/"><?php echo _('About SSL'); ?></a>)
 	</span>
       </td>
     </tr>

@@ -19,6 +19,11 @@ ul, p {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+input[type="text"], input[type="password"] {
+  outline: none;
+  padding: 2px;
+  border: 1px solid #9d9180;
+}
 
 .hidden { display: none; }
 .left { text-align: left; }
@@ -37,9 +42,9 @@ ul, p {
   background-color: #fff;
   background-position: 0 50%;
   color: #000;
-  padding-left: 18px;
+  padding-left: 18px !important;
 }
-.img-16-delete {background: transparent url(images/master-icons.png?v=0) no-repeat -64px 0px;}
+.img-16-delete {background: transparent url(images/master-icons.png?v=1) no-repeat -64px 0px;}
 
 #providers {
   height: 40px;

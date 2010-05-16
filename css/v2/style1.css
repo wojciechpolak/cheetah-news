@@ -20,6 +20,15 @@ input, select {
   font-size: 100%;
   outline: none;
 }
+input[type="text"], input[type="password"], textarea {
+  padding: 2px;
+  outline: none;
+  border: 1px solid #9d9180;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
 img {
   border-style: none;
 }
@@ -1143,31 +1152,31 @@ table.vc td { padding: 0; }
 }
 
 /* CSS Sprites */
-.img-10-down {background: transparent url(images/master-icons.png?v=0) no-repeat 0px 0px; }
-.img-10-remove {background: transparent url(images/master-icons.png?v=0) no-repeat -10px 0px;}
-.img-10-right {background: transparent url(images/master-icons.png?v=0) no-repeat -20px 0px;}
-.img-10-up {background: transparent url(images/master-icons.png?v=0) no-repeat -30px 0px;}
-.img-12-reload {background: transparent url(images/master-icons.png?v=0) no-repeat -40px 0px;}
-.img-12-remove {background: transparent url(images/master-icons.png?v=0) no-repeat -52px 0px;}
-.img-16-delete {background: transparent url(images/master-icons.png?v=0) no-repeat -64px 0px;}
-.img-16-feed {background: transparent url(images/master-icons.png?v=0) no-repeat -107px 0px; width: 16px; height: 16px;}
-.img-16-folderclose {background: transparent url(images/master-icons.png?v=0) no-repeat -123px 0px;}
-.img-16-folderopen {background: transparent url(images/master-icons.png?v=0) no-repeat -139px 0px;}
-.img-16-notifier {background: transparent url(images/master-icons.png?v=0) no-repeat -299px 0px;}
-.img-16-world {background: transparent url(images/master-icons.png?v=0) no-repeat -315px 0px;}
-.img-16-world-i {background: transparent url(images/master-icons.png?v=0) no-repeat -331px 0px;}
-.img-elink {background: transparent url(images/master-icons.png?v=0) no-repeat -80px 0px; width: 27px; height: 12px;}
+.img-10-down {background: transparent url(images/master-icons.png?v=1) no-repeat 0px 0px; }
+.img-10-remove {background: transparent url(images/master-icons.png?v=1) no-repeat -10px 0px;}
+.img-10-right {background: transparent url(images/master-icons.png?v=1) no-repeat -20px 0px;}
+.img-10-up {background: transparent url(images/master-icons.png?v=1) no-repeat -30px 0px;}
+.img-12-reload {background: transparent url(images/master-icons.png?v=1) no-repeat -40px 0px;}
+.img-12-remove {background: transparent url(images/master-icons.png?v=1) no-repeat -52px 0px;}
+.img-16-delete {background: transparent url(images/master-icons.png?v=1) no-repeat -64px 0px;}
+.img-16-feed {background: transparent url(images/master-icons.png?v=1) no-repeat -107px 0px; width: 16px; height: 16px;}
+.img-16-folderclose {background: transparent url(images/master-icons.png?v=1) no-repeat -123px 0px;}
+.img-16-folderopen {background: transparent url(images/master-icons.png?v=1) no-repeat -139px 0px;}
+.img-16-notifier {background: transparent url(images/master-icons.png?v=1) no-repeat -299px 0px;}
+.img-16-world {background: transparent url(images/master-icons.png?v=1) no-repeat -315px 0px;}
+.img-16-world-i {background: transparent url(images/master-icons.png?v=1) no-repeat -331px 0px;}
+.img-elink {background: transparent url(images/master-icons.png?v=1) no-repeat -80px 0px; width: 27px; height: 12px;}
 
-#menuOpenSWindow img {background: transparent url(images/master-icons.png?v=0) no-repeat -251px 0px;} /* mstuff */
-#menuOpenFacebook img {background: transparent url(images/master-share.png?v=1) no-repeat -64px 0px;}
-#menuOpenNotes img {background: transparent url(images/master-icons.png?v=0) no-repeat -235px 0px;} /* mnotes */
-#menuOpenWeather img {background: transparent url(images/master-icons.png?v=0) no-repeat -283px 0px;} /* mweather */
-#menuOpenFanbox img {background: transparent url(images/master-icons.png?v=0) no-repeat -203px 0px;} /* fanbox */
-#menuOpenCWindow1 img {background: transparent url(images/master-icons.png?v=0) no-repeat -155px 0px;} /* madd */
-#menuOpenCWindow2 img {background: transparent url(images/master-icons.png?v=0) no-repeat -267px 0px;} /* msubs */
-#menuOpenCWindow3 img {background: transparent url(images/master-icons.png?v=0) no-repeat -187px 0px;} /* mfolders */
-#menuOpenCWindow4 img {background: transparent url(images/master-icons.png?v=0) no-repeat -171px 0px;} /* medit */
-#logout img {background: transparent url(images/master-icons.png?v=0) no-repeat -219px 0px;} /* mlogout */
+#menuOpenSWindow img {background: transparent url(images/master-icons.png?v=1) no-repeat -251px 0px;} /* mstuff */
+#menuOpenFacebook img {background: transparent url(images/master-icons.png?v=1) no-repeat -347px 0px;}
+#menuOpenNotes img {background: transparent url(images/master-icons.png?v=1) no-repeat -235px 0px;} /* mnotes */
+#menuOpenWeather img {background: transparent url(images/master-icons.png?v=1) no-repeat -283px 0px;} /* mweather */
+#menuOpenFanbox img {background: transparent url(images/master-icons.png?v=1) no-repeat -203px 0px;} /* fanbox */
+#menuOpenCWindow1 img {background: transparent url(images/master-icons.png?v=1) no-repeat -155px 0px;} /* madd */
+#menuOpenCWindow2 img {background: transparent url(images/master-icons.png?v=1) no-repeat -267px 0px;} /* msubs */
+#menuOpenCWindow3 img {background: transparent url(images/master-icons.png?v=1) no-repeat -187px 0px;} /* mfolders */
+#menuOpenCWindow4 img {background: transparent url(images/master-icons.png?v=1) no-repeat -171px 0px;} /* medit */
+#logout img {background: transparent url(images/master-icons.png?v=1) no-repeat -219px 0px;} /* mlogout */
 
 .share-buzz {background: transparent url(images/master-share.png?v=1) no-repeat 0 0;}
 .share-delicious {background: transparent url(images/master-share.png?v=1) no-repeat -16px 0px;}

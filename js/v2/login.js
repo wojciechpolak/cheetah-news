@@ -50,9 +50,6 @@
 	return true;
       }
       else if (authMech) {
-	GID ('cEmail').disabled = true;
-	GID ('cPassword').disabled = true;
-
 	if (authMech == 'auth-facebook') {
 	  FB.login (function (res) {
 	      if (res.session && res.perms &&
@@ -72,6 +69,9 @@
 
 	if (window.location.protocol == 'http:')
 	  this.action = this.action.replace (/https:/, 'http:');
+
+	GID ('cEmail').disabled = true;
+	GID ('cPassword').disabled = true;
 	return true;
       }
       return false;
@@ -102,17 +102,21 @@
     GID ('trForgotPassword').className = 'hidden';
     GID ('l0wrap').className = 'hidden';
 
-    if (authMech == 'auth-openid') {
-      $('#trOpenID').removeClass ('hidden');
-      $('#openid_identifier').val ('').focus ();
-    }
-
     var c = readCookie (cookieLogin);
     if (c) {
       var m = GID (c);
       if (m) selectAuthMech.call (m);
       if (c == 'common')
 	writeCookie (cookieLogin, 'OpenID', 365);
+    }
+
+    var m = $('#providers a[class=selected]');
+    if (m.length) {
+      authMech = m[0].id;
+      if (authMech == 'auth-openid') {
+	$('#trOpenID').removeClass ('hidden');
+	$('#openid_identifier').val ('').focus ();
+      }
     }
   }
 
