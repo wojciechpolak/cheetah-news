@@ -97,7 +97,7 @@ Modules.OPML = new function () {
     if (!checkOnline ()) return false;
     var pf = GID ('popularFeeds');
 
-    var username = DCE ('input', {size:16});
+    var username = DCE ('input', {type: 'text', size: 16});
     prepareInputWithDefault (username, _('username'));
 
     var service = document.createElement ('select');

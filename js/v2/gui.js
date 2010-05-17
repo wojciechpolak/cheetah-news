@@ -51,6 +51,7 @@ function initGui () {
   sWindowFeeds.id = 'sWindowFeeds';
   sWindowFeeds.innerHTML = _('Loading...');
   sWindow.appendChild (sWindowOptions);
+  sWindow.appendChild (DCE ('div', {id: 'sWindowSocial'}));
   sWindow.appendChild (sWindowFeeds);
   sWindowOptions.style.display = 'block';
   sWindowFeeds.style.display = 'block';
@@ -466,7 +467,7 @@ function validateFeed (url) {
   if (!checkOnline ()) return;
   if (sendIntv) return;
   GID ('addURLStatusBar').style.display = 'none';
-  if (url == '') {
+  if (url == '' || url == _('feed URL or search term')) {
     updateCStatusBar ('red', _('Invalid URL'));
   }
   else if (/^(https?:\/\/|feed:\/\/)?([a-zA-Z0-9_]+:[a-zA-Z0-9\-_]+@)?[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+.*$/.test (url)) {
@@ -909,7 +910,7 @@ function initCWindow () {
   GID ('cWindowLabel_4_System').innerHTML = _('System:');
   GID ('cWindowLabel_4_Goodies').innerHTML = _('Goodies:');
 
-  prepareInput (GID ('addURLInput'));
+  prepareInputWithDefault (GID ('addURLInput'), _('feed URL or search term'));
   prepareInput (GID ('addFolderInput'));
   var cWindowRefreshRate = GID ('cWindowRefreshRate');
   cWindowRefreshRate.onchange = changeRefreshRate;
@@ -969,13 +970,7 @@ function openCWindow (label) {
 
   main.style.height = 'auto';
   setTimeout (function () {
-      $(settings).slideDown ('normal', function () {
-	  if (label == 1) {
-	    if (GID ('addURL').style.display != 'none') {
-	      $('#addURLInput').attr ('value', '').focus ();
-	    }
-	  }
-	});
+      $(settings).slideDown ('normal');
     }, 50);
 }
 

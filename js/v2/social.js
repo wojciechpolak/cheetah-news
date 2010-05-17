@@ -34,6 +34,13 @@ Modules.Social = new function () {
 
   function setup () {
     if (initiated) return;
+    var s = GID ('sWindowSocial');
+    if (s) {
+      var img = DCE ('img', {id: 'sWindowStreamFB', src: 'images/t.gif', alt: '',
+			     title: _('Facebook News Feed')});
+      img.onclick = function () { self.openFBStream (); };
+      s.appendChild (img);
+    }
     var m = GID ('menuOpenFacebook');
     if (m) {
       m.className = 'linkCM';

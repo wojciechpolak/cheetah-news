@@ -251,8 +251,8 @@ var SIGS = {'js':'".$SIGS["js"]."', 'tr':'".$SIGS["tr"]."', 'wt':'".
           <input type="hidden" id="neStatus" />
           <input type="hidden" id="neColor" />
           <table class="neWindowTable">
-            <tr><td id="neWindowT1" style="width:4em"></td><td><input id="neTitle" maxlength="64" style="width:90%" /></td></tr>
-	    <tr><td id="neWindowT2"></td><td><input id="neTags" maxlength="64" style="width:90%" />&nbsp;<span id="neTagsHelp">(?)</span></td></tr>
+            <tr><td id="neWindowT1" style="width:4em"></td><td><input type="text" id="neTitle" maxlength="64" style="width:90%" /></td></tr>
+	    <tr><td id="neWindowT2"></td><td><input type="text" id="neTags" maxlength="64" style="width:90%" />&nbsp;<span id="neTagsHelp">(?)</span></td></tr>
             <tr valign="top"><td id="neWindowT5"></td><td><div id="neNote"></div></td></tr>
             <tr><td id="neWindowT4"></td><td><input type="checkbox" id="nePublic" /></td></tr>
           </table>

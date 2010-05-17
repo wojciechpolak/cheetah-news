@@ -550,7 +550,6 @@ h4.weatherTemp {
   text-align: left;
   overflow: hidden;
 }
-
 #sWindowOptions {
   font-size: 95%;
   padding-right: 17px;
@@ -558,7 +557,6 @@ h4.weatherTemp {
   -moz-user-select: none;
   -webkit-user-select: none;
 }
-
 #sWindowFeeds {
   font-size: 95%;
   line-height: 150%;
@@ -572,18 +570,26 @@ h4.weatherTemp {
   -moz-user-select: none;
   -webkit-user-select: none;
 }
+#sWindowSocial {
+  margin: 5px 0 4px 5px;
+  height: 16px;
+}
+#sWindowStreamFB {
+  width: 16px;
+  height: 16px;
+  background: transparent url(images/master-icons.png?v=1) no-repeat -347px 0px;
+  cursor: pointer;
+}
 
 .feedWaiting {
   padding: 3px;
   background-color: red;
   color: white;
 }
-
 .feedOpened {
   color: black;
   font-weight: bold;
 }
-
 .feedClosed {
   color: red;
   font-weight: bold;
