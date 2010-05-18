@@ -31,7 +31,7 @@ $session->auth ('iflogged');
 $qs = false;
 $message = '';
 
-postvars ('link,unlink');
+postvars ('sid,link,unlink');
 $link = trim (strip_tags ($link));
 $unlink = trim (strip_tags ($unlink));
 
@@ -79,6 +79,7 @@ else if (isset ($_GET['openid_mode']) && !empty ($_GET['openid_mode']))
 }
 else if ($link == 'facebook')
 {
+  checkCSRF ($sid);
   try {
     $fb = new Facebook (array ('appId'  => $CONF['fb.app_id'],
 			       'secret' => $CONF['fb.secret_key'],
@@ -98,10 +99,12 @@ else if ($link == 'facebook')
 }
 else if ($unlink == 'facebook')
 {
+  checkCSRF ($sid);
   $db->query ("UPDATE user SET fbUID=0 WHERE id='".$session->id."'");
 }
 else if (!empty ($link))
 {
+  checkCSRF ($sid);
   $process_url = 'http://'.$CONF['site'].'/linked-accounts';
   $trust_root = 'http://'.$CONF['site'].'/';
 
@@ -133,6 +136,7 @@ else if (!empty ($link))
   }
 }
 else if (!empty ($unlink)) {
+  checkCSRF ($sid);
   $db->query ("DELETE FROM openid WHERE userid='".$session->id.
 	      "' AND identity='".$db->escape ($unlink)."'");
   redirect ('linked-accounts');
@@ -209,6 +213,7 @@ $db->query ("SELECT * FROM openid WHERE userid='".$session->id."' ORDER BY ident
       <div style="clear:both"></div>
     </div>
     <div id="add-openid" class="hidden">
+      <input type="hidden" name="sid" value="<?php echo session_id(); ?>" />
       <input type="hidden" id="unlink" name="unlink" disabled="disabled" />
       <input type="text" id="link" class="openid" name="link" size="30" maxlength="255" />
       <input type="submit" value="<?php echo _('Attach'); ?>" />
