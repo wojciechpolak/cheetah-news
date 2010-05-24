@@ -331,7 +331,8 @@
 	  </xsl:call-template>
 	</xsl:when>
       </xsl:choose>
-      <xsl:apply-templates select="enclosure|media:thumbnail|media:content"/>
+      <xsl:apply-templates select="enclosure|media:thumbnail|media:content|
+				   media:group/media:content[@isDefault='true']"/>
       <div class="entryMeta">
 	<xsl:if test="link">
 	  <span class="entryMore">
@@ -725,7 +726,8 @@
       </xsl:choose>
       <xsl:apply-templates select="atom:link[@rel = 'enclosure']|
 				   atomW3:link[@rel = 'enclosure']|
-				   media:thumbnail|media:content"/>
+				   media:thumbnail|media:content|
+				   media:group/media:content[@isDefault='true']"/>
       <div class="entryMeta">
 	<xsl:if test="atom:link|atomW3:link">
 	  <span class="entryMore">
