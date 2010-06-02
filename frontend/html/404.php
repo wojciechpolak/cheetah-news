@@ -1,8 +1,8 @@
 <?php
 
 /*
-   Cheetah News html/error.php
-   Copyright (C) 2005, 2010 Wojciech Polak.
+   Cheetah News html/404.php
+   Copyright (C) 2010 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -21,9 +21,7 @@
 require_once '../lib/include.php';
 require_once '../lib/d-sigs.php';
 
-start_session (null, false);
-$session->auth ('iflogged');
-getvars ('s,st');
+header ('HTTP/1.0 404 Not Found');
 header ("Content-Type: text/html; charset=UTF-8");
 
 ?>
@@ -31,14 +29,14 @@ header ("Content-Type: text/html; charset=UTF-8");
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<title>Cheetah News</title>
+<title>Not Found</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="<?php echo 'http://'.$CONF['site'].'/'.dsp('css.login'); ?>" type="text/css" />
 <link rel="icon" href="http://<?=$CONF['site']?>/images/favicon.png" type="image/png" />
 </head>
 <body>
 <div id="main">
-  <div id="message"><?php printf (_('Error %s: %s'), $s, $st); ?></div>
+  <div id="message"><?php echo _('404: Page not found'); ?></div>
 </div><!-- /main -->
 </body>
 </html>
