@@ -1539,7 +1539,7 @@ function scrollToElement (t, obj) {
   }
   else {
     var tOffset = $(t).offset().top;
-    $(obj).animate ({scrollTop: tOffset}, 200);
+    $('html,body').animate ({scrollTop: tOffset}, 200);
   }
 }
 
