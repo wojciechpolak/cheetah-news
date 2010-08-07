@@ -23,7 +23,6 @@ $CONF['trsExpireDays'] = 7;
 
 $CONF['feedEngine'] = 'cth';
 $CONF['google.key'] = 'GOOGLE-API-KEY';
-$CONF['google.mapkey'] = 'GOOGLE-MAP-KEY';
 $CONF['google.analytics'] = 'GA-CODE';
 
 $CONF['fb.app_id'] = 'FACEBOOK-APP-ID';

@@ -1010,10 +1010,9 @@
 <xsl:template name="show-map">
   <xsl:param name="lat"/>
   <xsl:param name="long"/>
-  <xsl:variable name="mapkey" select="'ABQIAAAAvLLQCnhTw46NwnzLhmeTWxTKCotwoHIH9XR8xmEaA1ptUXasrBR183bAB_OU-il8VLNhl9DX6kkXYA'"/>
   <div class="mapembedded">
     <a href="http://maps.google.com/maps?q={normalize-space($lat)},{normalize-space($long)}">
-      <img osrc="http://maps.google.com/staticmap?zoom=12&amp;size=175x120&amp;maptype=mobile&amp;markers={normalize-space($lat)},{normalize-space($long)}&amp;key={$mapkey}"
+      <img osrc="http://maps.google.com/maps/api/staticmap?sensor=false&amp;zoom=12&amp;size=175x120&amp;markers={normalize-space($lat)},{normalize-space($long)}"
 	   width="175" height="120" alt="Google Maps" title="Google Maps" />
     </a>
   </div>
