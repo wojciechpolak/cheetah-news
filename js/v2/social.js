@@ -176,7 +176,7 @@ Modules.Social = new function () {
     }
 
     var comments = '';
-    if ('comments' in e) {
+    if ('comments' in e && 'data' in e.comments) {
       comments += '<div class="comments">';
       var no = e.comments.data.length > 2 ? 2 : e.comments.data.length;
       for (var i = 0; i < e.comments.data.length; i++) {
