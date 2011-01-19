@@ -2,7 +2,7 @@
 
 /*
    Cheetah News index.php
-   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010, 2011 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -31,8 +31,8 @@ else {
   if (isset ($_SERVER['HTTPS'])) {
     redirect ('http://'.$CONF['site'].'/');
   }
-  getvars ('fb_sig_in_iframe');
-  if ($fb_sig_in_iframe == '1')
+  getvars ('signed_request');
+  if ($signed_request)
     redirect ('http://'.$CONF['site'].'/reader?insideFB=1');
 
   header ("Content-Type: text/html; charset=UTF-8");

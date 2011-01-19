@@ -2,7 +2,7 @@
 
 /*
    Cheetah News login.php
-   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010, 2011 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -26,7 +26,7 @@ require_once 'Auth/OpenID/FileStore.php';
 require_once 'Auth/OpenID/SReg.php';
 
 getvars ('cEmail,cPassword,openid_identifier,PersistentCookie,SignIn');
-getvars ('fbConnect,fb_sig_in_iframe');
+getvars ('fbConnect,signed_request');
 postvars ('regPassword,regRPassword,SignUp,RecoverPassword');
 
 if (!isset ($insideLogin)) {
@@ -80,7 +80,7 @@ else if ($fbConnect && isset ($CONF['fb.app_id']) &&
   if ($fb_session) {
     $fb_uid = $fb->getUser ();
     if ($fb_uid) {
-      $insideFB = $fb_sig_in_iframe == '1' ? true : false;
+      $insideFB = $signed_request ? true : false;
       $message = $_SESSION['session']->fb_login ($fb, $fb_uid, $insideFB);
     }
   }
