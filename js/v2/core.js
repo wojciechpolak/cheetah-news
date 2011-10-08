@@ -1,6 +1,6 @@
 /*
    Cheetah News JS/v2 Core
-   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010, 2011 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -1429,7 +1429,10 @@ function prepareEntry (n, feedid) {
       var anchor = n.getAttribute ('href');
       if (anchor) {
 	var rel = n.getAttribute ('relative');
-	if (anchor.charAt (0) == '/' || (rel && rel == 'yes')) {
+	if (anchor.indexOf ('//') == 0) {
+	  /* continue */
+	}
+	else if (anchor.charAt (0) == '/' || (rel && rel == 'yes')) {
 	  var cl = GID ('cl_' + feedid);
 	  if (cl) {
 	    var pathname = '';
@@ -1552,7 +1555,10 @@ function prepareImages (n, feedid) {
     var osrc = n.getAttribute ('osrc');
     if (osrc) {
       var rel = n.getAttribute ('relative');
-      if (osrc.charAt (0) == '/' || (rel && rel == 'yes')) {
+      if (osrc.indexOf ('//') == 0) {
+	/* continue */
+      }
+      else if (osrc.charAt (0) == '/' || (rel && rel == 'yes')) {
 	var cl = GID ('cl_' + feedid);
 	if (cl) {
 	  var pathname = '';
