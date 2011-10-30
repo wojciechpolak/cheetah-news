@@ -28,9 +28,6 @@ if ($session->status['afterlogged'] != 'yes') {
   include 'login.php';
 }
 else {
-  if (isset ($_SERVER['HTTPS'])) {
-    redirect ('http://'.$CONF['site'].'/');
-  }
   getvars ('signed_request');
   if ($signed_request)
     redirect ('http://'.$CONF['site'].'/reader?insideFB=1');
