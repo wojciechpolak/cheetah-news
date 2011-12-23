@@ -2,7 +2,7 @@
 
 /*
    Cheetah News login.php
-   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010, 2011 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -76,13 +76,10 @@ else if ($fbConnect && isset ($CONF['fb.app_id']) &&
   $fb = new Facebook (array ('appId'  => $CONF['fb.app_id'],
 			     'secret' => $CONF['fb.secret_key'],
 			     'cookie' => true));
-  $fb_session = $fb->getSession ();
-  if ($fb_session) {
-    $fb_uid = $fb->getUser ();
-    if ($fb_uid) {
-      $insideFB = $signed_request ? true : false;
-      $message = $_SESSION['session']->fb_login ($fb, $fb_uid, $insideFB);
-    }
+  $fb_uid = $fb->getUser ();
+  if ($fb_uid) {
+    $insideFB = $signed_request ? true : false;
+    $message = $_SESSION['session']->fb_login ($fb, $fb_uid, $insideFB);
   }
 }
 else if ($SignIn)
@@ -361,7 +358,7 @@ if ($message)
 <div id="fb-root"></div>
 <script type="text/javascript" src="https://connect.facebook.net/en_US/all.js"></script>
 <script type="text/javascript">
-FB.init ({appId: '<?=$CONF['fb.app_id']?>', status: true, cookie: true, xfbml: false});
+FB.init ({appId: '<?=$CONF['fb.app_id']?>', oauth: true, status: true, cookie: true, xfbml: false});
 </script>
 <?php } ?>
 

@@ -1,6 +1,6 @@
 /*
    Cheetah News JS/v2 Login
-   Copyright (C) 2005, 2006, 2007, 2008, 2010 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2010, 2012 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -52,10 +52,9 @@
       else if (authMech) {
 	if (authMech == 'auth-facebook') {
 	  FB.login (function (res) {
-	      if (res.session && res.perms &&
-		  res.perms.indexOf ('email') != -1)
+	      if (res.authResponse)
 		fb_login ();
-	    }, {perms: 'email'});
+	    }, {scope: 'email'});
 	  return false;
 	}
 	else if (authMech == 'auth-openid') {

@@ -1,6 +1,6 @@
 /*
    Cheetah News JS/v2 Social
-   Copyright (C) 2010 Wojciech Polak.
+   Copyright (C) 2010, 2012 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -25,7 +25,7 @@ Modules.Social = new function () {
   this.init = function () {
     setTimeout (function () {
 	$.getScript ('http://connect.facebook.net/en_US/all.js', function () {
-	    FB.init ({appId: CONF.fb_app_id, status: true});
+	    FB.init ({appId: CONF.fb_app_id, oauth: true, status: true});
 	    setup ();
 	  });
       }, 2000);
@@ -71,8 +71,8 @@ Modules.Social = new function () {
 
     FB.getLoginStatus (function (res1) {
 	var expired = true;
-	if (!fbSessionExpires && res1.session && 'expires' in res1.session) {
-	  fbSessionExpires = res1.session['expires'];
+	if (!fbSessionExpires && res1.authResponse && 'expires' in res1.authResponse) {
+	  fbSessionExpires = res1.authResponse['expires'];
 	  if (fbSessionExpires === 0)
 	    expired = false;
 	}
@@ -81,22 +81,20 @@ Modules.Social = new function () {
 	  if (fbSessionExpires - now > 1)
 	    expired = false;
 	}
-	if (res1.session && !expired) {
+	if (res1.authResponse && !expired) {
 	  fetchFBStream (args);
-	  if ('expires' in res1.session)
-	    fbSessionExpires = res1.session['expires'];
+	  if ('expires' in res1.authResponse)
+	    fbSessionExpires = res1.authResponse['expires'];
 	}
 	else {
 	  FB.login (function (res2) {
-	      if (res2.session && res2.perms) {
+	      if (res2.authResponse) {
 		writeCookie ('cheetahFBL', 1);
-		if (res2.perms.indexOf ('read_stream') != -1) {
-		  if ('expires' in res2.session)
-		    fbSessionExpires = res2.session['expires'];
-		  fetchFBStream (args);
-		}
+		if ('expires' in res2.authResponse)
+		  fbSessionExpires = res2.authResponse['expires'];
+		fetchFBStream (args);
 	      }
-	    }, {perms: 'read_stream'});
+	    }, {scope: 'read_stream'});
 	}
       });
   }

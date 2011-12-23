@@ -2,7 +2,7 @@
 
 /*
    Cheetah News linked-accounts.php
-   Copyright (C) 2008, 2010 Wojciech Polak.
+   Copyright (C) 2008, 2010, 2012 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -84,13 +84,10 @@ else if ($link == 'facebook')
     $fb = new Facebook (array ('appId'  => $CONF['fb.app_id'],
 			       'secret' => $CONF['fb.secret_key'],
 			       'cookie' => true));
-    $fb_session = $fb->getSession ();
-    if ($fb_session) {
-      $fb_uid = $fb->getUser ();
-      if ($fb_uid) {
-	$db->query ("UPDATE user SET fbUID=".$fb_uid." WHERE id='".
-		    $session->id."'");
-      }
+    $fb_uid = $fb->getUser ();
+    if ($fb_uid) {
+      $db->query ("UPDATE user SET fbUID=".$fb_uid." WHERE id='".
+		  $session->id."'");
     }
   }
   catch (FacebookApiException $e) {
@@ -244,12 +241,11 @@ function detach (id) {
     var id = this.id;
     if (id == 'auth-facebook') {
       FB.login (function (res) {
-	  if (res.session && res.perms &&
-	      res.perms.indexOf ('email') != -1) {
+	  if (res.authResponse) {
 	    GID ('link').value = 'facebook';
 	    document.forms[0].submit ();
 	  }
-	}, {perms: 'email'});
+	}, {scope: 'email'});
     }
     else if (id == 'auth-google') {
       GID ('link').value = 'https://www.google.com/accounts/o8/id';
@@ -279,7 +275,7 @@ function detach (id) {
 <div id="fb-root"></div>
 <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
 <script type="text/javascript">
-FB.init ({appId: '<?=$CONF['fb.app_id']?>', status: true, cookie: true, xfbml: false});
+FB.init ({appId: '<?=$CONF['fb.app_id']?>', oauth: true, status: true, cookie: true, xfbml: false});
 </script>
 <?php } ?>
 

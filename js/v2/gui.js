@@ -1,6 +1,6 @@
 /*
    Cheetah News JS/v2 GUI
-   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010, 2012 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -352,7 +352,7 @@ function initMenu () {
 	  readCookie ('cheetahFBL')) {
 	if (confirm (_('Log out also from Facebook?'))) {
 	  FB.getLoginStatus (function (res) {
-	      if (res.session)
+	      if (res.authResponse)
 		FB.logout (function (r) {
 		    writeCookie ('cheetahFBL', '', -1);
 		    window.location = 'logout';
