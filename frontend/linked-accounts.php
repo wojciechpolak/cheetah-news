@@ -273,9 +273,17 @@ function detach (id) {
 
 <?php if (isset ($CONF['fb.app_id'])) { ?>
 <div id="fb-root"></div>
-<script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
 <script type="text/javascript">
-FB.init ({appId: '<?=$CONF['fb.app_id']?>', oauth: true, status: true, cookie: true, xfbml: false});
+window.fbAsyncInit = function() {
+  FB.init ({appId: '<?=$CONF['fb.app_id']?>', oauth: true, status: true, cookie: true, xfbml: false});
+};
+(function(d) {
+  var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement('script'); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js";
+  ref.parentNode.insertBefore(js, ref);
+}(document));
 </script>
 <?php } ?>
 
