@@ -117,7 +117,6 @@ function initGui () {
 	'menuOpenCWindow3' : '&nbsp;' + _('Manage Folders') + '&nbsp;',
 	'menuOpenCWindow4' : '&nbsp;' + _('User Settings') + '&nbsp;',
 	'menuOpenFacebook': '&nbsp;' + _('Facebook News Feed') + '&nbsp;',
-	'menuOpenFanbox': '&nbsp;' + _('Facebook Fanbox') + '&nbsp;',
 	'logout' : '&nbsp;' + _('Logout') + '&nbsp;'}, true);
 
   initMenu ();
@@ -365,7 +364,6 @@ function initMenu () {
       }
       window.location = 'logout';
     });
-  setCmhLink (GID ('menuOpenFanbox'),   function () { this.className = 'linkCM'; openFanbox (); });
   setCmhLink (GID ('menuOpenCWindow1'), function () { this.className = 'linkCM'; openCWindow (1); });
   setCmhLink (GID ('menuOpenCWindow2'), function () { this.className = 'linkCM'; openCWindow (2); });
   setCmhLink (GID ('menuOpenCWindow3'), function () { this.className = 'linkCM'; openCWindow (3); });
@@ -866,13 +864,6 @@ function resizeSWindow () {
 function openAWindow () {
   Greybox.open ({type: 'inline', content: 'aboutContentWrap',
 	width:'44em', height:'26em', title: _('About Cheetah News')});
-  return false;
-}
-
-function openFanbox () {
-  hideMenu ();
-  Greybox.open ({type: 'inline', content: 'fbFanbox',
-	width:500, height:300, title: 'Facebook Fanbox'});
   return false;
 }
 

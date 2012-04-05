@@ -2,7 +2,7 @@
 
 /*
    Cheetah News reader.php
-   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010, 2011 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -349,8 +349,7 @@ var SIGS = {'js':'".$SIGS["js"]."', 'tr':'".$SIGS["tr"]."', 'wt':'".
   <span id="menuOpenSWindow" class="ilinkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
   <span id="menuOpenFacebook" class="ilinkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
   <span id="menuOpenNotes" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
-  <span id="menuOpenWeather" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
-  <span id="menuOpenFanbox" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span><hr />
+  <span id="menuOpenWeather" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span><hr />
   <span id="menuOpenCWindow1" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
   <span id="menuOpenCWindow2" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
   <span id="menuOpenCWindow3" class="linkCM">&nbsp;<img src="images/t.gif" width="16" height="16" alt="" /></span>
@@ -361,9 +360,6 @@ var SIGS = {'js':'".$SIGS["js"]."', 'tr':'".$SIGS["tr"]."', 'wt':'".
 <?php if (isset ($CONF['fb.app_id'])) { ?>
 <script type="text/javascript">CONF.fb_app_id = '<?=$CONF["fb.app_id"]?>';</script>
 <div id="fb-root"></div>
-<div id="fbFanbox" style="display:none">
-  <iframe src="https://www.facebook.com/plugins/fan.php?id=<?=$CONF['fb.app_id']?>&amp;width=500&amp;height=300&amp;connections=10&amp;stream=false&amp;header=false" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:500px; height:300px"></iframe>
-</div>
 <?php } ?>
 
 <?php if (isset ($CONF['google.analytics'])) { ?>
