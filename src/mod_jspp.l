@@ -304,7 +304,6 @@ ZEND_FUNCTION (jspp_gettext)
 
   obstack_init (&stk);
   gettext_string = quote = 0;
-  yy_init = 1;
   while (zend_hash_get_current_data (Z_ARRVAL (*files), (void **) &data) == SUCCESS)
     {
       char *str;
