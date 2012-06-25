@@ -249,29 +249,6 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">';
 	<a id="l2" href="http://<?php echo $CONF['site']; ?>/terms_of_service"><?php echo _('Terms of Service'); ?></a>&nbsp;&nbsp;
       </td>
     </tr>
-    <tr>
-      <td align="right" colspan="2">
-	<script type="text/javascript">
-	  var addthis_config = {
-	    username: 'wojciechpolak',
-	    ui_header_color: '#ffffff',
-	    ui_header_background: '#000000',
-	    data_track_clickback: false,
-	    services_compact: 'delicious,twitter,facebook,friendfeed,googlebuzz,google,stumbleupon,digg,reddit,more'
-          };
-          var addthis_share = {
-	    url: 'http://www.cheetah-news.com/',
-	    title: 'Cheetah News -- Web-based Personal News Aggregator'
-          };
-	</script>
-	<a href="http://www.addthis.com/bookmark.php?v=250" class="addthis_button"><img src="images/share.png" width="83" height="16" alt="Bookmark and Share" style="border-style:none" /></a>
-<?php if (isset ($_SERVER['HTTPS'])) { ?>
-	<script type="text/javascript" src="https://secure.addthis.com/js/250/addthis_widget.js"></script>
-<?php } else { ?>
-        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
-<?php } ?>
-      </td>
-    </tr>
   </table>
 </form>
 </div>
