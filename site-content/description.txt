@@ -22,6 +22,3 @@ News works with Mozilla Firefox 1.5+, Safari 3+, Google Chrome,
 Internet Explorer 7+ and Opera 9+.</p>
 
 <p>Cheetah News is a nice alternative to Google Reader!</p>
-
-<p>Blog: <a href="http://blog.cheetah-news.com/" title="Cheetah News Blog">
-http://blog.cheetah-news.com/</a></p>
