@@ -2,7 +2,7 @@
 
 /*
    Cheetah News xrds.php
-   Copyright (C) 2008, 2010 Wojciech Polak.
+   Copyright (C) 2008, 2010, 2012 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -19,6 +19,7 @@
 */
 
 header ('Content-Type: application/xrds+xml');
+header ('X-Robots-Tag: noindex');
 echo '<?xml version="1.0" encoding="UTF-8"?>'."\n";
 
 ?>
