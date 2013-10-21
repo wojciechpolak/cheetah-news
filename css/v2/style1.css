@@ -161,6 +161,10 @@ form {
   margin: 0;
   border-style: none;
 }
+.entryBody img {
+  max-width: 100%;
+  height: auto;
+}
 
 .entryMeta {
   margin-top: 2px;

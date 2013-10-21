@@ -164,7 +164,8 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">';
 <meta http-equiv="X-XRDS-Location" content="/xrds.xml" />
 <meta name="description" content="Web-based Personal News Aggregator. The Google Reader Alternative." />
 <meta name="keywords" content="cheetah news, web-based personal news aggregator, feedreader, feeds, rss, atom, rdf, web 2.0" />
-<meta name="robots" content="index,nofollow" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="http://www.cheetah-news.com/" />
 <link rel="stylesheet" href="<?=dsp('css.login')?>" type="text/css" />
 <link rel="icon" href="images/favicon.png" type="image/png" />
 <script type="text/javascript" src="<?=dsp('login')?>"></script>
