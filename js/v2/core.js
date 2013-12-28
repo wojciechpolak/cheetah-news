@@ -631,11 +631,7 @@ function transformJsonFeed (json, feedid, latest, expand) {
 			     document.createTextNode (String.fromCharCode (160) +
 						      String.fromCharCode (160) +
 						      String.fromCharCode (160)),
-			     linkSave,
-			     document.createTextNode (String.fromCharCode (160) +
-						      String.fromCharCode (160) +
-						      String.fromCharCode (160)),
-			     DCE ('span', {eid:entryId, className:'linkTranslate'})])]);
+			     linkSave])]);
 
       if (i >= expand) body.style.display = 'none';
       bWindowContent.appendChild (DCE ('div', {id:'entry_'+entryId, entrylang:'en'},
@@ -1235,12 +1231,6 @@ function prepareEntry (n, feedid) {
     else if (n.className == 'linkSave') {
       if (Modules.Notes)
 	Modules.Notes.attach (n);
-      else
-	n.parentNode.removeChild (n);
-    }
-    else if (n.className == 'linkTranslate') {
-      if (Modules.Translate)
-	Modules.Translate.attach (n);
       else
 	n.parentNode.removeChild (n);
     }

@@ -394,11 +394,6 @@
 	  </span>
 	  <xsl:text disable-output-escaping="yes">&amp;nbsp;&amp;nbsp;&amp;nbsp;</xsl:text>
 	</xsl:if>
-	<span class="linkTranslate">
-	  <xsl:attribute name="eid">
-	    <xsl:value-of select="$eid"/>
-	  </xsl:attribute>
-	</span>
       </div>
     </div>
   </div>
@@ -521,11 +516,6 @@
 	  </span>
 	  <xsl:text disable-output-escaping="yes">&amp;nbsp;&amp;nbsp;&amp;nbsp;</xsl:text>
 	</xsl:if>
-	<span class="linkTranslate">
-	  <xsl:attribute name="eid">
-	    <xsl:value-of select="$eid"/>
-	  </xsl:attribute>
-	</span>
       </div>
     </div>
   </div>
@@ -619,11 +609,6 @@
 	  </span>
 	  <xsl:text disable-output-escaping="yes">&amp;nbsp;&amp;nbsp;&amp;nbsp;</xsl:text>
 	</xsl:if>
-	<span class="linkTranslate">
-	  <xsl:attribute name="eid">
-	    <xsl:value-of select="$eid"/>
-	  </xsl:attribute>
-	</span>
       </div>
     </div>
   </div>
@@ -789,11 +774,6 @@
 	  </span>
 	  <xsl:text disable-output-escaping="yes">&amp;nbsp;&amp;nbsp;&amp;nbsp;</xsl:text>
 	</xsl:if>
-	<span class="linkTranslate">
-	  <xsl:attribute name="eid">
-	    <xsl:value-of select="$eid"/>
-	  </xsl:attribute>
-	</span>
       </div>
     </div>
   </div>
@@ -880,11 +860,6 @@
 	  </span>
 	  <xsl:text disable-output-escaping="yes">&amp;nbsp;&amp;nbsp;&amp;nbsp;</xsl:text>
 	</xsl:if>
-	<span class="linkTranslate">
-	  <xsl:attribute name="eid">
-	    <xsl:value-of select="$eid"/>
-	  </xsl:attribute>
-	</span>
       </div>
     </div>
     <div style="clear:both"></div>
