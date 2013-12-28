@@ -1,6 +1,6 @@
 /*
    Cheetah News JS/v2 Core
-   Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010, 2011 Wojciech Polak.
+   Copyright (C) 2005-2011, 2013 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -2555,10 +2555,10 @@ function convertMediaLinks (ctx) {
 }
 
 var video_embeds = {
-  'youtube': {code: '<object type="application/x-shockwave-flash" width="560" height="340" data="http://www.youtube.com/v/{ID}&autoplay=1&showsearch=0&fs=1"><param name="movie" value="http://www.youtube.com/v/{ID}&autoplay=1&showsearch=0&fs=1"/><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/></object>', width: 560, height: 340},
-  'vimeo': {code: '<object type="application/x-shockwave-flash" width="560" height="315" data="http://vimeo.com/moogaloop.swf?clip_id={ID}&server=vimeo.com&fullscreen=1&show_title=1&show_byline=1&show_portrait=1&color=&autoplay=1"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id={ID}&server=vimeo.com&fullscreen=1&show_title=1&show_byline=1&show_portrait=1&color=&autoplay=1"/><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><param name="quality" value="best"/><param name="scale" value="showAll"/></object>', width: 560, height: 315},
-  'chtv': {code: '<object type="application/x-shockwave-flash" width="560" height="315" data="http://www.collegehumor.com/moogaloop/moogaloop.swf?clip_id={ID}&fullscreen=1&autoplay=1"><param name="movie" value="http://www.collegehumor.com/moogaloop/moogaloop.swf?clip_id={ID}&fullscreen=1&autoplay=1"/><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><param name="wmode" value="transparent"/></object>', width: 560, height: 315},
-  'dailymotion': {code: '<object type="application/x-shockwave-flash" width="480" height="381" data="http://www.dailymotion.com/swf/{ID}?autoplay=1"><param name="movie" value="http://www.dailymotion.com/swf/{ID}?autoplay=1"/><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/></object>', width: 480, height: 381},
+  'youtube': {code: '<iframe width="560" height="349" src="//www.youtube.com/embed/{ID}?autoplay=1&rel=0" frameborder="0" allowfullscreen></iframe>', width: 560, height: 349},
+  'vimeo': {code: '<iframe width="560" height="315" src="//player.vimeo.com/video/{ID}?autoplay=1" frameborder="0" allowfullscreen></iframe>', width: 560, height: 315},
+  'chtv': {code: '<iframe width="560" height="315" src="http://www.collegehumor.com/e/{ID}?autoplay=1" frameborder="0" allowfullscreen></iframe>', width: 560, height: 315},
+  'dailymotion': {code: '<iframe width="560" height="315" src="http://www.dailymotion.com/embed/video/{ID}?autoplay=1" frameborder="0"></iframe>', width: 560, height: 315},
   'metacafe': {code: '<object type="application/x-shockwave-flash" width="498" height="423" data="http://www.metacafe.com/fplayer/{ID}/video.swf"><param name="movie" value="http://www.metacafe.com/fplayer/{ID}/video.swf"/><param name="name" value="Metacafe_{ID}"/><param name="flashvars" value="playerVars=showStats=no|autoPlay=yes"/><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/></object>', width: 498, height: 423},
   'facebook': {code: '<object type="application/x-shockwave-flash" width="560" height="315" data="http://www.facebook.com/v/{ID}"><param name="movie" value="http://www.facebook.com/v/{ID}"/><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/></object>', width: 560, height: 315}
 }
