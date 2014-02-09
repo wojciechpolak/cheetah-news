@@ -2,7 +2,7 @@
 
 /*
    Cheetah News xnotes.php
-   Copyright (C) 2005, 2006, 2007 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2014 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -122,9 +122,10 @@ function getNoteList ()
 
   $i = 1; $end = $db->num_rows ();
   if ($end > 0) {
-    echo "cheetahNoteList = {\n";
+    echo "cheetahNoteList = [\n";
     while ($db->next_record ()) {
-      echo "  '".$db->f ('id')."' : ['".encodeJsEntities ($db->f ('color')).
+      echo "['".$db->f ('id').
+	"', '".encodeJsEntities ($db->f ('color')).
 	"', '".encodeJsEntities ($db->f ('title')).
 	"', '".encodeJsEntities ($db->f ('date')).
 	"', '".encodeJsEntities ($db->f ('public')).
@@ -132,7 +133,7 @@ function getNoteList ()
       if ($i++ < $end) echo ',';
       echo "\n";
     }
-    echo "};\n";
+    echo "];\n";
   }
   else {
     echo "cheetahNoteList = null;\n";

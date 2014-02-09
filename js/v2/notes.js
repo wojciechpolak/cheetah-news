@@ -1,6 +1,6 @@
 /*
    Cheetah News JS/v2 Notes
-   Copyright (C) 2005, 2006, 2008 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2008, 2014 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -255,39 +255,40 @@ Modules.Notes = new function () {
     countNoteList ();
 
     if (cheetahNoteList) {
-      for (var n in cheetahNoteList) {
+      for (var n = 0; n < cheetahNoteList.length; n++) {
 
-	var row_rem = DCE ('span', {id: 'noteRowRem_' + n},
-			   ['<span class="link" id="removeNote_' + n +
+	var noteId = cheetahNoteList[n][0];
+	var row_rem = DCE ('span', {id: 'noteRowRem_' + noteId},
+			   ['<span class="link" id="removeNote_' + noteId +
 			    '"action="rem"><img class="img-10-remove iremove" src="images/t.gif" width="10" height="10" alt="'
 			    + _('rem') + '" /></span>']);
 	row_rem.onmouseover = selectRow;
  	row_rem.onmouseout = unselectRow;
 
-	var row_pstatus = DCE ('span', {id: 'notePStatus' + n},
-			       [cheetahNoteList[n][3] == 'yes' ?
+	var row_pstatus = DCE ('span', {id: 'notePStatus' + noteId},
+			       [cheetahNoteList[n][4] == 'yes' ?
 				'<img class="img-16-world" src="images/t.gif" width="16" height="16" alt="P" title="'
 				+ _('Publicly visible')+'" />' :
 				'<img class="img-16-world-i" src="images/t.gif" width="16" height="16" alt="NP" title="'
 				+ _('Not publicly visible')+'" />']);
 
-	var tags = '<span class="nb_tags">' + cheetahNoteList[n][4].replace (/,/g, ', ') + '</span>';
+	var tags = '<span class="nb_tags">' + cheetahNoteList[n][5].replace (/,/g, ', ') + '</span>';
 
-	var row = DCE ('div', {id: 'note_' + n, className: 'nbRow pointer'},
+	var row = DCE ('div', {id: 'note_' + noteId, className: 'nbRow pointer'},
 		       [DCE ('div', {className: 'nb_tls'},
-			     [cheetahNoteList[n][1] + ' ' + tags,
+			     [cheetahNoteList[n][2] + ' ' + tags,
 			      DCE ('div', {className: 'nb_tld'},
-				   [cheetahNoteList[n][2].substr (0, 16),
+				   [cheetahNoteList[n][3].substr (0, 16),
 				    row_pstatus,
 				    row_rem])])
 			]);
 
-	row.setAttribute ('noteid', n);
+	row.setAttribute ('noteid', noteId);
  	row.onclick = openINote;
 	row.rgbColor = '#ffffff';
 	tbody.appendChild (row);
 
- 	var rem = GID ('removeNote_' + n);
+ 	var rem = GID ('removeNote_' + noteId);
  	if (rem) {
  	  rem.title = _('Remove');
  	  rem.onclick = removeINote;
