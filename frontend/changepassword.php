@@ -4,7 +4,7 @@
 
 /*
    Cheetah News changepassword.php
-   Copyright (C) 2005, 2006, 2010 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2010, 2014 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -105,7 +105,7 @@ else if (!empty ($hash))
 	  $validPass = false;
 
 	if ($validPassLen && $validPass) {
-	  $db->query ("UPDATE user SET pass='".md5 ($pass).
+	  $db->query ("UPDATE user SET pass='".make_password ($pass).
 		      "', failogCount=0 WHERE email='".$email."'");
 	  $db->query ("DELETE FROM forgotpassword WHERE email='".$email."'");
 	  $message = _('Your password has been successfully changed.');

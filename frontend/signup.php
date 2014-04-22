@@ -53,7 +53,7 @@ if (!empty ($hash))
 
     if (empty ($email)) {
       if (!empty ($cEmail)) {
-	$res = rpNewSendEmail ($cEmail, uniqid (rand(), true), $openid_identity);
+	$res = rpNewSendEmail ($cEmail, '', $openid_identity);
 	switch ($res) {
 	case 0:
 	  $db->query ("DELETE FROM registration WHERE hash='".$db->escape ($hash)."'");

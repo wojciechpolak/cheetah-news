@@ -2,7 +2,7 @@
 
 /*
    Cheetah News lib/register.php
-   Copyright (C) 2005, 2006, 2010 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2010, 2014 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -56,7 +56,8 @@ function rpNewSendEmail ($cEmail, $regPassword, $openid_identity = '')
       if ($newEntry) {
 	$db->query ("INSERT INTO registration SET email='".$db->escape ($cEmail)."', ".
 		    "rdate=UTC_TIMESTAMP(), hash='".$hash."', pass='".
-		    md5 ($regPassword)."', openid_identity='".$db->escape ($openid_identity)."'");
+		    make_password ($regPassword)."', openid_identity='".
+		    $db->escape ($openid_identity)."'");
       }
       return 0; /* OK */
     }

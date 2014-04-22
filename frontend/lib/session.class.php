@@ -2,7 +2,7 @@
 
 /*
    Cheetah News lib/session.class.php
-   Copyright (C) 2005, 2006, 2007, 2008, 2010 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2007, 2008, 2010, 2014 Wojciech Polak.
 
    This program is free software; you can redistribute it and/or modify it
    under the terms of the GNU General Public License as published by the
@@ -87,7 +87,7 @@ class Session
     $this->status['iflogged'] = '';
   }
 
-  function login ($email, $pass)
+  function login ($email, $raw_password)
   {
     global $CONF;
 
@@ -95,7 +95,7 @@ class Session
 
     $db = new Database ();
 
-    if ($CONF['guestAccount'] && $email == 'guest' && $pass == 'guest')
+    if ($CONF['guestAccount'] && $email == 'guest' && $raw_password == 'guest')
     {
       $db->query ("SELECT id FROM user WHERE email='".$CONF['guestAccount'].
 		  "' AND active='yes'");
@@ -116,31 +116,34 @@ class Session
     }
     else {
       $db->query ("SELECT id,email,pass,lang FROM user ".
-		  "WHERE email='".$db->escape ($email)."' AND pass='".
-		  md5 ($pass)."' AND active != 'no' AND failogCount < 10");
+		  "WHERE email='".$db->escape ($email).
+		  "' AND active != 'no' AND failogCount < 10");
 
       if ($db->next_record ())
       {
-	$this->id    = $db->f ('id');
-	$this->email = $db->f ('email');
-	$this->pass  = $db->f ('pass');
-	$this->lang  = $db->f ('lang');
-	$this->status['afterlogged'] = 'yes';
-	$this->status['iflogged'] = 'yes';
+	$this->id   = $db->f ('id');
+	$this->pass = $db->f ('pass');
 
-	$db->query ("UPDATE user SET lastLog='".gmdate ('Y-m-d H:i:s')."', ".
-		    "active='yes', failogCount=0 WHERE id='".$this->id."'");
+	if ($this->check_password ($raw_password))
+	{
+	  $this->email = $db->f ('email');
+	  $this->lang  = $db->f ('lang');
+	  $this->status['afterlogged'] = 'yes';
+	  $this->status['iflogged'] = 'yes';
 
-	if (isset ($_SERVER['HTTPS']))
-	  redirect ($CONF['secureProto'].'://'.$CONF['site'].'/rd');
-	else
-	  redirect ('http://'.$CONF['site'].'/');
-      }
-      else /* failog, protection against dictionary attack */
-      {
-	$db->query ("UPDATE user SET failogCount=failogCount+1 WHERE ".
-		    "email='".$db->escape ($email).
-		    "' AND active != 'no' AND failogCount < 10");
+	  $db->query ("UPDATE user SET lastLog='".gmdate ('Y-m-d H:i:s')."', ".
+		      "active='yes', failogCount=0 WHERE id='".$this->id."'");
+
+	  if (isset ($_SERVER['HTTPS']))
+	    redirect ($CONF['secureProto'].'://'.$CONF['site'].'/rd');
+	  else
+	    redirect ('http://'.$CONF['site'].'/');
+	}
+	else { /* failog, protection against dictionary attack */
+	  $db->query ("UPDATE user SET failogCount=failogCount+1 WHERE ".
+		      "email='".$db->escape ($email).
+		      "' AND active != 'no' AND failogCount < 10");
+	}
       }
     }
   }
@@ -223,7 +226,7 @@ class Session
 	return _("To enable OpenID support, please visit Menu/User Settings/Linked Accounts.");
       }
 
-      $res = rpNewSendEmail ($email, uniqid (rand(), true), $identity);
+      $res = rpNewSendEmail ($email, '', $identity);
       switch ($res) {
       case 0:
 	return _('A registration confirmation e-mail has been sent to you.');
@@ -247,7 +250,7 @@ class Session
 		  $db->escape ($identity)."'");
       if (!$db->next_record ()) {
 	$hash = sha1 (time().$identity.rand());
-	$pass = uniqid (rand(), true);
+	$pass = '';
 	$db->query ("INSERT INTO registration SET rdate=UTC_TIMESTAMP(), ".
 		    "hash='".$hash."', pass='".$pass."', openid_identity='".
 		    $db->escape ($identity)."'");
@@ -301,7 +304,7 @@ class Session
 	return _('To link your Facebook account, please visit Menu/User Settings');
       }
 
-      $pass = uniqid (rand(), true);
+      $pass = '';
       $db->query ("INSERT INTO user SET email='".$email.
 		  "', pass='".$pass."', fbUID=".$fb_uid);
       $db->query ("SELECT LAST_INSERT_ID() as last_id FROM user");
@@ -346,7 +349,7 @@ class Session
   function auth ($res)
   {
     global $_ARGS, $CONF;
-    
+
     if ($this->email == 'guest') {
       return true;
     }
@@ -379,18 +382,102 @@ class Session
     }
   }
 
-  function change_password ($old, $new, $repeat)
+  function check_password ($raw_password)
   {
-    if ($new == $repeat && md5 ($old) == $this->pass)
-    {
-      $db = new Database ();
-      $db->query ("UPDATE user SET pass='".md5 ($new)."' WHERE id=".$this->id);
-      $this->pass = md5 ($new);
+    if (!$raw_password || $this->pass === '!')
+      return false;
+
+    if (strlen ($this->pass) == 32 && $this->pass == md5 ($raw_password)) {
+      /* good pass, old format */
+      $this->set_password ($raw_password); /* regenerate */
       return true;
     }
-    else
-      return false;
+    else {
+      list ($algo, $iterations, $salt, $hash) = explode (':', $this->pass, 4);
+      $encoded_2 = encode_password ($raw_password, $algo, $salt,
+				    intval ($iterations));
+      return $this->pass === $encoded_2;
+    }
+    return false;
   }
+
+  function set_password ($raw_password)
+  {
+    $this->pass = make_password ($raw_password);
+    $db = new Database ();
+    $db->query ("UPDATE user SET pass='".$this->pass."' WHERE id=".$this->id);
+  }
+
+  function change_password ($raw_password_old, $raw_password_new, $repeat)
+  {
+    if ($raw_password_new == $repeat &&
+	$this->check_password ($raw_password_old))
+    {
+      $this->set_password ($raw_password_new);
+      return true;
+    }
+    return false;
+  }
+}
+
+function make_password ($raw_password, $salt=null)
+{
+  if (!$raw_password)
+    return '!';
+
+  if (!$salt)
+    $salt = substr (str_shuffle ('abcdefghijklmnopqrstuvwxyz'.
+				 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.
+				 '0123456789'), 0, 12); /* 12 random chars */
+
+  return encode_password ($raw_password, 'pbkdf2_sha256', $salt);
+}
+
+function encode_password ($raw_password, $algo, $salt, $iterations=20000)
+{
+  if ($algo == 'pbkdf2_sha256')
+    $hash = cth_pbkdf2 ('sha256', $raw_password, $salt, $iterations, 32, true);
+  else
+    return '!';
+
+  $hash = trim (base64_encode ($hash));
+  return sprintf ('%s:%d:%s:%s', $algo, $iterations, $salt, $hash);
+}
+
+function cth_pbkdf2 ($algo, $password, $salt, $iterations, $length=0,
+		     $raw_output=false)
+{
+  if (!in_array (strtolower ($algo), hash_algos ())) {
+    trigger_error (sprintf ('cth_pbkdf2(): Unknown hashing algorithm: %s',
+			    $algo), E_USER_WARNING);
+    return false;
+  }
+
+  $derived_key = '';
+  $loops = 1;
+
+  if ($length > 0)
+    $loops = (int)ceil ($length / strlen (hash ($algo, '', $raw_output)));
+
+  for ($i = 1; $i <= $loops; $i++)
+  {
+    $digest = hash_hmac ($algo, $salt . pack ('N', $i), $password, true);
+    $block = $digest;
+    for ($j = 1; $j < $iterations; $j++)
+    {
+      $digest = hash_hmac ($algo, $digest, $password, true);
+      $block ^= $digest;
+    }
+    $derived_key .= $block;
+  }
+
+  if (!$raw_output)
+    $derived_key = bin2hex ($derived_key);
+
+  if ($length > 0)
+    return substr ($derived_key, 0, $length);
+
+  return $derived_key;
 }
 
 ?>
