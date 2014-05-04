@@ -316,7 +316,7 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">';
   <div>
 <?php i18n_get_content ('description'); ?>
   </div>
-  <p><span id="aboutSignIn" class="link"><?php echo _('Sign in'); ?></span>&nbsp;</p>
+  <p><span id="aboutSignIn" class="link" style="font-size:larger"><?php echo _('Sign in'); ?></span>&nbsp;</p>
   <p>&nbsp;</p>
 </div>
 <div id="banner">
@@ -350,12 +350,12 @@ window.fbAsyncInit = function() {
 
 <?php if (isset ($CONF['google.analytics']) && !isset ($_GET['openid_mode'])) { ?>
 <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker('<?=$CONF["google.analytics"]?>');
-pageTracker._trackPageview();
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', '<?=$CONF["google.analytics"]?>', 'www.cheetah-news.com');
+ga('send', 'pageview');
 </script>
 <?php } ?>
 
