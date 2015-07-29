@@ -2,7 +2,7 @@
 
 /*
    Cheetah News lib/http.class.php
-   Copyright (C) 2005, 2006 Wojciech Polak.
+   Copyright (C) 2005, 2006, 2015 Wojciech Polak.
    Copyright (C) 2006 The Cheetah News Team.
 
    This program is free software; you can redistribute it and/or modify it
@@ -69,10 +69,16 @@ class Http
     switch ($url_parts['scheme'])
     {
       case 'http':
+      case 'https':
 	$this->host = $url_parts['host'];
 	if (!empty ($url_parts['port']))
 	  $this->port = $url_parts['port'];
 
+	if ($url_parts['scheme'] == 'https') {
+	  $this->host = 'ssl://'.$this->host;
+	  $this->port = 443;
+	}
+	
 	if ($this->_connect ($fp))
 	{
 	  $path = (!empty ($url_parts['path']) ? $url_parts['path'] : '')
@@ -87,7 +93,7 @@ class Http
 	    if ($this->maxredirs > $this->_redirectdepth)
 	    {
 	      // only follow redirect if it's on this site, or offsiteok is true
-	      if (preg_match ("|^http://".preg_quote ($this->host)."|i",
+	      if (preg_match ("|^https?://".preg_quote ($this->host)."|i",
 			      $this->_redirectaddr) || $this->offsiteok)
 	      {
 		/* follow the redirect */
@@ -114,6 +120,8 @@ class Http
 
   function _httprequest ($path, $fp, $url)
   {
+    $this->host = str_replace ('ssl://', '', $this->host);
+
     $url_parts = parse_url ($url);
     if (empty ($path)) $path = '/';
     if (empty ($url)) $url = '/';
