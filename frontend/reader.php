@@ -277,7 +277,7 @@ var SIGS = {'js':'".$SIGS["js"]."', 'tr':'".$SIGS["tr"]."', 'wt':'".
   </p>
   <p><?php echo _('Credits:'); ?></p>
   <ul>
-    <li><a href="http://wojciechpolak.org/" target="Wojciech_Polak">Wojciech Polak</a> -- <?php echo _('main programming and lead developer'); ?></li>
+    <li><a href="https://wojciechpolak.org/" target="Wojciech_Polak">Wojciech Polak</a> -- <?php echo _('main programming and lead developer'); ?></li>
     <li><a href="http://gray.gnu.org.ua/" target="Sergey_Poznyakoff">Sergey Poznyakoff</a> -- <?php echo _('additional programming'); ?></li>
     <li><a href="http://www.linkedin.com/in/mraniszewski" target="Marcin_Raniszewski">Marcin Raniszewski</a> -- <?php echo _('additional programming'); ?></li>
     <li><a href="http://www.famfamfam.com/" target="Mark_James">Mark James</a> -- &quot;Silk&quot; icons</li>
@@ -285,9 +285,7 @@ var SIGS = {'js':'".$SIGS["js"]."', 'tr':'".$SIGS["tr"]."', 'wt':'".
   </ul>
   <p><?php echo _('Feedback:'); ?></p>
   <ul>
-    <li><a href="http://blog.cheetah-news.com/" target="Cheetah_News_Blog">Cheetah News Blog</a></li>
-    <li><a href="http://groups.google.com/group/cheetah-news" target="Cheetah_News_Group">Cheetah News Group</a>
-      <?php echo _('-- send us your bug reports and suggestions (public list).'); ?></li>
+    <li><a href="https://cheetahpress.wordpress.com/" target="Cheetah_News_Blog">Cheetah News Blog</a></li>
     <li><a href="mailto:cheetah-admins@gnu.org.ua">cheetah-admins@gnu.org.ua</a>
       <?php echo _('-- private list.'); ?></li>
   </ul>

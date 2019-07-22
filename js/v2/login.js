@@ -84,7 +84,6 @@
       else
 	persistentCookie.disabled = false;
     };
-    GID ('l0').onclick = function () { return nw (this, 'Cheetah_News_Blog'); };
     GID ('l1').onclick = function () { return nw (this, 'Privacy_Policy'); };
     GID ('l2').onclick = function () { return nw (this, 'Terms_of_Service'); };
     GID ('l3').onclick = function () { return nw (this); };
@@ -99,7 +98,6 @@
     GID ('useOpenID').style.display = 'none';
     GID ('useCommon').style.display = 'inline';
     GID ('trForgotPassword').className = 'hidden';
-    GID ('l0wrap').className = 'hidden';
 
     var c = readCookie (cookieLogin);
     if (c) {
@@ -127,7 +125,6 @@
     GID ('useOpenID').style.display = 'inline';
     GID ('useCommon').style.display = 'none';
     GID ('trForgotPassword').className = '';
-    GID ('l0wrap').className = '';
     GID ('cEmail').focus ();
     authMech = 'common';
     writeCookie (cookieLogin, authMech, 365);
