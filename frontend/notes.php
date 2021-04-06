@@ -115,9 +115,9 @@ function nl2br2 ($str) {
 
 function createLinks ($str)
 {
-  $lines = split ("\n", $str);
+  $lines = preg_split ("\n", $str);
   for ($z = 0; $z < count ($lines); $z++) {
-    $tmp = split (' ', $lines[$z]);
+    $tmp = preg_split (' ', $lines[$z]);
     for ($i = 0; $i < count ($tmp); $i++) {
       if (strstr ($tmp[$i], 'www.') && !strstr ($tmp[$i], 'http://'))
 	$tmp[$i] = '<a href="http://'.$tmp[$i].'">'.$tmp[$i].'</a>';

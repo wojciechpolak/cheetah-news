@@ -39,7 +39,7 @@ if ($session->status['afterlogged'] == 'yes')
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link id="style" rel="stylesheet" type="text/css" href="<?=dsp('css')?>" />
 <?php if ($CONF['feedEngine'] != 'cthonly') { ?><script type="text/javascript" src="https://www.google.com/jsapi?key=<?=$CONF['google.key']?>"></script>
-<? } ?>
+<?php } ?>
 <script type="text/javascript">
 <?php echo "var CONF = {'fbe': '".($insideFB ? 'google' : $CONF['feedEngine']).
    "', 'lang': '".($session->lang ? $session->lang : substr ($locale, 0, 2))

@@ -152,14 +152,12 @@ function calstr (&$s)
 
 function printJsCode ($files)
 {
-  /* Loading mod_jspp.so from php.ini is recommended. If, however, you
-     cannot afford it, uncomment the following:
-  if (!extension_loaded ('jspp') && @dl ('mod_jspp.so') == false) {
-    error_log ('Cannot load mod_jspp.so');
+  /* Loading mod_jspp.so from php.ini is recommended */
+  if (!extension_loaded ('jspp')) {
+    // error_log ('Cannot load mod_jspp.so');
     printCode ($files);
     return;
   }
-  */
   jspp_gettext (array_map ('normalize_filename', $files));
 }
 

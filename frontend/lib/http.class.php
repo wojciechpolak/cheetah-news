@@ -200,7 +200,7 @@ class Http
       else if (preg_match ("/Content-Encoding: gzip/", $currentHeader))
 	$is_gzipped = true;
 
-      $cHeader = split (':', $currentHeader, 2);
+      $cHeader = preg_split (':', $currentHeader, 2);
       if (isset ($cHeader[0]) && isset ($cHeader[1]))
 	$this->headers[$cHeader[0]] = trim ($cHeader[1]);
     }

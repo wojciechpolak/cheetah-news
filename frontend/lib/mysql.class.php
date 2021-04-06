@@ -53,29 +53,29 @@ class MySQL
       
     if ($this->LinkId == 0)
     {
-      @$this->LinkId = mysql_pconnect ($host, $user, $password);
+      @$this->LinkId = mysqli_connect ($host, $user, $password);
       if (!$this->LinkId) {
         $this->halt ('cannot connect to database '.$host);
       }
-      if (!@mysql_select_db ($database, $this->LinkId)) {
+      if (!@mysqli_select_db ($this->LinkId, $database)) {
         $this->halt ('cannot select database '.$database);
       }
-      mysql_query ('SET NAMES utf8', $this->LinkId);
+      mysqli_query ($this->LinkId, 'SET NAMES utf8');
     }
     return $this->LinkId;
   }
 
   function free () {
-    @mysql_free_result ($this->QueryId);
+    @mysqli_free_result ($this->QueryId);
     $this->QueryId = 0;
   }
 
   function escape ($str) {
     if ($this->LinkId == 0) {
       if (!$this->connect ())
-	return addslashes ($str);
+    return addslashes ($str);
     }
-    $s = mysql_real_escape_string ($str, $this->LinkId);
+    $s = mysqli_real_escape_string ($this->LinkId, $str);
     if ($s == false)
       return addslashes ($str);
     return $s;
@@ -84,17 +84,17 @@ class MySQL
   function query ($queryString) {
     if ($queryString == '')
       return 0;
-    if ($this->LinkId == 0) {
+    if (!$this->LinkId) {
       if (!$this->connect ())
-	return 0;
+    return 0;
     }
     if ($this->QueryId)
       $this->free ();
 
-    $this->QueryId = @mysql_query ($queryString, $this->LinkId);
+    $this->QueryId = @mysqli_query ($this->LinkId, $queryString);
     $this->Row   = 0;
-    $this->Errno = mysql_errno ();
-    $this->Error = mysql_error ();
+    $this->Errno = mysqli_errno ($this->LinkId);
+    $this->Error = mysqli_error ($this->LinkId);
     if (!$this->QueryId)
       $this->halt ('invalid SQL query: '.$queryString);
 
@@ -107,10 +107,10 @@ class MySQL
       return 0;
     }
 
-    $this->Record = @mysql_fetch_assoc ($this->QueryId);
+    $this->Record = @mysqli_fetch_assoc ($this->QueryId);
     $this->Row   += 1;
-    $this->Errno  = mysql_errno ();
-    $this->Error  = mysql_error ();
+    $this->Errno  = mysqli_errno ($this->LinkId);
+    $this->Error  = mysqli_error ($this->LinkId);
 
     $stat = is_array ($this->Record);
     if (!$stat && $this->AutoFree)
@@ -120,15 +120,15 @@ class MySQL
   }
 
   function data_seek ($row_number) {
-    return @mysql_data_seek ($this->QueryId, $row_number);
+    return @mysqli_data_seek ($this->QueryId, $row_number);
   }
 
   function num_rows () {
-    return @mysql_num_rows ($this->QueryId);
+    return @mysqli_num_rows ($this->QueryId);
   }
 
   function affected_rows () {
-    return @mysql_affected_rows ($this->LinkId);
+    return @mysqli_affected_rows ($this->LinkId);
   }
 
   function f ($name) {
@@ -136,8 +136,8 @@ class MySQL
   }
 
   function halt ($msg) {
-    $this->Error = @mysql_error ($this->LinkId);
-    $this->Errno = @mysql_errno ($this->LinkId);
+    $this->Error = @mysqli_error ($this->LinkId);
+    $this->Errno = @mysqli_errno ($this->LinkId);
     header ('Location: html/nodatabase');
     $this->haltmsg ($msg);
     exit;

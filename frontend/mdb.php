@@ -133,11 +133,11 @@ function saveFeeds ()
   /* Update feeds order */
   if ($feeds != 'flushAll')
   {
-    $feeds_order = split (':', $feeds);
+    $feeds_order = preg_split (':', $feeds);
     $i = 0;
     $size = count ($feeds_order);
     foreach ($feeds_order as $feedData) {
-      $feed   = split (',', $feedData);
+      $feed   = preg_split (',', $feedData);
       $feedid = $db->escape ($feed[0]);
       $desc   = $db->escape (trim (strip_tags (decodeSD ($feed[1]))));
       $folder = $db->escape ($feed[2]);
@@ -205,11 +205,11 @@ function saveFolders ()
   /* Update folders order */
   if ($folders != 'flushAll')
   {
-    $folders_order = split (':', $folders);
+    $folders_order = preg_split (':', $folders);
     $i = 0;
     $size = count ($folders_order);
     foreach ($folders_order as $folderData) {
-      $folder = split (',', $folderData);
+      $folder = preg_split (',', $folderData);
       $id     = $db->escape ($folder[0]);
       $fname  = $db->escape (trim (strip_tags (decodeSD ($folder[1]))));
       if (empty ($fname))

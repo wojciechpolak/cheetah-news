@@ -168,7 +168,7 @@ function saveNote ()
 
   $ptags = array ();
   $ntags = array ();
-  $atags = split (',', htmlspecialchars (strip_tags ($tags), ENT_NOQUOTES));
+  $atags = preg_split (',', htmlspecialchars (strip_tags ($tags), ENT_NOQUOTES));
   $atags = array_unique ($atags);
   foreach ($atags as $tag)
   {

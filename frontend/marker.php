@@ -60,7 +60,7 @@ function getMarkers ()
   while ($db->next_record ()) {
     $nr  = $endi - $i + 1;
     $mks = $db->f ('markers');
-    $arr = split (',', $mks);
+    $arr = preg_split (',', $mks);
     $endj = count ($arr);
     $stats[$db->f ('date')] = $endj;
     $j = 1;
@@ -118,7 +118,7 @@ function remMarkers ()
   $cache = array ();
   $rem = $db->escape ($rem);
 
-  $arr = split (',', $rem);
+  $arr = preg_split (',', $rem);
   foreach ($arr as $hash) {
     if (!array_search ($hash, $cache)) {
       $hash = $db->escape ($hash);
@@ -131,7 +131,7 @@ function remMarkers ()
 	$mem[$id] = true;
 	$mks = $db->f ('markers');
 
-	$arr1 = split (',', $mks);
+	$arr1 = preg_split (',', $mks);
 	$cache = array_merge ($cache, $arr1);
 
 	$out = array_diff ($arr1, $arr);
