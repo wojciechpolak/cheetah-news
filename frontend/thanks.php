@@ -20,6 +20,6 @@
 
 require 'lib/config.php';
 header ('Content-Type: text/plain; charset=UTF-8');
-include $CONF['baseDir'].'/THANKS';
+include $CONF['baseDir'].'/THANKS.md';
 
 ?>
