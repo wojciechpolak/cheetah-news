@@ -1,0 +1,35 @@
+services:
+  web:
+    image: ghcr.io/wojciechpolak/cheetah-news:latest
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      CHEETAH_DB_HOST: db
+      CHEETAH_DB_DATABASE: cheetah
+      CHEETAH_DB_USER: cheetah
+      CHEETAH_DB_PASSWORD: cheetah
+      CHEETAH_SITE: localhost:8080
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mariadb:10.6
+    environment:
+      MARIADB_ROOT_PASSWORD: cheetah-root
+      MARIADB_DATABASE: cheetah
+      MARIADB_USER: cheetah
+      MARIADB_PASSWORD: cheetah
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-pcheetah-root"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./sql/cheetah.sql:/docker-source/cheetah.sql:ro
+      - ./docker/mysql/01-init-cheetah.sh:/docker-entrypoint-initdb.d/01-init-cheetah.sh:ro
+
+volumes:
+  db-data:

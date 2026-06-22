@@ -17,6 +17,29 @@ Emacs was used as an IDE.
 
 The old blog with screenshots: https://cheetahpress.wordpress.com/
 
+Docker Demo
+-----------
+
+This repository includes a Docker Compose setup for running Cheetah
+News locally as a historical demo. Start the demo with:
+
+```shell
+curl https://raw.githubusercontent.com/wojciechpolak/cheetah-news/master/docker-compose.yml | docker compose -f - up
+```
+
+If you have checked out the repository and want to build the image
+locally instead of pulling it from GHCR, run:
+
+```shell
+docker compose up --build
+```
+
+Open http://localhost:8080/ and sign in with:
+
+```
+guest / guest
+```
+
 Original Description
 --------------------
 
